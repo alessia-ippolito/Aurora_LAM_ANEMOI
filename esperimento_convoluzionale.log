@@ -1,0 +1,91 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+campi: (1096, 24, 15, 31) (giorni, canali, lat, lon); canali: ['a_tx3', 'a_tn3', 'a_rr7', 'a_qq2', 'sup_2t_media', 'sup_msl_media', 'sup_10u_media', 'sup_10v_media', 'sup_vento10_max', 'sup_i10fg_media', 'sup_blh_media', 'sup_ttr_1h_media', 'sup_scaled_sf_1h_media', 'atm_t_media_925', 'atm_t_media_850', 'atm_t_media_700', 'atm_t_media_500', 'atm_q_media_925', 'atm_q_media_850', 'atm_q_media_700', 'atm_z_media_500', 'atm_u_media_850', 'atm_v_media_850', 'orog_aurora']
+righe: 2205947, stazioni: 1270
+[tx3] Lombardia 2016: migliore 2.415 (Aurora 5.312)
+[tx3] Lombardia 2022: migliore 2.455 (Aurora 5.614)
+[tx3] Lombardia 2023: migliore 2.435 (Aurora 5.420)
+[tx3] Emilia-Romagna 2016: migliore 2.124 (Aurora 4.882)
+[tx3] Emilia-Romagna 2022: migliore 1.937 (Aurora 5.136)
+[tx3] Emilia-Romagna 2023: migliore 1.908 (Aurora 5.110)
+[tx3] Veneto 2016: migliore 2.663 (Aurora 4.980)
+[tx3] Veneto 2022: migliore 2.592 (Aurora 5.483)
+[tx3] Veneto 2023: migliore 2.583 (Aurora 5.294)
+[tn3] Lombardia 2016: migliore 2.255 (Aurora 3.837)
+[tn3] Lombardia 2022: migliore 2.372 (Aurora 4.299)
+[tn3] Lombardia 2023: migliore 2.275 (Aurora 4.105)
+[tn3] Emilia-Romagna 2016: migliore 2.073 (Aurora 3.726)
+[tn3] Emilia-Romagna 2022: migliore 2.262 (Aurora 4.164)
+[tn3] Emilia-Romagna 2023: migliore 2.138 (Aurora 4.113)
+[tn3] Veneto 2016: migliore 2.453 (Aurora 4.035)
+[tn3] Veneto 2022: migliore 2.429 (Aurora 4.545)
+[tn3] Veneto 2023: migliore 2.444 (Aurora 4.450)
+[rr7] Lombardia 2016: migliore 6.248 (Aurora 9.331)
+[rr7] Lombardia 2022: migliore 5.182 (Aurora 7.472)
+[rr7] Lombardia 2023: migliore 7.207 (Aurora 9.889)
+[rr7] Emilia-Romagna 2016: migliore 6.545 (Aurora 7.762)
+[rr7] Emilia-Romagna 2022: migliore 5.977 (Aurora 7.487)
+[rr7] Emilia-Romagna 2023: migliore 9.200 (Aurora 10.608)
+[rr7] Veneto 2016: migliore 6.417 (Aurora 8.167)
+[rr7] Veneto 2022: migliore 5.071 (Aurora 6.006)
+[rr7] Veneto 2023: migliore 5.929 (Aurora 8.247)
+[qq2] Lombardia 2016: migliore 39.668 (Aurora 61.869)
+[qq2] Lombardia 2022: migliore 37.403 (Aurora 57.839)
+[qq2] Lombardia 2023: migliore 39.690 (Aurora 56.515)
+[qq2] Emilia-Romagna 2016: migliore 36.932 (Aurora 59.566)
+[qq2] Emilia-Romagna 2022: migliore 34.118 (Aurora 55.611)
+[qq2] Emilia-Romagna 2023: migliore 35.536 (Aurora 54.111)
+[qq2] Veneto 2016: migliore 35.061 (Aurora 56.653)
+[qq2] Veneto 2022: migliore 33.891 (Aurora 53.425)
+[qq2] Veneto 2023: migliore 35.787 (Aurora 55.059)
+
+=== CV regione x anno: convoluzionale vs testa attuale (RMSE medio sui fold) ===
+           rmse_conv  epoche_conv  ...  rmse_aurora  differenza_%
+parametro                          ...                           
+qq2           36.966           23  ...       56.739         6.674
+rr7            6.584            2  ...        8.330         2.018
+tn3            2.329            7  ...        4.141         0.314
+tx3            2.398            3  ...        5.248         2.185
+
+[4 rows x 5 columns]
+
+per fold:
+                                conv  testa_attuale
+parametro regione        anno                      
+qq2       Lombardia      2016  40.28          38.72
+                         2022  38.01          34.85
+                         2023  40.46          38.14
+          Emilia-Romagna 2016  37.53          35.73
+                         2022  34.36          32.41
+                         2023  35.72          32.75
+          Veneto         2016  35.50          33.79
+                         2022  34.05          31.70
+                         2023  36.78          33.79
+rr7       Lombardia      2016   6.25           6.00
+                         2022   5.40           5.30
+                         2023   7.55           7.47
+          Emilia-Romagna 2016   6.54           6.42
+                         2022   6.24           6.13
+                         2023   9.28           9.26
+          Veneto         2016   6.52           6.46
+                         2022   5.26           4.93
+                         2023   6.20           6.13
+tn3       Lombardia      2016   2.34           2.17
+                         2022   2.37           2.41
+                         2023   2.32           2.22
+          Emilia-Romagna 2016   2.12           2.19
+                         2022   2.27           2.31
+                         2023   2.14           2.22
+          Veneto         2016   2.48           2.48
+                         2022   2.44           2.45
+                         2023   2.48           2.45
+tx3       Lombardia      2016   2.43           2.35
+                         2022   2.45           2.42
+                         2023   2.44           2.33
+          Emilia-Romagna 2016   2.19           2.22
+                         2022   2.07           2.00
+                         2023   2.09           2.00
+          Veneto         2016   2.71           2.68
+                         2022   2.60           2.53
+                         2023   2.61           2.58
+
+fold in cui la convoluzionale e' migliore: {'qq2': 0, 'rr7': 0, 'tn3': 5, 'tx3': 1}

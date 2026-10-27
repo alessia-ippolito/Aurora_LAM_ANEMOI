@@ -1,0 +1,60 @@
+{
+ "fattori_scala": {
+  "tx3": 1.0,
+  "tn3": 1.0,
+  "rr7": 4323.82630044394,
+  "qq2": 0.00041673074383938465
+ },
+ "aurora_feature": [
+  "a_tx3",
+  "a_tn3",
+  "a_rr7",
+  "a_qq2",
+  "sup_2t_media",
+  "sup_msl_media",
+  "sup_10u_media",
+  "sup_10v_media",
+  "sup_vento10_max",
+  "sup_i10fg_media",
+  "sup_blh_media",
+  "sup_ttr_1h_media",
+  "sup_scaled_sf_1h_media",
+  "atm_t_925",
+  "atm_t_850",
+  "atm_t_700",
+  "atm_t_500",
+  "atm_q_925",
+  "atm_q_850",
+  "atm_q_700",
+  "atm_z_500",
+  "atm_u_850",
+  "atm_v_850",
+  "dz"
+ ],
+ "table_qc": {
+  "tx3": [
+   -30,
+   50
+  ],
+  "tn3": [
+   -40,
+   35
+  ],
+  "qq2": [
+   0,
+   450
+  ],
+  "rr7": [
+   0,
+   300
+  ]
+ },
+ "forma_rilievo": [
+  "tpi_1km",
+  "tpi_5km",
+  "tpi_20km",
+  "pendenza",
+  "nordness",
+  "eastness"
+ ]
+}

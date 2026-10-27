@@ -1,0 +1,38 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+[tx3] M minima (26 feature) seed 0 fatto
+[tx3] M minima (26 feature) seed 1 fatto
+[tx3] R ridotta (24 feature) seed 0 fatto
+[tx3] R ridotta (24 feature) seed 1 fatto
+[tn3] M minima (32 feature) seed 0 fatto
+[tn3] M minima (32 feature) seed 1 fatto
+[tn3] R ridotta (29 feature) seed 0 fatto
+[tn3] R ridotta (29 feature) seed 1 fatto
+[rr7] M minima (26 feature) seed 0 fatto
+[rr7] M minima (26 feature) seed 1 fatto
+[rr7] R ridotta (24 feature) seed 0 fatto
+[rr7] R ridotta (24 feature) seed 1 fatto
+[qq2] M minima (32 feature) seed 0 fatto
+[qq2] M minima (32 feature) seed 1 fatto
+[qq2] R ridotta (29 feature) seed 0 fatto
+[qq2] R ridotta (29 feature) seed 1 fatto
+
+=== CV regione x anno: RMSE medio sui fold e sui 2 seed, all'epoca migliore ===
+parametro           tx3    tn3    rr7     qq2
+variante                                     
+M minima          2.354  2.276  6.476  34.226
+R ridotta         2.336  2.257  6.452  34.338
+tutte le feature  2.335  2.255  6.431  34.183
+
+differenza % rispetto a tutte le feature:
+parametro          tx3   tn3   rr7   qq2
+variante                                
+M minima          0.81  0.89  0.71  0.13
+R ridotta         0.05  0.06  0.34  0.45
+tutte le feature  0.00  0.00  0.00  0.00
+
+epoca migliore:
+parametro         tx3  tn3  rr7  qq2
+variante                            
+M minima           10    6    6   38
+R ridotta           8    5   13   38
+tutte le feature    6    6    7   32

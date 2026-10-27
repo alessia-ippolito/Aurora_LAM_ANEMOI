@@ -1,0 +1,18 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+Lombardia 2016 fatto
+Lombardia 2022 fatto
+Lombardia 2023 fatto
+Emilia-Romagna 2016 fatto
+Emilia-Romagna 2022 fatto
+Emilia-Romagna 2023 fatto
+Veneto 2016 fatto
+Veneto 2022 fatto
+Veneto 2023 fatto
+
+=== rr7, CV regione x anno: medie sui fold e sui seed, all'epoca con RMSE migliore ===
+                    epoca   rmse   bias    mae  pod_1  far_1  csi_1  pod_20  far_20  csi_20
+P0 residuo            6.0  6.438  0.006  2.542  0.831  0.488  0.464   0.367   0.440   0.284
+P1 radice             4.0  6.491 -0.843  2.187  0.716  0.332  0.530   0.274   0.378   0.234
+P2 log                4.0  6.692 -1.021  2.226  0.732  0.344  0.531   0.213   0.348   0.191
+P3 due parti         17.0  6.453 -0.028  2.470  0.811  0.434  0.502   0.363   0.444   0.279
+Aurora interpolata    NaN  8.330  0.078  3.030  0.610  0.393  0.436   0.391   0.614   0.241

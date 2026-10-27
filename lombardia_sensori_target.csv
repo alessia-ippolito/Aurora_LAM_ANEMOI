@@ -1,0 +1,749 @@
+idsensore,tipologia,unit_dimisura,idstazione,nomestazione,quota,provincia,datastart,storico,cgb_nord,cgb_est,lng,lat,location,:@computed_region_af5v_nc64,:@computed_region_ttgh_9sm5,datastop
+9935,Radiazione Globale,W/m²,677,Cremona Via Fatebenefratelli,43,CR,2006-04-10T00:00:00.000,N,4999315,582066,10.04384767,45.14254358,"{'type': 'Point', 'coordinates': [10.04384767, 45.14254358]}",4,8,
+9025,Temperatura,°C,1228,Goito,30,MN,2004-03-11T00:00:00.000,N,5013581,630514,10.66359803,45.26361744,"{'type': 'Point', 'coordinates': [10.66359803, 45.26361744]}",4,9,
+121,Temperatura,°C,60,Villa di Chiavenna,665,SO,2002-11-20T00:00:00.000,N,5131062,539410,9.51204364,46.33199472,"{'type': 'Point', 'coordinates': [9.51204364, 46.33199472]}",7,3,
+6431,Radiazione Globale,W/m²,594,Bergamo v.Goisis,290,BG,1996-09-13T00:00:00.000,N,5062715,553620,9.68896994,45.71591825,"{'type': 'Point', 'coordinates': [9.68896994, 45.71591825]}",1,5,
+17003,Radiazione Globale,W/m²,1303,Cremona v.Gerre Borghi,36,CR,2011-09-20T00:00:00.000,N,4995675,584111,10.06924181,45.10954275,"{'type': 'Point', 'coordinates': [10.06924181, 45.10954275]}",4,8,
+8094,Precipitazione,mm,832,Lanzada Palù,2151,SO,1992-01-01T00:00:00.000,N,5126972,568128,9.88452786,46.2929069,"{'type': 'Point', 'coordinates': [9.88452786, 46.2929069]}",7,3,
+5947,Temperatura,°C,552,Varese v.Vidoletti,425,VA,1991-12-30T00:00:00.000,S,5075945,484773,8.80393513,45.83690178,"{'type': 'Point', 'coordinates': [8.80393513, 45.83690178]}",3,1,2018-12-10T00:00:00.000
+9030,Temperatura,°C,1218,Ardesio Valcanale,1002,BG,2004-01-01T00:00:00.000,N,5088916,566917,9.863434,45.95056364,"{'type': 'Point', 'coordinates': [9.863434, 45.95056364]}",1,5,
+22599,Temperatura,°C,1986,Darfo Boario Terme Cappellino,215,BS,2025-08-22T00:00:00.000,N,5080754,590899,10.17126954,45.87434965,"{'type': 'Point', 'coordinates': [10.17126954, 45.87434965]}",7,6,
+4112,Precipitazione,mm,148,Arconate SMR,182,MI,2009-03-05T00:00:00.000,N,5043898,488082,8.84732669,45.54852147,"{'type': 'Point', 'coordinates': [8.84732669, 45.54852147]}",8,4,
+14194,Temperatura,°C,1342,Ponte in Valtellina Lago Reguzzo,2440,SO,2012-10-13T00:00:00.000,N,5105228,574978,9.96999939,46.09651358,"{'type': 'Point', 'coordinates': [9.96999939, 46.09651358]}",7,3,
+14606,Temperatura,°C,1380,Tremezzo,309,CO,2013-04-18T00:00:00.000,N,5092705,516580,9.2140589,45.9877167,"{'type': 'Point', 'coordinates': [9.2140589, 45.9877167]}",7,2,
+17479,Radiazione Globale,W/m²,1873,Abbiategrasso Strada Casalina,115,MI,2018-12-28T00:00:00.000,N,5026799,491367,8.88970564,45.39465495,"{'type': 'Point', 'coordinates': [8.88970564, 45.39465495]}",8,4,
+8190,Precipitazione,mm,908,Voghera v. Cambiaso,95,PV,2003-03-04T00:00:00.000,N,4981870,501379,9.01750575,44.9902815,"{'type': 'Point', 'coordinates': [9.01750575, 44.9902815]}",6,7,
+14128,Precipitazione,mm,1328,Teglio S. Giacomo,357,SO,2012-04-20T00:00:00.000,N,5112157,580182,10.03847892,46.15827664,"{'type': 'Point', 'coordinates': [10.03847892, 46.15827664]}",7,3,
+19282,Temperatura,°C,1513,Introbio al bivio,574,LC,2017-01-28T00:00:00.000,N,5090402,534927,9.4507999,45.966301,"{'type': 'Point', 'coordinates': [9.4507999, 45.966301]}",5,10,
+19426,Temperatura,°C,1657,Mariano Comense campo sportivo,255,CO,2017-10-11T00:00:00.000,N,5059052,513843,9.177773,45.684884,"{'type': 'Point', 'coordinates': [9.177773, 45.684884]}",3,2,
+17561,Precipitazione,mm,1879,Montichiari Boschetti,92,BS,2018-12-13T00:00:00.000,N,5028666,610666,10.41406192,45.40275984,"{'type': 'Point', 'coordinates': [10.41406192, 45.40275984]}",2,6,
+9118,Precipitazione,mm,1239,San Pellegrino Terme P.za Alighieri,350,BG,2004-02-18T00:00:00.000,S,5077078,551733,9.66626614,45.84532778,"{'type': 'Point', 'coordinates': [9.66626614, 45.84532778]}",1,5,2013-03-19T00:00:00.000
+12,Temperatura,°C,3,Sondalo Le Prese,950,SO,1987-11-24T00:00:00.000,N,5133847,604242,10.35482008,46.35017633,"{'type': 'Point', 'coordinates': [10.35482008, 46.35017633]}",7,3,
+9110,Precipitazione,mm,1234,Osnago,234,LC,2004-01-01T00:00:00.000,N,5058312,530261,9.38855728,45.6777065,"{'type': 'Point', 'coordinates': [9.38855728, 45.6777065]}",5,10,
+14603,Radiazione Globale,W/m²,1379,Gargnano,984,BS,2015-07-15T00:00:00.000,N,5065317,625847,10.61740677,45.72996009,"{'type': 'Point', 'coordinates': [10.61740677, 45.72996009]}",2,6,
+102,Temperatura,°C,53,Piazza Brembana Ponte dei Fondi,485,BG,2001-12-01T00:00:00.000,S,5088339,551715,9.66723664,45.94667586,"{'type': 'Point', 'coordinates': [9.66723664, 45.94667586]}",1,5,2022-05-17T00:00:00.000
+9024,Temperatura,°C,1221,Casnigo Campo Sportivo,502,BG,2004-02-18T00:00:00.000,N,5073453,567252,9.86559107,45.81136488,"{'type': 'Point', 'coordinates': [9.86559107, 45.81136488]}",1,5,
+39,Temperatura,°C,26,Torre di Santa Maria Val Torreggio RTU 60,1275,SO,1999-04-26T00:00:00.000,N,5120793,564317,9.83420599,46.23767804,"{'type': 'Point', 'coordinates': [9.83420599, 46.23767804]}",7,3,
+14018,Precipitazione,mm,1077,Oltre il Colle Zambla,1138,BG,2012-01-13T00:00:00.000,N,5082261,561209,9.78893967,45.89119304,"{'type': 'Point', 'coordinates': [9.78893967, 45.89119304]}",1,5,
+10443,Precipitazione,mm,1264,Sondrio v.Paribelli,290,SO,2008-11-17T00:00:00.000,S,5113073,567873,9.87921169,46.16785664,"{'type': 'Point', 'coordinates': [9.87921169, 46.16785664]}",7,3,2019-01-22T00:00:00.000
+9100,Precipitazione,mm,1230,San Giacomo Filippo Lago Truzzo,2064,SO,2004-01-09T00:00:00.000,N,5134156,524616,9.31999148,46.36053879,"{'type': 'Point', 'coordinates': [9.31999148, 46.36053879]}",7,3,
+8025,Precipitazione,mm,847,Carona Carisole,1954,BG,1993-07-01T00:00:00.000,N,5098634,561423,9.79379959,46.03852339,"{'type': 'Point', 'coordinates': [9.79379959, 46.03852339]}",1,5,
+9091,Precipitazione,mm,1211,Castronno,379,VA,2004-01-01T00:00:00.000,N,5066146,486058,8.82076322,45.74873297,"{'type': 'Point', 'coordinates': [8.82076322, 45.74873297]}",3,1,
+9033,Temperatura,°C,1208,Olgiate Comasco casa Cantalupo,382,CO,2004-01-01T00:00:00.000,S,5071532,498419,8.97966342,45.79734875,"{'type': 'Point', 'coordinates': [8.97966342, 45.79734875]}",3,2,2014-06-19T00:00:00.000
+4041,Precipitazione,mm,144,Madesimo Spluga,1915,SO,2000-11-19T00:00:00.000,N,5146513,526726,9.34812808,46.47166446,"{'type': 'Point', 'coordinates': [9.34812808, 46.47166446]}",7,3,
+2084,Radiazione Globale,W/m²,106,Varzi Nivione,500,PV,2003-09-12T00:00:00.000,N,4961571,514194,9.17949163,44.80739989,"{'type': 'Point', 'coordinates': [9.17949163, 44.80739989]}",6,7,
+14443,Precipitazione,mm,1366,Porlezza torrente,291,CO,2012-12-12T00:00:00.000,N,5098254,510895,9.14079938,46.03777316,"{'type': 'Point', 'coordinates': [9.14079938, 46.03777316]}",7,2,
+8006,Precipitazione,mm,856,Fortunago,501,PV,1998-01-01T00:00:00.000,N,4973248,515391,9.19499417,44.91250111,"{'type': 'Point', 'coordinates': [9.19499417, 44.91250111]}",6,7,
+6469,Radiazione Globale,W/m²,569,Sondrio v.Mazzini,307,SO,1996-06-06T00:00:00.000,S,5113078,567173,9.87014581,46.16797103,"{'type': 'Point', 'coordinates': [9.87014581, 46.16797103]}",7,3,2010-06-24T00:00:00.000
+22654,Precipitazione,mm,1090,Valdisotto Bormio 2000,2328,SO,2025-08-23T00:00:00.000,N,5143703,607568,10.4003,46.43833,"{'type': 'Point', 'coordinates': [10.4003, 46.43833]}",7,3,
+6990,Radiazione Globale,W/m²,679,Valmadrera v.Pozzi,247,LC,2006-02-02T00:00:00.000,N,5076576,527307,9.35166247,45.84221272,"{'type': 'Point', 'coordinates': [9.35166247, 45.84221272]}",5,10,
+22589,Precipitazione,mm,1985,Caponago Casello idraulico,154,MB,2025-12-30T00:00:00.000,N,5044950,530056,9.38509974,45.55743938,"{'type': 'Point', 'coordinates': [9.38509974, 45.55743938]}",5,12,
+12023,Precipitazione,mm,1297,Spinadesco v.Battisti,48,CR,2011-02-03T00:00:00.000,N,5000087,573153,9.93059842,45.15047339,"{'type': 'Point', 'coordinates': [9.93059842, 45.15047339]}",4,8,
+17429,Radiazione Globale,W/m²,1862,Broni,77,PV,2018-03-22T00:00:00.000,N,4987916,517630,9.22386082,45.04448039,"{'type': 'Point', 'coordinates': [9.22386082, 45.04448039]}",6,7,
+5883,Temperatura,°C,575,Nibionno v.della Chiesa,310,LC,2002-12-03T00:00:00.000,S,5066429,520613,9.26502439,45.75111892,"{'type': 'Point', 'coordinates': [9.26502439, 45.75111892]}",5,10,2021-11-30T00:00:00.000
+14742,Temperatura,°C,1546,Rho Scalo Fiorenza - Prato,143,MI,2015-02-24T00:00:00.000,N,5040479,506867,9.0879233,45.51781084,"{'type': 'Point', 'coordinates': [9.0879233, 45.51781084]}",8,4,
+2492,Precipitazione,mm,136,Persico Dosimo,44,CR,1990-10-17T00:00:00.000,N,5003424,582100,10.0449444,45.17951839,"{'type': 'Point', 'coordinates': [10.0449444, 45.17951839]}",4,8,
+14348,Temperatura,°C,1359,Breno Lago Della Vacca,2410,BS,2012-12-09T00:00:00.000,N,5090337,611798,10.4427287,45.95749967,"{'type': 'Point', 'coordinates': [10.4427287, 45.95749967]}",7,6,
+1364,Temperatura,°C,79,Valdidentro Semogo RTU 230,1610,SO,2004-01-01T00:00:00.000,N,5149131,597748,10.273638,46.488662,"{'type': 'Point', 'coordinates': [10.273638, 46.488662]}",7,3,
+8103,Precipitazione,mm,851,Treviso Bresciano Cavacca,1147,BS,1998-01-01T00:00:00.000,S,5064493,616659,10.49916675,45.72416486,"{'type': 'Point', 'coordinates': [10.49916675, 45.72416486]}",2,6,2025-06-04T00:00:00.000
+8215,Precipitazione,mm,899,Castiglione delle Stiviere,109,MN,2003-03-11T00:00:00.000,S,5025628,618385,10.51193925,45.37416708,"{'type': 'Point', 'coordinates': [10.51193925, 45.37416708]}",4,9,2018-11-22T00:00:00.000
+9008,Temperatura,°C,1216,Valbondione,1784,BG,2000-12-01T00:00:00.000,N,5101745,580328,10.03860694,46.06456797,"{'type': 'Point', 'coordinates': [10.03860694, 46.06456797]}",1,5,
+8195,Precipitazione,mm,886,Vigevano SS494,94,PV,2003-02-18T00:00:00.000,N,5020886,490573,8.87967586,45.34142636,"{'type': 'Point', 'coordinates': [8.87967586, 45.34142636]}",6,7,
+7029,Temperatura,°C,687,Ferno v.Di Dio,215,VA,2006-11-05T00:00:00.000,N,5051773,481053,8.75697656,45.61924753,"{'type': 'Point', 'coordinates': [8.75697656, 45.61924753]}",3,1,
+9014,Temperatura,°C,1237,Monno,1728,BS,2004-10-11T00:00:00.000,N,5122691,600885,10.308807,46.25030272,"{'type': 'Point', 'coordinates': [10.308807, 46.25030272]}",7,6,
+17001,Temperatura,°C,1303,Cremona v.Gerre Borghi,36,CR,2011-10-10T00:00:00.000,N,4995675,584111,10.06924181,45.10954275,"{'type': 'Point', 'coordinates': [10.06924181, 45.10954275]}",4,8,
+9016,Temperatura,°C,1224,Cortenova,456,LC,2004-01-01T00:00:00.000,N,5094947,529451,9.38040375,46.00746603,"{'type': 'Point', 'coordinates': [9.38040375, 46.00746603]}",5,10,
+17473,Radiazione Globale,W/m²,1679,Sormano rifugio Alpetto,1158,CO,2018-09-26T00:00:00.000,N,5083535,518233,9.23506881,45.90514139,"{'type': 'Point', 'coordinates': [9.23506881, 45.90514139]}",3,2,
+53,Temperatura,°C,28,Chiesa in Valmalenco Alpe Entova,1905,SO,1989-10-28T00:00:00.000,N,5130098,564213,9.83412892,46.32141817,"{'type': 'Point', 'coordinates': [9.83412892, 46.32141817]}",7,3,
+6846,Precipitazione,mm,659,Odolo v.Praes,349,BS,2006-02-22T00:00:00.000,N,5055661,608260,10.38929672,45.64605175,"{'type': 'Point', 'coordinates': [10.38929672, 45.64605175]}",2,6,
+6458,Radiazione Globale,W/m²,502,Milano v.Juvara,122,MI,1999-01-01T00:00:00.000,N,5035546,517377,9.22231536,45.47322769,"{'type': 'Point', 'coordinates': [9.22231536, 45.47322769]}",8,4,
+2146,Temperatura,°C,111,Cassina Valsassina Moggio,1234,LC,2002-01-01T00:00:00.000,N,5084512,538583,9.49750222,45.91309369,"{'type': 'Point', 'coordinates': [9.49750222, 45.91309369]}",5,10,
+17131,Precipitazione,mm,1303,Cremona v.Gerre Borghi,36,CR,2011-10-10T00:00:00.000,N,4995675,584111,10.06924181,45.10954275,"{'type': 'Point', 'coordinates': [10.06924181, 45.10954275]}",4,8,
+30990,Temperatura,°C,1568,Ponte Nizza Vignola,590,PV,2016-09-23T00:00:00.000,N,4965822,509636,9.121938,44.84575,"{'type': 'Point', 'coordinates': [9.121938, 44.84575]}",6,7,
+6433,Radiazione Globale,W/m²,582,Bergamo v.S.Giorgio,249,BG,1989-01-01T00:00:00.000,S,5058641,552746,9.67729786,45.67931931,"{'type': 'Point', 'coordinates': [9.67729786, 45.67931931]}",1,5,2010-04-14T00:00:00.000
+83,Temperatura,°C,45,Valfurva Ruinon RTU 206,2140,SO,1999-01-18T00:00:00.000,N,5144339,612277,10.46173396,46.44328904,"{'type': 'Point', 'coordinates': [10.46173396, 46.44328904]}",7,3,
+9006,Temperatura,°C,1217,Schilpario,1096,BG,2004-01-01T00:00:00.000,S,5095451,588221,10.13948686,46.00695864,"{'type': 'Point', 'coordinates': [10.13948686, 46.00695864]}",1,5,2012-09-23T00:00:00.000
+8145,Temperatura,°C,889,Torre Boldone,311,BG,2001-11-21T00:00:00.000,N,5063070,555269,9.71018546,45.71897778,"{'type': 'Point', 'coordinates': [9.71018546, 45.71897778]}",1,5,
+41,Precipitazione,mm,28,Chiesa in Valmalenco Alpe Entova,1905,SO,1989-10-28T00:00:00.000,N,5130098,564213,9.83412892,46.32141817,"{'type': 'Point', 'coordinates': [9.83412892, 46.32141817]}",7,3,
+5868,Temperatura,°C,586,Costa Volpino v.Nazionale,192,BG,1993-07-26T00:00:00.000,N,5075429,585212,10.09707131,45.82716061,"{'type': 'Point', 'coordinates': [10.09707131, 45.82716061]}",1,5,
+8584,Temperatura,°C,999,Laveno-Mombello Poggio S.Elsa,950,VA,1999-06-23T00:00:00.000,N,5084222,471939,8.63818571,45.91099372,"{'type': 'Point', 'coordinates': [8.63818571, 45.91099372]}",3,1,
+2129,Precipitazione,mm,109,Sant'Angelo Lodigiano,60,LO,1993-03-11T00:00:00.000,N,5011978,529787,9.37965968,45.26066731,"{'type': 'Point', 'coordinates': [9.37965968, 45.26066731]}",8,11,
+5902,Precipitazione,mm,525,Corsico v.le Italia,119,MI,2002-03-29T00:00:00.000,N,5031403,507619,9.09741197,45.43611269,"{'type': 'Point', 'coordinates': [9.09741197, 45.43611269]}",8,4,
+8123,Temperatura,°C,867,Caslino d'Erba v. 4 novembre,427,CO,1998-07-24T00:00:00.000,N,5075784,518046,9.23237261,45.83539031,"{'type': 'Point', 'coordinates': [9.23237261, 45.83539031]}",3,2,
+5870,Precipitazione,mm,564,Erba v. Battisti,279,CO,2009-07-01T00:00:00.000,S,5072803,517232,9.2217792,45.8085738,"{'type': 'Point', 'coordinates': [9.2217792, 45.8085738]}",3,2,2024-07-18T00:00:00.000
+5867,Temperatura,°C,584,Bergamo v.Garibaldi,249,BG,1994-06-16T00:00:00.000,S,5060449,551482,9.66126061,45.69568669,"{'type': 'Point', 'coordinates': [9.66126061, 45.69568669]}",1,5,2011-07-11T00:00:00.000
+31289,Precipitazione,mm,1583,Pian Camuno Roncaglia SCM2,600,BS,2017-12-06T00:00:00.000,N,5076479,590132,10.16058803,45.835988,"{'type': 'Point', 'coordinates': [10.16058803, 45.835988]}",7,6,
+1325,Temperatura,°C,69,Lanzada Campo Franscia RTU 120,1670,SO,2010-08-24T00:00:00.000,N,5126393,569523,9.90255599,46.28755197,"{'type': 'Point', 'coordinates': [9.90255599, 46.28755197]}",7,3,
+19026,Precipitazione,mm,1422,Bergamo v.Maffei,249,BG,2013-10-01T00:00:00.000,S,5060404,552526,9.67466285,45.69520255,"{'type': 'Point', 'coordinates': [9.67466285, 45.69520255]}",1,5,2025-07-24T00:00:00.000
+22576,Temperatura,°C,1955,Magasa Malga Corva,1244,BS,2023-06-01T00:00:00.000,N,5070236,626539,10.62758311,45.77409061,"{'type': 'Point', 'coordinates': [10.62758311, 45.77409061]}",2,6,
+31562,Precipitazione,mm,1603,Torre di Santa Maria Val Dagua,1200,SO,2018-09-05T00:00:00.000,N,5120789,567187,9.868042,46.23805,"{'type': 'Point', 'coordinates': [9.868042, 46.23805]}",7,3,
+9106,Precipitazione,mm,1205,Molteno Cimitero,278,LC,2004-01-01T00:00:00.000,N,5069985,523872,9.30710044,45.78301922,"{'type': 'Point', 'coordinates': [9.30710044, 45.78301922]}",5,10,
+2452,Precipitazione,mm,133,Bema,958,SO,1993-01-01T00:00:00.000,N,5105929,544001,9.5693423,46.10552765,"{'type': 'Point', 'coordinates': [9.5693423, 46.10552765]}",7,3,
+9031,Temperatura,°C,1219,Casalbuttano ed Uniti,56,CR,2005-01-15T00:00:00.000,N,5011836,575599,9.96349494,45.25595928,"{'type': 'Point', 'coordinates': [9.96349494, 45.25595928]}",4,8,
+19428,Precipitazione,mm,1657,Mariano Comense campo sportivo,255,CO,2017-10-11T00:00:00.000,N,5059052,513843,9.177773,45.684884,"{'type': 'Point', 'coordinates': [9.177773, 45.684884]}",3,2,
+9001,Temperatura,°C,1210,Ranzanico,486,BG,2004-01-01T00:00:00.000,N,5070741,572525,9.9330421,45.78641993,"{'type': 'Point', 'coordinates': [9.9330421, 45.78641993]}",1,5,
+9017,Temperatura,°C,1205,Molteno Cimitero,278,LC,2004-01-01T00:00:00.000,N,5069985,523872,9.30710044,45.78301922,"{'type': 'Point', 'coordinates': [9.30710044, 45.78301922]}",5,10,
+32391,Temperatura,°C,1555,Manerba del Garda Dusano,73,BS,2017-11-15T00:00:00.000,N,5044545,622300,10.56663509,45.543701,"{'type': 'Point', 'coordinates': [10.56663509, 45.543701]}",2,6,
+25,Temperatura,°C,81,Valdisotto Val Pola RTU 100,2350,SO,1988-04-01T00:00:00.000,N,5136742,602161,10.328415,46.37653598,"{'type': 'Point', 'coordinates': [10.328415, 46.37653598]}",7,3,
+2400,Temperatura,°C,129,Capo di Ponte v.Briscioli,362,BS,2002-10-30T00:00:00.000,N,5097875,603903,10.3425026,46.02656354,"{'type': 'Point', 'coordinates': [10.3425026, 46.02656354]}",7,6,
+12755,Temperatura,°C,1510,Monza v.Monte Generoso,173,MB,2020-11-25T00:00:00.000,N,5048372,519174,9.24580749,45.58862553,"{'type': 'Point', 'coordinates': [9.24580749, 45.58862553]}",5,12,
+19347,Precipitazione,mm,1560,Padenghe sul Garda v.Fondrini,187,BS,2016-07-14T00:00:00.000,N,5041631,617629,10.50612,45.518286,"{'type': 'Point', 'coordinates': [10.50612, 45.518286]}",2,6,
+10574,Precipitazione,mm,1273,Val Masino Bagni,1191,SO,2011-07-11T00:00:00.000,S,5121270,545980,9.59643936,46.24345747,"{'type': 'Point', 'coordinates': [9.59643936, 46.24345747]}",7,3,2021-02-12T00:00:00.000
+14121,Precipitazione,mm,1327,Milano v.Rosellini,124,MI,2012-04-02T00:00:00.000,N,5037538,515199,9.19451245,45.49120675,"{'type': 'Point', 'coordinates': [9.19451245, 45.49120675]}",8,4,
+2275,Radiazione Globale,W/m²,119,San Giovanni Bianco Cornalita,622,BG,2003-09-12T00:00:00.000,N,5079768,549604,9.63912077,45.86969697,"{'type': 'Point', 'coordinates': [9.63912077, 45.86969697]}",1,5,
+6819,Precipitazione,mm,656,Gambara v.Parma,47,BS,1990-01-01T00:00:00.000,N,5011493,601945,10.29913,45.24955194,"{'type': 'Point', 'coordinates': [10.29913, 45.24955194]}",2,6,
+31506,Temperatura,°C,1599,Sellero Zinvill S1,1000,BS,2017-12-06T00:00:00.000,N,5101188,602676,10.32737507,46.05656602,"{'type': 'Point', 'coordinates': [10.32737507, 46.05656602]}",7,6,
+13,Temperatura,°C,6,Bormio Ponte sul  Frodolfo,1250,SO,1987-11-25T00:00:00.000,N,5146642,605400,10.372755,46.465111,"{'type': 'Point', 'coordinates': [10.372755, 46.465111]}",7,3,
+42,Precipitazione,mm,29,Chiesa in Valmalenco Funivia Bernina,2014,SO,1989-12-04T00:00:00.000,N,5126716,566527,9.863706,46.290759,"{'type': 'Point', 'coordinates': [9.863706, 46.290759]}",7,3,
+2247,Radiazione Globale,W/m²,117,Edolo Ist.Meneghini,699,BS,1998-07-21T00:00:00.000,S,5114436,602920,10.33339293,46.17572375,"{'type': 'Point', 'coordinates': [10.33339293, 46.17572375]}",7,6,2011-11-16T00:00:00.000
+14724,Precipitazione,mm,1545,San Siro Alpe Rescascìa,1285,CO,2014-12-30T00:00:00.000,N,5102069,518430,9.2383327,46.0719452,"{'type': 'Point', 'coordinates': [9.2383327, 46.0719452]}",7,2,
+5859,Precipitazione,mm,582,Bergamo v.S.Giorgio,249,BG,1989-01-01T00:00:00.000,S,5058641,552746,9.67729786,45.67931931,"{'type': 'Point', 'coordinates': [9.67729786, 45.67931931]}",1,5,2011-10-27T00:00:00.000
+5860,Precipitazione,mm,584,Bergamo v.Garibaldi,249,BG,1994-06-15T00:00:00.000,S,5060449,551482,9.66126061,45.69568669,"{'type': 'Point', 'coordinates': [9.66126061, 45.69568669]}",1,5,2012-01-11T00:00:00.000
+9341,Precipitazione,mm,503,Milano P.zza Zavattari,122,MI,2004-11-22T00:00:00.000,N,5035847,511082,9.14178666,45.47606529,"{'type': 'Point', 'coordinates': [9.14178666, 45.47606529]}",8,4,
+8007,Temperatura,°C,856,Fortunago,501,PV,1998-01-01T00:00:00.000,N,4973248,515391,9.19499417,44.91250111,"{'type': 'Point', 'coordinates': [9.19499417, 44.91250111]}",6,7,
+9785,Radiazione Globale,W/m²,846,Edolo Pantano d`Avio,2108,BS,1993-05-01T00:00:00.000,N,5114768,613679,10.47282844,46.17700799,"{'type': 'Point', 'coordinates': [10.47282844, 46.17700799]}",7,6,
+8013,Temperatura,°C,833,Gerola Alta Pescegallo,1875,SO,1992-01-01T00:00:00.000,N,5097116,544202,9.57112074,46.0261969,"{'type': 'Point', 'coordinates': [9.57112074, 46.0261969]}",7,3,
+200,Precipitazione,mm,65,Saviore dell'Adamello Valle UR01,1100,BS,2004-01-01T00:00:00.000,N,5102643,610196,10.4249,46.068484,"{'type': 'Point', 'coordinates': [10.4249, 46.068484]}",7,6,
+9099,Precipitazione,mm,1235,Cene Ponte,361,BG,2012-01-01T00:00:00.000,N,5070400,563860,9.8215332,45.78420692,"{'type': 'Point', 'coordinates': [9.8215332, 45.78420692]}",1,5,
+8137,Precipitazione,mm,875,Bagolino Valle Dorizzo,1226,BS,2001-06-06T00:00:00.000,S,5081485,612286,10.44694397,45.87777614,"{'type': 'Point', 'coordinates': [10.44694397, 45.87777614]}",2,6,2012-11-13T00:00:00.000
+8176,Precipitazione,mm,894,Lomello SS 211,95,PV,2000-01-16T00:00:00.000,S,4996705,484221,8.79937869,45.12364792,"{'type': 'Point', 'coordinates': [8.79937869, 45.12364792]}",6,7,2018-11-26T00:00:00.000
+8216,Temperatura,°C,899,Castiglione delle Stiviere,109,MN,2003-03-11T00:00:00.000,S,5025628,618385,10.51193925,45.37416708,"{'type': 'Point', 'coordinates': [10.51193925, 45.37416708]}",4,9,2018-11-22T00:00:00.000
+17501,Radiazione Globale,W/m²,817,Pavia SS 35,71,PV,2018-10-21T00:00:00.000,N,5003026,511523,9.14666412,45.18062204,"{'type': 'Point', 'coordinates': [9.14666412, 45.18062204]}",6,7,
+2524,Temperatura,°C,139,Virgilio Mantova Cerese,19,MN,2003-09-26T00:00:00.000,S,4997294,641005,9.378006,46.107976,"{'type': 'Point', 'coordinates': [9.378006, 46.107976]}",5,10,2018-09-19T00:00:00.000
+17360,Temperatura,°C,1548,Gianico Val Vedetta,1050,BS,2015-05-06T00:00:00.000,N,5078508,593267,10.201751,45.854273,"{'type': 'Point', 'coordinates': [10.201751, 45.854273]}",7,6,
+1436,Temperatura,°C,92,Valfurva Confinale,2300,SO,2011-10-28T00:00:00.000,N,5144310,612927,10.470188,46.44292,"{'type': 'Point', 'coordinates': [10.470188, 46.44292]}",7,3,
+8196,Temperatura,°C,886,Vigevano SS494,94,PV,2003-02-18T00:00:00.000,N,5020886,490573,8.87967586,45.34142636,"{'type': 'Point', 'coordinates': [8.87967586, 45.34142636]}",6,7,
+14014,Temperatura,°C,1077,Oltre il Colle Zambla,1138,BG,2012-01-13T00:00:00.000,N,5082261,561209,9.78893967,45.89119304,"{'type': 'Point', 'coordinates': [9.78893967, 45.89119304]}",1,5,
+17446,Precipitazione,mm,1692,Bienno Piazze,472,BS,2018-07-13T00:00:00.000,N,5086804,600114,10.29124095,45.92751023,"{'type': 'Point', 'coordinates': [10.29124095, 45.92751023]}",7,6,
+14367,Temperatura,°C,1360,Clusone SP 671,564,BG,2012-11-14T00:00:00.000,N,5081243,572409,9.93314133,45.88094706,"{'type': 'Point', 'coordinates': [9.93314133, 45.88094706]}",1,5,
+6992,Temperatura,°C,679,Valmadrera v.Pozzi,247,LC,2006-02-02T00:00:00.000,N,5076576,527307,9.35166247,45.84221272,"{'type': 'Point', 'coordinates': [9.35166247, 45.84221272]}",5,10,
+9117,Precipitazione,mm,1202,Vercana,980,CO,2004-01-01T00:00:00.000,N,5114303,525058,9.32468906,46.18185467,"{'type': 'Point', 'coordinates': [9.32468906, 46.18185467]}",7,2,
+91,Precipitazione,mm,49,Morbegno ponte ferroviario,242,SO,2002-04-01T00:00:00.000,S,5109365,543448,9.562504,46.136478,"{'type': 'Point', 'coordinates': [9.562504, 46.136478]}",7,3,2021-02-11T00:00:00.000
+9027,Temperatura,°C,1206,Cavaria con Premezzo v. Cantalupa,274,VA,2004-01-01T00:00:00.000,N,5059567,485026,8.80769797,45.68949617,"{'type': 'Point', 'coordinates': [8.80769797, 45.68949617]}",3,1,
+2152,Precipitazione,mm,111,Cassina Valsassina Moggio,1234,LC,2002-01-01T00:00:00.000,N,5084512,538583,9.49750222,45.91309369,"{'type': 'Point', 'coordinates': [9.49750222, 45.91309369]}",5,10,
+9026,Temperatura,°C,1233,Lurago Marinone,296,CO,2004-01-01T00:00:00.000,N,5061268,499092,8.98833547,45.70496503,"{'type': 'Point', 'coordinates': [8.98833547, 45.70496503]}",3,2,
+32345,Radiazione Globale,W/m²,1359,Breno Lago Della Vacca,2410,BS,2017-07-11T00:00:00.000,N,5090337,611798,10.4427287,45.95749967,"{'type': 'Point', 'coordinates': [10.4427287, 45.95749967]}",7,6,
+30533,Precipitazione,mm,1510,Monza v.Monte Generoso,173,MB,2014-09-26T00:00:00.000,N,5048372,519174,9.24580749,45.58862553,"{'type': 'Point', 'coordinates': [9.24580749, 45.58862553]}",5,12,
+119,Precipitazione,mm,59,Saviore dell'Adamello Rifugio Lissone,2017,BS,2001-12-01T00:00:00.000,S,5104407,615682,10.49623769,46.08344458,"{'type': 'Point', 'coordinates': [10.49623769, 46.08344458]}",7,6,2018-08-23T00:00:00.000
+99,Temperatura,°C,52,Grosio Diga Fusino,1220,SO,2001-12-01T00:00:00.000,N,5131141,595908,10.24598125,46.32706204,"{'type': 'Point', 'coordinates': [10.24598125, 46.32706204]}",7,3,
+14766,Temperatura,°C,1553,Mozzanica v.Donizetti,104,BG,2015-07-20T00:00:00.000,N,5036208,553342,9.68248866,45.47736192,"{'type': 'Point', 'coordinates': [9.68248866, 45.47736192]}",1,5,
+4016,Precipitazione,mm,141,Vertemate con Minoprio serre,310,CO,2009-02-04T00:00:00.000,N,5062832,506653,9.0854885,45.71901089,"{'type': 'Point', 'coordinates': [9.0854885, 45.71901089]}",3,2,
+12716,Temperatura,°C,1899,Bereguardo Fornasetta,95,PV,2020-08-11T00:00:00.000,N,5012143,501719,9.02191087,45.26278148,"{'type': 'Point', 'coordinates': [9.02191087, 45.26278148]}",6,7,
+21,Precipitazione,mm,14,Valfurva S. Caterina,1730,SO,1988-05-02T00:00:00.000,N,5140927,614872,10.49466533,46.41214997,"{'type': 'Point', 'coordinates': [10.49466533, 46.41214997]}",7,3,
+17593,Radiazione Globale,W/m²,1889,Val Masino Merdarola,2280,SO,2019-08-01T00:00:00.000,N,5119691,544851,9.58163635,46.22931619,"{'type': 'Point', 'coordinates': [9.58163635, 46.22931619]}",7,3,
+8001,Precipitazione,mm,855,Varzi v.Mazzini,485,PV,1998-01-01T00:00:00.000,S,4963189,515657,9.19805102,44.82194363,"{'type': 'Point', 'coordinates': [9.19805102, 44.82194363]}",6,7,2018-09-19T00:00:00.000
+5929,Precipitazione,mm,569,Sondrio v.Mazzini,307,SO,1993-10-28T00:00:00.000,S,5113078,567173,9.87014581,46.16797103,"{'type': 'Point', 'coordinates': [9.87014581, 46.16797103]}",7,3,2012-01-11T00:00:00.000
+2620,Temperatura,°C,214,Bigarello,15,MN,2009-11-25T00:00:00.000,N,5005622,648246,10.887137,45.18849864,"{'type': 'Point', 'coordinates': [10.887137, 45.18849864]}",4,9,
+10777,Radiazione Globale,W/m²,16,Valfurva Ghiacciaio dei Forni,2180,SO,2022-08-09T00:00:00.000,N,5141977,619522,10.55541386,46.42078875,"{'type': 'Point', 'coordinates': [10.55541386, 46.42078875]}",7,3,
+2461,Radiazione Globale,W/m²,134,Corzano Bargnano,93,BS,2003-09-12T00:00:00.000,N,5031659,581271,10.03902737,45.43372847,"{'type': 'Point', 'coordinates': [10.03902737, 45.43372847]}",2,6,
+14476,Precipitazione,mm,1367,Bagolino SP669,775,BS,2012-12-12T00:00:00.000,N,5077140,612773,10.452199,45.83860244,"{'type': 'Point', 'coordinates': [10.452199, 45.83860244]}",2,6,
+14568,Temperatura,°C,1378,Tignale Oldesio,374,BS,2013-07-23T00:00:00.000,N,5065781,633895,10.7209063,45.7326393,"{'type': 'Point', 'coordinates': [10.7209063, 45.7326393]}",2,6,
+17476,Radiazione Globale,W/m²,1420,Gordona,1362,SO,2018-09-26T00:00:00.000,N,5126494,526127,9.33920315,46.29151911,"{'type': 'Point', 'coordinates': [9.33920315, 46.29151911]}",7,3,
+4065,Precipitazione,mm,147,Cinisello Balsamo Parco Nord,142,MI,2002-05-30T00:00:00.000,N,5043257,516051,9.20560341,45.54266467,"{'type': 'Point', 'coordinates': [9.20560341, 45.54266467]}",8,4,
+1398,Precipitazione,mm,88,Valfurva Scè di Sotto,1760,SO,2010-11-19T00:00:00.000,N,5144452,611506,10.4517298,46.4444313,"{'type': 'Point', 'coordinates': [10.4517298, 46.4444313]}",7,3,
+19022,Temperatura,°C,1422,Bergamo v.Maffei,249,BG,2013-10-01T00:00:00.000,S,5060404,552526,9.67466285,45.69520255,"{'type': 'Point', 'coordinates': [9.67466285, 45.69520255]}",1,5,2025-07-24T00:00:00.000
+4042,Temperatura,°C,145,Darfo Boario Terme,222,BS,2002-12-04T00:00:00.000,S,5080789,591371,10.1773568,45.8746021,"{'type': 'Point', 'coordinates': [10.1773568, 45.8746021]}",7,6,2023-07-18T00:00:00.000
+9019,Temperatura,°C,1201,Canevino,455,PV,2004-01-01T00:00:00.000,N,4975743,521751,9.275674,44.93479528,"{'type': 'Point', 'coordinates': [9.275674, 44.93479528]}",6,7,
+8027,Temperatura,°C,848,Livigno La Vallaccia,2660,SO,1993-09-11T00:00:00.000,N,5147768,591251,10.18873661,46.47730866,"{'type': 'Point', 'coordinates': [10.18873661, 46.47730866]}",7,3,
+19445,Radiazione Globale,W/m²,1659,Mornico al Serio campo sportivo,162,BG,2017-04-14T00:00:00.000,N,5049158,562551,9.801961,45.593154,"{'type': 'Point', 'coordinates': [9.801961, 45.593154]}",1,5,
+97,Precipitazione,mm,51,Tirano Madonna di Tirano,438,SO,2002-01-01T00:00:00.000,S,5118814,588943,10.15318792,46.21708825,"{'type': 'Point', 'coordinates': [10.15318792, 46.21708825]}",7,3,2020-07-06T00:00:00.000
+19397,Radiazione Globale,W/m²,1650,Bormio eliporto,1172,SO,2016-09-29T00:00:00.000,N,5145365,604906,10.36603171,46.45370081,"{'type': 'Point', 'coordinates': [10.36603171, 46.45370081]}",7,3,
+9122,Precipitazione,mm,1208,Olgiate Comasco casa Cantalupo,382,CO,2004-01-01T00:00:00.000,S,5071532,498419,8.97966342,45.79734875,"{'type': 'Point', 'coordinates': [8.97966342, 45.79734875]}",3,2,2014-03-21T00:00:00.000
+12757,Temperatura,°C,1511,Rescaldina,215,MI,2020-11-25T00:00:00.000,N,5050479,496327,8.95289668,45.60784534,"{'type': 'Point', 'coordinates': [8.95289668, 45.60784534]}",8,4,
+4085,Radiazione Globale,W/m²,150,Pieve San Giacomo,39,CR,2002-07-04T00:00:00.000,N,4997179,594005,10.19526123,45.1218284,"{'type': 'Point', 'coordinates': [10.19526123, 45.1218284]}",4,8,
+14725,Temperatura,°C,1545,San Siro Alpe Rescascìa,1285,CO,2014-12-30T00:00:00.000,N,5102069,518430,9.2383327,46.0719452,"{'type': 'Point', 'coordinates': [9.2383327, 46.0719452]}",7,2,
+17432,Temperatura,°C,1862,Broni,77,PV,2018-03-22T00:00:00.000,N,4987916,517630,9.22386082,45.04448039,"{'type': 'Point', 'coordinates': [9.22386082, 45.04448039]}",6,7,
+9010,Temperatura,°C,1235,Cene Ponte,361,BG,2011-10-04T00:00:00.000,N,5070400,563860,9.8215332,45.78420692,"{'type': 'Point', 'coordinates': [9.8215332, 45.78420692]}",1,5,
+1367,Temperatura,°C,78,Tirano Monte Masuccio,1750,SO,2011-01-01T00:00:00.000,N,5121837,590452,10.1733198,46.244091,"{'type': 'Point', 'coordinates': [10.1733198, 46.244091]}",7,3,
+11044,Temperatura,°C,1264,Sondrio v.Paribelli,290,SO,2010-07-01T00:00:00.000,S,5113073,567873,9.87921169,46.16785664,"{'type': 'Point', 'coordinates': [9.87921169, 46.16785664]}",7,3,2019-01-22T00:00:00.000
+141,Radiazione Globale,W/m²,61,Valdisotto Arginone,1050,SO,2006-06-05T00:00:00.000,N,5137647,604113,10.35398908,46.38438486,"{'type': 'Point', 'coordinates': [10.35398908, 46.38438486]}",7,3,
+30994,Precipitazione,mm,1568,Ponte Nizza Vignola,590,PV,2016-09-23T00:00:00.000,N,4965822,509636,9.121938,44.84575,"{'type': 'Point', 'coordinates': [9.121938, 44.84575]}",6,7,
+6453,Radiazione Globale,W/m²,512,Carate Brianza v.De Gasperi,250,MB,2002-01-02T00:00:00.000,S,5057635,518272,9.234603,45.672017,"{'type': 'Point', 'coordinates': [9.234603, 45.672017]}",5,12,2018-09-06T00:00:00.000
+9322,Precipitazione,mm,625,Casalmaggiore v.Volta,23,CR,2004-01-20T00:00:00.000,S,4981793,612537,10.42738161,44.98066517,"{'type': 'Point', 'coordinates': [10.42738161, 44.98066517]}",4,8,2007-02-21T00:00:00.000
+8004,Precipitazione,mm,857,Santa Margherita di Staffora Passo del Giovà,1363,PV,1998-01-01T00:00:00.000,N,4947846,517168,9.21663743,44.6837785,"{'type': 'Point', 'coordinates': [9.21663743, 44.6837785]}",6,7,
+30998,Precipitazione,mm,1569,Paisco Loveno Grumello,1260,BS,2016-10-06T00:00:00.000,N,5102256,597127,10.255872,46.066981,"{'type': 'Point', 'coordinates': [10.255872, 46.066981]}",7,6,
+14119,Precipitazione,mm,1324,Limone sul Garda,75,BS,2012-03-18T00:00:00.000,N,5074143,639088,10.79005556,45.80683333,"{'type': 'Point', 'coordinates': [10.79005556, 45.80683333]}",2,6,
+31338,Temperatura,°C,1589,San Nazzaro Val Cavargna C5,980,CO,2017-08-02T00:00:00.000,N,5103965,510077,9.13034906,46.08918704,"{'type': 'Point', 'coordinates': [9.13034906, 46.08918704]}",7,2,
+17565,Radiazione Globale,W/m²,1879,Montichiari Boschetti,92,BS,2018-12-13T00:00:00.000,N,5028666,610666,10.41406192,45.40275984,"{'type': 'Point', 'coordinates': [10.41406192, 45.40275984]}",2,6,
+2001,Temperatura,°C,100,Milano Lambrate,120,MI,2001-06-29T00:00:00.000,N,5038171,520120,9.2575154,45.49677982,"{'type': 'Point', 'coordinates': [9.2575154, 45.49677982]}",8,4,
+16431,Precipitazione,mm,1338,Sueglio Monte Letee,1110,LC,2012-08-06T00:00:00.000,N,5104935,526026,9.336862,46.097601,"{'type': 'Point', 'coordinates': [9.336862, 46.097601]}",5,10,
+7028,Radiazione Globale,W/m²,687,Ferno v.Di Dio,215,VA,2006-11-21T00:00:00.000,N,5051773,481053,8.75697656,45.61924753,"{'type': 'Point', 'coordinates': [8.75697656, 45.61924753]}",3,1,
+22011,Precipitazione,mm,1890,Tavernole sul Mella Monte Guglielmo,1790,BS,2019-10-14T00:00:00.000,N,5067376,591417,10.17540709,45.75389593,"{'type': 'Point', 'coordinates': [10.17540709, 45.75389593]}",2,6,
+5856,Precipitazione,mm,595,Filago v.Don Milani,190,BG,1991-12-07T00:00:00.000,N,5053519,543342,9.55609572,45.63387247,"{'type': 'Point', 'coordinates': [9.55609572, 45.63387247]}",1,5,
+2414,Temperatura,°C,130,Brescia ITAS Pastori,149,BS,1995-01-01T00:00:00.000,N,5042175,598502,10.26138219,45.52614578,"{'type': 'Point', 'coordinates': [10.26138219, 45.52614578]}",2,6,
+1403,Precipitazione,mm,89,Branzi Il Pizzo,1600,BG,2010-11-12T00:00:00.000,N,5093991,557587,9.74368,45.997079,"{'type': 'Point', 'coordinates': [9.74368, 45.997079]}",1,5,
+19403,Precipitazione,mm,1652,Tirano eliporto,481,SO,2016-12-07T00:00:00.000,N,5118967,591186,10.18226719,46.2181778,"{'type': 'Point', 'coordinates': [10.18226719, 46.2181778]}",7,3,
+2239,Precipitazione,mm,116,Ispra prato,193,VA,2001-10-25T00:00:00.000,S,5073482,470058,9.95468,45.996306,"{'type': 'Point', 'coordinates': [9.95468, 45.996306]}",1,5,2011-05-01T00:00:00.000
+14075,Temperatura,°C,1325,Collio Memmo,1069,BS,2012-03-15T00:00:00.000,N,5073930,602209,10.31552778,45.81136111,"{'type': 'Point', 'coordinates': [10.31552778, 45.81136111]}",2,6,
+17437,Precipitazione,mm,1862,Broni,77,PV,2018-03-22T00:00:00.000,N,4987916,517630,9.22386082,45.04448039,"{'type': 'Point', 'coordinates': [9.22386082, 45.04448039]}",6,7,
+108,Precipitazione,mm,55,Edolo Parnigò,655,BS,2002-04-01T00:00:00.000,S,5114248,601515,10.31516333,46.17424525,"{'type': 'Point', 'coordinates': [10.31516333, 46.17424525]}",7,6,2021-02-03T00:00:00.000
+8163,Precipitazione,mm,859,Luino v. Piero Chiara,205,VA,2000-07-05T00:00:00.000,N,5094539,480080,8.74272325,46.00414283,"{'type': 'Point', 'coordinates': [8.74272325, 46.00414283]}",3,1,
+2006,Precipitazione,mm,100,Milano Lambrate,120,MI,2001-06-29T00:00:00.000,N,5038171,520120,9.2575154,45.49677982,"{'type': 'Point', 'coordinates': [9.2575154, 45.49677982]}",8,4,
+9938,Temperatura,°C,677,Cremona Via Fatebenefratelli,43,CR,2006-04-10T00:00:00.000,N,4999315,582066,10.04384767,45.14254358,"{'type': 'Point', 'coordinates': [10.04384767, 45.14254358]}",4,8,
+5916,Precipitazione,mm,614,Rodano v.Turati,112,MI,1999-01-01T00:00:00.000,N,5035511,527631,9.35349644,45.47258192,"{'type': 'Point', 'coordinates': [9.35349644, 45.47258192]}",8,4,
+32357,Radiazione Globale,W/m²,1807,Ispra JRC,249,VA,2022-04-21T00:00:00.000,N,5072552,471760,8.6365627,45.80595188,"{'type': 'Point', 'coordinates': [8.6365627, 45.80595188]}",3,1,
+10556,Radiazione Globale,W/m²,554,Saronno v.Santuario,212,VA,2010-07-06T00:00:00.000,N,5052646,502058,9.02640138,45.62735705,"{'type': 'Point', 'coordinates': [9.02640138, 45.62735705]}",3,1,
+5941,Temperatura,°C,559,Somma Lombardo v.Facchinetti,210,VA,2000-03-20T00:00:00.000,S,5055150,477613,8.71269853,45.64954097,"{'type': 'Point', 'coordinates': [8.71269853, 45.64954097]}",3,1,2020-10-30T00:00:00.000
+31290,Temperatura,°C,1583,Pian Camuno Roncaglia SCM2,600,BS,2017-12-06T00:00:00.000,N,5076479,590132,10.16058803,45.835988,"{'type': 'Point', 'coordinates': [10.16058803, 45.835988]}",7,6,
+4053,Radiazione Globale,W/m²,146,Mezzoldo Passo S.Marco,1824,BG,2003-09-19T00:00:00.000,N,5098490,548644,9.62865186,46.0382628,"{'type': 'Point', 'coordinates': [9.62865186, 46.0382628]}",1,5,
+58,Temperatura,°C,35,Caspoggio Piazzo Cavalli,1719,SO,1989-10-27T00:00:00.000,N,5122179,567130,9.870887,46.249872,"{'type': 'Point', 'coordinates': [9.870887, 46.249872]}",7,3,
+9018,Temperatura,°C,1225,Premana Diga di Pagnona,725,LC,2004-01-01T00:00:00.000,S,5100122,531422,9.40620278,46.05395319,"{'type': 'Point', 'coordinates': [9.40620278, 46.05395319]}",5,10,2014-06-19T00:00:00.000
+22590,Temperatura,°C,1985,Caponago Casello idraulico,154,MB,2025-12-30T00:00:00.000,N,5044950,530056,9.38509974,45.55743938,"{'type': 'Point', 'coordinates': [9.38509974, 45.55743938]}",5,12,
+5894,Precipitazione,mm,530,Agrate Brianza v.Ferrario,162,MB,1992-03-24T00:00:00.000,S,5046977,527628,9.354094,45.575778,"{'type': 'Point', 'coordinates': [9.354094, 45.575778]}",5,12,2018-11-06T00:00:00.000
+14180,Radiazione Globale,W/m²,1342,Ponte in Valtellina Lago Reguzzo,2440,SO,2012-10-13T00:00:00.000,N,5105228,574978,9.96999939,46.09651358,"{'type': 'Point', 'coordinates': [9.96999939, 46.09651358]}",7,3,
+6443,Radiazione Globale,W/m²,617,Tavazzano con Villavesco Enel suolo,80,LO,2000-01-13T00:00:00.000,S,5020175,533401,9.42627342,45.33429114,"{'type': 'Point', 'coordinates': [9.42627342, 45.33429114]}",8,11,2015-06-15T00:00:00.000
+32363,Radiazione Globale,W/m²,832,Lanzada Palù,2151,SO,2017-10-12T00:00:00.000,N,5126972,568128,9.88452786,46.2929069,"{'type': 'Point', 'coordinates': [9.88452786, 46.2929069]}",7,3,
+14221,Temperatura,°C,1343,Lanzada Passo Marinelli,3032,SO,2012-10-13T00:00:00.000,N,5133321,570414,9.91515411,46.34981046,"{'type': 'Point', 'coordinates': [9.91515411, 46.34981046]}",7,3,
+2435,Radiazione Globale,W/m²,132,Bergamo v.Stezzano,211,BG,1993-01-01T00:00:00.000,N,5056541,551321,9.65876847,45.66051928,"{'type': 'Point', 'coordinates': [9.65876847, 45.66051928]}",1,5,
+8226,Precipitazione,mm,904,Paisco Loveno,816,BS,2003-06-20T00:00:00.000,N,5103599,600282,10.29694303,46.07861336,"{'type': 'Point', 'coordinates': [10.29694303, 46.07861336]}",7,6,
+9022,Temperatura,°C,1236,Porlezza Ponte Cuccio,304,CO,2004-01-08T00:00:00.000,S,5098356,510909,9.14099594,46.03869656,"{'type': 'Point', 'coordinates': [9.14099594, 46.03869656]}",7,2,2012-12-13T00:00:00.000
+14445,Temperatura,°C,1366,Porlezza torrente,291,CO,2013-05-10T00:00:00.000,N,5098254,510895,9.14079938,46.03777316,"{'type': 'Point', 'coordinates': [9.14079938, 46.03777316]}",7,2,
+9021,Temperatura,°C,1234,Osnago,234,LC,2004-01-01T00:00:00.000,N,5058312,530261,9.38855728,45.6777065,"{'type': 'Point', 'coordinates': [9.38855728, 45.6777065]}",5,10,
+5928,Temperatura,°C,572,Morbegno v.Cortivacci,262,SO,1998-09-29T00:00:00.000,S,5108901,543736,9.56624,46.135486,"{'type': 'Point', 'coordinates': [9.56624, 46.135486]}",7,3,2015-09-26T00:00:00.000
+8165,Precipitazione,mm,870,Como viale Geno,200,CO,2000-07-05T00:00:00.000,N,5074080,506207,9.07990936,45.82025397,"{'type': 'Point', 'coordinates': [9.07990936, 45.82025397]}",3,2,
+2623,Radiazione Globale,W/m²,214,Bigarello,15,MN,2009-11-25T00:00:00.000,N,5005622,648246,10.887137,45.18849864,"{'type': 'Point', 'coordinates': [10.887137, 45.18849864]}",4,9,
+2235,Temperatura,°C,116,Ispra prato,193,VA,2001-10-25T00:00:00.000,S,5073482,470058,9.95468,45.996306,"{'type': 'Point', 'coordinates': [9.95468, 45.996306]}",1,5,2011-06-15T00:00:00.000
+2433,Temperatura,°C,132,Bergamo v.Stezzano,211,BG,1993-01-01T00:00:00.000,N,5056541,551321,9.65876847,45.66051928,"{'type': 'Point', 'coordinates': [9.65876847, 45.66051928]}",1,5,
+5124,Radiazione Globale,W/m²,166,Mantova Lunetta2 SMR,25,MN,2006-01-08T00:00:00.000,N,5002119,643358,10.82394014,45.15799358,"{'type': 'Point', 'coordinates': [10.82394014, 45.15799358]}",4,9,
+16462,Precipitazione,mm,1340,Sonico Pal alta,1310,BS,2012-10-04T00:00:00.000,N,5113101,606325,10.3772068,46.1631966,"{'type': 'Point', 'coordinates': [10.3772068, 46.1631966]}",7,6,
+54,Temperatura,°C,29,Chiesa in Valmalenco Funivia Bernina,2014,SO,1989-10-28T00:00:00.000,N,5126716,566527,9.863706,46.290759,"{'type': 'Point', 'coordinates': [9.863706, 46.290759]}",7,3,
+110,Temperatura,°C,56,Ponte di Legno Corso Trieste,1265,BS,2002-04-04T00:00:00.000,S,5124153,616398,10.510349,46.26098,"{'type': 'Point', 'coordinates': [10.510349, 46.26098]}",7,6,2022-08-24T00:00:00.000
+22598,Precipitazione,mm,1986,Darfo Boario Terme Cappellino,215,BS,2025-08-22T00:00:00.000,N,5080754,590899,10.17126954,45.87434965,"{'type': 'Point', 'coordinates': [10.17126954, 45.87434965]}",7,6,
+9123,Precipitazione,mm,1209,Rota d'Imagna,674,BG,2004-01-02T00:00:00.000,N,5076380,539709,9.51135208,45.83984475,"{'type': 'Point', 'coordinates': [9.51135208, 45.83984475]}",1,5,
+8186,Temperatura,°C,878,Darfo Boario Terme SS 42,205,BS,2003-01-01T00:00:00.000,S,5080335,589760,10.15652706,45.87072956,"{'type': 'Point', 'coordinates': [10.15652706, 45.87072956]}",7,6,2015-12-13T00:00:00.000
+7045,Radiazione Globale,W/m²,695,Ponti sul Mincio v.San Martino,113,MN,2006-12-19T00:00:00.000,N,5030184,631718,10.68336214,45.41277633,"{'type': 'Point', 'coordinates': [10.68336214, 45.41277633]}",4,9,
+19377,Precipitazione,mm,1651,Morbegno eliporto,230,SO,2016-07-28T00:00:00.000,N,5109394,545135,9.58432198,46.13664246,"{'type': 'Point', 'coordinates': [9.58432198, 46.13664246]}",7,3,
+122,Precipitazione,mm,60,Villa di Chiavenna,665,SO,2002-11-20T00:00:00.000,N,5131062,539410,9.51204364,46.33199472,"{'type': 'Point', 'coordinates': [9.51204364, 46.33199472]}",7,3,
+19388,Temperatura,°C,1650,Bormio eliporto,1172,SO,2016-09-29T00:00:00.000,N,5145365,604906,10.36603171,46.45370081,"{'type': 'Point', 'coordinates': [10.36603171, 46.45370081]}",7,3,
+1363,Precipitazione,mm,79,Valdidentro Semogo RTU 230,1610,SO,2004-01-01T00:00:00.000,N,5149131,597748,10.273638,46.488662,"{'type': 'Point', 'coordinates': [10.273638, 46.488662]}",7,3,
+9119,Precipitazione,mm,1218,Ardesio Valcanale,1002,BG,2004-01-01T00:00:00.000,N,5088916,566917,9.863434,45.95056364,"{'type': 'Point', 'coordinates': [9.863434, 45.95056364]}",1,5,
+2336,Precipitazione,mm,123,Cavenago d'Adda,67,LO,2002-08-08T00:00:00.000,N,5013018,544138,9.56265997,45.26927396,"{'type': 'Point', 'coordinates': [9.56265997, 45.26927396]}",8,11,
+2195,Precipitazione,mm,114,Landriano Cascina Marianna,88,PV,2005-09-29T00:00:00.000,N,5018600,520938,9.26715311,45.32059361,"{'type': 'Point', 'coordinates': [9.26715311, 45.32059361]}",6,7,
+118,Temperatura,°C,59,Saviore dell'Adamello Rifugio Lissone,2017,BS,2001-12-01T00:00:00.000,S,5104407,615682,10.49623769,46.08344458,"{'type': 'Point', 'coordinates': [10.49623769, 46.08344458]}",7,6,2018-08-23T00:00:00.000
+1397,Temperatura,°C,88,Valfurva Scè di Sotto,1760,SO,2010-11-19T00:00:00.000,N,5144452,611506,10.4517298,46.4444313,"{'type': 'Point', 'coordinates': [10.4517298, 46.4444313]}",7,3,
+2008,Radiazione Globale,W/m²,100,Milano Lambrate,120,MI,2003-09-12T00:00:00.000,N,5038171,520120,9.2575154,45.49677982,"{'type': 'Point', 'coordinates': [9.2575154, 45.49677982]}",8,4,
+8218,Temperatura,°C,896,Collio S.Colombano,960,BS,2003-04-09T00:00:00.000,S,5073980,606852,10.37527678,45.81111356,"{'type': 'Point', 'coordinates': [10.37527678, 45.81111356]}",2,6,2012-03-15T00:00:00.000
+4001,Temperatura,°C,140,Motta Visconti SMR,100,MI,2003-05-23T00:00:00.000,S,5014273,499103,9.363781,46.134414,"{'type': 'Point', 'coordinates': [9.363781, 46.134414]}",5,10,2020-08-25T00:00:00.000
+14282,Radiazione Globale,W/m²,1347,Barzio Piani di Bobbio,1713,LC,2012-10-14T00:00:00.000,N,5089669,538832,9.50113918,45.95949713,"{'type': 'Point', 'coordinates': [9.50113918, 45.95949713]}",5,10,
+31575,Temperatura,°C,1604,Fuipiano Valle Imagna Pagafone,1000,BG,2018-06-28T00:00:00.000,N,5077903,540727,9.524593,45.85349,"{'type': 'Point', 'coordinates': [9.524593, 45.85349]}",1,5,
+14384,Precipitazione,mm,1360,Clusone SP 671,564,BG,2012-11-21T00:00:00.000,N,5081243,572409,9.93314133,45.88094706,"{'type': 'Point', 'coordinates': [9.93314133, 45.88094706]}",1,5,
+2465,Precipitazione,mm,134,Corzano Bargnano,93,BS,1998-05-03T00:00:00.000,N,5031659,581271,10.03902737,45.43372847,"{'type': 'Point', 'coordinates': [10.03902737, 45.43372847]}",2,6,
+8182,Precipitazione,mm,854,Calcinato Ponte S.Marco,145,BS,2003-01-01T00:00:00.000,S,5036665,609910,10.40620314,45.47486381,"{'type': 'Point', 'coordinates': [10.40620314, 45.47486381]}",2,6,2011-08-04T00:00:00.000
+14605,Precipitazione,mm,1380,Tremezzo,309,CO,2013-04-18T00:00:00.000,N,5092705,516580,9.2140589,45.9877167,"{'type': 'Point', 'coordinates': [9.2140589, 45.9877167]}",7,2,
+6698,Temperatura,°C,642,Pavia v. Folperti,77,PV,2002-06-01T00:00:00.000,S,5004590,512932,9.16464919,45.19468231,"{'type': 'Point', 'coordinates': [9.16464919, 45.19468231]}",6,7,2026-02-05T00:00:00.000
+2116,Precipitazione,mm,108,Samolaco v.Vignola,206,SO,1994-07-27T00:00:00.000,N,5120369,532896,9.42666579,46.23610858,"{'type': 'Point', 'coordinates': [9.42666579, 46.23610858]}",7,3,
+8207,Temperatura,°C,906,Asola Sorbara,41,MN,2003-03-12T00:00:00.000,S,5008025,611167,10.41583719,45.21694686,"{'type': 'Point', 'coordinates': [10.41583719, 45.21694686]}",4,9,2018-11-19T00:00:00.000
+5940,Precipitazione,mm,559,Somma Lombardo v.Facchinetti,210,VA,2000-03-20T00:00:00.000,S,5055150,477613,8.71269853,45.64954097,"{'type': 'Point', 'coordinates': [8.71269853, 45.64954097]}",3,1,2020-10-30T00:00:00.000
+2377,Precipitazione,mm,126,Casatenovo prato,360,LC,2002-04-26T00:00:00.000,S,5060979,524066,9.30914781,45.70195333,"{'type': 'Point', 'coordinates': [9.30914781, 45.70195333]}",5,10,2017-10-30T00:00:00.000
+6986,Precipitazione,mm,679,Valmadrera v.Pozzi,247,LC,2006-01-21T00:00:00.000,N,5076576,527307,9.35166247,45.84221272,"{'type': 'Point', 'coordinates': [9.35166247, 45.84221272]}",5,10,
+8189,Temperatura,°C,901,Crema v.Camporelle,103,CR,2003-03-04T00:00:00.000,N,5022780,552590,9.67144061,45.35656022,"{'type': 'Point', 'coordinates': [9.67144061, 45.35656022]}",4,8,
+2082,Temperatura,°C,106,Varzi Nivione,500,PV,2001-05-15T00:00:00.000,N,4961571,514194,9.17949163,44.80739989,"{'type': 'Point', 'coordinates': [9.17949163, 44.80739989]}",6,7,
+6432,Radiazione Globale,W/m²,596,Osio Sotto v.per Levate,182,BG,2000-04-04T00:00:00.000,N,5052072,547691,9.61173782,45.62055568,"{'type': 'Point', 'coordinates': [9.61173782, 45.62055568]}",1,5,
+8140,Temperatura,°C,876,Caino,428,BS,2001-02-01T00:00:00.000,N,5051536,603100,10.32222392,45.60972056,"{'type': 'Point', 'coordinates': [10.32222392, 45.60972056]}",2,6,
+2404,Radiazione Globale,W/m²,129,Capo di Ponte v.Briscioli,362,BS,2003-09-12T00:00:00.000,N,5097875,603903,10.3425026,46.02656354,"{'type': 'Point', 'coordinates': [10.3425026, 46.02656354]}",7,6,
+14700,Precipitazione,mm,1420,Gordona,1362,SO,2014-03-20T00:00:00.000,N,5126494,526127,9.33920315,46.29151911,"{'type': 'Point', 'coordinates': [9.33920315, 46.29151911]}",7,3,
+14131,Precipitazione,mm,1329,Lavena Ponte Tresa via della Boschiva,269,VA,2012-04-18T00:00:00.000,N,5090913,488398,8.85024227,45.9716903,"{'type': 'Point', 'coordinates': [8.85024227, 45.9716903]}",3,1,
+30536,Precipitazione,mm,1511,Rescaldina,215,MI,2014-09-26T00:00:00.000,N,5050479,496327,8.95289668,45.60784534,"{'type': 'Point', 'coordinates': [8.95289668, 45.60784534]}",8,4,
+8155,Precipitazione,mm,817,Pavia SS 35,71,PV,2000-05-04T00:00:00.000,N,5003026,511523,9.14666412,45.18062204,"{'type': 'Point', 'coordinates': [9.14666412, 45.18062204]}",6,7,
+11228,Radiazione Globale,W/m²,1075,Edolo Centrale ENEL,659,BS,2011-12-20T00:00:00.000,N,5113706,603479,10.34047351,46.1690708,"{'type': 'Point', 'coordinates': [10.34047351, 46.1690708]}",7,6,
+8206,Precipitazione,mm,906,Asola Sorbara,41,MN,2003-03-12T00:00:00.000,S,5008025,611167,10.41583719,45.21694686,"{'type': 'Point', 'coordinates': [10.41583719, 45.21694686]}",4,9,2018-11-19T00:00:00.000
+2136,Radiazione Globale,W/m²,110,Gonzaga Palidano,22,MN,1999-05-07T00:00:00.000,N,4980052,638675,10.75828107,44.96037167,"{'type': 'Point', 'coordinates': [10.75828107, 44.96037167]}",4,9,
+30539,Precipitazione,mm,1512,Pogliano Milanese,160,MI,2014-09-26T00:00:00.000,N,5042449,500406,9.00519996,45.53557672,"{'type': 'Point', 'coordinates': [9.00519996, 45.53557672]}",8,4,
+4009,Temperatura,°C,141,Vertemate con Minoprio serre,310,CO,2002-06-19T00:00:00.000,N,5062832,506653,9.0854885,45.71901089,"{'type': 'Point', 'coordinates': [9.0854885, 45.71901089]}",3,2,
+2112,Radiazione Globale,W/m²,108,Samolaco v.Vignola,206,SO,1998-07-24T00:00:00.000,N,5120369,532896,9.42666579,46.23610858,"{'type': 'Point', 'coordinates': [9.42666579, 46.23610858]}",7,3,
+8201,Precipitazione,mm,858,Santa Margherita di Staffora Casanova,575,PV,2003-01-01T00:00:00.000,N,4957210,518916,9.23905083,44.76803261,"{'type': 'Point', 'coordinates': [9.23905083, 44.76803261]}",6,7,
+2046,Precipitazione,mm,102,San Colombano al Lambro,140,MI,2001-06-27T00:00:00.000,N,5002165,538425,9.48899684,45.17191896,"{'type': 'Point', 'coordinates': [9.48899684, 45.17191896]}",8,4,
+8098,Precipitazione,mm,823,Piazza Brembana vivaio,510,BG,1998-01-01T00:00:00.000,N,5088280,552145,9.67277767,45.94611233,"{'type': 'Point', 'coordinates': [9.67277767, 45.94611233]}",1,5,
+8021,Precipitazione,mm,846,Edolo Pantano d`Avio,2108,BS,1993-05-01T00:00:00.000,N,5114768,613679,10.47282844,46.17700799,"{'type': 'Point', 'coordinates': [10.47282844, 46.17700799]}",7,6,
+2278,Precipitazione,mm,119,San Giovanni Bianco Cornalita,622,BG,2001-09-07T00:00:00.000,N,5079768,549604,9.63912077,45.86969697,"{'type': 'Point', 'coordinates': [9.63912077, 45.86969697]}",1,5,
+8184,Temperatura,°C,909,Bienno,501,BS,2003-01-01T00:00:00.000,S,5088803,599748,10.2869455,45.94555714,"{'type': 'Point', 'coordinates': [10.2869455, 45.94555714]}",7,6,2017-03-22T00:00:00.000
+4069,Radiazione Globale,W/m²,148,Arconate SMR,182,MI,2002-07-02T00:00:00.000,N,5043898,488082,8.84732669,45.54852147,"{'type': 'Point', 'coordinates': [8.84732669, 45.54852147]}",8,4,
+8179,Precipitazione,mm,895,Soncino v. Brescia,87,CR,2000-01-01T00:00:00.000,N,5027680,569678,9.89027567,45.3991695,"{'type': 'Point', 'coordinates': [9.89027567, 45.3991695]}",4,8,
+14120,Precipitazione,mm,1326,Toscolano-Maderno,70,BS,2012-03-25T00:00:00.000,N,5054923,626016,10.61687842,45.63641172,"{'type': 'Point', 'coordinates': [10.61687842, 45.63641172]}",2,6,
+9023,Temperatura,°C,1232,Lavena Ponte Tresa depuratore,279,VA,2004-01-01T00:00:00.000,S,5090577,489263,8.86142711,45.96868806,"{'type': 'Point', 'coordinates': [8.86142711, 45.96868806]}",,,2012-04-18T00:00:00.000
+17487,Precipitazione,mm,1874,Magenta cascina Mainaga,137,MI,2018-11-13T00:00:00.000,N,5033848,488617,8.85440899,45.45806524,"{'type': 'Point', 'coordinates': [8.85440899, 45.45806524]}",8,4,
+5918,Precipitazione,mm,513,Trezzo sull'Adda v.Nenni,199,MI,2001-02-21T00:00:00.000,N,5051253,539618,9.508134,45.61370028,"{'type': 'Point', 'coordinates': [9.508134, 45.61370028]}",8,4,
+2190,Radiazione Globale,W/m²,114,Landriano Cascina Marianna,88,PV,2005-09-29T00:00:00.000,N,5018600,520938,9.26715311,45.32059361,"{'type': 'Point', 'coordinates': [9.26715311, 45.32059361]}",6,7,
+2441,Precipitazione,mm,132,Bergamo v.Stezzano,211,BG,1990-10-15T00:00:00.000,N,5056541,551321,9.65876847,45.66051928,"{'type': 'Point', 'coordinates': [9.65876847, 45.66051928]}",1,5,
+14280,Precipitazione,mm,1347,Barzio Piani di Bobbio,1713,LC,2012-10-14T00:00:00.000,N,5089669,538832,9.50113918,45.95949713,"{'type': 'Point', 'coordinates': [9.50113918, 45.95949713]}",5,10,
+9092,Precipitazione,mm,1212,Castione della Presolana,1180,BG,2004-01-01T00:00:00.000,N,5086647,582441,10.06332908,45.92845581,"{'type': 'Point', 'coordinates': [10.06332908, 45.92845581]}",1,5,
+9104,Precipitazione,mm,1229,Gandellino Grabiasca,738,BG,2004-01-01T00:00:00.000,N,5095336,573386,9.94787769,46.00767519,"{'type': 'Point', 'coordinates': [9.94787769, 46.00767519]}",1,5,
+6434,Radiazione Globale,W/m²,586,Costa Volpino v.Nazionale,192,BG,1993-07-26T00:00:00.000,N,5075429,585212,10.09707131,45.82716061,"{'type': 'Point', 'coordinates': [10.09707131, 45.82716061]}",1,5,
+31133,Precipitazione,mm,1577,Abbadia Lariana Torrioni di Rialba,535,LC,2017-08-02T00:00:00.000,N,5082469,527674,9.356727,45.895236,"{'type': 'Point', 'coordinates': [9.356727, 45.895236]}",5,10,
+28,Temperatura,°C,12,Valdidentro Arnoga,1880,SO,1988-05-02T00:00:00.000,N,5145777,595373,10.24200594,46.45882331,"{'type': 'Point', 'coordinates': [10.24200594, 46.45882331]}",7,3,
+9011,Temperatura,°C,1230,San Giacomo Filippo Lago Truzzo,2064,SO,2004-01-09T00:00:00.000,N,5134156,524616,9.31999148,46.36053879,"{'type': 'Point', 'coordinates': [9.31999148, 46.36053879]}",7,3,
+32401,Temperatura,°C,1680,Vilminore di Scalve Presolana,1856,BG,2017-11-15T00:00:00.000,N,5092483,580679,10.041578,45.98117244,"{'type': 'Point', 'coordinates': [10.041578, 45.98117244]}",1,5,
+91653,Precipitazione,mm,2181,Delebio Canargo,900,SO,2025-04-03T00:00:00.000,N,5106713,535363,9.45762893,46.11307673,"{'type': 'Point', 'coordinates': [9.45762893, 46.11307673]}",7,3,
+1346,Temperatura,°C,27,Chiesa in Valmalenco Alpe dell' Oro,2040,SO,2011-01-01T00:00:00.000,N,5130048,558743,9.76307569,46.32146572,"{'type': 'Point', 'coordinates': [9.76307569, 46.32146572]}",7,3,
+19345,Temperatura,°C,1560,Padenghe sul Garda v.Fondrini,187,BS,2016-07-14T00:00:00.000,N,5041631,617629,10.50612,45.518286,"{'type': 'Point', 'coordinates': [10.50612, 45.518286]}",2,6,
+9102,Precipitazione,mm,1220,Ponte di Legno Case Pirli,1640,BS,2004-01-01T00:00:00.000,N,5127374,617932,10.5310511,46.28969035,"{'type': 'Point', 'coordinates': [10.5310511, 46.28969035]}",7,6,
+22272,Precipitazione,mm,1912,Seveso v. Europa Unita,208,MB,2023-07-25T00:00:00.000,N,5054459,511342,9.14554466,45.64358606,"{'type': 'Point', 'coordinates': [9.14554466, 45.64358606]}",5,12,
+30997,Temperatura,°C,1569,Paisco Loveno Grumello,1260,BS,2016-10-05T00:00:00.000,N,5102256,597127,10.255872,46.066981,"{'type': 'Point', 'coordinates': [10.255872, 46.066981]}",7,6,
+14518,Temperatura,°C,1372,Garzeno,581,CO,2013-07-25T00:00:00.000,N,5108761,519145,9.2478209,46.1321526,"{'type': 'Point', 'coordinates': [9.2478209, 46.1321526]}",7,2,
+10467,Radiazione Globale,W/m²,1266,Bertonico v.Moro,65,LO,2009-03-03T00:00:00.000,N,5009105,552297,9.66625758,45.23349689,"{'type': 'Point', 'coordinates': [9.66625758, 45.23349689]}",8,11,
+5910,Temperatura,°C,535,Lacchiarella v.Molise,97,MI,1998-09-15T00:00:00.000,N,5019010,510542,9.1345295,45.32452314,"{'type': 'Point', 'coordinates': [9.1345295, 45.32452314]}",8,4,
+2044,Radiazione Globale,W/m²,102,San Colombano al Lambro,140,MI,2003-09-12T00:00:00.000,N,5002165,538425,9.48899684,45.17191896,"{'type': 'Point', 'coordinates': [9.48899684, 45.17191896]}",8,4,
+19384,Radiazione Globale,W/m²,1651,Morbegno eliporto,230,SO,2016-07-28T00:00:00.000,N,5109394,545135,9.58432198,46.13664246,"{'type': 'Point', 'coordinates': [9.58432198, 46.13664246]}",7,3,
+34,Precipitazione,mm,8,Spriana Ponte sul Mallero,645,SO,1987-08-14T00:00:00.000,N,5118488,566593,9.86339675,46.21671208,"{'type': 'Point', 'coordinates': [9.86339675, 46.21671208]}",7,3,
+2447,Temperatura,°C,133,Bema,958,SO,1993-01-01T00:00:00.000,N,5105929,544001,9.5693423,46.10552765,"{'type': 'Point', 'coordinates': [9.5693423, 46.10552765]}",7,3,
+1420,Precipitazione,mm,90,Talamona San Giorgio,840,SO,2011-02-10T00:00:00.000,S,5107938,548717,9.383251,46.443735,"{'type': 'Point', 'coordinates': [9.383251, 46.443735]}",7,3,2017-11-27T00:00:00.000
+5872,Precipitazione,mm,562,Mariano Comense v.le Lombardia,256,CO,1996-09-23T00:00:00.000,S,5059472,514067,9.18065777,45.68865731,"{'type': 'Point', 'coordinates': [9.18065777, 45.68865731]}",3,2,2016-07-23T00:00:00.000
+43,Precipitazione,mm,30,Lanzada Campo Moro,1970,SO,1989-10-28T00:00:00.000,N,5128438,571423,9.92752017,46.30575733,"{'type': 'Point', 'coordinates': [9.92752017, 46.30575733]}",7,3,
+14130,Temperatura,°C,1329,Lavena Ponte Tresa via della Boschiva,269,VA,2012-04-18T00:00:00.000,N,5090913,488398,8.85024227,45.9716903,"{'type': 'Point', 'coordinates': [8.85024227, 45.9716903]}",3,1,
+8005,Temperatura,°C,857,Santa Margherita di Staffora Passo del Giovà,1363,PV,1998-01-01T00:00:00.000,N,4947846,517168,9.21663743,44.6837785,"{'type': 'Point', 'coordinates': [9.21663743, 44.6837785]}",6,7,
+8167,Precipitazione,mm,860,Angera v.le Repubblica,202,VA,2000-07-05T00:00:00.000,N,5068671,466871,8.57392189,45.77080719,"{'type': 'Point', 'coordinates': [8.57392189, 45.77080719]}",3,1,
+31536,Precipitazione,mm,1601,Dorio Bedolesso,790,LC,2017-12-05T00:00:00.000,N,5106113,529212,9.37800595,46.10797603,"{'type': 'Point', 'coordinates': [9.37800595, 46.10797603]}",5,10,
+17585,Temperatura,°C,1889,Val Masino Merdarola,2280,SO,2008-01-01T00:00:00.000,N,5119691,544851,9.58163635,46.22931619,"{'type': 'Point', 'coordinates': [9.58163635, 46.22931619]}",7,3,
+14665,Temperatura,°C,1383,Sarezzo v.della Fonte,290,BS,2012-11-02T00:00:00.000,N,5057824,592468,10.1870962,45.66779897,"{'type': 'Point', 'coordinates': [10.1870962, 45.66779897]}",2,6,
+100,Precipitazione,mm,52,Grosio Diga Fusino,1220,SO,2002-01-01T00:00:00.000,N,5131141,595908,10.24598125,46.32706204,"{'type': 'Point', 'coordinates': [10.24598125, 46.32706204]}",7,3,
+9818,Radiazione Globale,W/m²,671,Mantova Tridolino,22,MN,2004-12-30T00:00:00.000,S,5001664,646147,10.859272,45.153328,"{'type': 'Point', 'coordinates': [10.859272, 45.153328]}",4,9,2024-02-01T00:00:00.000
+8133,Temperatura,°C,819,Lozio,994,BS,2001-11-21T00:00:00.000,N,5093242,597570,10.25975254,45.98580874,"{'type': 'Point', 'coordinates': [10.25975254, 45.98580874]}",7,6,
+9114,Precipitazione,mm,1228,Goito,30,MN,2004-03-11T00:00:00.000,N,5013581,630514,10.66359803,45.26361744,"{'type': 'Point', 'coordinates': [10.66359803, 45.26361744]}",4,9,
+5858,Precipitazione,mm,596,Osio Sotto v.per Levate,182,BG,2000-04-04T00:00:00.000,N,5052072,547691,9.61173782,45.62055568,"{'type': 'Point', 'coordinates': [9.61173782, 45.62055568]}",1,5,
+17361,Precipitazione,mm,1548,Gianico Val Vedetta,1050,BS,2015-05-06T00:00:00.000,N,5078508,593267,10.201751,45.854273,"{'type': 'Point', 'coordinates': [10.201751, 45.854273]}",7,6,
+4049,Precipitazione,mm,145,Darfo Boario Terme,222,BS,2002-06-06T00:00:00.000,S,5080789,591371,10.1773568,45.8746021,"{'type': 'Point', 'coordinates': [10.1773568, 45.8746021]}",7,6,2023-07-18T00:00:00.000
+19374,Radiazione Globale,W/m²,620,Milano v.Brera,122,MI,2016-07-08T00:00:00.000,N,5035365,514782,9.18911083,45.47165828,"{'type': 'Point', 'coordinates': [9.18911083, 45.47165828]}",8,4,
+6694,Precipitazione,mm,642,Pavia v. Folperti,77,PV,2002-06-01T00:00:00.000,S,5004590,512932,9.16464919,45.19468231,"{'type': 'Point', 'coordinates': [9.16464919, 45.19468231]}",6,7,2026-02-05T00:00:00.000
+5866,Temperatura,°C,582,Bergamo v.S.Giorgio,249,BG,1989-01-01T00:00:00.000,S,5058641,552746,9.67729786,45.67931931,"{'type': 'Point', 'coordinates': [9.67729786, 45.67931931]}",1,5,2010-04-14T00:00:00.000
+8015,Precipitazione,mm,833,Gerola Alta Pescegallo,1875,SO,1992-01-01T00:00:00.000,N,5097116,544202,9.57112074,46.0261969,"{'type': 'Point', 'coordinates': [9.57112074, 46.0261969]}",7,3,
+5877,Temperatura,°C,573,Colico v.La Madoneta,229,LC,1990-11-06T00:00:00.000,N,5109468,529713,9.38468725,46.1381409,"{'type': 'Point', 'coordinates': [9.38468725, 46.1381409]}",5,10,
+8692,Precipitazione,mm,866,Paderno Dugnano Palazzolo,168,MI,2006-02-07T00:00:00.000,S,5047708,512402,9.15897783,45.58280558,"{'type': 'Point', 'coordinates': [9.15897783, 45.58280558]}",8,4,2014-11-24T00:00:00.000
+112,Temperatura,°C,57,Branzi Caserma Carabinieri,830,BG,2001-11-16T00:00:00.000,N,5094534,558779,9.75913061,46.00185828,"{'type': 'Point', 'coordinates': [9.75913061, 46.00185828]}",1,5,
+9015,Temperatura,°C,1229,Gandellino Grabiasca,738,BG,2004-01-01T00:00:00.000,N,5095336,573386,9.94787769,46.00767519,"{'type': 'Point', 'coordinates': [9.94787769, 46.00767519]}",1,5,
+8157,Temperatura,°C,817,Pavia SS 35,71,PV,2000-05-04T00:00:00.000,N,5003026,511523,9.14666412,45.18062204,"{'type': 'Point', 'coordinates': [9.14666412, 45.18062204]}",6,7,
+17580,Temperatura,°C,847,Carona Carisole,1954,BG,2016-08-20T00:00:00.000,N,5098634,561423,9.79379959,46.03852339,"{'type': 'Point', 'coordinates': [9.79379959, 46.03852339]}",1,5,
+5863,Temperatura,°C,595,Filago v.Don Milani,190,BG,1991-12-07T00:00:00.000,N,5053519,543342,9.55609572,45.63387247,"{'type': 'Point', 'coordinates': [9.55609572, 45.63387247]}",1,5,
+14242,Temperatura,°C,1345,Piazzatorre,966,BG,2012-10-13T00:00:00.000,N,5093546,553689,9.69328479,45.99338359,"{'type': 'Point', 'coordinates': [9.69328479, 45.99338359]}",1,5,
+11025,Precipitazione,mm,826,Gavardo SP 116,205,BS,2020-08-06T00:00:00.000,N,5049767,612403,10.44108528,45.59235897,"{'type': 'Point', 'coordinates': [10.44108528, 45.59235897]}",2,6,
+8230,Precipitazione,mm,900,Chiari,140,BS,2003-06-20T00:00:00.000,N,5041392,573236,9.93777821,45.52222206,"{'type': 'Point', 'coordinates': [9.93777821, 45.52222206]}",2,6,
+14500,Temperatura,°C,1371,Brembilla,468,BG,2013-03-19T00:00:00.000,N,5073646,547333,9.60925258,45.81475229,"{'type': 'Point', 'coordinates': [9.60925258, 45.81475229]}",1,5,
+5887,Precipitazione,mm,617,Tavazzano con Villavesco Enel suolo,80,LO,2000-01-13T00:00:00.000,S,5020175,533401,9.42627342,45.33429114,"{'type': 'Point', 'coordinates': [9.42627342, 45.33429114]}",8,11,2015-06-15T00:00:00.000
+96,Temperatura,°C,51,Tirano Madonna di Tirano,438,SO,2001-12-01T00:00:00.000,S,5118814,588943,10.15318792,46.21708825,"{'type': 'Point', 'coordinates': [10.15318792, 46.21708825]}",7,3,2020-07-06T00:00:00.000
+9819,Temperatura,°C,671,Mantova Tridolino,22,MN,2004-12-30T00:00:00.000,S,5001664,646147,10.859272,45.153328,"{'type': 'Point', 'coordinates': [10.859272, 45.153328]}",4,9,2024-02-01T00:00:00.000
+19375,Temperatura,°C,1651,Morbegno eliporto,230,SO,2016-07-28T00:00:00.000,N,5109394,545135,9.58432198,46.13664246,"{'type': 'Point', 'coordinates': [9.58432198, 46.13664246]}",7,3,
+8212,Temperatura,°C,903,Misinto,247,MB,2003-03-12T00:00:00.000,N,5056428,505172,9.06639475,45.66138472,"{'type': 'Point', 'coordinates': [9.06639475, 45.66138472]}",5,12,
+17477,Radiazione Globale,W/m²,857,Santa Margherita di Staffora Passo del Giovà,1363,PV,2018-09-28T00:00:00.000,N,4947846,517168,9.21663743,44.6837785,"{'type': 'Point', 'coordinates': [9.21663743, 44.6837785]}",6,7,
+22580,Precipitazione,mm,1955,Magasa Malga Corva,1244,BS,2023-06-01T00:00:00.000,N,5070236,626539,10.62758311,45.77409061,"{'type': 'Point', 'coordinates': [10.62758311, 45.77409061]}",2,6,
+4029,Radiazione Globale,W/m²,143,Livigno Passo Foscagno,2320,SO,2002-06-02T00:00:00.000,N,5149692,592662,10.20748854,46.49442378,"{'type': 'Point', 'coordinates': [10.20748854, 46.49442378]}",7,3,
+8180,Temperatura,°C,895,Soncino v. Brescia,87,CR,2000-01-01T00:00:00.000,N,5027680,569678,9.89027567,45.3991695,"{'type': 'Point', 'coordinates': [9.89027567, 45.3991695]}",4,8,
+2122,Temperatura,°C,109,Sant'Angelo Lodigiano,60,LO,1993-03-11T00:00:00.000,N,5011978,529787,9.37965968,45.26066731,"{'type': 'Point', 'coordinates': [9.37965968, 45.26066731]}",8,11,
+8220,Temperatura,°C,897,Busto Arsizio v.Rossini,242,VA,2003-03-26T00:00:00.000,N,5052553,486271,8.82388414,45.62639047,"{'type': 'Point', 'coordinates': [8.82388414, 45.62639047]}",3,1,
+24416,Precipitazione,mm,1974,Grone San Fermo,1246,BG,2020-08-30T00:00:00.000,N,5066048,572800,9.93587297,45.74415628,"{'type': 'Point', 'coordinates': [9.93587297, 45.74415628]}",1,5,
+5884,Precipitazione,mm,578,Varenna v.Polvani,220,LC,1991-01-01T00:00:00.000,S,5095134,522088,9.28531411,46.00942731,"{'type': 'Point', 'coordinates': [9.28531411, 46.00942731]}",5,10,2008-02-07T00:00:00.000
+8172,Precipitazione,mm,877,Bovegno ponte Zigole,572,BS,2001-06-06T00:00:00.000,N,5070534,598195,10.26318272,45.78138436,"{'type': 'Point', 'coordinates': [10.26318272, 45.78138436]}",2,6,
+22322,Precipitazione,mm,1914,Trescore Balneario V. Cherio,251,BG,2023-07-17T00:00:00.000,N,5060005,566109,9.84904342,45.69044264,"{'type': 'Point', 'coordinates': [9.84904342, 45.69044264]}",1,5,
+107,Temperatura,°C,55,Edolo Parnigò,655,BS,2001-12-01T00:00:00.000,S,5114248,601515,10.31516333,46.17424525,"{'type': 'Point', 'coordinates': [10.31516333, 46.17424525]}",7,6,2021-02-03T00:00:00.000
+22023,Temperatura,°C,1891,Porto Valtravaglia San Michele,875,VA,2020-01-30T00:00:00.000,N,5087930,477812,8.71373858,45.94458167,"{'type': 'Point', 'coordinates': [8.71373858, 45.94458167]}",3,1,
+8224,Precipitazione,mm,873,Ponti sul Mincio Monzambano,62,MN,2003-07-01T00:00:00.000,N,5027985,633560,10.706296,45.39264211,"{'type': 'Point', 'coordinates': [10.706296, 45.39264211]}",4,9,
+14451,Radiazione Globale,W/m²,1366,Porlezza torrente,291,CO,2012-12-12T00:00:00.000,N,5098254,510895,9.14079938,46.03777316,"{'type': 'Point', 'coordinates': [9.14079938, 46.03777316]}",7,2,
+8150,Precipitazione,mm,884,Cuveglio,294,VA,2000-07-06T00:00:00.000,N,5083338,480047,8.74277458,45.90332947,"{'type': 'Point', 'coordinates': [8.74277458, 45.90332947]}",3,1,
+5924,Temperatura,°C,567,Chiavenna v.Cerletti,333,SO,1993-10-27T00:00:00.000,S,5129768,530454,9.39559186,46.32081378,"{'type': 'Point', 'coordinates': [9.39559186, 46.32081378]}",7,3,2010-10-21T00:00:00.000
+19354,Temperatura,°C,1561,Porto Ceresio campo sportivo,275,VA,2016-12-23T00:00:00.000,N,5082687,491668,8.89260364,45.89770027,"{'type': 'Point', 'coordinates': [8.89260364, 45.89770027]}",3,1,
+9325,Precipitazione,mm,628,Cremona p.zza Libertà,61,CR,2004-01-20T00:00:00.000,S,4998730,581171,10.03237064,45.13738208,"{'type': 'Point', 'coordinates': [10.03237064, 45.13738208]}",4,8,2006-04-04T00:00:00.000
+14587,Temperatura,°C,1379,Gargnano,984,BS,2015-07-15T00:00:00.000,N,5065317,625847,10.61740677,45.72996009,"{'type': 'Point', 'coordinates': [10.61740677, 45.72996009]}",2,6,
+8174,Precipitazione,mm,909,Bienno,501,BS,2003-01-01T00:00:00.000,S,5088803,599748,10.2869455,45.94555714,"{'type': 'Point', 'coordinates': [10.2869455, 45.94555714]}",7,6,2017-03-22T00:00:00.000
+22663,Radiazione Globale,W/m²,1090,Valdisotto Bormio 2000,2328,SO,2025-08-18T00:00:00.000,N,5143703,607568,10.4003,46.43833,"{'type': 'Point', 'coordinates': [10.4003, 46.43833]}",7,3,
+9096,Precipitazione,mm,1215,Taleggio,763,BG,2004-01-01T00:00:00.000,S,5082304,543960,9.56663314,45.89290225,"{'type': 'Point', 'coordinates': [9.56663314, 45.89290225]}",1,5,2012-11-10T00:00:00.000
+14399,Temperatura,°C,1365,Bione,911,BS,2012-11-18T00:00:00.000,N,5057931,603395,10.32736288,45.66721826,"{'type': 'Point', 'coordinates': [10.32736288, 45.66721826]}",2,6,
+17464,Radiazione Globale,W/m²,58,Carona Lago Fregabolgia,1955,BG,2018-10-21T00:00:00.000,N,5097125,566799,9.86305936,46.02444861,"{'type': 'Point', 'coordinates': [9.86305936, 46.02444861]}",1,5,
+4017,Temperatura,°C,142,Caiolo,274,SO,2002-05-24T00:00:00.000,N,5111566,561195,9.79251888,46.15492316,"{'type': 'Point', 'coordinates': [9.79251888, 46.15492316]}",7,3,
+6792,Precipitazione,mm,653,Brescia v.Ziziola,125,BS,1997-10-15T00:00:00.000,N,5040836,595170,10.21846492,45.51456611,"{'type': 'Point', 'coordinates': [10.21846492, 45.51456611]}",2,6,
+11140,Radiazione Globale,W/m²,824,Clusone Campo Sportivo,591,BG,2011-08-29T00:00:00.000,S,5081860,573451,9.94666236,45.88638933,"{'type': 'Point', 'coordinates': [9.94666236, 45.88638933]}",1,5,2015-07-21T00:00:00.000
+4034,Temperatura,°C,144,Madesimo Spluga,1915,SO,2000-11-19T00:00:00.000,N,5146513,526726,9.34812808,46.47166446,"{'type': 'Point', 'coordinates': [9.34812808, 46.47166446]}",7,3,
+8111,Precipitazione,mm,818,Gera Lario Fuentes,199,CO,1998-01-01T00:00:00.000,N,5110832,531836,9.41227503,46.15033242,"{'type': 'Point', 'coordinates': [9.41227503, 46.15033242]}",7,2,
+2124,Radiazione Globale,W/m²,109,Sant'Angelo Lodigiano,60,LO,1998-07-23T00:00:00.000,N,5011978,529787,9.37965968,45.26066731,"{'type': 'Point', 'coordinates': [9.37965968, 45.26066731]}",8,11,
+105,Temperatura,°C,54,Lenna Brembo di Carona,485,BG,2001-12-01T00:00:00.000,S,5088227,553813,9.69429044,45.94550661,"{'type': 'Point', 'coordinates': [9.69429044, 45.94550661]}",1,5,2022-07-13T00:00:00.000
+14253,Precipitazione,mm,1346,Campodolcino Alpe Motta,1880,SO,2012-10-17T00:00:00.000,N,5141127,528341,9.36883561,46.42312151,"{'type': 'Point', 'coordinates': [9.36883561, 46.42312151]}",7,3,
+4057,Precipitazione,mm,146,Mezzoldo Passo S.Marco,1824,BG,2003-05-23T00:00:00.000,N,5098490,548644,9.62865186,46.0382628,"{'type': 'Point', 'coordinates': [9.62865186, 46.0382628]}",1,5,
+8217,Precipitazione,mm,896,Collio S.Colombano,960,BS,2003-04-09T00:00:00.000,S,5073980,606852,10.37527678,45.81111356,"{'type': 'Point', 'coordinates': [10.37527678, 45.81111356]}",2,6,2012-03-15T00:00:00.000
+5921,Precipitazione,mm,571,Bormio v.Monte Braulio,1225,SO,1993-11-01T00:00:00.000,S,5147136,605598,10.37543275,46.46952397,"{'type': 'Point', 'coordinates': [10.37543275, 46.46952397]}",7,3,2016-10-04T00:00:00.000
+5865,Temperatura,°C,596,Osio Sotto v.per Levate,182,BG,2000-04-04T00:00:00.000,N,5052072,547691,9.61173782,45.62055568,"{'type': 'Point', 'coordinates': [9.61173782, 45.62055568]}",1,5,
+1429,Temperatura,°C,91,San Giacomo Filippo Val Genasca,840,SO,2011-02-09T00:00:00.000,N,5130392,528106,9.365136,46.326521,"{'type': 'Point', 'coordinates': [9.365136, 46.326521]}",7,3,
+17552,Temperatura,°C,1877,Asola v.Industria,38,MN,2018-11-19T00:00:00.000,N,5008934,609678,10.39707082,45.22535225,"{'type': 'Point', 'coordinates': [10.39707082, 45.22535225]}",4,9,
+30890,Precipitazione,mm,1562,Verceia Campo sportivo,200,SO,2016-03-23T00:00:00.000,N,5116223,535141,9.455467,46.198677,"{'type': 'Point', 'coordinates': [9.455467, 46.198677]}",7,3,
+2270,Temperatura,°C,119,San Giovanni Bianco Cornalita,622,BG,2001-09-07T00:00:00.000,N,5079768,549604,9.63912077,45.86969697,"{'type': 'Point', 'coordinates': [9.63912077, 45.86969697]}",1,5,
+4033,Precipitazione,mm,143,Livigno Passo Foscagno,2320,SO,2002-06-02T00:00:00.000,N,5149692,592662,10.20748854,46.49442378,"{'type': 'Point', 'coordinates': [10.20748854, 46.49442378]}",7,3,
+9034,Temperatura,°C,1209,Rota d'Imagna,674,BG,2004-01-02T00:00:00.000,N,5076380,539709,9.51135208,45.83984475,"{'type': 'Point', 'coordinates': [9.51135208, 45.83984475]}",1,5,
+14058,Temperatura,°C,1324,Limone sul Garda,75,BS,2012-03-13T00:00:00.000,N,5074143,639088,10.79005556,45.80683333,"{'type': 'Point', 'coordinates': [10.79005556, 45.80683333]}",2,6,
+8583,Precipitazione,mm,999,Laveno-Mombello Poggio S.Elsa,950,VA,1999-06-23T00:00:00.000,N,5084222,471939,8.63818571,45.91099372,"{'type': 'Point', 'coordinates': [8.63818571, 45.91099372]}",3,1,
+4050,Temperatura,°C,146,Mezzoldo Passo S.Marco,1824,BG,2003-05-30T00:00:00.000,N,5098490,548644,9.62865186,46.0382628,"{'type': 'Point', 'coordinates': [9.62865186, 46.0382628]}",1,5,
+10551,Temperatura,°C,554,Saronno v.Santuario,212,VA,2010-07-06T00:00:00.000,N,5052646,502058,9.02640138,45.62735705,"{'type': 'Point', 'coordinates': [9.02640138, 45.62735705]}",3,1,
+8010,Precipitazione,mm,835,Valdisotto Oga S. Colombano,2300,SO,1992-01-01T00:00:00.000,N,5145272,600293,10.30596404,46.45356516,"{'type': 'Point', 'coordinates': [10.30596404, 46.45356516]}",7,3,
+9663,Precipitazione,mm,2514,Schignano Alpe Comana,1130,CO,2026-05-12T00:00:00.000,N,5084897,508837,9.11396111,45.91758611,"{'type': 'Point', 'coordinates': [9.11396111, 45.91758611]}",7,2,
+5909,Temperatura,°C,502,Milano v.Juvara,122,MI,1989-01-01T00:00:00.000,N,5035546,517377,9.22231536,45.47322769,"{'type': 'Point', 'coordinates': [9.22231536, 45.47322769]}",8,4,
+2098,Radiazione Globale,W/m²,107,Sondrio Fond.Fojanini,307,SO,2001-03-05T00:00:00.000,N,5113016,565691,9.85094015,46.16755337,"{'type': 'Point', 'coordinates': [9.85094015, 46.16755337]}",7,3,
+32353,Temperatura,°C,1807,Ispra JRC,249,VA,2022-04-21T00:00:00.000,N,5072552,471760,8.6365627,45.80595188,"{'type': 'Point', 'coordinates': [8.6365627, 45.80595188]}",3,1,
+9109,Precipitazione,mm,1222,Cavargna,1100,CO,2004-04-09T00:00:00.000,N,5104225,508568,9.11084686,46.09155206,"{'type': 'Point', 'coordinates': [9.11084686, 46.09155206]}",7,2,
+5917,Temperatura,°C,614,Rodano v.Turati,112,MI,1999-01-01T00:00:00.000,N,5035511,527631,9.35349644,45.47258192,"{'type': 'Point', 'coordinates': [9.35349644, 45.47258192]}",8,4,
+8171,Precipitazione,mm,821,Azzone Dezzo di Scalve,746,BG,2001-12-31T00:00:00.000,N,5092134,585424,10.10276314,45.97745722,"{'type': 'Point', 'coordinates': [10.10276314, 45.97745722]}",1,5,
+5933,Precipitazione,mm,558,Busto Arsizio  Accam,206,VA,1998-12-05T00:00:00.000,N,5047718,487687,8.84216546,45.58289429,"{'type': 'Point', 'coordinates': [8.84216546, 45.58289429]}",3,1,
+8152,Precipitazione,mm,885,Arcisate,383,VA,2000-07-05T00:00:00.000,N,5076955,491501,8.89055144,45.84610806,"{'type': 'Point', 'coordinates': [8.89055144, 45.84610806]}",3,1,
+9003,Temperatura,°C,1212,Castione della Presolana,1180,BG,2004-01-01T00:00:00.000,N,5086647,582441,10.06332908,45.92845581,"{'type': 'Point', 'coordinates': [10.06332908, 45.92845581]}",1,5,
+8197,Precipitazione,mm,911,Lambrugo,273,CO,2003-03-06T00:00:00.000,N,5067627,519009,9.24444953,45.76194769,"{'type': 'Point', 'coordinates': [9.24444953, 45.76194769]}",3,2,
+10575,Radiazione Globale,W/m²,1273,Val Masino Bagni,1191,SO,2011-07-15T00:00:00.000,S,5121270,545980,9.59643936,46.24345747,"{'type': 'Point', 'coordinates': [9.59643936, 46.24345747]}",7,3,2021-02-12T00:00:00.000
+5882,Precipitazione,mm,575,Nibionno v.della Chiesa,310,LC,2002-12-02T00:00:00.000,S,5066429,520613,9.26502439,45.75111892,"{'type': 'Point', 'coordinates': [9.26502439, 45.75111892]}",5,10,2021-11-30T00:00:00.000
+5890,Temperatura,°C,598,San Rocco al Porto v.Matteotti,50,LO,2002-01-23T00:00:00.000,N,4992297,555154,9.70079278,45.08199189,"{'type': 'Point', 'coordinates': [9.70079278, 45.08199189]}",8,11,
+19293,Temperatura,°C,1514,Carenno centro sportivo,633,LC,2018-05-08T00:00:00.000,N,5072042,536210,9.46596925,45.8009939,"{'type': 'Point', 'coordinates': [9.46596925, 45.8009939]}",5,10,
+17488,Temperatura,°C,1874,Magenta cascina Mainaga,137,MI,2018-10-30T00:00:00.000,N,5033848,488617,8.85440899,45.45806524,"{'type': 'Point', 'coordinates': [8.85440899, 45.45806524]}",8,4,
+6476,Radiazione Globale,W/m²,559,Somma Lombardo v.Facchinetti,210,VA,2000-03-20T00:00:00.000,S,5055150,477613,8.71269853,45.64954097,"{'type': 'Point', 'coordinates': [8.71269853, 45.64954097]}",3,1,2020-10-30T00:00:00.000
+4045,Radiazione Globale,W/m²,145,Darfo Boario Terme,222,BS,2002-06-06T00:00:00.000,S,5080789,591371,10.1773568,45.8746021,"{'type': 'Point', 'coordinates': [10.1773568, 45.8746021]}",7,6,2023-07-18T00:00:00.000
+2459,Temperatura,°C,134,Corzano Bargnano,93,BS,1998-05-03T00:00:00.000,N,5031659,581271,10.03902737,45.43372847,"{'type': 'Point', 'coordinates': [10.03902737, 45.43372847]}",2,6,
+5922,Temperatura,°C,571,Bormio v.Monte Braulio,1225,SO,1993-11-01T00:00:00.000,S,5147136,605598,10.37543275,46.46952397,"{'type': 'Point', 'coordinates': [10.37543275, 46.46952397]}",7,3,2016-10-04T00:00:00.000
+8225,Temperatura,°C,873,Ponti sul Mincio Monzambano,62,MN,2003-07-01T00:00:00.000,N,5027985,633560,10.706296,45.39264211,"{'type': 'Point', 'coordinates': [10.706296, 45.39264211]}",4,9,
+8222,Precipitazione,mm,816,Sermide e Felonica SP 91,10,MN,2003-07-10T00:00:00.000,N,4987208,680433,11.28993625,45.01536422,"{'type': 'Point', 'coordinates': [11.28993625, 45.01536422]}",,9,
+10585,Precipitazione,mm,1274,Perledo P.zza della stazione,212,LC,2010-07-01T00:00:00.000,N,5095846,522171,9.28641942,46.01583272,"{'type': 'Point', 'coordinates': [9.28641942, 46.01583272]}",5,10,
+19415,Temperatura,°C,1656,Casalmaggiore campo sportivo,26,CR,2017-03-28T00:00:00.000,N,4983484,611536,10.415068,44.996044,"{'type': 'Point', 'coordinates': [10.415068, 44.996044]}",4,8,
+2204,Radiazione Globale,W/m²,115,Ispra tetto,193,VA,2003-09-24T00:00:00.000,S,5073482,470058,9.701628,45.879961,"{'type': 'Point', 'coordinates': [9.701628, 45.879961]}",1,5,2012-08-04T00:00:00.000
+8185,Precipitazione,mm,878,Darfo Boario Terme SS 42,205,BS,2003-01-01T00:00:00.000,S,5080335,589760,10.15652706,45.87072956,"{'type': 'Point', 'coordinates': [10.15652706, 45.87072956]}",7,6,2015-12-13T00:00:00.000
+9816,Precipitazione,mm,671,Mantova Tridolino,22,MN,2004-12-30T00:00:00.000,S,5001664,646147,10.859272,45.153328,"{'type': 'Point', 'coordinates': [10.859272, 45.153328]}",4,9,2024-02-01T00:00:00.000
+14527,Precipitazione,mm,1375,Varano Borghi,241,VA,2013-03-27T00:00:00.000,N,5068133,477631,8.71232365,45.76639371,"{'type': 'Point', 'coordinates': [8.71232365, 45.76639371]}",3,1,
+14224,Precipitazione,mm,1343,Lanzada Passo Marinelli,3032,SO,2012-10-13T00:00:00.000,N,5133321,570414,9.91515411,46.34981046,"{'type': 'Point', 'coordinates': [9.91515411, 46.34981046]}",7,3,
+32370,Temperatura,°C,1679,Sormano rifugio Alpetto,1158,CO,2017-11-23T00:00:00.000,N,5083535,518233,9.23506881,45.90514139,"{'type': 'Point', 'coordinates': [9.23506881, 45.90514139]}",3,2,
+8208,Precipitazione,mm,910,Manerbio v.Dante,60,BS,2003-04-09T00:00:00.000,N,5023554,589720,10.14555158,45.35975344,"{'type': 'Point', 'coordinates': [10.14555158, 45.35975344]}",2,6,
+2245,Temperatura,°C,117,Edolo Ist.Meneghini,699,BS,1998-01-01T00:00:00.000,N,5114436,602920,10.33339293,46.17572375,"{'type': 'Point', 'coordinates': [10.33339293, 46.17572375]}",7,6,
+6723,Precipitazione,mm,644,Vigevano v.Petrarca,107,PV,2004-01-24T00:00:00.000,S,5019220,489053,8.86031156,45.32640825,"{'type': 'Point', 'coordinates': [8.86031156, 45.32640825]}",6,7,2013-10-09T00:00:00.000
+2390,Radiazione Globale,W/m²,128,Capralba,96,CR,1998-07-21T00:00:00.000,S,5032570,550482,9.132164,46.088243,"{'type': 'Point', 'coordinates': [9.132164, 46.088243]}",7,2,2012-02-10T00:00:00.000
+40,Precipitazione,mm,27,Chiesa in Valmalenco Alpe dell' Oro,2040,SO,1989-10-27T00:00:00.000,N,5130048,558743,9.76307569,46.32146572,"{'type': 'Point', 'coordinates': [9.76307569, 46.32146572]}",7,3,
+8122,Precipitazione,mm,867,Caslino d'Erba v. 4 novembre,427,CO,1998-07-24T00:00:00.000,N,5075784,518046,9.23237261,45.83539031,"{'type': 'Point', 'coordinates': [9.23237261, 45.83539031]}",3,2,
+9786,Radiazione Globale,W/m²,847,Carona Carisole,1954,BG,1993-07-01T00:00:00.000,N,5098634,561423,9.79379959,46.03852339,"{'type': 'Point', 'coordinates': [9.79379959, 46.03852339]}",1,5,
+14092,Temperatura,°C,1326,Toscolano-Maderno,70,BS,2012-03-22T00:00:00.000,N,5054923,626016,10.61687842,45.63641172,"{'type': 'Point', 'coordinates': [10.61687842, 45.63641172]}",2,6,
+19363,Temperatura,°C,1559,Dervio v.S.Cecilia,198,LC,2016-07-05T00:00:00.000,N,5101755,523618,9.30538273,46.06896591,"{'type': 'Point', 'coordinates': [9.30538273, 46.06896591]}",5,10,
+5966,Temperatura,°C,625,Casalmaggiore v.Volta,23,CR,1992-06-01T00:00:00.000,S,4981793,612537,10.42738161,44.98066517,"{'type': 'Point', 'coordinates': [10.42738161, 44.98066517]}",4,8,2007-02-21T00:00:00.000
+19335,Precipitazione,mm,1551,Premana v.Luciani papa,910,LC,2015-07-08T00:00:00.000,N,5099899,532481,9.419878,46.0519,"{'type': 'Point', 'coordinates': [9.419878, 46.0519]}",5,10,
+8136,Temperatura,°C,874,Sarnico v. Roma,197,BG,2001-04-12T00:00:00.000,N,5057377,574538,9.95688896,45.66594103,"{'type': 'Point', 'coordinates': [9.95688896, 45.66594103]}",1,5,
+2327,Temperatura,°C,123,Cavenago d'Adda,67,LO,2002-08-08T00:00:00.000,N,5013018,544138,9.56265997,45.26927396,"{'type': 'Point', 'coordinates': [9.56265997, 45.26927396]}",8,11,
+8135,Precipitazione,mm,874,Sarnico v. Roma,197,BG,2001-04-12T00:00:00.000,N,5057377,574538,9.95688896,45.66594103,"{'type': 'Point', 'coordinates': [9.95688896, 45.66594103]}",1,5,
+8211,Precipitazione,mm,903,Misinto,247,MB,2003-03-12T00:00:00.000,N,5056428,505172,9.06639475,45.66138472,"{'type': 'Point', 'coordinates': [9.06639475, 45.66138472]}",5,12,
+2476,Radiazione Globale,W/m²,135,Vertemate con Minoprio villa,322,CO,1992-02-21T00:00:00.000,S,5062757,506658,10.204777,45.851052,"{'type': 'Point', 'coordinates': [10.204777, 45.851052]}",7,6,2010-07-22T00:00:00.000
+14517,Precipitazione,mm,1372,Garzeno,581,CO,2013-07-25T00:00:00.000,N,5108761,519145,9.2478209,46.1321526,"{'type': 'Point', 'coordinates': [9.2478209, 46.1321526]}",7,2,
+2417,Precipitazione,mm,130,Brescia ITAS Pastori,149,BS,1990-10-11T00:00:00.000,N,5042175,598502,10.26138219,45.52614578,"{'type': 'Point', 'coordinates': [10.26138219, 45.52614578]}",2,6,
+31563,Temperatura,°C,1603,Torre di Santa Maria Val Dagua,1200,SO,2018-09-05T00:00:00.000,N,5120789,567187,9.868042,46.23805,"{'type': 'Point', 'coordinates': [9.868042, 46.23805]}",7,3,
+2368,Precipitazione,mm,125,Castello d'Agogna,106,PV,1990-10-17T00:00:00.000,N,5010411,476502,8.70057165,45.24680044,"{'type': 'Point', 'coordinates': [8.70057165, 45.24680044]}",6,7,
+14284,Temperatura,°C,1347,Barzio Piani di Bobbio,1713,LC,2012-10-14T00:00:00.000,N,5089669,538832,9.50113918,45.95949713,"{'type': 'Point', 'coordinates': [9.50113918, 45.95949713]}",5,10,
+6834,Temperatura,°C,657,Lonato del Garda v.del Marchesino,180,BS,1990-01-01T00:00:00.000,N,5035536,615762,10.48078183,45.46375819,"{'type': 'Point', 'coordinates': [10.48078183, 45.46375819]}",2,6,
+8131,Precipitazione,mm,888,Sonico centrale Edolo,623,BS,2001-11-21T00:00:00.000,S,5113810,603547,10.34138478,46.16999828,"{'type': 'Point', 'coordinates': [10.34138478, 46.16999828]}",7,6,2011-11-16T00:00:00.000
+10554,Precipitazione,mm,554,Saronno v.Santuario,212,VA,2010-07-06T00:00:00.000,N,5052646,502058,9.02640138,45.62735705,"{'type': 'Point', 'coordinates': [9.02640138, 45.62735705]}",3,1,
+2134,Temperatura,°C,110,Gonzaga Palidano,22,MN,1998-01-01T00:00:00.000,N,4980052,638675,10.75828107,44.96037167,"{'type': 'Point', 'coordinates': [10.75828107, 44.96037167]}",4,9,
+6849,Temperatura,°C,659,Odolo v.Praes,349,BS,1990-10-08T00:00:00.000,N,5055661,608260,10.38929672,45.64605175,"{'type': 'Point', 'coordinates': [10.38929672, 45.64605175]}",2,6,
+12728,Radiazione Globale,W/m²,1974,Grone San Fermo,1246,BG,2020-08-30T00:00:00.000,N,5066048,572800,9.93587297,45.74415628,"{'type': 'Point', 'coordinates': [9.93587297, 45.74415628]}",1,5,
+31060,Precipitazione,mm,1572,Dossena ST1,1000,BG,2017-08-02T00:00:00.000,N,5080775,554455,9.701726,45.878392,"{'type': 'Point', 'coordinates': [9.701726, 45.878392]}",1,5,
+31094,Precipitazione,mm,1576,Gandellino Tezzi,1000,BG,2017-05-25T00:00:00.000,N,5094080,573927,9.95468,45.996306,"{'type': 'Point', 'coordinates': [9.95468, 45.996306]}",1,5,
+8588,Temperatura,°C,998,Laveno-Mombello p.zza Matteotti,207,VA,1999-06-24T00:00:00.000,N,5084109,470426,8.61868535,45.90991335,"{'type': 'Point', 'coordinates': [8.61868535, 45.90991335]}",3,1,
+23,Precipitazione,mm,16,Valfurva Ghiacciaio dei Forni,2180,SO,1988-05-03T00:00:00.000,N,5141977,619522,10.55541386,46.42078875,"{'type': 'Point', 'coordinates': [10.55541386, 46.42078875]}",7,3,
+14197,Precipitazione,mm,1342,Ponte in Valtellina Lago Reguzzo,2440,SO,2012-10-13T00:00:00.000,N,5105228,574978,9.96999939,46.09651358,"{'type': 'Point', 'coordinates': [9.96999939, 46.09651358]}",7,3,
+8178,Temperatura,°C,894,Lomello SS 211,95,PV,2000-01-16T00:00:00.000,S,4996705,484221,8.79937869,45.12364792,"{'type': 'Point', 'coordinates': [8.79937869, 45.12364792]}",6,7,2018-11-26T00:00:00.000
+5908,Precipitazione,mm,502,Milano v.Juvara,122,MI,1989-01-01T00:00:00.000,N,5035546,517377,9.22231536,45.47322769,"{'type': 'Point', 'coordinates': [9.22231536, 45.47322769]}",8,4,
+5923,Precipitazione,mm,567,Chiavenna v.Cerletti,333,SO,1993-10-27T00:00:00.000,S,5129768,530454,9.39559186,46.32081378,"{'type': 'Point', 'coordinates': [9.39559186, 46.32081378]}",7,3,2010-12-31T00:00:00.000
+8214,Temperatura,°C,902,Barni,625,CO,2003-03-13T00:00:00.000,S,5083557,520640,9.26610817,45.90527661,"{'type': 'Point', 'coordinates': [9.26610817, 45.90527661]}",3,2,2018-05-09T00:00:00.000
+32360,Radiazione Globale,W/m²,833,Gerola Alta Pescegallo,1875,SO,2017-10-13T00:00:00.000,N,5097116,544202,9.57112074,46.0261969,"{'type': 'Point', 'coordinates': [9.57112074, 46.0261969]}",7,3,
+19401,Temperatura,°C,1652,Tirano eliporto,481,SO,2016-12-07T00:00:00.000,N,5118967,591186,10.18226719,46.2181778,"{'type': 'Point', 'coordinates': [10.18226719, 46.2181778]}",7,3,
+9097,Precipitazione,mm,1216,Valbondione,1784,BG,2000-12-01T00:00:00.000,N,5101745,580328,10.03860694,46.06456797,"{'type': 'Point', 'coordinates': [10.03860694, 46.06456797]}",1,5,
+5878,Precipitazione,mm,574,Lecco v. Amendola,214,LC,1991-01-01T00:00:00.000,S,5077479,530713,9.39558125,45.85019631,"{'type': 'Point', 'coordinates': [9.39558125, 45.85019631]}",5,10,2008-09-25T00:00:00.000
+17443,Temperatura,°C,1692,Bienno Piazze,472,BS,2018-07-13T00:00:00.000,N,5086804,600114,10.29124095,45.92751023,"{'type': 'Point', 'coordinates': [10.29124095, 45.92751023]}",7,6,
+24408,Temperatura,°C,1974,Grone San Fermo,1246,BG,2020-08-30T00:00:00.000,N,5066048,572800,9.93587297,45.74415628,"{'type': 'Point', 'coordinates': [9.93587297, 45.74415628]}",1,5,
+8219,Precipitazione,mm,897,Busto Arsizio v.Rossini,242,VA,2003-03-26T00:00:00.000,N,5052553,486271,8.82388414,45.62639047,"{'type': 'Point', 'coordinates': [8.82388414, 45.62639047]}",3,1,
+4004,Radiazione Globale,W/m²,140,Motta Visconti SMR,100,MI,2008-10-28T00:00:00.000,S,5014273,499103,9.363781,46.134414,"{'type': 'Point', 'coordinates': [9.363781, 46.134414]}",5,10,2020-08-25T00:00:00.000
+14317,Temperatura,°C,823,Piazza Brembana vivaio,510,BG,2012-10-21T00:00:00.000,N,5088280,552145,9.67277767,45.94611233,"{'type': 'Point', 'coordinates': [9.67277767, 45.94611233]}",1,5,
+14255,Radiazione Globale,W/m²,1346,Campodolcino Alpe Motta,1880,SO,2012-10-17T00:00:00.000,N,5141127,528341,9.36883561,46.42312151,"{'type': 'Point', 'coordinates': [9.36883561, 46.42312151]}",7,3,
+9115,Precipitazione,mm,1233,Lurago Marinone,296,CO,2004-01-01T00:00:00.000,N,5061268,499092,8.98833547,45.70496503,"{'type': 'Point', 'coordinates': [8.98833547, 45.70496503]}",3,2,
+82,Precipitazione,mm,92,Valfurva Confinale,2300,SO,1999-01-13T00:00:00.000,N,5144310,612927,10.470188,46.44292,"{'type': 'Point', 'coordinates': [10.470188, 46.44292]}",7,3,
+6474,Radiazione Globale,W/m²,557,Lonate Pozzolo v.Veneto,204,VA,1996-12-13T00:00:00.000,S,5048975,479783,8.74080297,45.59402776,"{'type': 'Point', 'coordinates': [8.74080297, 45.59402776]}",3,1,2018-12-10T00:00:00.000
+9093,Precipitazione,mm,1213,Mezzoldo Ronchi,988,BG,2004-01-01T00:00:00.000,S,5095843,551256,9.66212067,46.01425236,"{'type': 'Point', 'coordinates': [9.66212067, 46.01425236]}",1,5,2012-08-02T00:00:00.000
+19,Precipitazione,mm,12,Valdidentro Arnoga,1880,SO,1988-05-02T00:00:00.000,N,5145777,595373,10.24200594,46.45882331,"{'type': 'Point', 'coordinates': [10.24200594, 46.45882331]}",7,3,
+5897,Temperatura,°C,620,Milano v.Brera,122,MI,1990-03-19T00:00:00.000,N,5035365,514782,9.18911083,45.47165828,"{'type': 'Point', 'coordinates': [9.18911083, 45.47165828]}",8,4,
+133,Temperatura,°C,61,Valdisotto Arginone,1050,SO,2006-06-05T00:00:00.000,N,5137647,604113,10.35398908,46.38438486,"{'type': 'Point', 'coordinates': [10.35398908, 46.38438486]}",7,3,
+4025,Precipitazione,mm,142,Caiolo,274,SO,2002-05-24T00:00:00.000,N,5111566,561195,9.79251888,46.15492316,"{'type': 'Point', 'coordinates': [9.79251888, 46.15492316]}",7,3,
+2385,Precipitazione,mm,127,Casatenovo tetto,360,LC,2003-11-10T00:00:00.000,N,5060979,524066,9.30914481,45.70194614,"{'type': 'Point', 'coordinates': [9.30914481, 45.70194614]}",5,10,
+19373,Precipitazione,mm,620,Milano v.Brera,122,MI,2016-07-11T00:00:00.000,N,5035365,514782,9.18911083,45.47165828,"{'type': 'Point', 'coordinates': [9.18911083, 45.47165828]}",8,4,
+22022,Precipitazione,mm,1891,Porto Valtravaglia San Michele,875,VA,2020-01-30T00:00:00.000,N,5087930,477812,8.71373858,45.94458167,"{'type': 'Point', 'coordinates': [8.71373858, 45.94458167]}",3,1,
+8228,Precipitazione,mm,907,Varese v.Appiani,416,VA,2003-08-27T00:00:00.000,N,5075452,486300,8.82361133,45.83249661,"{'type': 'Point', 'coordinates': [8.82361133, 45.83249661]}",3,1,
+5931,Precipitazione,mm,570,Tirano Viale Italia,439,SO,1993-11-01T00:00:00.000,S,5118891,589196,10.170397,46.216293,"{'type': 'Point', 'coordinates': [10.170397, 46.216293]}",7,3,2012-07-03T00:00:00.000
+8191,Temperatura,°C,908,Voghera v. Cambiaso,95,PV,2003-03-04T00:00:00.000,N,4981870,501379,9.01750575,44.9902815,"{'type': 'Point', 'coordinates': [9.01750575, 44.9902815]}",6,7,
+17518,Radiazione Globale,W/m²,1375,Varano Borghi,241,VA,2018-10-21T00:00:00.000,N,5068133,477631,8.71232365,45.76639371,"{'type': 'Point', 'coordinates': [8.71232365, 45.76639371]}",3,1,
+14207,Radiazione Globale,W/m²,1343,Lanzada Passo Marinelli,3032,SO,2012-10-13T00:00:00.000,N,5133321,570414,9.91515411,46.34981046,"{'type': 'Point', 'coordinates': [9.91515411, 46.34981046]}",7,3,
+17459,Precipitazione,mm,1872,Lasnigo s.Alessandro,554,CO,2018-09-26T00:00:00.000,N,5081375,520268,9.26121361,45.88564351,"{'type': 'Point', 'coordinates': [9.26121361, 45.88564351]}",3,2,
+91064,Temperatura,°C,65,Saviore dell'Adamello Valle UR01,1100,BS,2022-02-03T00:00:00.000,N,5102643,610196,10.4249,46.068484,"{'type': 'Point', 'coordinates': [10.4249, 46.068484]}",7,6,
+2596,Precipitazione,mm,205,Montevecchia cascina Butto,385,LC,2014-10-06T00:00:00.000,N,5061321,529882,9.38387611,45.70480511,"{'type': 'Point', 'coordinates': [9.38387611, 45.70480511]}",5,10,
+5901,Temperatura,°C,512,Carate Brianza v.De Gasperi,250,MB,1996-04-01T00:00:00.000,S,5057635,518272,9.234603,45.672017,"{'type': 'Point', 'coordinates': [9.234603, 45.672017]}",5,12,2018-04-26T00:00:00.000
+9002,Temperatura,°C,1211,Castronno,379,VA,2004-01-01T00:00:00.000,N,5066146,486058,8.82076322,45.74873297,"{'type': 'Point', 'coordinates': [8.82076322, 45.74873297]}",3,1,
+31095,Temperatura,°C,1576,Gandellino Tezzi,1000,BG,2017-06-06T00:00:00.000,N,5094080,573927,9.95468,45.996306,"{'type': 'Point', 'coordinates': [9.95468, 45.996306]}",1,5,
+6588,Radiazione Globale,W/m²,574,Lecco v. Amendola,214,LC,1998-01-01T00:00:00.000,S,5077479,530713,9.39558125,45.85019631,"{'type': 'Point', 'coordinates': [9.39558125, 45.85019631]}",5,10,2008-07-15T00:00:00.000
+19365,Precipitazione,mm,1559,Dervio v.S.Cecilia,198,LC,2016-05-03T00:00:00.000,N,5101755,523618,9.30538273,46.06896591,"{'type': 'Point', 'coordinates': [9.30538273, 46.06896591]}",5,10,
+2626,Precipitazione,mm,214,Bigarello,15,MN,2009-11-25T00:00:00.000,N,5005622,648246,10.887137,45.18849864,"{'type': 'Point', 'coordinates': [10.887137, 45.18849864]}",4,9,
+8166,Temperatura,°C,870,Como viale Geno,200,CO,2000-07-05T00:00:00.000,N,5074080,506207,9.07990936,45.82025397,"{'type': 'Point', 'coordinates': [9.07990936, 45.82025397]}",3,2,
+2549,Precipitazione,mm,192,Idro Frana,427,BS,2006-12-13T00:00:00.000,N,5065296,612856,10.449929,45.732214,"{'type': 'Point', 'coordinates': [10.449929, 45.732214]}",2,6,
+8193,Precipitazione,mm,862,Lodi v. X Maggio,64,LO,2003-02-18T00:00:00.000,N,5018523,539869,9.50869728,45.31908319,"{'type': 'Point', 'coordinates': [9.50869728, 45.31908319]}",8,11,
+6795,Temperatura,°C,653,Brescia v.Ziziola,125,BS,1997-10-17T00:00:00.000,N,5040836,595170,10.21846492,45.51456611,"{'type': 'Point', 'coordinates': [10.21846492, 45.51456611]}",2,6,
+8213,Precipitazione,mm,902,Barni,625,CO,2003-03-13T00:00:00.000,S,5083557,520640,9.26610817,45.90527661,"{'type': 'Point', 'coordinates': [9.26610817, 45.90527661]}",3,2,2018-05-09T00:00:00.000
+2488,Radiazione Globale,W/m²,136,Persico Dosimo,44,CR,2001-02-13T00:00:00.000,N,5003424,582100,10.0449444,45.17951839,"{'type': 'Point', 'coordinates': [10.0449444, 45.17951839]}",4,8,
+9095,Precipitazione,mm,1217,Schilpario,1096,BG,2004-01-01T00:00:00.000,S,5095451,588221,10.13948686,46.00695864,"{'type': 'Point', 'coordinates': [10.13948686, 46.00695864]}",1,5,2012-09-23T00:00:00.000
+8169,Precipitazione,mm,820,Pisogne,842,BS,2001-11-21T00:00:00.000,N,5074267,589881,10.1569491,45.81611569,"{'type': 'Point', 'coordinates': [10.1569491, 45.81611569]}",7,6,
+14664,Precipitazione,mm,1383,Sarezzo v.della Fonte,290,BS,2012-11-02T00:00:00.000,N,5057824,592468,10.1870962,45.66779897,"{'type': 'Point', 'coordinates': [10.1870962, 45.66779897]}",2,6,
+17506,Radiazione Globale,W/m²,816,Sermide e Felonica SP 91,10,MN,2018-10-21T00:00:00.000,N,4987208,680433,11.28993625,45.01536422,"{'type': 'Point', 'coordinates': [11.28993625, 45.01536422]}",,9,
+14567,Precipitazione,mm,1378,Tignale Oldesio,374,BS,2013-07-23T00:00:00.000,N,5065781,633895,10.7209063,45.7326393,"{'type': 'Point', 'coordinates': [10.7209063, 45.7326393]}",2,6,
+9013,Temperatura,°C,1220,Ponte di Legno Case Pirli,1640,BS,2004-01-01T00:00:00.000,N,5127374,617932,10.5310511,46.28969035,"{'type': 'Point', 'coordinates': [10.5310511, 46.28969035]}",7,6,
+10469,Temperatura,°C,1266,Bertonico v.Moro,65,LO,2009-03-03T00:00:00.000,N,5009105,552297,9.66625758,45.23349689,"{'type': 'Point', 'coordinates': [9.66625758, 45.23349689]}",8,11,
+17460,Temperatura,°C,1872,Lasnigo s.Alessandro,554,CO,2018-09-26T00:00:00.000,N,5081375,520268,9.26121361,45.88564351,"{'type': 'Point', 'coordinates': [9.26121361, 45.88564351]}",3,2,
+2148,Radiazione Globale,W/m²,111,Cassina Valsassina Moggio,1234,LC,2003-10-31T00:00:00.000,N,5084512,538583,9.49750222,45.91309369,"{'type': 'Point', 'coordinates': [9.49750222, 45.91309369]}",5,10,
+9865,Radiazione Globale,W/m²,672,Cornale v.Libertà,74,PV,2005-07-29T00:00:00.000,N,4987406,493238,8.91415717,45.04008561,"{'type': 'Point', 'coordinates': [8.91415717, 45.04008561]}",6,7,
+31134,Temperatura,°C,1577,Abbadia Lariana Torrioni di Rialba,535,LC,2017-04-07T00:00:00.000,N,5082469,527674,9.356727,45.895236,"{'type': 'Point', 'coordinates': [9.356727, 45.895236]}",5,10,
+17528,Radiazione Globale,W/m²,1555,Manerba del Garda Dusano,73,BS,2018-10-21T00:00:00.000,N,5044545,622300,10.56663509,45.543701,"{'type': 'Point', 'coordinates': [10.56663509, 45.543701]}",2,6,
+5048,Precipitazione,mm,163,Padenghe sul Garda,129,BS,2004-04-21T00:00:00.000,S,5040086,617699,10.50664161,45.50437431,"{'type': 'Point', 'coordinates': [10.50664161, 45.50437431]}",2,6,2008-08-25T00:00:00.000
+9112,Precipitazione,mm,1232,Lavena Ponte Tresa depuratore,279,VA,2004-01-01T00:00:00.000,S,5090577,489263,8.86142711,45.96868806,"{'type': 'Point', 'coordinates': [8.86142711, 45.96868806]}",,,2012-04-18T00:00:00.000
+4012,Radiazione Globale,W/m²,141,Vertemate con Minoprio serre,310,CO,2002-05-25T00:00:00.000,N,5062832,506653,9.0854885,45.71901089,"{'type': 'Point', 'coordinates': [9.0854885, 45.71901089]}",3,2,
+19417,Precipitazione,mm,1656,Casalmaggiore campo sportivo,26,CR,2017-03-28T00:00:00.000,N,4983484,611536,10.415068,44.996044,"{'type': 'Point', 'coordinates': [10.415068, 44.996044]}",4,8,
+14499,Precipitazione,mm,1371,Brembilla,468,BG,2013-03-19T00:00:00.000,N,5073646,547333,9.60925258,45.81475229,"{'type': 'Point', 'coordinates': [9.60925258, 45.81475229]}",1,5,
+5121,Temperatura,°C,166,Mantova Lunetta2 SMR,25,MN,2006-02-15T00:00:00.000,N,5002119,643358,10.82394014,45.15799358,"{'type': 'Point', 'coordinates': [10.82394014, 45.15799358]}",4,9,
+8134,Temperatura,°C,820,Pisogne,842,BS,2001-11-21T00:00:00.000,N,5074267,589881,10.1569491,45.81611569,"{'type': 'Point', 'coordinates': [10.1569491, 45.81611569]}",7,6,
+7043,Precipitazione,mm,695,Ponti sul Mincio v.San Martino,113,MN,2006-12-19T00:00:00.000,N,5030184,631718,10.68336214,45.41277633,"{'type': 'Point', 'coordinates': [10.68336214, 45.41277633]}",4,9,
+5871,Temperatura,°C,564,Erba v. Battisti,279,CO,2009-02-21T00:00:00.000,S,5072803,517232,9.2217792,45.8085738,"{'type': 'Point', 'coordinates': [9.2217792, 45.8085738]}",3,2,2024-07-18T00:00:00.000
+9090,Precipitazione,mm,1210,Ranzanico,486,BG,2004-01-01T00:00:00.000,N,5070741,572525,9.9330421,45.78641993,"{'type': 'Point', 'coordinates': [9.9330421, 45.78641993]}",1,5,
+19390,Precipitazione,mm,1650,Bormio eliporto,1172,SO,2017-01-12T00:00:00.000,N,5145365,604906,10.36603171,46.45370081,"{'type': 'Point', 'coordinates': [10.36603171, 46.45370081]}",7,3,
+17511,Radiazione Globale,W/m²,856,Fortunago,501,PV,2018-10-21T00:00:00.000,N,4973248,515391,9.19499417,44.91250111,"{'type': 'Point', 'coordinates': [9.19499417, 44.91250111]}",6,7,
+2333,Radiazione Globale,W/m²,123,Cavenago d'Adda,67,LO,2003-09-23T00:00:00.000,N,5013018,544138,9.56265997,45.26927396,"{'type': 'Point', 'coordinates': [9.56265997, 45.26927396]}",8,11,
+9,Precipitazione,mm,3,Sondalo Le Prese,950,SO,1987-11-24T00:00:00.000,N,5133847,604242,10.35482008,46.35017633,"{'type': 'Point', 'coordinates': [10.35482008, 46.35017633]}",7,3,
+153,Precipitazione,mm,63,Montemezzo Gera Lario,680,CO,2004-01-01T00:00:00.000,N,5114231,527759,9.359678,46.181098,"{'type': 'Point', 'coordinates': [9.359678, 46.181098]}",7,2,
+9329,Precipitazione,mm,629,Crema v.XI febbraio,79,CR,2004-01-20T00:00:00.000,N,5023885,555127,9.70395139,45.36631075,"{'type': 'Point', 'coordinates': [9.70395139, 45.36631075]}",4,8,
+14405,Radiazione Globale,W/m²,1365,Bione,911,BS,2012-11-18T00:00:00.000,N,5057931,603395,10.32736288,45.66721826,"{'type': 'Point', 'coordinates': [10.32736288, 45.66721826]}",2,6,
+14586,Precipitazione,mm,1379,Gargnano,984,BS,2015-07-15T00:00:00.000,N,5065317,625847,10.61740677,45.72996009,"{'type': 'Point', 'coordinates': [10.61740677, 45.72996009]}",2,6,
+22003,Temperatura,°C,1890,Tavernole sul Mella Monte Guglielmo,1790,BS,2019-10-14T00:00:00.000,N,5067376,591417,10.17540709,45.75389593,"{'type': 'Point', 'coordinates': [10.17540709, 45.75389593]}",2,6,
+48,Precipitazione,mm,35,Caspoggio Piazzo Cavalli,1719,SO,1989-10-27T00:00:00.000,N,5122179,567130,9.870887,46.249872,"{'type': 'Point', 'coordinates': [9.870887, 46.249872]}",7,3,
+2535,Precipitazione,mm,139,Virgilio Mantova Cerese,19,MN,2003-09-26T00:00:00.000,S,4997294,641005,9.378006,46.107976,"{'type': 'Point', 'coordinates': [9.378006, 46.107976]}",5,10,2018-09-19T00:00:00.000
+4082,Temperatura,°C,150,Pieve San Giacomo,39,CR,2002-07-04T00:00:00.000,N,4997179,594005,10.19526123,45.1218284,"{'type': 'Point', 'coordinates': [10.19526123, 45.1218284]}",4,8,
+17573,Temperatura,°C,1880,Lomello Cantona,84,PV,2018-12-05T00:00:00.000,N,4996463,484923,8.80829914,45.12147725,"{'type': 'Point', 'coordinates': [8.80829914, 45.12147725]}",6,7,
+14171,Precipitazione,mm,1341,Bosisio Parini Imbarcadero,266,LC,2012-10-27T00:00:00.000,N,5072258,522295,9.28691933,45.80353008,"{'type': 'Point', 'coordinates': [9.28691933, 45.80353008]}",5,10,
+5968,Temperatura,°C,628,Cremona p.zza Libertà,61,CR,1992-06-10T00:00:00.000,S,4998730,581171,10.03237064,45.13738208,"{'type': 'Point', 'coordinates': [10.03237064, 45.13738208]}",4,8,2006-04-04T00:00:00.000
+19344,Precipitazione,mm,1556,Prata Camportaccio Pratella,1035,SO,2015-12-03T00:00:00.000,N,5126642,531883,9.413906,46.292608,"{'type': 'Point', 'coordinates': [9.413906, 46.292608]}",7,3,
+2039,Temperatura,°C,102,San Colombano al Lambro,140,MI,2001-06-27T00:00:00.000,N,5002165,538425,9.48899684,45.17191896,"{'type': 'Point', 'coordinates': [9.48899684, 45.17191896]}",8,4,
+14765,Precipitazione,mm,1553,Mozzanica v.Donizetti,104,BG,2015-08-13T00:00:00.000,N,5036208,553342,9.68248866,45.47736192,"{'type': 'Point', 'coordinates': [9.68248866, 45.47736192]}",1,5,
+9098,Precipitazione,mm,1227,Sarezzo Gardone,338,BS,2004-01-01T00:00:00.000,S,5060559,592390,10.18662064,45.69242525,"{'type': 'Point', 'coordinates': [10.18662064, 45.69242525]}",2,6,2013-06-06T00:00:00.000
+8161,Precipitazione,mm,889,Torre Boldone,311,BG,2001-11-21T00:00:00.000,N,5063070,555269,9.71018546,45.71897778,"{'type': 'Point', 'coordinates': [9.71018546, 45.71897778]}",1,5,
+2449,Radiazione Globale,W/m²,133,Bema,958,SO,1993-01-01T00:00:00.000,N,5105929,544001,9.5693423,46.10552765,"{'type': 'Point', 'coordinates': [9.5693423, 46.10552765]}",7,3,
+31574,Precipitazione,mm,1604,Fuipiano Valle Imagna Pagafone,1000,BG,2018-06-28T00:00:00.000,N,5077903,540727,9.524593,45.85349,"{'type': 'Point', 'coordinates': [9.524593, 45.85349]}",1,5,
+19356,Precipitazione,mm,1561,Porto Ceresio campo sportivo,275,VA,2016-12-23T00:00:00.000,N,5082687,491668,8.89260364,45.89770027,"{'type': 'Point', 'coordinates': [8.89260364, 45.89770027]}",3,1,
+14741,Precipitazione,mm,1546,Rho Scalo Fiorenza - Prato,143,MI,2015-02-24T00:00:00.000,N,5040479,506867,9.0879233,45.51781084,"{'type': 'Point', 'coordinates': [9.0879233, 45.51781084]}",8,4,
+2533,Radiazione Globale,W/m²,139,Virgilio Mantova Cerese,19,MN,2003-09-26T00:00:00.000,S,4997294,641005,9.378006,46.107976,"{'type': 'Point', 'coordinates': [9.378006, 46.107976]}",5,10,2018-09-19T00:00:00.000
+9116,Precipitazione,mm,1206,Cavaria con Premezzo v. Cantalupa,274,VA,2004-01-01T00:00:00.000,N,5059567,485026,8.80769797,45.68949617,"{'type': 'Point', 'coordinates': [8.80769797, 45.68949617]}",3,1,
+8127,Temperatura,°C,872,Brembate di Sopra Ponte Briolo,260,BG,1998-07-24T00:00:00.000,S,5062019,545719,9.58739228,45.71022186,"{'type': 'Point', 'coordinates': [9.58739228, 45.71022186]}",1,5,2011-08-23T00:00:00.000
+2187,Temperatura,°C,114,Landriano Cascina Marianna,88,PV,2005-09-29T00:00:00.000,N,5018600,520938,9.26715311,45.32059361,"{'type': 'Point', 'coordinates': [9.26715311, 45.32059361]}",6,7,
+30,Temperatura,°C,14,Valfurva S. Caterina,1730,SO,1988-05-02T00:00:00.000,N,5140927,614872,10.49466533,46.41214997,"{'type': 'Point', 'coordinates': [10.49466533, 46.41214997]}",7,3,
+14139,Temperatura,°C,1330,Olgiate Comasco v.Repubblica,400,CO,2012-04-18T00:00:00.000,N,5068834,497872,8.97262961,45.77306208,"{'type': 'Point', 'coordinates': [8.97262961, 45.77306208]}",3,2,
+10666,Precipitazione,mm,1898,Valganna Mondonico,665,VA,2020-05-18T00:00:00.000,N,5084612,485317,8.8106663,45.91491984,"{'type': 'Point', 'coordinates': [8.8106663, 45.91491984]}",3,1,
+9863,Precipitazione,mm,672,Cornale v.Libertà,74,PV,2005-07-28T00:00:00.000,N,4987406,493238,8.91415717,45.04008561,"{'type': 'Point', 'coordinates': [8.91415717, 45.04008561]}",6,7,
+17527,Radiazione Globale,W/m²,874,Sarnico v. Roma,197,BG,2018-10-21T00:00:00.000,N,5057377,574538,9.95688896,45.66594103,"{'type': 'Point', 'coordinates': [9.95688896, 45.66594103]}",1,5,
+5939,Temperatura,°C,557,Lonate Pozzolo v.Veneto,204,VA,1996-12-13T00:00:00.000,S,5048975,479783,8.74080297,45.59402776,"{'type': 'Point', 'coordinates': [8.74080297, 45.59402776]}",3,1,2018-06-19T00:00:00.000
+135,Precipitazione,mm,61,Valdisotto Arginone,1050,SO,2007-01-01T00:00:00.000,N,5137647,604113,10.35398908,46.38438486,"{'type': 'Point', 'coordinates': [10.35398908, 46.38438486]}",7,3,
+9094,Precipitazione,mm,1214,Oltre il Colle Acquedotto,1084,BG,2004-01-01T00:00:00.000,S,5082095,559544,9.76747367,45.88984764,"{'type': 'Point', 'coordinates': [9.76747367, 45.88984764]}",1,5,2012-01-17T00:00:00.000
+14141,Precipitazione,mm,1330,Olgiate Comasco v.Repubblica,400,CO,2016-06-08T00:00:00.000,N,5068834,497872,8.97262961,45.77306208,"{'type': 'Point', 'coordinates': [8.97262961, 45.77306208]}",3,2,
+4058,Temperatura,°C,147,Cinisello Balsamo Parco Nord,142,MI,2002-05-30T00:00:00.000,N,5043257,516051,9.20560341,45.54266467,"{'type': 'Point', 'coordinates': [9.20560341, 45.54266467]}",8,4,
+4020,Radiazione Globale,W/m²,142,Caiolo,274,SO,2002-05-24T00:00:00.000,N,5111566,561195,9.79251888,46.15492316,"{'type': 'Point', 'coordinates': [9.79251888, 46.15492316]}",7,3,
+8202,Temperatura,°C,858,Santa Margherita di Staffora Casanova,575,PV,2003-01-01T00:00:00.000,N,4957210,518916,9.23905083,44.76803261,"{'type': 'Point', 'coordinates': [9.23905083, 44.76803261]}",6,7,
+115,Temperatura,°C,58,Carona Lago Fregabolgia,1955,BG,2001-12-01T00:00:00.000,N,5097125,566799,9.86305936,46.02444861,"{'type': 'Point', 'coordinates': [9.86305936, 46.02444861]}",1,5,
+17600,Precipitazione,mm,1889,Val Masino Merdarola,2280,SO,2019-08-01T00:00:00.000,N,5119691,544851,9.58163635,46.22931619,"{'type': 'Point', 'coordinates': [9.58163635, 46.22931619]}",7,3,
+9107,Precipitazione,mm,1225,Premana Diga di Pagnona,725,LC,2004-01-01T00:00:00.000,S,5100122,531422,9.40620278,46.05395319,"{'type': 'Point', 'coordinates': [9.40620278, 46.05395319]}",5,10,2012-02-24T00:00:00.000
+9004,Temperatura,°C,1213,Mezzoldo Ronchi,988,BG,2004-01-01T00:00:00.000,S,5095843,551256,9.66212067,46.01425236,"{'type': 'Point', 'coordinates': [9.66212067, 46.01425236]}",1,5,2012-08-01T00:00:00.000
+2065,Precipitazione,mm,104,Segrate Milano Due,120,MI,1994-09-23T00:00:00.000,S,5038760,520713,9.26513128,45.50206551,"{'type': 'Point', 'coordinates': [9.26513128, 45.50206551]}",8,4,2004-06-16T00:00:00.000
+8138,Temperatura,°C,875,Bagolino Valle Dorizzo,1226,BS,2001-06-06T00:00:00.000,S,5081485,612286,10.44694397,45.87777614,"{'type': 'Point', 'coordinates': [10.44694397, 45.87777614]}",2,6,2012-11-14T00:00:00.000
+17451,Temperatura,°C,1871,Tavernola Bergamasca Gallinarga,185,BG,2018-11-27T00:00:00.000,N,5060849,582076,10.05422004,45.6963302,"{'type': 'Point', 'coordinates': [10.05422004, 45.6963302]}",1,5,
+9009,Temperatura,°C,1227,Sarezzo Gardone,338,BS,2004-01-01T00:00:00.000,S,5060559,592390,10.18662064,45.69242525,"{'type': 'Point', 'coordinates': [10.18662064, 45.69242525]}",2,6,2013-06-06T00:00:00.000
+10382,Radiazione Globale,W/m²,706,Lecco v.Sora,272,LC,2008-07-31T00:00:00.000,N,5078987,531045,9.39995481,45.86375372,"{'type': 'Point', 'coordinates': [9.39995481, 45.86375372]}",5,10,
+8223,Temperatura,°C,816,Sermide e Felonica SP 91,10,MN,2003-07-10T00:00:00.000,N,4987208,680433,11.28993625,45.01536422,"{'type': 'Point', 'coordinates': [11.28993625, 45.01536422]}",,9,
+32355,Precipitazione,mm,1807,Ispra JRC,249,VA,2022-04-21T00:00:00.000,N,5072552,471760,8.6365627,45.80595188,"{'type': 'Point', 'coordinates': [8.6365627, 45.80595188]}",3,1,
+7046,Temperatura,°C,695,Ponti sul Mincio v.San Martino,113,MN,2006-12-19T00:00:00.000,N,5030184,631718,10.68336214,45.41277633,"{'type': 'Point', 'coordinates': [10.68336214, 45.41277633]}",4,9,
+6430,Radiazione Globale,W/m²,595,Filago v.Don Milani,190,BG,1991-12-07T00:00:00.000,N,5053519,543342,9.55609572,45.63387247,"{'type': 'Point', 'coordinates': [9.55609572, 45.63387247]}",1,5,
+1401,Temperatura,°C,89,Branzi Il Pizzo,1600,BG,2010-11-12T00:00:00.000,N,5093991,557587,9.74368,45.997079,"{'type': 'Point', 'coordinates': [9.74368, 45.997079]}",1,5,
+31,Temperatura,°C,16,Valfurva Ghiacciaio dei Forni,2180,SO,1988-05-03T00:00:00.000,N,5141977,619522,10.55541386,46.42078875,"{'type': 'Point', 'coordinates': [10.55541386, 46.42078875]}",7,3,
+1433,Precipitazione,mm,91,San Giacomo Filippo Val Genasca,840,SO,2011-03-21T00:00:00.000,N,5130392,528106,9.365136,46.326521,"{'type': 'Point', 'coordinates': [9.365136, 46.326521]}",7,3,
+8221,Precipitazione,mm,898,Codogno Ist.Tosi,68,LO,2003-03-26T00:00:00.000,N,5001193,556652,9.72083264,45.16194522,"{'type': 'Point', 'coordinates': [9.72083264, 45.16194522]}",8,11,
+8116,Temperatura,°C,863,Lozza Ponte Vedano,276,VA,1998-07-24T00:00:00.000,S,5069163,489791,8.86869244,45.77595336,"{'type': 'Point', 'coordinates': [8.86869244, 45.77595336]}",3,1,2013-03-26T00:00:00.000
+14241,Precipitazione,mm,1345,Piazzatorre,966,BG,2012-10-13T00:00:00.000,N,5093546,553689,9.69328479,45.99338359,"{'type': 'Point', 'coordinates': [9.69328479, 45.99338359]}",1,5,
+1421,Temperatura,°C,90,Talamona San Giorgio,840,SO,2011-02-10T00:00:00.000,S,5107938,548717,9.383251,46.443735,"{'type': 'Point', 'coordinates': [9.383251, 46.443735]}",7,3,2017-11-27T00:00:00.000
+8151,Temperatura,°C,884,Cuveglio,294,VA,2000-07-06T00:00:00.000,N,5083338,480047,8.74277458,45.90332947,"{'type': 'Point', 'coordinates': [8.74277458, 45.90332947]}",3,1,
+14385,Radiazione Globale,W/m²,1360,Clusone SP 671,564,BG,2012-11-14T00:00:00.000,N,5081243,572409,9.93314133,45.88094706,"{'type': 'Point', 'coordinates': [9.93314133, 45.88094706]}",1,5,
+5938,Precipitazione,mm,557,Lonate Pozzolo v.Veneto,204,VA,1996-12-05T00:00:00.000,S,5048975,479783,8.74080297,45.59402776,"{'type': 'Point', 'coordinates': [8.74080297, 45.59402776]}",3,1,2018-12-10T00:00:00.000
+2251,Precipitazione,mm,117,Edolo Ist.Meneghini,699,BS,1993-04-02T00:00:00.000,N,5114436,602920,10.33339293,46.17572375,"{'type': 'Point', 'coordinates': [10.33339293, 46.17572375]}",7,6,
+8095,Precipitazione,mm,912,Foppolo,1682,BG,1998-01-01T00:00:00.000,N,5099046,558502,9.75610761,46.04249594,"{'type': 'Point', 'coordinates': [9.75610761, 46.04249594]}",1,5,
+19333,Temperatura,°C,1551,Premana v.Luciani papa,910,LC,2015-07-08T00:00:00.000,N,5099899,532481,9.419878,46.0519,"{'type': 'Point', 'coordinates': [9.419878, 46.0519]}",5,10,
+14528,Temperatura,°C,1375,Varano Borghi,241,VA,2013-03-27T00:00:00.000,N,5068133,477631,8.71232365,45.76639371,"{'type': 'Point', 'coordinates': [8.71232365, 45.76639371]}",3,1,
+8126,Precipitazione,mm,872,Brembate di Sopra Ponte Briolo,260,BG,1998-07-24T00:00:00.000,S,5062019,545719,9.58739228,45.71022186,"{'type': 'Point', 'coordinates': [9.58739228, 45.71022186]}",1,5,2011-08-23T00:00:00.000
+11,Precipitazione,mm,6,Bormio Ponte sul  Frodolfo,1250,SO,1987-11-24T00:00:00.000,N,5146642,605400,10.372755,46.465111,"{'type': 'Point', 'coordinates': [10.372755, 46.465111]}",7,3,
+38,Precipitazione,mm,26,Torre di Santa Maria Val Torreggio RTU 60,1275,SO,1999-04-26T00:00:00.000,N,5120793,564317,9.83420599,46.23767804,"{'type': 'Point', 'coordinates': [9.83420599, 46.23767804]}",7,3,
+19342,Temperatura,°C,1556,Prata Camportaccio Pratella,1035,SO,2015-12-03T00:00:00.000,N,5126642,531883,9.413906,46.292608,"{'type': 'Point', 'coordinates': [9.413906, 46.292608]}",7,3,
+9007,Temperatura,°C,1215,Taleggio,763,BG,2004-01-01T00:00:00.000,S,5082304,543960,9.56663314,45.89290225,"{'type': 'Point', 'coordinates': [9.56663314, 45.89290225]}",1,5,2012-11-10T00:00:00.000
+10658,Temperatura,°C,1898,Valganna Mondonico,665,VA,2020-05-18T00:00:00.000,N,5084612,485317,8.8106663,45.91491984,"{'type': 'Point', 'coordinates': [8.8106663, 45.91491984]}",3,1,
+11007,Temperatura,°C,822,Valtorta,982,BG,2010-11-10T00:00:00.000,N,5091256,541747,9.53889086,45.97360719,"{'type': 'Point', 'coordinates': [9.53889086, 45.97360719]}",1,5,
+14712,Precipitazione,mm,868,Lesmo Peregallo,180,MB,2014-10-13T00:00:00.000,N,5053558,523312,9.29910483,45.63518697,"{'type': 'Point', 'coordinates': [9.29910483, 45.63518697]}",5,12,
+10570,Temperatura,°C,1273,Val Masino Bagni,1191,SO,2011-07-15T00:00:00.000,S,5121270,545980,9.59643936,46.24345747,"{'type': 'Point', 'coordinates': [9.59643936, 46.24345747]}",7,3,2021-02-12T00:00:00.000
+8209,Temperatura,°C,910,Manerbio v.Dante,60,BS,2003-04-09T00:00:00.000,N,5023554,589720,10.14555158,45.35975344,"{'type': 'Point', 'coordinates': [10.14555158, 45.35975344]}",2,6,
+9029,Temperatura,°C,1239,San Pellegrino Terme P.za Alighieri,350,BG,2004-02-18T00:00:00.000,S,5077078,551733,9.66626614,45.84532778,"{'type': 'Point', 'coordinates': [9.66626614, 45.84532778]}",1,5,2013-03-19T00:00:00.000
+5920,Temperatura,°C,503,Milano P.zza Zavattari,122,MI,1989-01-01T00:00:00.000,N,5035847,511082,9.14178666,45.47606529,"{'type': 'Point', 'coordinates': [9.14178666, 45.47606529]}",8,4,
+30889,Temperatura,°C,1562,Verceia Campo sportivo,200,SO,2016-03-23T00:00:00.000,N,5116223,535141,9.455467,46.198677,"{'type': 'Point', 'coordinates': [9.455467, 46.198677]}",7,3,
+90,Temperatura,°C,49,Morbegno ponte ferroviario,242,SO,2001-12-01T00:00:00.000,S,5109365,543448,9.562504,46.136478,"{'type': 'Point', 'coordinates': [9.562504, 46.136478]}",7,3,2021-02-11T00:00:00.000
+2063,Temperatura,°C,104,Segrate Milano Due,120,MI,1995-06-21T00:00:00.000,S,5038760,520713,9.26513128,45.50206551,"{'type': 'Point', 'coordinates': [9.26513128, 45.50206551]}",8,4,2004-06-16T00:00:00.000
+14125,Temperatura,°C,1328,Teglio S. Giacomo,357,SO,2012-04-20T00:00:00.000,N,5112157,580182,10.03847892,46.15827664,"{'type': 'Point', 'coordinates': [10.03847892, 46.15827664]}",7,3,
+2548,Temperatura,°C,192,Idro Frana,427,BS,2006-12-13T00:00:00.000,N,5065296,612856,10.449929,45.732214,"{'type': 'Point', 'coordinates': [10.449929, 45.732214]}",2,6,
+8018,Precipitazione,mm,836,Aprica,1950,SO,1992-01-01T00:00:00.000,N,5109097,588704,10.14826598,46.12968795,"{'type': 'Point', 'coordinates': [10.14826598, 46.12968795]}",7,3,
+8019,Temperatura,°C,846,Edolo Pantano d`Avio,2108,BS,1993-05-01T00:00:00.000,N,5114768,613679,10.47282844,46.17700799,"{'type': 'Point', 'coordinates': [10.47282844, 46.17700799]}",7,6,
+11113,Radiazione Globale,W/m²,896,Collio S.Colombano,960,BS,2011-08-10T00:00:00.000,S,5073980,606852,10.37527678,45.81111356,"{'type': 'Point', 'coordinates': [10.37527678, 45.81111356]}",2,6,2012-03-15T00:00:00.000
+9308,Precipitazione,mm,646,Como Villa Gallia,201,CO,1999-01-01T00:00:00.000,N,5073500,505203,9.06697886,45.81504217,"{'type': 'Point', 'coordinates': [9.06697886, 45.81504217]}",3,2,
+19419,Radiazione Globale,W/m²,1656,Casalmaggiore campo sportivo,26,CR,2017-03-28T00:00:00.000,N,4983484,611536,10.415068,44.996044,"{'type': 'Point', 'coordinates': [10.415068, 44.996044]}",4,8,
+9101,Precipitazione,mm,1238,Val Masino S.Martino,943,SO,2000-02-21T00:00:00.000,N,5121068,548737,9.63217806,46.24144667,"{'type': 'Point', 'coordinates': [9.63217806, 46.24144667]}",7,3,
+8162,Temperatura,°C,869,Milano v.Feltre,127,MI,2000-07-05T00:00:00.000,N,5037597,519436,9.24873853,45.49163461,"{'type': 'Point', 'coordinates': [9.24873853, 45.49163461]}",8,4,
+9103,Precipitazione,mm,1237,Monno,1728,BS,2004-10-11T00:00:00.000,N,5122691,600885,10.308807,46.25030272,"{'type': 'Point', 'coordinates': [10.308807, 46.25030272]}",7,6,
+5861,Precipitazione,mm,586,Costa Volpino v.Nazionale,192,BG,1992-01-01T00:00:00.000,N,5075429,585212,10.09707131,45.82716061,"{'type': 'Point', 'coordinates': [10.09707131, 45.82716061]}",1,5,
+17474,Radiazione Globale,W/m²,1382,Veddasca Monte Cadrigna,1302,VA,2018-09-27T00:00:00.000,N,5102054,482122,8.76881513,46.07182708,"{'type': 'Point', 'coordinates': [8.76881513, 46.07182708]}",3,1,
+8029,Precipitazione,mm,848,Livigno La Vallaccia,2660,SO,1993-09-11T00:00:00.000,N,5147768,591251,10.18873661,46.47730866,"{'type': 'Point', 'coordinates': [10.18873661, 46.47730866]}",7,3,
+9020,Temperatura,°C,1222,Cavargna,1100,CO,2004-04-09T00:00:00.000,N,5104225,508568,9.11084686,46.09155206,"{'type': 'Point', 'coordinates': [9.11084686, 46.09155206]}",7,2,
+22,Precipitazione,mm,82,Valdisotto Val Pola RTU 004/5,2114,SO,1988-03-13T00:00:00.000,N,5137523,602293,10.33030201,46.38354896,"{'type': 'Point', 'coordinates': [10.33030201, 46.38354896]}",7,3,
+8146,Temperatura,°C,824,Clusone Campo Sportivo,591,BG,2001-11-21T00:00:00.000,S,5081860,573451,9.94666236,45.88638933,"{'type': 'Point', 'coordinates': [9.94666236, 45.88638933]}",1,5,2015-07-21T00:00:00.000
+8002,Temperatura,°C,855,Varzi v.Mazzini,485,PV,1998-01-01T00:00:00.000,S,4963189,515657,9.19805102,44.82194363,"{'type': 'Point', 'coordinates': [9.19805102, 44.82194363]}",6,7,2018-09-19T00:00:00.000
+2384,Radiazione Globale,W/m²,127,Casatenovo tetto,360,LC,2003-11-10T00:00:00.000,N,5060979,524066,9.30914481,45.70194614,"{'type': 'Point', 'coordinates': [9.30914481, 45.70194614]}",5,10,
+4060,Radiazione Globale,W/m²,147,Cinisello Balsamo Parco Nord,142,MI,2002-05-30T00:00:00.000,N,5043257,516051,9.20560341,45.54266467,"{'type': 'Point', 'coordinates': [9.20560341, 45.54266467]}",8,4,
+2103,Precipitazione,mm,107,Sondrio Fond.Fojanini,307,SO,2001-01-29T00:00:00.000,N,5113016,565691,9.85094015,46.16755337,"{'type': 'Point', 'coordinates': [9.85094015, 46.16755337]}",7,3,
+8096,Temperatura,°C,912,Foppolo,1682,BG,1998-01-01T00:00:00.000,N,5099046,558502,9.75610761,46.04249594,"{'type': 'Point', 'coordinates': [9.75610761, 46.04249594]}",1,5,
+16430,Temperatura,°C,1338,Sueglio Monte Letee,1110,LC,2012-08-06T00:00:00.000,N,5104935,526026,9.336862,46.097601,"{'type': 'Point', 'coordinates': [9.336862, 46.097601]}",5,10,
+9809,Precipitazione,mm,670,Mantova S.Agnese,22,MN,2014-10-05T00:00:00.000,N,5002356,641122,10.79557331,45.16057658,"{'type': 'Point', 'coordinates': [10.79557331, 45.16057658]}",4,9,
+9827,Radiazione Globale,W/m²,835,Valdisotto Oga S. Colombano,2300,SO,1992-10-01T00:00:00.000,N,5145272,600293,10.30596404,46.45356516,"{'type': 'Point', 'coordinates': [10.30596404, 46.45356516]}",7,3,
+6823,Temperatura,°C,656,Gambara v.Parma,47,BS,1990-01-01T00:00:00.000,N,5011493,601945,10.29913,45.24955194,"{'type': 'Point', 'coordinates': [10.29913, 45.24955194]}",2,6,
+2595,Temperatura,°C,205,Montevecchia cascina Butto,385,LC,2014-10-06T00:00:00.000,N,5061321,529882,9.38387611,45.70480511,"{'type': 'Point', 'coordinates': [9.38387611, 45.70480511]}",5,10,
+9105,Precipitazione,mm,1224,Cortenova,456,LC,2004-01-01T00:00:00.000,N,5094947,529451,9.38040375,46.00746603,"{'type': 'Point', 'coordinates': [9.38040375, 46.00746603]}",5,10,
+9108,Precipitazione,mm,1201,Canevino,455,PV,2004-01-01T00:00:00.000,N,4975743,521751,9.275674,44.93479528,"{'type': 'Point', 'coordinates': [9.275674, 44.93479528]}",6,7,
+14118,Precipitazione,mm,1325,Collio Memmo,1069,BS,2012-03-18T00:00:00.000,N,5073930,602209,10.31552778,45.81136111,"{'type': 'Point', 'coordinates': [10.31552778, 45.81136111]}",2,6,
+5864,Temperatura,°C,594,Bergamo v.Goisis,290,BG,1996-09-13T00:00:00.000,N,5062715,553620,9.68896994,45.71591825,"{'type': 'Point', 'coordinates': [9.68896994, 45.71591825]}",1,5,
+2388,Temperatura,°C,128,Capralba,96,CR,1996-03-20T00:00:00.000,S,5032570,550482,9.132164,46.088243,"{'type': 'Point', 'coordinates': [9.132164, 46.088243]}",7,2,2012-02-10T00:00:00.000
+17562,Temperatura,°C,1879,Montichiari Boschetti,92,BS,2018-12-13T00:00:00.000,N,5028666,610666,10.41406192,45.40275984,"{'type': 'Point', 'coordinates': [10.41406192, 45.40275984]}",2,6,
+8198,Temperatura,°C,911,Lambrugo,273,CO,2003-03-06T00:00:00.000,N,5067627,519009,9.24444953,45.76194769,"{'type': 'Point', 'coordinates': [9.24444953, 45.76194769]}",3,2,
+4066,Temperatura,°C,148,Arconate SMR,182,MI,2002-07-02T00:00:00.000,N,5043898,488082,8.84732669,45.54852147,"{'type': 'Point', 'coordinates': [8.84732669, 45.54852147]}",8,4,
+14545,Precipitazione,mm,1376,Puegnago del Garda,291,BS,2013-04-19T00:00:00.000,N,5048460,617051,10.5003309,45.5798378,"{'type': 'Point', 'coordinates': [10.5003309, 45.5798378]}",2,6,
+2471,Temperatura,°C,135,Vertemate con Minoprio villa,322,CO,1992-01-02T00:00:00.000,S,5062757,506658,10.204777,45.851052,"{'type': 'Point', 'coordinates': [10.204777, 45.851052]}",7,6,2010-07-22T00:00:00.000
+103,Precipitazione,mm,53,Piazza Brembana Ponte dei Fondi,485,BG,2002-01-01T00:00:00.000,S,5088339,551715,9.66723664,45.94667586,"{'type': 'Point', 'coordinates': [9.66723664, 45.94667586]}",1,5,2022-05-17T00:00:00.000
+2477,Precipitazione,mm,135,Vertemate con Minoprio villa,322,CO,1990-10-20T00:00:00.000,S,5062757,506658,10.204777,45.851052,"{'type': 'Point', 'coordinates': [10.204777, 45.851052]}",7,6,2010-07-15T00:00:00.000
+16463,Temperatura,°C,1340,Sonico Pal alta,1310,BS,2012-10-04T00:00:00.000,N,5113101,606325,10.3772068,46.1631966,"{'type': 'Point', 'coordinates': [10.3772068, 46.1631966]}",7,6,
+9933,Precipitazione,mm,677,Cremona Via Fatebenefratelli,43,CR,2006-04-10T00:00:00.000,N,4999315,582066,10.04384767,45.14254358,"{'type': 'Point', 'coordinates': [10.04384767, 45.14254358]}",4,8,
+14684,Temperatura,°C,1420,Gordona,1362,SO,2014-03-20T00:00:00.000,N,5126494,526127,9.33920315,46.29151911,"{'type': 'Point', 'coordinates': [9.33920315, 46.29151911]}",7,3,
+91654,Temperatura,°C,2181,Delebio Canargo,900,SO,2025-04-03T00:00:00.000,N,5106713,535363,9.45762893,46.11307673,"{'type': 'Point', 'coordinates': [9.45762893, 46.11307673]}",7,3,
+17475,Radiazione Globale,W/m²,1545,San Siro Alpe Rescascìa,1285,CO,2018-09-26T00:00:00.000,N,5102069,518430,9.2383327,46.0719452,"{'type': 'Point', 'coordinates': [9.2383327, 46.0719452]}",7,2,
+32413,Radiazione Globale,W/m²,1680,Vilminore di Scalve Presolana,1856,BG,2017-11-15T00:00:00.000,N,5092483,580679,10.041578,45.98117244,"{'type': 'Point', 'coordinates': [10.041578, 45.98117244]}",1,5,
+5888,Temperatura,°C,617,Tavazzano con Villavesco Enel suolo,80,LO,2000-01-13T00:00:00.000,S,5020175,533401,9.42627342,45.33429114,"{'type': 'Point', 'coordinates': [9.42627342, 45.33429114]}",8,11,2015-06-15T00:00:00.000
+2096,Temperatura,°C,107,Sondrio Fond.Fojanini,307,SO,2001-01-29T00:00:00.000,N,5113016,565691,9.85094015,46.16755337,"{'type': 'Point', 'coordinates': [9.85094015, 46.16755337]}",7,3,
+10376,Precipitazione,mm,706,Lecco v.Sora,272,LC,2008-07-22T00:00:00.000,N,5078987,531045,9.39995481,45.86375372,"{'type': 'Point', 'coordinates': [9.39995481, 45.86375372]}",5,10,
+4037,Radiazione Globale,W/m²,144,Madesimo Spluga,1915,SO,2000-11-19T00:00:00.000,N,5146513,526726,9.34812808,46.47166446,"{'type': 'Point', 'coordinates': [9.34812808, 46.47166446]}",7,3,
+35,Precipitazione,mm,23,Chiesa in Valmalenco S.Giuseppe,1428,SO,1987-08-14T00:00:00.000,N,5128414,563900,9.82983,46.306299,"{'type': 'Point', 'coordinates': [9.82983, 46.306299]}",7,3,
+8200,Temperatura,°C,865,Cantù Asnago,244,CO,2003-04-29T00:00:00.000,N,5062780,507811,9.10037269,45.71853181,"{'type': 'Point', 'coordinates': [9.10037269, 45.71853181]}",3,2,
+9664,Temperatura,°C,2514,Schignano Alpe Comana,1130,CO,2026-05-12T00:00:00.000,N,5084897,508837,9.11396111,45.91758611,"{'type': 'Point', 'coordinates': [9.11396111, 45.91758611]}",7,2,
+8187,Temperatura,°C,905,Cevo,1128,BS,2003-06-18T00:00:00.000,N,5103920,606529,10.37778231,46.08055608,"{'type': 'Point', 'coordinates': [10.37778231, 46.08055608]}",7,6,
+6696,Radiazione Globale,W/m²,642,Pavia v. Folperti,77,PV,2002-06-01T00:00:00.000,S,5004590,512932,9.16464919,45.19468231,"{'type': 'Point', 'coordinates': [9.16464919, 45.19468231]}",6,7,2026-02-05T00:00:00.000
+5946,Precipitazione,mm,552,Varese v.Vidoletti,425,VA,1999-05-24T00:00:00.000,S,5075945,484773,8.80393513,45.83690178,"{'type': 'Point', 'coordinates': [8.80393513, 45.83690178]}",3,1,2018-12-10T00:00:00.000
+5934,Precipitazione,mm,555,Busto Arsizio v.Magenta,222,VA,1991-05-25T00:00:00.000,S,5050810,488313,8.850121,45.61073922,"{'type': 'Point', 'coordinates': [8.850121, 45.61073922]}",3,1,2018-10-21T00:00:00.000
+22017,Radiazione Globale,W/m²,1890,Tavernole sul Mella Monte Guglielmo,1790,BS,2019-10-14T00:00:00.000,N,5067376,591417,10.17540709,45.75389593,"{'type': 'Point', 'coordinates': [10.17540709, 45.75389593]}",2,6,
+2373,Temperatura,°C,126,Casatenovo prato,360,LC,2002-04-26T00:00:00.000,S,5060979,524066,9.30914781,45.70195333,"{'type': 'Point', 'coordinates': [9.30914781, 45.70195333]}",5,10,2017-10-30T00:00:00.000
+2502,Precipitazione,mm,137,Rivolta d'Adda Ist. Spallanzani,102,CR,1993-06-09T00:00:00.000,N,5032417,540720,9.52068901,45.44409052,"{'type': 'Point', 'coordinates': [9.52068901, 45.44409052]}",4,8,
+14645,Temperatura,°C,1382,Veddasca Monte Cadrigna,1302,VA,2013-07-19T00:00:00.000,N,5102054,482122,8.76881513,46.07182708,"{'type': 'Point', 'coordinates': [8.76881513, 46.07182708]}",3,1,
+10465,Precipitazione,mm,1266,Bertonico v.Moro,65,LO,2009-03-03T00:00:00.000,N,5009105,552297,9.66625758,45.23349689,"{'type': 'Point', 'coordinates': [9.66625758, 45.23349689]}",8,11,
+8115,Precipitazione,mm,863,Lozza Ponte Vedano,276,VA,1998-07-24T00:00:00.000,S,5069163,489791,8.86869244,45.77595336,"{'type': 'Point', 'coordinates': [8.86869244, 45.77595336]}",3,1,2013-03-26T00:00:00.000
+19024,Radiazione Globale,W/m²,1422,Bergamo v.Maffei,249,BG,2013-11-06T00:00:00.000,S,5060404,552526,9.67466285,45.69520255,"{'type': 'Point', 'coordinates': [9.67466285, 45.69520255]}",1,5,2025-07-24T00:00:00.000
+8188,Precipitazione,mm,901,Crema v.Camporelle,103,CR,2003-03-04T00:00:00.000,N,5022780,552590,9.67144061,45.35656022,"{'type': 'Point', 'coordinates': [9.67144061, 45.35656022]}",4,8,
+14019,Radiazione Globale,W/m²,1077,Oltre il Colle Zambla,1138,BG,2012-01-13T00:00:00.000,N,5082261,561209,9.78893967,45.89119304,"{'type': 'Point', 'coordinates': [9.78893967, 45.89119304]}",1,5,
+5969,Temperatura,°C,629,Crema v.XI febbraio,79,CR,1992-08-01T00:00:00.000,N,5023885,555127,9.70395139,45.36631075,"{'type': 'Point', 'coordinates': [9.70395139, 45.36631075]}",4,8,
+19295,Precipitazione,mm,1514,Carenno centro sportivo,633,LC,2014-07-18T00:00:00.000,N,5072042,536210,9.46596925,45.8009939,"{'type': 'Point', 'coordinates': [9.46596925, 45.8009939]}",5,10,
+19307,Temperatura,°C,1518,Dubino La Piazza,993,SO,2014-11-21T00:00:00.000,N,5112733,535367,9.45812983,46.16725553,"{'type': 'Point', 'coordinates': [9.45812983, 46.16725553]}",7,3,
+2613,Temperatura,°C,212,Canzo,1233,CO,2011-04-20T00:00:00.000,N,5077224,524701,9.31813681,45.84814356,"{'type': 'Point', 'coordinates': [9.31813681, 45.84814356]}",3,2,
+9812,Temperatura,°C,670,Mantova S.Agnese,22,MN,2004-12-30T00:00:00.000,N,5002356,641122,10.79557331,45.16057658,"{'type': 'Point', 'coordinates': [10.79557331, 45.16057658]}",4,9,
+9120,Precipitazione,mm,1219,Casalbuttano ed Uniti,56,CR,2005-01-15T00:00:00.000,N,5011836,575599,9.96349494,45.25595928,"{'type': 'Point', 'coordinates': [9.96349494, 45.25595928]}",4,8,
+2614,Precipitazione,mm,212,Canzo,1233,CO,2008-11-26T00:00:00.000,N,5077224,524701,9.31813681,45.84814356,"{'type': 'Point', 'coordinates': [9.31813681, 45.84814356]}",3,2,
+17572,Precipitazione,mm,1880,Lomello Cantona,84,PV,2018-12-05T00:00:00.000,N,4996463,484923,8.80829914,45.12147725,"{'type': 'Point', 'coordinates': [8.80829914, 45.12147725]}",6,7,
+8016,Temperatura,°C,836,Aprica,1950,SO,1992-01-01T00:00:00.000,N,5109097,588704,10.14826598,46.12968795,"{'type': 'Point', 'coordinates': [10.14826598, 46.12968795]}",7,3,
+19443,Precipitazione,mm,1659,Mornico al Serio campo sportivo,162,BG,2017-09-08T00:00:00.000,N,5049158,562551,9.801961,45.593154,"{'type': 'Point', 'coordinates': [9.801961, 45.593154]}",1,5,
+12759,Temperatura,°C,1512,Pogliano Milanese,160,MI,2020-11-25T00:00:00.000,N,5042449,500406,9.00519996,45.53557672,"{'type': 'Point', 'coordinates': [9.00519996, 45.53557672]}",8,4,
+10373,Precipitazione,mm,687,Ferno v.Di Dio,215,VA,2007-08-13T00:00:00.000,N,5051773,481053,8.75697656,45.61924753,"{'type': 'Point', 'coordinates': [8.75697656, 45.61924753]}",3,1,
+14038,Radiazione Globale,W/m²,836,Aprica,1950,SO,2012-02-27T00:00:00.000,N,5109097,588704,10.14826598,46.12968795,"{'type': 'Point', 'coordinates': [10.14826598, 46.12968795]}",7,3,
+5927,Precipitazione,mm,572,Morbegno v.Cortivacci,262,SO,1998-09-29T00:00:00.000,S,5108901,543736,9.56624,46.135486,"{'type': 'Point', 'coordinates': [9.56624, 46.135486]}",7,3,2015-09-29T00:00:00.000
+14477,Radiazione Globale,W/m²,1367,Bagolino SP669,775,BS,2012-12-12T00:00:00.000,N,5077140,612773,10.452199,45.83860244,"{'type': 'Point', 'coordinates': [10.452199, 45.83860244]}",2,6,
+10377,Temperatura,°C,706,Lecco v.Sora,272,LC,2008-07-22T00:00:00.000,N,5078987,531045,9.39995481,45.86375372,"{'type': 'Point', 'coordinates': [9.39995481, 45.86375372]}",5,10,
+5930,Temperatura,°C,569,Sondrio v.Mazzini,307,SO,1993-10-28T00:00:00.000,S,5113078,567173,9.87014581,46.16797103,"{'type': 'Point', 'coordinates': [9.87014581, 46.16797103]}",7,3,2010-06-24T00:00:00.000
+22603,Radiazione Globale,W/m²,1986,Darfo Boario Terme Cappellino,215,BS,2025-08-22T00:00:00.000,N,5080754,590899,10.17126954,45.87434965,"{'type': 'Point', 'coordinates': [10.17126954, 45.87434965]}",7,6,
+19410,Radiazione Globale,W/m²,1652,Tirano eliporto,481,SO,2016-12-07T00:00:00.000,N,5118967,591186,10.18226719,46.2181778,"{'type': 'Point', 'coordinates': [10.18226719, 46.2181778]}",7,3,
+5876,Precipitazione,mm,573,Colico v.La Madoneta,229,LC,1990-11-06T00:00:00.000,N,5109468,529713,9.38468725,46.1381409,"{'type': 'Point', 'coordinates': [9.38468725, 46.1381409]}",5,10,
+2408,Precipitazione,mm,129,Capo di Ponte v.Briscioli,362,BS,2002-10-30T00:00:00.000,N,5097875,603903,10.3425026,46.02656354,"{'type': 'Point', 'coordinates': [10.3425026, 46.02656354]}",7,6,
+32398,Precipitazione,mm,1680,Vilminore di Scalve Presolana,1856,BG,2017-11-15T00:00:00.000,N,5092483,580679,10.041578,45.98117244,"{'type': 'Point', 'coordinates': [10.041578, 45.98117244]}",1,5,
+8104,Temperatura,°C,851,Treviso Bresciano Cavacca,1147,BS,1998-01-01T00:00:00.000,S,5064493,616659,10.49916675,45.72416486,"{'type': 'Point', 'coordinates': [10.49916675, 45.72416486]}",2,6,2025-06-04T00:00:00.000
+152,Temperatura,°C,63,Montemezzo Gera Lario,680,CO,2004-01-01T00:00:00.000,N,5114231,527759,9.359678,46.181098,"{'type': 'Point', 'coordinates': [9.359678, 46.181098]}",7,2,
+31537,Temperatura,°C,1601,Dorio Bedolesso,790,LC,2017-12-05T00:00:00.000,N,5106113,529212,9.37800595,46.10797603,"{'type': 'Point', 'coordinates': [9.37800595, 46.10797603]}",5,10,
+2110,Temperatura,°C,108,Samolaco v.Vignola,206,SO,1994-07-27T00:00:00.000,N,5120369,532896,9.42666579,46.23610858,"{'type': 'Point', 'coordinates': [9.42666579, 46.23610858]}",7,3,
+2364,Radiazione Globale,W/m²,125,Castello d'Agogna,106,PV,1998-07-21T00:00:00.000,N,5010411,476502,8.70057165,45.24680044,"{'type': 'Point', 'coordinates': [8.70057165, 45.24680044]}",6,7,
+31061,Temperatura,°C,1572,Dossena ST1,1000,BG,2017-03-29T00:00:00.000,N,5080775,554455,9.701726,45.878392,"{'type': 'Point', 'coordinates': [9.701726, 45.878392]}",1,5,
+5900,Precipitazione,mm,512,Carate Brianza v.De Gasperi,250,MB,1996-03-31T00:00:00.000,S,5057635,518272,9.234603,45.672017,"{'type': 'Point', 'coordinates': [9.234603, 45.672017]}",5,12,2018-09-06T00:00:00.000
+5873,Temperatura,°C,562,Mariano Comense v.le Lombardia,256,CO,1996-09-23T00:00:00.000,S,5059472,514067,9.18065777,45.68865731,"{'type': 'Point', 'coordinates': [9.18065777, 45.68865731]}",3,2,2016-07-23T00:00:00.000
+26,Temperatura,°C,82,Valdisotto Val Pola RTU 004/5,2114,SO,1988-01-25T00:00:00.000,N,5137523,602293,10.33030201,46.38354896,"{'type': 'Point', 'coordinates': [10.33030201, 46.38354896]}",7,3,
+6437,Radiazione Globale,W/m²,625,Casalmaggiore v.Volta,23,CR,2002-01-01T00:00:00.000,S,4981793,612537,10.42738161,44.98066517,"{'type': 'Point', 'coordinates': [10.42738161, 44.98066517]}",4,8,2007-02-21T00:00:00.000
+12724,Precipitazione,mm,1899,Bereguardo Fornasetta,95,PV,2020-08-11T00:00:00.000,N,5012143,501719,9.02191087,45.26278148,"{'type': 'Point', 'coordinates': [9.02191087, 45.26278148]}",6,7,
+9113,Precipitazione,mm,1221,Casnigo Campo Sportivo,502,BG,2004-02-18T00:00:00.000,N,5073453,567252,9.86559107,45.81136488,"{'type': 'Point', 'coordinates': [9.86559107, 45.81136488]}",1,5,
+8168,Temperatura,°C,885,Arcisate,383,VA,2000-07-05T00:00:00.000,N,5076955,491501,8.89055144,45.84610806,"{'type': 'Point', 'coordinates': [8.89055144, 45.84610806]}",3,1,
+9111,Precipitazione,mm,1236,Porlezza Ponte Cuccio,304,CO,2004-01-08T00:00:00.000,S,5098356,510909,9.14099594,46.03869656,"{'type': 'Point', 'coordinates': [9.14099594, 46.03869656]}",7,2,2012-12-13T00:00:00.000
+9012,Temperatura,°C,1238,Val Masino S.Martino,943,SO,2004-01-01T00:00:00.000,N,5121068,548737,9.63217806,46.24144667,"{'type': 'Point', 'coordinates': [9.63217806, 46.24144667]}",7,3,
+8227,Temperatura,°C,904,Paisco Loveno,816,BS,2003-06-20T00:00:00.000,N,5103599,600282,10.29694303,46.07861336,"{'type': 'Point', 'coordinates': [10.29694303, 46.07861336]}",7,6,
+19441,Temperatura,°C,1659,Mornico al Serio campo sportivo,162,BG,2017-04-14T00:00:00.000,N,5049158,562551,9.801961,45.593154,"{'type': 'Point', 'coordinates': [9.801961, 45.593154]}",1,5,
+8097,Precipitazione,mm,822,Valtorta,982,BG,1998-01-01T00:00:00.000,N,5091256,541747,9.53889086,45.97360719,"{'type': 'Point', 'coordinates': [9.53889086, 45.97360719]}",1,5,
+19309,Precipitazione,mm,1518,Dubino La Piazza,993,SO,2014-11-21T00:00:00.000,N,5112733,535367,9.45812983,46.16725553,"{'type': 'Point', 'coordinates': [9.45812983, 46.16725553]}",7,3,
+5895,Temperatura,°C,530,Agrate Brianza v.Ferrario,162,MB,1992-03-25T00:00:00.000,S,5046977,527628,9.354094,45.575778,"{'type': 'Point', 'coordinates': [9.354094, 45.575778]}",5,12,2018-11-06T00:00:00.000
+32382,Precipitazione,mm,1679,Sormano rifugio Alpetto,1158,CO,2017-11-28T00:00:00.000,N,5083535,518233,9.23506881,45.90514139,"{'type': 'Point', 'coordinates': [9.23506881, 45.90514139]}",3,2,
+11216,Temperatura,°C,1202,Vercana,980,CO,2011-11-11T00:00:00.000,N,5114303,525058,9.32468906,46.18185467,"{'type': 'Point', 'coordinates': [9.32468906, 46.18185467]}",7,2,
+2206,Precipitazione,mm,115,Ispra tetto,193,VA,2003-09-24T00:00:00.000,S,5073482,470058,9.701628,45.879961,"{'type': 'Point', 'coordinates': [9.701628, 45.879961]}",1,5,2012-10-23T00:00:00.000
+1366,Precipitazione,mm,78,Tirano Monte Masuccio,1750,SO,2011-01-01T00:00:00.000,N,5121837,590452,10.1733198,46.244091,"{'type': 'Point', 'coordinates': [10.1733198, 46.244091]}",7,3,
+17450,Precipitazione,mm,1871,Tavernola Bergamasca Gallinarga,185,BG,2018-11-27T00:00:00.000,N,5060849,582076,10.05422004,45.6963302,"{'type': 'Point', 'coordinates': [10.05422004, 45.6963302]}",1,5,
+2140,Precipitazione,mm,110,Gonzaga Palidano,22,MN,1994-01-03T00:00:00.000,N,4980052,638675,10.75828107,44.96037167,"{'type': 'Point', 'coordinates': [10.75828107, 44.96037167]}",4,9,
+2485,Temperatura,°C,136,Persico Dosimo,44,CR,1993-01-01T00:00:00.000,N,5003424,582100,10.0449444,45.17951839,"{'type': 'Point', 'coordinates': [10.0449444, 45.17951839]}",4,8,
+14406,Precipitazione,mm,1365,Bione,911,BS,2012-11-18T00:00:00.000,N,5057931,603395,10.32736288,45.66721826,"{'type': 'Point', 'coordinates': [10.32736288, 45.66721826]}",2,6,
+46,Precipitazione,mm,33,Lanzada Ganda,988,SO,1989-11-10T00:00:00.000,N,5124452,568154,9.884505,46.270224,"{'type': 'Point', 'coordinates': [9.884505, 46.270224]}",7,3,
+30525,Precipitazione,mm,1509,Paderno Dugnano Palazzolo Parco Borghetto,170,MI,2014-05-21T00:00:00.000,N,5047745,512305,9.15773268,45.58313746,"{'type': 'Point', 'coordinates': [9.15773268, 45.58313746]}",8,4,
+14478,Temperatura,°C,1367,Bagolino SP669,775,BS,2012-12-12T00:00:00.000,N,5077140,612773,10.452199,45.83860244,"{'type': 'Point', 'coordinates': [10.452199, 45.83860244]}",2,6,
+8160,Precipitazione,mm,824,Clusone Campo Sportivo,591,BG,2001-11-21T00:00:00.000,S,5081860,573451,9.94666236,45.88638933,"{'type': 'Point', 'coordinates': [9.94666236, 45.88638933]}",1,5,2015-07-21T00:00:00.000
+4008,Precipitazione,mm,140,Motta Visconti SMR,100,MI,2003-05-15T00:00:00.000,S,5014273,499103,9.363781,46.134414,"{'type': 'Point', 'coordinates': [9.363781, 46.134414]}",5,10,2020-08-25T00:00:00.000
+2395,Precipitazione,mm,128,Capralba,96,CR,1996-03-20T00:00:00.000,S,5032570,550482,9.132164,46.088243,"{'type': 'Point', 'coordinates': [9.132164, 46.088243]}",7,2,2012-02-10T00:00:00.000
+14365,Precipitazione,mm,1359,Breno Lago Della Vacca,2410,BS,2012-12-09T00:00:00.000,N,5090337,611798,10.4427287,45.95749967,"{'type': 'Point', 'coordinates': [10.4427287, 45.95749967]}",7,6,
+8164,Temperatura,°C,859,Luino v. Piero Chiara,205,VA,2000-07-05T00:00:00.000,N,5094539,480080,8.74272325,46.00414283,"{'type': 'Point', 'coordinates': [8.74272325, 46.00414283]}",3,1,
+14257,Temperatura,°C,1346,Campodolcino Alpe Motta,1880,SO,2012-10-17T00:00:00.000,N,5141127,528341,9.36883561,46.42312151,"{'type': 'Point', 'coordinates': [9.36883561, 46.42312151]}",7,3,
+4089,Precipitazione,mm,150,Pieve San Giacomo,39,CR,2002-07-04T00:00:00.000,N,4997179,594005,10.19526123,45.1218284,"{'type': 'Point', 'coordinates': [10.19526123, 45.1218284]}",4,8,
+22661,Temperatura,°C,1090,Valdisotto Bormio 2000,2328,SO,2025-08-18T00:00:00.000,N,5143703,607568,10.4003,46.43833,"{'type': 'Point', 'coordinates': [10.4003, 46.43833]}",7,3,
+22594,Radiazione Globale,W/m²,1985,Caponago Casello idraulico,154,MB,2025-12-30T00:00:00.000,N,5044950,530056,9.38509974,45.55743938,"{'type': 'Point', 'coordinates': [9.38509974, 45.55743938]}",5,12,
+5903,Temperatura,°C,525,Corsico v.le Italia,119,MI,1997-02-12T00:00:00.000,N,5031403,507619,9.09741197,45.43611269,"{'type': 'Point', 'coordinates': [9.09741197, 45.43611269]}",8,4,
+5911,Temperatura,°C,501,Milano v.Marche,129,MI,1989-01-01T00:00:00.000,N,5038105,514918,9.19093444,45.49631883,"{'type': 'Point', 'coordinates': [9.19093444, 45.49631883]}",8,4,
+1324,Precipitazione,mm,69,Lanzada Campo Franscia RTU 120,1670,SO,2010-08-24T00:00:00.000,N,5126393,569523,9.90255599,46.28755197,"{'type': 'Point', 'coordinates': [9.90255599, 46.28755197]}",7,3,
+12025,Temperatura,°C,1297,Spinadesco v.Battisti,48,CR,2011-02-03T00:00:00.000,N,5000087,573153,9.93059842,45.15047339,"{'type': 'Point', 'coordinates': [9.93059842, 45.15047339]}",4,8,
+5935,Temperatura,°C,555,Busto Arsizio v.Magenta,222,VA,1991-05-25T00:00:00.000,S,5050810,488313,8.850121,45.61073922,"{'type': 'Point', 'coordinates': [8.850121, 45.61073922]}",3,1,2018-12-10T00:00:00.000
+9868,Temperatura,°C,672,Cornale v.Libertà,74,PV,2005-07-28T00:00:00.000,N,4987406,493238,8.91415717,45.04008561,"{'type': 'Point', 'coordinates': [8.91415717, 45.04008561]}",6,7,
+11144,Temperatura,°C,143,Livigno Passo Foscagno,2320,SO,2011-09-08T00:00:00.000,N,5149692,592662,10.20748854,46.49442378,"{'type': 'Point', 'coordinates': [10.20748854, 46.49442378]}",7,3,
+5932,Temperatura,°C,570,Tirano Viale Italia,439,SO,1993-11-19T00:00:00.000,S,5118891,589196,10.170397,46.216293,"{'type': 'Point', 'coordinates': [10.170397, 46.216293]}",7,3,2018-05-17T00:00:00.000
+19430,Radiazione Globale,W/m²,1657,Mariano Comense campo sportivo,255,CO,2017-10-11T00:00:00.000,N,5059052,513843,9.177773,45.684884,"{'type': 'Point', 'coordinates': [9.177773, 45.684884]}",3,2,
+5857,Precipitazione,mm,594,Bergamo v.Goisis,290,BG,1996-07-09T00:00:00.000,N,5062715,553620,9.68896994,45.71591825,"{'type': 'Point', 'coordinates': [9.68896994, 45.71591825]}",1,5,
+56,Temperatura,°C,33,Lanzada Ganda,988,SO,1989-11-10T00:00:00.000,N,5124452,568154,9.884505,46.270224,"{'type': 'Point', 'coordinates': [9.884505, 46.270224]}",7,3,
+2089,Precipitazione,mm,106,Varzi Nivione,500,PV,2001-05-15T00:00:00.000,N,4961571,514194,9.17949163,44.80739989,"{'type': 'Point', 'coordinates': [9.17949163, 44.80739989]}",6,7,
+8149,Precipitazione,mm,890,Milano v.Confalonieri,122,MI,2006-06-28T00:00:00.000,S,5037078,515100,9.19323203,45.48707058,"{'type': 'Point', 'coordinates': [9.19323203, 45.48707058]}",8,4,2012-04-02T00:00:00.000
+9005,Temperatura,°C,1214,Oltre il Colle Acquedotto,1084,BG,2004-01-01T00:00:00.000,S,5082095,559544,9.76747367,45.88984764,"{'type': 'Point', 'coordinates': [9.76747367, 45.88984764]}",1,5,2012-01-16T00:00:00.000
+8587,Precipitazione,mm,998,Laveno-Mombello p.zza Matteotti,207,VA,1999-06-24T00:00:00.000,N,5084109,470426,8.61868535,45.90991335,"{'type': 'Point', 'coordinates': [8.61868535, 45.90991335]}",3,1,
+5128,Precipitazione,mm,166,Mantova Lunetta2 SMR,25,MN,2006-01-08T00:00:00.000,N,5002119,643358,10.82394014,45.15799358,"{'type': 'Point', 'coordinates': [10.82394014, 45.15799358]}",4,9,
+2497,Temperatura,°C,137,Rivolta d'Adda Ist. Spallanzani,102,CR,1993-06-09T00:00:00.000,N,5032417,540720,9.52068901,45.44409052,"{'type': 'Point', 'coordinates': [9.52068901, 45.44409052]}",4,8,
+9828,Radiazione Globale,W/m²,848,Livigno La Vallaccia,2660,SO,1993-09-11T00:00:00.000,N,5147768,591251,10.18873661,46.47730866,"{'type': 'Point', 'coordinates': [10.18873661, 46.47730866]}",7,3,
+6727,Temperatura,°C,644,Vigevano v.Petrarca,107,PV,2004-01-24T00:00:00.000,S,5019220,489053,8.86031156,45.32640825,"{'type': 'Point', 'coordinates': [8.86031156, 45.32640825]}",6,7,2013-10-09T00:00:00.000
+116,Precipitazione,mm,58,Carona Lago Fregabolgia,1955,BG,2002-01-02T00:00:00.000,N,5097125,566799,9.86305936,46.02444861,"{'type': 'Point', 'coordinates': [9.86305936, 46.02444861]}",1,5,
+8139,Precipitazione,mm,876,Caino,428,BS,2001-02-01T00:00:00.000,N,5051536,603100,10.32222392,45.60972056,"{'type': 'Point', 'coordinates': [10.32222392, 45.60972056]}",2,6,
+14584,Radiazione Globale,W/m²,1378,Tignale Oldesio,374,BS,2013-07-23T00:00:00.000,N,5065781,633895,10.7209063,45.7326393,"{'type': 'Point', 'coordinates': [10.7209063, 45.7326393]}",2,6,
+2361,Temperatura,°C,125,Castello d'Agogna,106,PV,1993-01-01T00:00:00.000,N,5010411,476502,8.70057165,45.24680044,"{'type': 'Point', 'coordinates': [8.70057165, 45.24680044]}",6,7,
+31337,Precipitazione,mm,1589,San Nazzaro Val Cavargna C5,980,CO,2017-08-02T00:00:00.000,N,5103965,510077,9.13034906,46.08918704,"{'type': 'Point', 'coordinates': [9.13034906, 46.08918704]}",7,2,
+6725,Radiazione Globale,W/m²,644,Vigevano v.Petrarca,107,PV,2004-01-24T00:00:00.000,S,5019220,489053,8.86031156,45.32640825,"{'type': 'Point', 'coordinates': [8.86031156, 45.32640825]}",6,7,2013-10-09T00:00:00.000
+14161,Radiazione Globale,W/m²,1202,Vercana,980,CO,2012-06-16T00:00:00.000,N,5114303,525058,9.32468906,46.18185467,"{'type': 'Point', 'coordinates': [9.32468906, 46.18185467]}",7,2,
+14546,Temperatura,°C,1376,Puegnago del Garda,291,BS,2013-04-19T00:00:00.000,N,5048460,617051,10.5003309,45.5798378,"{'type': 'Point', 'coordinates': [10.5003309, 45.5798378]}",2,6,
+17551,Precipitazione,mm,1877,Asola v.Industria,38,MN,2018-11-19T00:00:00.000,N,5008934,609678,10.39707082,45.22535225,"{'type': 'Point', 'coordinates': [10.39707082, 45.22535225]}",4,9,
+14661,Precipitazione,mm,1382,Veddasca Monte Cadrigna,1302,VA,2013-07-19T00:00:00.000,N,5102054,482122,8.76881513,46.07182708,"{'type': 'Point', 'coordinates': [8.76881513, 46.07182708]}",3,1,
+8229,Temperatura,°C,907,Varese v.Appiani,416,VA,2003-08-27T00:00:00.000,N,5075452,486300,8.82361133,45.83249661,"{'type': 'Point', 'coordinates': [8.82361133, 45.83249661]}",3,1,
+2200,Temperatura,°C,115,Ispra tetto,193,VA,2003-09-24T00:00:00.000,S,5073482,470058,9.701628,45.879961,"{'type': 'Point', 'coordinates': [9.701628, 45.879961]}",1,5,2012-08-01T00:00:00.000
+31505,Precipitazione,mm,1599,Sellero Zinvill S1,1000,BS,2017-12-06T00:00:00.000,N,5101188,602676,10.32737507,46.05656602,"{'type': 'Point', 'coordinates': [10.32737507, 46.05656602]}",7,6,
+9310,Temperatura,°C,646,Como Villa Gallia,201,CO,1999-01-01T00:00:00.000,N,5073500,505203,9.06697886,45.81504217,"{'type': 'Point', 'coordinates': [9.06697886, 45.81504217]}",3,2,
+113,Precipitazione,mm,57,Branzi Caserma Carabinieri,830,BG,2002-01-01T00:00:00.000,N,5094534,558779,9.75913061,46.00185828,"{'type': 'Point', 'coordinates': [9.75913061, 46.00185828]}",1,5,
+8008,Temperatura,°C,835,Valdisotto Oga S. Colombano,2300,SO,1992-01-01T00:00:00.000,N,5145272,600293,10.30596404,46.45356516,"{'type': 'Point', 'coordinates': [10.30596404, 46.45356516]}",7,3,
+6440,Radiazione Globale,W/m²,629,Crema v.XI febbraio,79,CR,2002-01-01T00:00:00.000,N,5023885,555127,9.70395139,45.36631075,"{'type': 'Point', 'coordinates': [9.70395139, 45.36631075]}",4,8,
+14148,Radiazione Globale,W/m²,1325,Collio Memmo,1069,BS,2012-04-18T00:00:00.000,N,5073930,602209,10.31552778,45.81136111,"{'type': 'Point', 'coordinates': [10.31552778, 45.81136111]}",2,6,
+8199,Precipitazione,mm,865,Cantù Asnago,244,CO,2003-04-29T00:00:00.000,N,5062780,507811,9.10037269,45.71853181,"{'type': 'Point', 'coordinates': [9.10037269, 45.71853181]}",3,2,
+8092,Temperatura,°C,832,Lanzada Palù,2151,SO,1992-01-01T00:00:00.000,N,5126972,568128,9.88452786,46.2929069,"{'type': 'Point', 'coordinates': [9.88452786, 46.2929069]}",7,3,
+8173,Precipitazione,mm,905,Cevo,1128,BS,2003-06-18T00:00:00.000,N,5103920,606529,10.37778231,46.08055608,"{'type': 'Point', 'coordinates': [10.37778231, 46.08055608]}",7,6,
+8170,Precipitazione,mm,819,Lozio,994,BS,2001-11-21T00:00:00.000,N,5093242,597570,10.25975254,45.98580874,"{'type': 'Point', 'coordinates': [10.25975254, 45.98580874]}",7,6,

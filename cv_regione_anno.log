@@ -1,0 +1,66 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+anni: [np.int32(2016), np.int32(2022), np.int32(2023)] | fold per parametro: 9 | reti per fold: 5
+[tx3] Lombardia 2016: train=246710 val=77914 rmse grezzo=5.312
+[tx3] Lombardia 2022: train=251114 val=87028 rmse grezzo=5.614
+[tx3] Lombardia 2023: train=252706 val=85942 rmse grezzo=5.420
+[tx3] Emilia-Romagna 2016: train=309378 val=67509 rmse grezzo=4.882
+[tx3] Emilia-Romagna 2022: train=293656 val=56497 rmse grezzo=5.136
+[tx3] Emilia-Romagna 2023: train=293642 val=53805 rmse grezzo=5.110
+[tx3] Veneto 2016: train=296634 val=54587 rmse grezzo=4.980
+[tx3] Veneto 2022: train=298409 val=61072 rmse grezzo=5.483
+[tx3] Veneto 2023: train=301989 val=61974 rmse grezzo=5.294
+[tn3] Lombardia 2016: train=246511 val=77904 rmse grezzo=3.837
+[tn3] Lombardia 2022: train=250736 val=87028 rmse grezzo=4.299
+[tn3] Lombardia 2023: train=252237 val=85942 rmse grezzo=4.105
+[tn3] Emilia-Romagna 2016: train=309377 val=67186 rmse grezzo=3.726
+[tn3] Emilia-Romagna 2022: train=293644 val=56352 rmse grezzo=4.164
+[tn3] Emilia-Romagna 2023: train=293631 val=53752 rmse grezzo=4.113
+[tn3] Veneto 2016: train=296435 val=54587 rmse grezzo=4.035
+[tn3] Veneto 2022: train=298021 val=61072 rmse grezzo=4.545
+[tn3] Veneto 2023: train=301510 val=61974 rmse grezzo=4.450
+[rr7] Lombardia 2016: train=286546 val=66985 rmse grezzo=9.331
+[rr7] Lombardia 2022: train=299803 val=90101 rmse grezzo=7.472
+[rr7] Lombardia 2023: train=305957 val=90003 rmse grezzo=9.889
+[rr7] Emilia-Romagna 2016: train=319449 val=95123 rmse grezzo=7.762
+[rr7] Emilia-Romagna 2022: train=291145 val=76678 rmse grezzo=7.487
+[rr7] Emilia-Romagna 2023: train=291242 val=70523 rmse grezzo=10.608
+[rr7] Veneto 2016: train=339172 val=56945 rmse grezzo=8.167
+[rr7] Veneto 2022: train=335844 val=63476 rmse grezzo=6.006
+[rr7] Veneto 2023: train=342622 val=64002 rmse grezzo=8.247
+[qq2] Lombardia 2016: train=113247 val=24872 rmse grezzo=61.869
+[qq2] Lombardia 2022: train=110778 val=33962 rmse grezzo=57.839
+[qq2] Lombardia 2023: train=112701 val=33743 rmse grezzo=56.515
+[qq2] Emilia-Romagna 2016: train=168390 val=8679 rmse grezzo=59.566
+[qq2] Emilia-Romagna 2022: train=155110 val=6958 rmse grezzo=55.611
+[qq2] Emilia-Romagna 2023: train=155898 val=5604 rmse grezzo=54.111
+[qq2] Veneto 2016: train=111840 val=33706 rmse grezzo=56.653
+[qq2] Veneto 2022: train=101241 val=34666 rmse grezzo=53.425
+[qq2] Veneto 2023: train=103163 val=34446 rmse grezzo=55.059
+
+epoche scelte (salvate in epoche_cv.json): {'tx3': 8, 'tn3': 6, 'rr7': 9, 'qq2': 45}
+
+=== CV regione x anno, all'epoca scelta: media sui fold ===
+           rmse_grezzo  rmse_rete_singola  ...  miglioramento_%  std_tra_fold
+parametro                                  ...                               
+tx3              5.248              2.349  ...          -55.429         0.247
+tn3              4.141              2.271  ...          -45.491         0.135
+rr7              8.330              6.451  ...          -22.838         1.262
+qq2             56.739             34.250  ...          -39.906         2.786
+
+[4 rows x 7 columns]
+
+per regione e anno (rmse corretto):
+anno                        2016    2022    2023
+parametro regione                               
+qq2       Emilia-Romagna  35.586  31.745  31.569
+          Lombardia       38.425  34.892  37.625
+          Veneto          32.811  30.295  33.919
+rr7       Emilia-Romagna   6.325   6.155   9.240
+          Lombardia        5.997   5.231   7.330
+          Veneto           6.588   4.975   6.006
+tn3       Emilia-Romagna   2.099   2.158   2.051
+          Lombardia        2.282   2.385   2.189
+          Veneto           2.381   2.392   2.379
+tx3       Emilia-Romagna   2.211   2.013   1.966
+          Lombardia        2.336   2.413   2.326
+          Veneto           2.719   2.522   2.545

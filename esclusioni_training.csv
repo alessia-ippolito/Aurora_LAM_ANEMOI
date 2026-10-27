@@ -1,0 +1,502 @@
+uid,parameter,date,motivo
+arpalom_8222,,,duplicato tra fonti
+arpalom_17476,qq2,,qq2: stazione sotto il cielo sereno (sito/sensore)
+ecad_0026108,qq2,,qq2: stazione sotto il cielo sereno (sito/sensore)
+ecad_0026197,qq2,,qq2: stazione sotto il cielo sereno (sito/sensore)
+ecad_0026205,qq2,,qq2: stazione sotto il cielo sereno (sito/sensore)
+ecad_0026214,qq2,,qq2: stazione sotto il cielo sereno (sito/sensore)
+ecad_0026234,qq2,,qq2: stazione sotto il cielo sereno (sito/sensore)
+ecad_0026277,qq2,,qq2: stazione sotto il cielo sereno (sito/sensore)
+ecad_0027744,qq2,,qq2: stazione sotto il cielo sereno (sito/sensore)
+ecad_0000755,qq2,2023-11-19,qq2: sopra il cielo sereno o bloccato
+ecad_0000755,qq2,2023-11-20,qq2: sopra il cielo sereno o bloccato
+ecad_0000755,qq2,2023-11-21,qq2: sopra il cielo sereno o bloccato
+ecad_0000755,qq2,2023-11-22,qq2: sopra il cielo sereno o bloccato
+ecad_0021550,qq2,2023-12-03,qq2: sopra il cielo sereno o bloccato
+ecad_0026091,qq2,2022-01-13,qq2: sopra il cielo sereno o bloccato
+ecad_0026091,qq2,2022-01-14,qq2: sopra il cielo sereno o bloccato
+ecad_0026091,qq2,2022-01-15,qq2: sopra il cielo sereno o bloccato
+ecad_0026091,qq2,2022-01-16,qq2: sopra il cielo sereno o bloccato
+ecad_0026105,qq2,2022-12-08,qq2: sopra il cielo sereno o bloccato
+ecad_0026105,qq2,2023-12-16,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-09-12,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-09-13,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-09-14,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-09-15,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-10-21,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-10-22,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-10-23,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-10-24,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-10-27,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-10-28,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-10-29,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-10-30,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-10-31,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-01,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-02,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-04,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-05,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-06,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-07,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-09,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-10,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-11,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-12,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-13,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-11-20,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-04,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-06,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-07,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-08,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-10,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-11,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-14,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-15,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-16,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-17,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-18,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-19,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-20,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-21,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-22,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-23,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-24,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-25,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-26,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-27,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-28,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-29,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-30,qq2: sopra il cielo sereno o bloccato
+ecad_0026122,qq2,2023-12-31,qq2: sopra il cielo sereno o bloccato
+ecad_0026146,qq2,2023-12-14,qq2: sopra il cielo sereno o bloccato
+ecad_0026146,qq2,2023-12-15,qq2: sopra il cielo sereno o bloccato
+ecad_0026146,qq2,2023-12-16,qq2: sopra il cielo sereno o bloccato
+ecad_0026146,qq2,2023-12-17,qq2: sopra il cielo sereno o bloccato
+ecad_0026146,qq2,2023-12-18,qq2: sopra il cielo sereno o bloccato
+ecad_0026146,qq2,2023-12-27,qq2: sopra il cielo sereno o bloccato
+ecad_0026169,qq2,2022-01-16,qq2: sopra il cielo sereno o bloccato
+ecad_0026169,qq2,2022-01-17,qq2: sopra il cielo sereno o bloccato
+ecad_0026169,qq2,2022-01-18,qq2: sopra il cielo sereno o bloccato
+ecad_0026169,qq2,2022-01-19,qq2: sopra il cielo sereno o bloccato
+ecad_0026173,qq2,2022-01-12,qq2: sopra il cielo sereno o bloccato
+ecad_0026173,qq2,2022-01-13,qq2: sopra il cielo sereno o bloccato
+ecad_0026173,qq2,2022-01-14,qq2: sopra il cielo sereno o bloccato
+ecad_0026173,qq2,2022-01-15,qq2: sopra il cielo sereno o bloccato
+ecad_0026173,qq2,2022-01-16,qq2: sopra il cielo sereno o bloccato
+ecad_0026173,qq2,2022-01-17,qq2: sopra il cielo sereno o bloccato
+ecad_0026183,qq2,2016-09-28,qq2: sopra il cielo sereno o bloccato
+ecad_0026183,qq2,2016-09-29,qq2: sopra il cielo sereno o bloccato
+ecad_0026183,qq2,2016-09-30,qq2: sopra il cielo sereno o bloccato
+ecad_0026183,qq2,2016-10-01,qq2: sopra il cielo sereno o bloccato
+ecad_0026183,qq2,2016-10-02,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2016-12-15,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2016-12-16,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2016-12-17,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2016-12-18,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-05,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-06,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-07,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-08,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-11,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-12,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-13,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-14,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-15,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2022-01-16,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2023-01-18,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2023-01-19,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2023-01-20,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2023-01-21,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2023-01-22,qq2: sopra il cielo sereno o bloccato
+ecad_0026197,qq2,2023-01-23,qq2: sopra il cielo sereno o bloccato
+ecad_0026202,qq2,2016-12-27,qq2: sopra il cielo sereno o bloccato
+ecad_0026202,qq2,2016-12-28,qq2: sopra il cielo sereno o bloccato
+ecad_0026202,qq2,2016-12-29,qq2: sopra il cielo sereno o bloccato
+ecad_0026202,qq2,2016-12-30,qq2: sopra il cielo sereno o bloccato
+ecad_0026202,qq2,2016-12-31,qq2: sopra il cielo sereno o bloccato
+ecad_0026204,qq2,2016-12-27,qq2: sopra il cielo sereno o bloccato
+ecad_0026204,qq2,2016-12-28,qq2: sopra il cielo sereno o bloccato
+ecad_0026204,qq2,2016-12-29,qq2: sopra il cielo sereno o bloccato
+ecad_0026204,qq2,2016-12-30,qq2: sopra il cielo sereno o bloccato
+ecad_0026204,qq2,2016-12-31,qq2: sopra il cielo sereno o bloccato
+ecad_0026204,qq2,2022-12-12,qq2: sopra il cielo sereno o bloccato
+ecad_0026205,qq2,2016-01-01,qq2: sopra il cielo sereno o bloccato
+ecad_0026205,qq2,2016-01-02,qq2: sopra il cielo sereno o bloccato
+ecad_0026205,qq2,2016-01-03,qq2: sopra il cielo sereno o bloccato
+ecad_0026205,qq2,2016-01-04,qq2: sopra il cielo sereno o bloccato
+ecad_0026205,qq2,2016-01-05,qq2: sopra il cielo sereno o bloccato
+ecad_0026205,qq2,2016-01-06,qq2: sopra il cielo sereno o bloccato
+ecad_0026224,qq2,2016-12-28,qq2: sopra il cielo sereno o bloccato
+ecad_0026224,qq2,2016-12-29,qq2: sopra il cielo sereno o bloccato
+ecad_0026224,qq2,2016-12-30,qq2: sopra il cielo sereno o bloccato
+ecad_0026224,qq2,2016-12-31,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-05-24,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-05-25,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-05-26,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-05-27,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-05-28,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-05-29,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-05-30,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-05-31,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-01,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-02,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-03,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-04,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-05,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-06,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-07,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-08,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-09,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-10,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-11,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-12,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-13,qq2: sopra il cielo sereno o bloccato
+ecad_0026238,qq2,2016-06-14,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-09-28,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-09-29,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-09-30,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-01,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-02,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-03,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-04,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-05,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-07,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-08,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-09,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-10,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-11,qq2: sopra il cielo sereno o bloccato
+ecad_0026270,qq2,2016-10-12,qq2: sopra il cielo sereno o bloccato
+ecad_0026277,qq2,2016-12-15,qq2: sopra il cielo sereno o bloccato
+ecad_0026277,qq2,2016-12-16,qq2: sopra il cielo sereno o bloccato
+ecad_0026277,qq2,2016-12-17,qq2: sopra il cielo sereno o bloccato
+ecad_0026277,qq2,2016-12-18,qq2: sopra il cielo sereno o bloccato
+ecad_0027726,qq2,2016-12-02,qq2: sopra il cielo sereno o bloccato
+ecad_0027726,qq2,2016-12-03,qq2: sopra il cielo sereno o bloccato
+ecad_0027726,qq2,2016-12-04,qq2: sopra il cielo sereno o bloccato
+ecad_0027726,qq2,2016-12-05,qq2: sopra il cielo sereno o bloccato
+ecad_0027736,qq2,2022-01-22,qq2: sopra il cielo sereno o bloccato
+ecad_0027736,qq2,2022-01-23,qq2: sopra il cielo sereno o bloccato
+ecad_0027736,qq2,2022-01-24,qq2: sopra il cielo sereno o bloccato
+ecad_0027736,qq2,2022-01-25,qq2: sopra il cielo sereno o bloccato
+ecad_0027736,qq2,2022-01-26,qq2: sopra il cielo sereno o bloccato
+ecad_0027749,qq2,2022-01-13,qq2: sopra il cielo sereno o bloccato
+ecad_0027749,qq2,2022-01-14,qq2: sopra il cielo sereno o bloccato
+ecad_0027749,qq2,2022-01-15,qq2: sopra il cielo sereno o bloccato
+ecad_0027749,qq2,2022-01-16,qq2: sopra il cielo sereno o bloccato
+ecad_0027749,qq2,2023-12-14,qq2: sopra il cielo sereno o bloccato
+ecad_0027749,qq2,2023-12-15,qq2: sopra il cielo sereno o bloccato
+ecad_0027749,qq2,2023-12-16,qq2: sopra il cielo sereno o bloccato
+ecad_0027749,qq2,2023-12-17,qq2: sopra il cielo sereno o bloccato
+ecad_0027749,qq2,2023-12-18,qq2: sopra il cielo sereno o bloccato
+ecad_0027839,qq2,2023-12-15,qq2: sopra il cielo sereno o bloccato
+ecad_0027839,qq2,2023-12-16,qq2: sopra il cielo sereno o bloccato
+ecad_0027839,qq2,2023-12-17,qq2: sopra il cielo sereno o bloccato
+ecad_0027839,qq2,2023-12-18,qq2: sopra il cielo sereno o bloccato
+ecad_0027858,qq2,2022-02-26,qq2: sopra il cielo sereno o bloccato
+ecad_0027858,qq2,2022-02-27,qq2: sopra il cielo sereno o bloccato
+ecad_0027858,qq2,2022-02-28,qq2: sopra il cielo sereno o bloccato
+ecad_0027858,qq2,2022-03-01,qq2: sopra il cielo sereno o bloccato
+ecad_0027892,qq2,2022-01-11,qq2: sopra il cielo sereno o bloccato
+arpalom_14207,qq2,2022-02-17,qq2: sopra il cielo sereno o bloccato
+arpalom_14255,qq2,2023-12-15,qq2: sopra il cielo sereno o bloccato
+arpalom_14255,qq2,2023-12-16,qq2: sopra il cielo sereno o bloccato
+arpalom_32345,qq2,2022-03-07,qq2: sopra il cielo sereno o bloccato
+arpalom_6476,qq2,2016-08-16,qq2: sopra il cielo sereno o bloccato
+arpalom_6476,qq2,2016-08-23,qq2: sopra il cielo sereno o bloccato
+arpalom_6476,qq2,2016-08-24,qq2: sopra il cielo sereno o bloccato
+arpalom_6476,qq2,2016-09-07,qq2: sopra il cielo sereno o bloccato
+arpalom_6476,qq2,2016-09-08,qq2: sopra il cielo sereno o bloccato
+arpalom_6476,qq2,2016-09-13,qq2: sopra il cielo sereno o bloccato
+PIE-002002-902,qq2,2020-11-03,qq2: sopra il cielo sereno o bloccato
+PIE-001010-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-001019-900,rr7,2020-03-28,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-001019-900,rr7,2020-04-22,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-001019-901,rr7,2020-12-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-001019-901,rr7,2020-12-06,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-001019-901,rr7,2020-12-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-001073-900,rr7,2020-03-09,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-001192-900,rr7,2020-06-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-002014-900,rr7,2020-06-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-002014-900,rr7,2020-06-12,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-002014-900,rr7,2020-06-13,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-002038-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-002092-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-002149-901,rr7,2020-03-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-002149-901,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003003-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003003-900,rr7,2020-12-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003020-901,rr7,2020-10-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003067-900,rr7,2020-10-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003067-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003067-900,rr7,2020-12-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003067-900,rr7,2020-12-06,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003067-900,rr7,2020-12-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003086-900,rr7,2020-10-26,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003103-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003142-900,rr7,2020-03-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003142-900,rr7,2020-12-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003142-900,rr7,2020-12-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003145-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003145-900,rr7,2020-12-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003145-900,rr7,2020-12-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003147-900,rr7,2020-03-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003147-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003147-900,rr7,2020-12-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003150-900,rr7,2020-03-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003150-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003150-900,rr7,2020-12-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003150-900,rr7,2020-12-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003151-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003155-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003155-900,rr7,2020-12-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-003155-901,rr7,2020-12-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-004006-900,rr7,2020-05-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-004006-900,rr7,2020-06-13,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-004006-900,rr7,2020-07-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-004175-900,rr7,2020-06-13,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-004248-900,rr7,2020-03-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-004248-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-004248-902,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-004248-903,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-006045-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-006136-901,rr7,2020-12-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+PIE-006146-900,rr7,2020-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_103,rr7,2022-04-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_10585,rr7,2022-02-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_116,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_116,rr7,2016-02-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_116,rr7,2016-02-28,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_116,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_116,rr7,2023-01-08,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_122,rr7,2016-04-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_1324,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_1324,rr7,2023-01-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_1324,rr7,2023-01-24,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_1324,rr7,2023-01-25,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_135,rr7,2016-05-12,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14018,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_1403,rr7,2016-02-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_1403,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14118,rr7,2016-11-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14197,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14197,rr7,2016-04-20,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14197,rr7,2016-11-19,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14197,rr7,2023-11-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14224,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14224,rr7,2016-04-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14224,rr7,2016-05-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14224,rr7,2016-10-16,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14224,rr7,2016-11-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14224,rr7,2023-11-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14224,rr7,2023-12-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14241,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14253,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14253,rr7,2016-02-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14253,rr7,2016-02-09,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14365,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14365,rr7,2016-02-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14365,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14365,rr7,2016-11-21,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14365,rr7,2022-01-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14365,rr7,2023-11-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14476,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14517,rr7,2016-08-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14517,rr7,2016-08-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14517,rr7,2016-08-20,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14517,rr7,2016-09-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14567,rr7,2016-11-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14661,rr7,2016-02-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14661,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14661,rr7,2023-07-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_14724,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_153,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_16431,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_16431,rr7,2016-11-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_16431,rr7,2016-11-19,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_16431,rr7,2016-11-21,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_16431,rr7,2016-11-22,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_17361,rr7,2016-10-14,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_17361,rr7,2016-10-25,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_17446,rr7,2023-01-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_17446,rr7,2023-01-16,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_17446,rr7,2023-01-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_17600,rr7,2023-11-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_19026,rr7,2016-05-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_19026,rr7,2016-05-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_19026,rr7,2016-05-29,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_19335,rr7,2016-06-16,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_19365,rr7,2016-05-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_19365,rr7,2016-05-12,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_19365,rr7,2016-05-19,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_19417,rr7,2022-11-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2046,rr7,2016-06-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2046,rr7,2022-04-22,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2046,rr7,2022-04-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2046,rr7,2022-04-24,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2140,rr7,2022-11-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2195,rr7,2016-02-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2195,rr7,2016-02-09,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2195,rr7,2016-02-28,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2195,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_22011,rr7,2022-02-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_22011,rr7,2023-01-08,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_22011,rr7,2023-10-30,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2549,rr7,2016-08-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2549,rr7,2022-11-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2549,rr7,2022-11-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2549,rr7,2023-11-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2549,rr7,2023-11-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2549,rr7,2023-11-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_2596,rr7,2023-10-20,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_30998,rr7,2023-12-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_32355,rr7,2023-03-14,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_40,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_4041,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_4041,rr7,2016-02-09,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_4041,rr7,2016-04-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_4041,rr7,2016-08-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_4041,rr7,2016-11-06,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_4041,rr7,2016-11-22,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_4065,rr7,2023-06-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_41,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_42,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_43,rr7,2016-01-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_5933,rr7,2023-04-20,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_6819,rr7,2016-05-14,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_6986,rr7,2022-11-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_7043,rr7,2022-08-18,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_7043,rr7,2022-08-27,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_7043,rr7,2023-07-25,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8004,rr7,2023-10-21,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8004,rr7,2023-10-25,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8015,rr7,2022-12-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8015,rr7,2023-01-08,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8021,rr7,2023-01-08,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8025,rr7,2016-02-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8025,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8103,rr7,2022-02-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8103,rr7,2023-11-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8103,rr7,2023-11-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8103,rr7,2023-11-12,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8135,rr7,2016-02-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8135,rr7,2016-02-09,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8150,rr7,2016-07-31,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8150,rr7,2016-08-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8221,rr7,2016-10-14,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_8224,rr7,2016-10-14,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9,rr7,2023-08-27,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9,rr7,2023-08-28,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9090,rr7,2016-10-14,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9100,rr7,2022-11-14,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9100,rr7,2022-11-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9100,rr7,2022-11-16,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9117,rr7,2016-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9308,rr7,2016-11-25,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9341,rr7,2023-11-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+arpalom_9933,rr7,2016-06-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0000854,rr7,2022-02-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0000860,rr7,2023-05-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0000861,rr7,2022-11-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0000861,rr7,2023-05-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002783,rr7,2023-12-31,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002799,rr7,2023-05-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002801,rr7,2023-04-24,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002801,rr7,2023-04-25,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002801,rr7,2023-04-26,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002807,rr7,2022-12-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002809,rr7,2022-01-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002833,rr7,2023-05-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002852,rr7,2022-02-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002855,rr7,2022-12-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0002922,rr7,2022-12-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0016753,rr7,2023-01-31,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0016753,rr7,2023-02-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0016753,rr7,2023-02-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017524,rr7,2022-02-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017529,rr7,2022-09-16,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017529,rr7,2022-10-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017529,rr7,2022-12-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017529,rr7,2023-10-21,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017529,rr7,2023-10-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017570,rr7,2022-02-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017570,rr7,2023-08-28,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017570,rr7,2023-08-29,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017575,rr7,2023-05-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017577,rr7,2022-01-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017585,rr7,2023-07-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017601,rr7,2023-05-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017601,rr7,2023-05-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017626,rr7,2016-02-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017648,rr7,2016-03-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017650,rr7,2022-02-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017650,rr7,2022-04-06,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017650,rr7,2022-11-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017650,rr7,2023-01-16,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017670,rr7,2023-06-30,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017670,rr7,2023-07-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017670,rr7,2023-07-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017672,rr7,2023-09-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017677,rr7,2022-11-19,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017677,rr7,2023-05-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017677,rr7,2023-10-24,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017683,rr7,2023-03-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017690,rr7,2023-03-31,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017690,rr7,2023-04-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017690,rr7,2023-04-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017705,rr7,2022-08-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017717,rr7,2023-01-31,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017717,rr7,2023-02-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017717,rr7,2023-02-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017732,rr7,2016-12-26,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017737,rr7,2023-05-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017744,rr7,2016-10-14,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017761,rr7,2023-06-29,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017761,rr7,2023-06-30,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017761,rr7,2023-07-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017765,rr7,2023-09-23,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017769,rr7,2022-12-20,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017769,rr7,2022-12-21,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017769,rr7,2022-12-22,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017770,rr7,2022-08-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017782,rr7,2016-08-29,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017793,rr7,2022-08-18,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017797,rr7,2023-05-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017799,rr7,2023-05-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017813,rr7,2023-05-16,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017821,rr7,2022-02-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017821,rr7,2023-08-28,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017821,rr7,2023-08-29,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017822,rr7,2023-12-31,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017823,rr7,2016-09-16,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0017828,rr7,2023-12-31,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0022462,rr7,2022-06-09,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027716,rr7,2023-10-30,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027725,rr7,2023-07-11,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027726,rr7,2022-05-06,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027726,rr7,2022-05-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027726,rr7,2022-05-08,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027731,rr7,2023-12-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027733,rr7,2023-12-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027735,rr7,2022-05-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027735,rr7,2022-05-06,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027735,rr7,2022-05-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027735,rr7,2022-05-26,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027736,rr7,2023-12-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027739,rr7,2022-05-05,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027739,rr7,2022-05-06,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027739,rr7,2022-05-07,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027751,rr7,2016-03-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027751,rr7,2016-03-04,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027751,rr7,2023-12-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027757,rr7,2022-08-15,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027757,rr7,2023-07-08,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027788,rr7,2016-09-16,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027833,rr7,2022-06-22,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027843,rr7,2016-09-13,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027861,rr7,2022-08-17,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027894,rr7,2023-04-01,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027894,rr7,2023-04-02,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027894,rr7,2023-04-03,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027899,rr7,2022-09-09,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027899,rr7,2022-09-10,"rr7: incoerente con i vicini, accumulo o bloccato"
+ecad_0027899,rr7,2022-09-11,"rr7: incoerente con i vicini, accumulo o bloccato"

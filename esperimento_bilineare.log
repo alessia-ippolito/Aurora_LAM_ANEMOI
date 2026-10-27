@@ -1,0 +1,72 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+campi Aurora: {'date': 1096, 'lat': 15, 'lon': 31, 'livello': 13}
+fattori di scala: {'tx3': 1.0, 'tn3': 1.0, 'qq2': 0.0004171015891782403, 'rr7': 4315.1040400345355}
+righe: 2205947 | differenza media |aurora A - B|: {'qq2': 2.037, 'rr7': 0.253, 'tn3': 0.286, 'tx3': 0.373}
+[tx3] Lombardia 2016: fatto
+[tx3] Lombardia 2022: fatto
+[tx3] Lombardia 2023: fatto
+[tx3] Emilia-Romagna 2016: fatto
+[tx3] Emilia-Romagna 2022: fatto
+[tx3] Emilia-Romagna 2023: fatto
+[tx3] Veneto 2016: fatto
+[tx3] Veneto 2022: fatto
+[tx3] Veneto 2023: fatto
+[tn3] Lombardia 2016: fatto
+[tn3] Lombardia 2022: fatto
+[tn3] Lombardia 2023: fatto
+[tn3] Emilia-Romagna 2016: fatto
+[tn3] Emilia-Romagna 2022: fatto
+[tn3] Emilia-Romagna 2023: fatto
+[tn3] Veneto 2016: fatto
+[tn3] Veneto 2022: fatto
+[tn3] Veneto 2023: fatto
+[rr7] Lombardia 2016: fatto
+[rr7] Lombardia 2022: fatto
+[rr7] Lombardia 2023: fatto
+[rr7] Emilia-Romagna 2016: fatto
+[rr7] Emilia-Romagna 2022: fatto
+[rr7] Emilia-Romagna 2023: fatto
+[rr7] Veneto 2016: fatto
+[rr7] Veneto 2022: fatto
+[rr7] Veneto 2023: fatto
+[qq2] Lombardia 2016: fatto
+[qq2] Lombardia 2022: fatto
+[qq2] Lombardia 2023: fatto
+[qq2] Emilia-Romagna 2016: fatto
+[qq2] Emilia-Romagna 2022: fatto
+[qq2] Emilia-Romagna 2023: fatto
+[qq2] Veneto 2016: fatto
+[qq2] Veneto 2022: fatto
+[qq2] Veneto 2023: fatto
+
+=== CV regione x anno, senza lat/lon: RMSE medio sui fold e sui seed, all'epoca migliore ===
+                          rmse_aurora_input  rmse_testa  epoche  diff_tra_seed
+parametro variante                                                            
+qq2       A cella vicina             56.884      41.233      19          0.063
+          B bilineare                56.722      40.951      20          0.047
+          C bilineare+               56.722      35.007      20          0.291
+rr7       A cella vicina              8.387       7.291       2          0.005
+          B bilineare                 8.322       7.275       2          0.005
+          C bilineare+                8.322       6.445       5          0.035
+tn3       A cella vicina              4.181       2.785       5          0.000
+          B bilineare                 4.141       2.757       2          0.015
+          C bilineare+                4.141       2.333       6          0.024
+tx3       A cella vicina              5.313       2.796      13          0.019
+          B bilineare                 5.248       2.733      10          0.004
+          C bilineare+                5.248       2.352       6          0.007
+
+differenza massima tra seed sullo stesso fold:
+parametro  variante      
+qq2        A cella vicina    0.595
+           B bilineare       0.360
+           C bilineare+      1.290
+rr7        A cella vicina    0.021
+           B bilineare       0.021
+           C bilineare+      0.123
+tn3        A cella vicina    0.031
+           B bilineare       0.067
+           C bilineare+      0.086
+tx3        A cella vicina    0.068
+           B bilineare       0.049
+           C bilineare+      0.072
+Name: rmse, dtype: float64

@@ -1,0 +1,49 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+[tx3] Lombardia 2016 fatto
+[tx3] Lombardia 2022 fatto
+[tx3] Lombardia 2023 fatto
+[tx3] Emilia-Romagna 2016 fatto
+[tx3] Emilia-Romagna 2022 fatto
+[tx3] Emilia-Romagna 2023 fatto
+[tx3] Veneto 2016 fatto
+[tx3] Veneto 2022 fatto
+[tx3] Veneto 2023 fatto
+[tn3] Lombardia 2016 fatto
+[tn3] Lombardia 2022 fatto
+[tn3] Lombardia 2023 fatto
+[tn3] Emilia-Romagna 2016 fatto
+[tn3] Emilia-Romagna 2022 fatto
+[tn3] Emilia-Romagna 2023 fatto
+[tn3] Veneto 2016 fatto
+[tn3] Veneto 2022 fatto
+[tn3] Veneto 2023 fatto
+[rr7] Lombardia 2016 fatto
+[rr7] Lombardia 2022 fatto
+[rr7] Lombardia 2023 fatto
+[rr7] Emilia-Romagna 2016 fatto
+[rr7] Emilia-Romagna 2022 fatto
+[rr7] Emilia-Romagna 2023 fatto
+[rr7] Veneto 2016 fatto
+[rr7] Veneto 2022 fatto
+[rr7] Veneto 2023 fatto
+[qq2] Lombardia 2016 fatto
+[qq2] Lombardia 2022 fatto
+[qq2] Lombardia 2023 fatto
+[qq2] Emilia-Romagna 2016 fatto
+[qq2] Emilia-Romagna 2022 fatto
+[qq2] Emilia-Romagna 2023 fatto
+[qq2] Veneto 2016 fatto
+[qq2] Veneto 2022 fatto
+[qq2] Veneto 2023 fatto
+
+=== CV regione x anno: RMSE medio sui 9 fold all'epoca migliore ===
+                    tx3    tn3    rr7     qq2
+rete singola      2.348  2.259  6.442  34.240
+epoca singola     8.000  6.000  7.000  37.000
+ensemble 2        2.328  2.248  6.417  34.065
+ensemble 3        2.337  2.247  6.418  34.097
+ensemble 4        2.336  2.246  6.420  34.077
+ensemble 5        2.338  2.247  6.421  34.088
+epoca ensemble 5  8.000  6.000  7.000  37.000
+
+guadagno dell'ensemble di 5 reti rispetto alla rete singola (%): {'tx3': -0.44, 'tn3': -0.55, 'rr7': -0.33, 'qq2': -0.44}

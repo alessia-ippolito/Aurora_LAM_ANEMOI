@@ -1,0 +1,3 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+campi: (1096, 24, 15, 31)
+[tx3] Lombardia 2016: stop all'epoca 17, RMSE 2.732 (minimo 2.428, Aurora 5.312)

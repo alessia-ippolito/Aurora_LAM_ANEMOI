@@ -1,0 +1,40 @@
+﻿esclusioni (esclusioni_training.csv): tolte 0 righe su 676438
+
+=== tx3: train=626149  test(Piemonte)=50289  epoche=8  feature=27  reti=5 ===
+salvato checkpoints/tx3_finale.pt
+[train (dati visti in training)] n=626149
+  Aurora interpolata -> RMSE=5.248  bias=-3.373
+  downscaling        -> RMSE=1.940  bias=0.019
+[test (Piemonte 2020, regione e anno mai visti)] n=50289
+  Aurora interpolata -> RMSE=4.695  bias=-1.665
+  downscaling        -> RMSE=2.292  bias=0.792
+esclusioni (esclusioni_training.csv): tolte 0 righe su 675902
+
+=== tn3: train=625616  test(Piemonte)=50286  epoche=6  feature=33  reti=5 ===
+salvato checkpoints/tn3_finale.pt
+[train (dati visti in training)] n=625616
+  Aurora interpolata -> RMSE=4.126  bias=-1.596
+  downscaling        -> RMSE=1.850  bias=-0.003
+[test (Piemonte 2020, regione e anno mai visti)] n=50286
+  Aurora interpolata -> RMSE=3.769  bias=-0.348
+  downscaling        -> RMSE=1.939  bias=0.309
+esclusioni (esclusioni_training.csv): tolte 1361 righe su 746761
+
+=== rr7: train=693242  test(Piemonte)=52158  epoche=9  feature=27  reti=5 ===
+salvato checkpoints/rr7_finale.pt
+[train (dati visti in training)] n=693242
+  Aurora interpolata -> RMSE=8.585  bias=0.003
+  downscaling        -> RMSE=5.911  bias=-0.031
+[test (Piemonte 2020, regione e anno mai visti)] n=52158
+  Aurora interpolata -> RMSE=8.879  bias=1.013
+  downscaling        -> RMSE=5.776  bias=0.168
+esclusioni (esclusioni_training.csv): tolte 7289 righe su 279273
+
+=== qq2: train=260940  test(Piemonte)=11044  epoche=45  feature=33  reti=5 ===
+salvato checkpoints/qq2_finale.pt
+[train (dati visti in training)] n=260940
+  Aurora interpolata -> RMSE=56.656  bias=-0.971
+  downscaling        -> RMSE=30.144  bias=0.058
+[test (Piemonte 2020, regione e anno mai visti)] n=11044
+  Aurora interpolata -> RMSE=62.667  bias=-14.768
+  downscaling        -> RMSE=39.676  bias=-5.944

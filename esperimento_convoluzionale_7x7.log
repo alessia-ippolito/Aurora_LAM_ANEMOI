@@ -1,0 +1,4 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+campi: (1096, 24, 15, 31) (giorni, canali, lat, lon); canali: ['a_tx3', 'a_tn3', 'a_rr7', 'a_qq2', 'sup_2t_media', 'sup_msl_media', 'sup_10u_media', 'sup_10v_media', 'sup_vento10_max', 'sup_i10fg_media', 'sup_blh_media', 'sup_ttr_1h_media', 'sup_scaled_sf_1h_media', 'atm_t_media_925', 'atm_t_media_850', 'atm_t_media_700', 'atm_t_media_500', 'atm_q_media_925', 'atm_q_media_850', 'atm_q_media_700', 'atm_z_media_500', 'atm_u_media_850', 'atm_v_media_850', 'orog_aurora']
+righe: 2205947, stazioni: 1270
+[tx3] Lombardia 2016: migliore 2.506 (Aurora 5.312)

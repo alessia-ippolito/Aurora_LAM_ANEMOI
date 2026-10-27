@@ -1,0 +1,76 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+B base 64-64 [tx3] seed 0 fatto
+B base 64-64 [tn3] seed 0 fatto
+B base 64-64 [rr7] seed 0 fatto
+B base 64-64 [qq2] seed 0 fatto
+H1 32-32 [tx3] seed 0 fatto
+H1 32-32 [tn3] seed 0 fatto
+H1 32-32 [rr7] seed 0 fatto
+H1 32-32 [qq2] seed 0 fatto
+H2 128-128 [tx3] seed 0 fatto
+H2 128-128 [tn3] seed 0 fatto
+H2 128-128 [rr7] seed 0 fatto
+H2 128-128 [qq2] seed 0 fatto
+H3 64-64-64 [tx3] seed 0 fatto
+H3 64-64-64 [tn3] seed 0 fatto
+H3 64-64-64 [rr7] seed 0 fatto
+H3 64-64-64 [qq2] seed 0 fatto
+D1 dropout 0.1 [tx3] seed 0 fatto
+D1 dropout 0.1 [tn3] seed 0 fatto
+D1 dropout 0.1 [rr7] seed 0 fatto
+D1 dropout 0.1 [qq2] seed 0 fatto
+D2 128-128 dropout 0.2 [tx3] seed 0 fatto
+D2 128-128 dropout 0.2 [tn3] seed 0 fatto
+D2 128-128 dropout 0.2 [rr7] seed 0 fatto
+D2 128-128 dropout 0.2 [qq2] seed 0 fatto
+L lr 3e-4 [tx3] seed 0 fatto
+L lr 3e-4 [tn3] seed 0 fatto
+L lr 3e-4 [rr7] seed 0 fatto
+L lr 3e-4 [qq2] seed 0 fatto
+W wd 1e-3 [tx3] seed 0 fatto
+W wd 1e-3 [tn3] seed 0 fatto
+W wd 1e-3 [rr7] seed 0 fatto
+W wd 1e-3 [qq2] seed 0 fatto
+S batch 1024 [tx3] seed 0 fatto
+S batch 1024 [tn3] seed 0 fatto
+S batch 1024 [rr7] seed 0 fatto
+S batch 1024 [qq2] seed 0 fatto
+
+=== seed 0: RMSE medio sui 9 fold all'epoca migliore ===
+parametro                 tx3    tn3    rr7     qq2
+variante                                           
+B base 64-64            2.351  2.272  6.436  34.448
+D1 dropout 0.1          2.326  2.254  6.430  34.130
+D2 128-128 dropout 0.2  2.340  2.250  6.434  34.138
+H1 32-32                2.370  2.261  6.449  34.522
+H2 128-128              2.358  2.264  6.444  34.501
+H3 64-64-64             2.367  2.285  6.481  34.843
+L lr 3e-4               2.352  2.262  6.457  34.795
+S batch 1024            2.339  2.282  6.487  34.497
+W wd 1e-3               2.352  2.270  6.436  34.448
+
+differenza % rispetto alla base:
+parametro                tx3   tn3   rr7   qq2
+variante                                      
+B base 64-64            0.00  0.00  0.00  0.00
+D1 dropout 0.1         -1.04 -0.76 -0.10 -0.92
+D2 128-128 dropout 0.2 -0.46 -0.93 -0.04 -0.90
+H1 32-32                0.82 -0.48  0.20  0.22
+H2 128-128              0.30 -0.32  0.12  0.16
+H3 64-64-64             0.70  0.59  0.69  1.15
+L lr 3e-4               0.06 -0.42  0.32  1.01
+S batch 1024           -0.47  0.45  0.78  0.14
+W wd 1e-3               0.06 -0.06 -0.01  0.00
+
+epoca migliore:
+parametro               tx3  tn3  rr7  qq2
+variante                                  
+B base 64-64              6    5    4   32
+D1 dropout 0.1            9    7    7   37
+D2 128-128 dropout 0.2    7    4    3   25
+H1 32-32                  7    8    6   39
+H2 128-128                4    4    4   22
+H3 64-64-64               5    3    3   14
+L lr 3e-4                15   11   15   60
+S batch 1024              2    2    2   10
+W wd 1e-3                 6    5    4   32

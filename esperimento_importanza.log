@@ -1,0 +1,92 @@
+esclusioni (esclusioni_training.csv): tolte 8622 righe su 2214569
+[tx3] Lombardia 2016 fatto (RMSE 2.343)
+[tx3] Lombardia 2022 fatto (RMSE 2.392)
+[tx3] Lombardia 2023 fatto (RMSE 2.324)
+[tx3] Emilia-Romagna 2016 fatto (RMSE 2.210)
+[tx3] Emilia-Romagna 2022 fatto (RMSE 1.986)
+[tx3] Emilia-Romagna 2023 fatto (RMSE 1.961)
+[tx3] Veneto 2016 fatto (RMSE 2.706)
+[tx3] Veneto 2022 fatto (RMSE 2.496)
+[tx3] Veneto 2023 fatto (RMSE 2.559)
+[tn3] Lombardia 2016 fatto (RMSE 2.307)
+[tn3] Lombardia 2022 fatto (RMSE 2.354)
+[tn3] Lombardia 2023 fatto (RMSE 2.181)
+[tn3] Emilia-Romagna 2016 fatto (RMSE 2.107)
+[tn3] Emilia-Romagna 2022 fatto (RMSE 2.165)
+[tn3] Emilia-Romagna 2023 fatto (RMSE 2.050)
+[tn3] Veneto 2016 fatto (RMSE 2.386)
+[tn3] Veneto 2022 fatto (RMSE 2.376)
+[tn3] Veneto 2023 fatto (RMSE 2.368)
+[rr7] Lombardia 2016 fatto (RMSE 5.954)
+[rr7] Lombardia 2022 fatto (RMSE 5.272)
+[rr7] Lombardia 2023 fatto (RMSE 7.318)
+[rr7] Emilia-Romagna 2016 fatto (RMSE 6.334)
+[rr7] Emilia-Romagna 2022 fatto (RMSE 6.151)
+[rr7] Emilia-Romagna 2023 fatto (RMSE 9.207)
+[rr7] Veneto 2016 fatto (RMSE 6.650)
+[rr7] Veneto 2022 fatto (RMSE 4.936)
+[rr7] Veneto 2023 fatto (RMSE 6.049)
+[qq2] Lombardia 2016 fatto (RMSE 38.494)
+[qq2] Lombardia 2022 fatto (RMSE 35.077)
+[qq2] Lombardia 2023 fatto (RMSE 37.729)
+[qq2] Emilia-Romagna 2016 fatto (RMSE 35.436)
+[qq2] Emilia-Romagna 2022 fatto (RMSE 31.915)
+[qq2] Emilia-Romagna 2023 fatto (RMSE 31.599)
+[qq2] Veneto 2016 fatto (RMSE 33.164)
+[qq2] Veneto 2022 fatto (RMSE 30.230)
+[qq2] Veneto 2023 fatto (RMSE 33.498)
+
+=== aumento % dell'RMSE mescolando un GRUPPO (media sui 9 fold) ===
+parametro                     tx3    tn3    rr7     qq2
+nome                                                   
+Stagione                    61.68  22.59   2.89  183.07
+Umidita'                     5.66  59.32  93.26   67.90
+Aurora: variabile stessa    54.24  73.61  20.31   77.85
+Profilo termico in quota    68.64  22.10  78.38   35.10
+Quota                       74.37  63.44   2.19    3.55
+Aurora: altre 3 principali   9.05   5.95   1.47   39.50
+Forma del rilievo             NaN  23.02    NaN    3.04
+Nubi (infrarosso uscente)    3.72   0.19   1.81   18.56
+Vento                        4.17   4.45   5.38    8.43
+Temperatura in superficie    2.05   3.52   2.53   11.90
+Pressione e geopotenziale    3.24   3.38   1.01    2.44
+Strato limite                3.92   3.44   0.50    2.11
+Neve                         0.04  -0.00   0.32    0.16
+
+=== aumento % dell'RMSE mescolando una SINGOLA feature (media sui 9 fold) ===
+parametro                 tx3    tn3    rr7     qq2
+nome                                               
+doy_cos                 58.80  22.24   2.65  182.34
+elev                    53.25  46.10   2.22    3.13
+atm_t_925               46.67  19.12   9.05    8.83
+a_tx3                   14.62   7.26   1.32   53.65
+aurora                  19.43  24.77   6.98   22.85
+atm_q_925                2.63  23.82   6.40   26.00
+a_qq2                    5.69   3.76   0.35   36.00
+a_tn3                    3.66  24.42   2.35    5.27
+atm_q_850                0.87   8.11  16.07   10.22
+dz                      13.05  10.27   0.21    1.64
+sup_ttr_1h_media         3.69   0.18   1.84   18.64
+atm_t_500                1.19   0.69  15.94    6.16
+atm_q_700                1.02   1.91   6.51   13.14
+sup_2t_media             2.04   3.51   2.49   11.78
+atm_t_850               10.28   2.31   0.85    4.91
+doy_sin                  5.75   0.79   0.38    7.54
+sup_i10fg_media          3.59   2.32   3.56    4.30
+pendenza                  NaN   4.86    NaN    1.01
+tpi_5km                   NaN   4.17    NaN    1.60
+tpi_1km                   NaN   5.45    NaN    0.23
+atm_t_700                5.37   0.92   1.53    2.55
+sup_blh_media            3.92   3.40   0.49    2.05
+atm_z_500                4.02   3.02   0.84    1.89
+atm_v_850                0.74   0.51   0.60    6.67
+a_rr7                    0.58   0.16   3.32    1.44
+sup_10v_media            2.28   1.01   0.35    1.05
+tpi_20km                  NaN   1.70    NaN    0.35
+sup_vento10_max          1.51   1.49   0.09    0.83
+atm_u_850                1.58   0.59   0.30    1.03
+sup_msl_media            1.67   0.30   0.05    0.82
+sup_10u_media            1.08   0.65   0.31    0.32
+nordness                  NaN   0.59    NaN    0.55
+sup_scaled_sf_1h_media   0.04  -0.00   0.31    0.18
+eastness                  NaN  -0.08    NaN   -0.11

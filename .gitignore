@@ -1,0 +1,43 @@
+# Credenziali (ADS, EUMETSAT, DTM): mai su git
+.env
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Dati scaricati (cache delle API, si ricreano con il notebook)
+arpa_lombardia_daily_cache_utc/
+arpa_piemonte_daily_cache/
+arpae_qq2_daily_cache/
+ecad_padania_by_year/
+ecad_padania_raw_cache/
+sarah3_padania_raw/
+
+# Campi di Aurora (extract_aurora_campi.py su Lightning)
+aurora_campi*/
+
+# Modelli e log di Lightning
+checkpoints/
+lightning_logs/
+*.ckpt
+
+# Dati grandi o derivati: si ricreano con il notebook e gli script
+*.parquet
+*.csv.gz
+*.nc
+*.tif
+*.tiff
+*.npy
+*.npz
+*.pt
+
+# Cartelle di inutili/ con dati e modelli vecchi (gli script .py restano)
+inutili/
+immagini_output/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

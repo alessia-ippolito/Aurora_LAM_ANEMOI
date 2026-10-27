@@ -1,0 +1,32 @@
+esclusioni (esclusioni_training.csv): tolte 7289 righe su 268229
+pixel SARAH nelle regioni di validazione: 711; lettura di 1096 file...
+salvato sarah_c_pixel_2016_2022_2023.parquet: (778542, 33)
+stazioni qq2: 272 (260940 righe) | pixel SARAH: 711 (778542 righe) | bias SARAH - Aurora 7.0, stazioni - Aurora 1.0 W/m2
+Lombardia 2016: fatto (pre-training su 319740 righe SARAH)
+Lombardia 2022: fatto (pre-training su 319740 righe SARAH)
+Lombardia 2023: fatto (pre-training su 319740 righe SARAH)
+Emilia-Romagna 2016: fatto (pre-training su 341640 righe SARAH)
+Emilia-Romagna 2022: fatto (pre-training su 341637 righe SARAH)
+Emilia-Romagna 2023: fatto (pre-training su 341637 righe SARAH)
+Veneto 2016: fatto (pre-training su 376680 righe SARAH)
+Veneto 2022: fatto (pre-training su 376677 righe SARAH)
+Veneto 2023: fatto (pre-training su 376677 righe SARAH)
+
+=== qq2, CV regione x anno: RMSE medio sui fold e sui seed, all'epoca migliore ===
+            rmse  epoca
+variante               
+PRE+FT    35.256      8
+STAZIONI  34.725     32
+variante             PRE+FT  STAZIONI
+regione        anno                  
+Emilia-Romagna 2016   35.67     35.80
+               2022   32.57     32.03
+               2023   33.28     32.75
+Lombardia      2016   38.58     38.55
+               2022   35.47     35.02
+               2023   39.38     38.48
+Veneto         2016   34.15     33.91
+               2022   31.85     31.55
+               2023   36.35     34.43
+
+bias medio: {'PRE+FT': -1.76, 'STAZIONI': -1.49}
