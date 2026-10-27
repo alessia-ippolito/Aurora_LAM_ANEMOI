@@ -34,7 +34,7 @@ from campi_aurora import carica_campi, interpola_punti
 from cv_comune import BATCH, PARAMS, REGIONS, SEED, assign_regions
 from train_downscaling_head import DownscalingHead, applica_esclusioni
 
-TABLE = "training_table_aurora_backup_cella_vicina.csv.gz"  # tabella con Aurora nella cella piu' vicina (variante A)
+TABLE = "inutili/training_table_aurora_backup_cella_vicina.csv.gz"  # tabella con Aurora nella cella piu' vicina (variante A)
 MAX_EPOCHS = 20
 SEEDS = [0, 1]
 COL_RAW = {"tx3": "tx3_aurora", "tn3": "tn3_aurora", "rr7": "rr7_aurora_raw", "qq2": "qq2_aurora_raw"}
@@ -138,7 +138,7 @@ def fold(tr, va, col_aurora, feature, taglia_zero, seed=SEED):
     return out
 
 
-def main(varianti=VARIANTI, uscita="esperimento_bilineare_risultati.csv", idw=False):
+def main(varianti=VARIANTI, uscita="risultati/esperimento_bilineare_risultati.csv", idw=False):
     torch.set_num_threads(4)
     t = prepara(idw)
     servono = list(dict.fromkeys(c for col, feat in varianti.values() for c in [col] + feat))

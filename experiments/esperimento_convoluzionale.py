@@ -36,8 +36,8 @@ from campi_aurora import carica_campi
 from cv_comune import BATCH, PARAMS, REGIONS, SEED, assign_regions
 from train_downscaling_head import applica_esclusioni
 
-TABLE = "training_table_aurora.parquet"
-INFO = json.load(open("fattori_scala_aurora.json"))
+TABLE = "tabelle/training_table_aurora.parquet"
+INFO = json.load(open("tabelle/fattori_scala_aurora.json"))
 MAX_EPOCHS = 25
 COL_AURORA = {"tx3": "tx3_aurora", "tn3": "tn3_aurora", "rr7": "rr7_aurora_raw", "qq2": "qq2_aurora_raw"}
 NON_NEGATIVI = {"rr7", "qq2"}
@@ -49,8 +49,8 @@ ATM = [("atm_t_media", 925), ("atm_t_media", 850), ("atm_t_media", 700), ("atm_t
 SCALARI = ["aurora", "elev", "dz", "doy_sin", "doy_cos"]
 LATO = int(sys.argv[1]) if __name__ == "__main__" and len(sys.argv) > 1 else 5   # celle per lato (dispari)
 OFFSET = 0.25 * (np.arange(LATO) - LATO // 2)
-RISULTATI = ("esperimento_convoluzionale_risultati.csv" if LATO == 5
-             else f"esperimento_convoluzionale_{LATO}x{LATO}_risultati.csv")
+RISULTATI = ("risultati/esperimento_convoluzionale_risultati.csv" if LATO == 5
+             else f"risultati/esperimento_convoluzionale_{LATO}x{LATO}_risultati.csv")
 
 
 def cubo_aurora(anni):
@@ -190,7 +190,7 @@ def main():
     curva = res.groupby(["parametro", "epoca"])["rmse"].mean().unstack("parametro")
     conv = pd.DataFrame({"rmse_conv": curva.min(), "epoche_conv": curva.idxmin()})
     # testa attuale (MLP, 28 feature nel punto): stessa CV, risultati di cv_regione_anno.py
-    mlp = pd.read_csv("cv_regione_anno_risultati_modello_precedente.csv")  # testa con cui e' stato fatto il confronto
+    mlp = pd.read_csv("risultati/cv_regione_anno_risultati_modello_precedente.csv")  # testa con cui e' stato fatto il confronto
     cm = mlp.groupby(["parametro", "epoca"])["rmse_corretto"].mean().unstack("parametro")
     conv["rmse_testa_attuale"] = cm.min()
     conv["rmse_aurora"] = res.groupby("parametro")["rmse_aurora"].mean()

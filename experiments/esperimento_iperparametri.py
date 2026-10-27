@@ -21,7 +21,7 @@ import torch
 
 from cv_comune import PARAMS, carica_tabella, cv_rete, riepilogo
 from descrittori_terreno import USCITA
-from esperimento_terreno import FORMA
+from experiments.esperimento_terreno import FORMA
 from train_downscaling_head import FEATURE_COLS
 
 FEATURE = {p: FEATURE_COLS + (FORMA if p in ("tn3", "qq2") else []) for p in PARAMS}
@@ -37,7 +37,7 @@ CONFIGURAZIONI = {
     "W wd 1e-3": dict(wd=1e-3),
     "S batch 1024": dict(batch=1024),
 }
-USCITA_CSV = "esperimento_iperparametri_risultati.csv"
+USCITA_CSV = "risultati/esperimento_iperparametri_risultati.csv"
 
 
 def main():

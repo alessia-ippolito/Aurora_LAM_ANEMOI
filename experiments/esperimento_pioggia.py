@@ -100,7 +100,7 @@ def main():
                     righe.append({"variante": nome, "regione": reg, "anno": anno, "seed": seed, "epoca": ep,
                                   **errori(p, ov), **categoriche(p, ov)})
         print(f"{reg} {anno} fatto", flush=True)
-        pd.DataFrame(righe).to_csv("esperimento_pioggia_risultati.csv", index=False)
+        pd.DataFrame(righe).to_csv("risultati/esperimento_pioggia_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
     # epoca scelta per variante sull'RMSE medio (come per il modello), poi tutte le metriche a quell'epoca

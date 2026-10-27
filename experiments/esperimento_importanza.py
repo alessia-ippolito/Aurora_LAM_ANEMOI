@@ -66,7 +66,7 @@ def rmse_con(net, xv, av, ov, param):
 
 def main():
     torch.set_num_threads(6)
-    epoche = json.load(open("epoche_cv.json"))
+    epoche = json.load(open("modello/epoche_cv.json"))
     t = carica_tabella()
     rng = np.random.default_rng(0)
     righe = []
@@ -93,7 +93,7 @@ def main():
                 righe.append({"parametro": param, "regione": reg, "anno": anno, "tipo": tipo, "nome": nome,
                               "aumento_rmse_%": float(np.mean(aumenti)), "rmse_base": base})
             print(f"[{param}] {reg} {anno} fatto (RMSE {base:.3f})", flush=True)
-            pd.DataFrame(righe).to_csv("esperimento_importanza_risultati.csv", index=False)
+            pd.DataFrame(righe).to_csv("risultati/esperimento_importanza_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
     m = res.groupby(["tipo", "nome", "parametro"])["aumento_rmse_%"].mean().unstack("parametro")[PARAMS]

@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 import xarray as xr
 
-CARTELLA = "aurora_campi"
+CARTELLA = "dati/aurora_campi"  # extract_aurora_campi.py
 _RE = re.compile(r"aurora_campi_(\d{4})-(\d{2})-(\d{2})\.nc$")
 
 

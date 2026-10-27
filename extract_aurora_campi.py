@@ -59,7 +59,9 @@ import torch
 import xarray as xr
 from huggingface_hub import hf_hub_download
 
-CARTELLA = Path("aurora_campi")
+# Percorsi relativi alla cartella principale del progetto (da cui si lancia lo script)
+CACHE_TEMPI_ARCO = "dati/arco_time_cache.npy"
+CARTELLA = Path("dati/aurora_campi")
 
 
 def _giorni(argomenti):
@@ -101,7 +103,7 @@ def load_static_vars():
     return {k: torch.from_numpy(v) for k, v in static_raw.items()}
 
 
-def get_time_index(ds, cache_path="arco_time_cache.npy"):
+def get_time_index(ds, cache_path=CACHE_TEMPI_ARCO):
     p = Path(cache_path) # costruisce il path
     if p.exists():
         return np.load(p)
@@ -182,7 +184,7 @@ def main():
           + (", pesi degli strati lineari in " + str(model.autocast_dtype) + ", decoder dei livelli a pezzi"
              if POCA_MEMORIA else ""))
 
-    CARTELLA.mkdir(exist_ok=True)
+    CARTELLA.mkdir(parents=True, exist_ok=True)
     fatti = 0
     for giorno in GIORNI:
         day = pd.Timestamp(giorno)

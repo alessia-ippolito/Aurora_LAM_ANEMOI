@@ -19,6 +19,9 @@ import pandas as pd
 
 from train_downscaling_head import PARAMS, carica_modello, load_tables, prevedi
 
+# Percorsi relativi alla cartella principale del progetto (da cui si lancia lo script)
+REGIONI = "dati/statici/italy_regions.geojson"
+
 MIN_GIORNI = 30
 UNITA = {"tx3": "°C", "tn3": "°C", "qq2": "W/m²", "rr7": "mm"}
 
@@ -39,8 +42,8 @@ def rmse_stazioni(param):
 
 def main():
     tab = pd.concat([rmse_stazioni(p) for p in PARAMS], ignore_index=True)
-    tab.to_csv("rmse_stazioni_test.csv", index=False)
-    regioni = gpd.read_file("italy_regions.geojson")
+    tab.to_csv("risultati/rmse_stazioni_test.csv", index=False)
+    regioni = gpd.read_file(REGIONI)
 
     fig, axes = plt.subplots(len(PARAMS), 3, figsize=(13, 4 * len(PARAMS)))
     for riga, p in zip(axes, PARAMS):
@@ -61,7 +64,7 @@ def main():
             fig.colorbar(sc, ax=ax, shrink=0.8, label=UNITA[p])
     fig.suptitle(f"Test Piemonte 2020: errore per stazione (stazioni con almeno {MIN_GIORNI} giorni)")
     fig.tight_layout()
-    fig.savefig("mappa_rmse_test.png", dpi=130)
+    fig.savefig("mappe/mappa_rmse_test.png", dpi=130)
     print("salvati mappa_rmse_test.png e rmse_stazioni_test.csv")
     print(tab.groupby("parametro")[["rmse_aurora", "rmse_modello", "differenza"]].median().round(3))
     print("stazioni in cui il modello migliora Aurora:",

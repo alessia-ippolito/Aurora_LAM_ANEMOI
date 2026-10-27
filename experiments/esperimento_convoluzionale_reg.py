@@ -26,7 +26,7 @@ import pandas as pd
 import torch
 import torch.nn as nn
 
-from esperimento_convoluzionale import (NON_NEGATIVI, SCALARI, TABLE, cubo_aurora, finestre, pesi_finestra)
+from experiments.esperimento_convoluzionale import (NON_NEGATIVI, SCALARI, TABLE, cubo_aurora, finestre, pesi_finestra)
 from cv_comune import BATCH, PARAMS, REGIONS, SEED, assign_regions
 from train_downscaling_head import applica_esclusioni
 
@@ -150,15 +150,15 @@ def main():
                 r_stop = next(r["rmse"] for r in curva if r["epoca"] == stop)
                 print(f"[{param}] {reg} {anno}: stop all'epoca {stop}, RMSE {r_stop:.3f} "
                       f"(minimo {min(r['rmse'] for r in curva):.3f}, Aurora {curva[0]['rmse_aurora']:.3f})", flush=True)
-                pd.DataFrame(rows).to_csv("esperimento_convoluzionale_reg_risultati.csv", index=False)
+                pd.DataFrame(rows).to_csv("risultati/esperimento_convoluzionale_reg_risultati.csv", index=False)
 
     res = pd.DataFrame(rows)
     stop = res[res["epoca"] == res["epoca_stop"]].set_index(["parametro", "regione", "anno"])["rmse"]
-    mlp = pd.read_csv("cv_regione_anno_risultati_modello_precedente.csv")  # testa con cui e' stato fatto il confronto
+    mlp = pd.read_csv("risultati/cv_regione_anno_risultati_modello_precedente.csv")  # testa con cui e' stato fatto il confronto
     ep_mlp = mlp.groupby(["parametro", "epoca"])["rmse_corretto"].mean().groupby("parametro").idxmin()
     attuale = pd.concat([mlp[(mlp["parametro"] == p) & (mlp["epoca"] == e)] for p, e in ep_mlp])
     attuale = attuale.set_index(["parametro", "regione", "anno"])["rmse_corretto"]
-    conv = pd.read_csv("esperimento_convoluzionale_risultati.csv")
+    conv = pd.read_csv("risultati/esperimento_convoluzionale_risultati.csv")
     ep_conv = conv.groupby(["parametro", "epoca"])["rmse"].mean().groupby("parametro").idxmin()
     conv = pd.concat([conv[(conv["parametro"] == p) & (conv["epoca"] == e)] for p, e in ep_conv])
     conv = conv.set_index(["parametro", "regione", "anno"])["rmse"]

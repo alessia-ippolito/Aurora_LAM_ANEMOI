@@ -38,8 +38,9 @@ from descrittori_terreno import dem_elevation
 from cv_comune import BATCH, REGIONS, assign_regions
 from train_downscaling_head import FEATURE_COLS, DownscalingHead, applica_esclusioni
 
-TABLE = "training_table_aurora.parquet"
-INFO = json.load(open("fattori_scala_aurora.json"))
+TABLE = "tabelle/training_table_aurora.parquet"
+INFO = json.load(open("tabelle/fattori_scala_aurora.json"))
+SARAH_RAW = "dati/statici/sarah3_padania_raw"
 PASSO_PIXEL = 2          # un pixel SARAH ogni 2 (0.1 gradi, ~10 km)
 EPOCHE_PRE = 20
 MAX_EPOCHS_FT = 40
@@ -50,11 +51,11 @@ COL_AURORA = {"tx3": "tx3_aurora", "tn3": "tn3_aurora", "rr7": "rr7_aurora_raw",
 def pixel_sarah(anni):
     """Pixel SARAH (uno ogni PASSO_PIXEL) dentro le regioni di validazione, con SIS giornaliero e
     tutte le feature di Aurora interpolate nel punto. Cache su disco."""
-    cache = f"sarah_c_pixel_{'_'.join(map(str, anni))}.parquet"
+    cache = f"tabelle/sarah_c_pixel_{'_'.join(map(str, anni))}.parquet"
     if os.path.exists(cache):
         print(f"pixel SARAH da cache: {cache}")
         return pd.read_parquet(cache)
-    files = sorted(f for f in glob.glob(os.path.join("sarah3_padania_raw", "SISdm*.nc"))
+    files = sorted(f for f in glob.glob(os.path.join(SARAH_RAW, "SISdm*.nc"))
                    if int(re.search(r"SISdm(\d{4})", f).group(1)) in anni)
     with netCDF4.Dataset(files[0]) as d:
         lat, lon = d["lat"][:].data, d["lon"][:].data
@@ -165,7 +166,7 @@ def main():
                 for r in allena(net, tr, mean, std, MAX_EPOCHS_FT, seed, va):
                     rows.append({"regione": reg, "anno": anno, "seed": seed, "variante": "PRE+FT", **r})
             print(f"{reg} {anno}: fatto (pre-training su {len(pre)} righe SARAH)", flush=True)
-            pd.DataFrame(rows).to_csv("esperimento_sarah_c_risultati.csv", index=False)
+            pd.DataFrame(rows).to_csv("risultati/esperimento_sarah_c_risultati.csv", index=False)
 
     res = pd.DataFrame(rows)
     curva = res.groupby(["variante", "epoca"])["rmse"].mean()

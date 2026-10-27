@@ -18,7 +18,7 @@ import torch
 
 from cv_comune import PARAMS, allena_valuta, carica_tabella, errori, folds
 from descrittori_terreno import USCITA
-from esperimento_terreno import FORMA
+from experiments.esperimento_terreno import FORMA
 from train_downscaling_head import FEATURE_COLS
 
 N_SEED = 5
@@ -46,7 +46,7 @@ def main():
                 riga["bias_ensemble"] = errori(pred[:, ep].mean(axis=0), ov)["bias"]
                 righe.append(riga)
             print(f"[{param}] {reg} {anno} fatto", flush=True)
-            pd.DataFrame(righe).to_csv("esperimento_ensemble_risultati.csv", index=False)
+            pd.DataFrame(righe).to_csv("risultati/esperimento_ensemble_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
     curva = res.groupby(["parametro", "epoca"]).mean(numeric_only=True).drop(columns="anno")

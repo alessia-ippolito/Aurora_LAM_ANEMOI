@@ -29,12 +29,15 @@ from functools import lru_cache
 import numpy as np
 import pandas as pd
 
-DEM_PATH = "cop30_padania.tif"
+# Percorsi relativi alla cartella principale del progetto (da cui si lancia lo script)
+DEM = "dati/statici/cop30_padania.tif"
+TABELLA_TRAINING = "tabelle/training_table_aurora.parquet"
+
 FATTORE = 3                     # 30 m -> ~90 m
 LATI_TPI_KM = {"tpi_1km": 2, "tpi_5km": 10, "tpi_20km": 40}
 DESCRITTORI = list(LATI_TPI_KM) + ["pendenza", "nordness", "eastness", "dist_mare_km", "dist_lago_km"]
 FORMA_RILIEVO = ["tpi_1km", "tpi_5km", "tpi_20km", "pendenza", "nordness", "eastness"]
-USCITA = "descrittori_terreno_stazioni.parquet"
+USCITA = "tabelle/descrittori_terreno_stazioni.parquet"
 
 
 def dem_elevation(lats, lons):
@@ -44,7 +47,7 @@ def dem_elevation(lats, lons):
     era ~50 m, con punte oltre 800 m in montagna)."""
     import rasterio
 
-    with rasterio.open(DEM_PATH) as d:
+    with rasterio.open(DEM) as d:
         b = d.bounds
         out = []
         for lat, lon, v in zip(lats, lons, d.sample(list(zip(lons, lats)))):
@@ -60,7 +63,7 @@ def _griglie_dem():
     from rasterio.enums import Resampling
     from scipy.ndimage import uniform_filter
 
-    with rasterio.open(DEM_PATH) as d:
+    with rasterio.open(DEM) as d:
         h, w = d.height // FATTORE, d.width // FATTORE
         z = d.read(1, out_shape=(h, w), resampling=Resampling.average).astype("float64")
         b = d.bounds
@@ -117,7 +120,7 @@ def descrittori(lats, lons, con_distanze=True):
 
 
 def main():
-    t = pd.read_parquet("training_table_aurora.parquet", columns=["uid", "lat", "lon"])
+    t = pd.read_parquet(TABELLA_TRAINING, columns=["uid", "lat", "lon"])
     st = t.drop_duplicates("uid").reset_index(drop=True)
     d = descrittori(st["lat"].values, st["lon"].values)
     d.insert(0, "uid", st["uid"].values)

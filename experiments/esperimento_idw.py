@@ -15,11 +15,11 @@ Uso:
 Output:
     esperimento_idw_risultati.csv, riepilogo a schermo
 """
-from esperimento_bilineare import BASE, EXTRA, main
+from experiments.esperimento_bilineare import BASE, EXTRA, main
 
 EXTRA_IDW = [f"{c}_idw" if c in ("a_rr7", "a_qq2") else c for c in EXTRA]
 VARIANTI = {"B bilineare": ("aurora_B", BASE), "C bilineare+": ("aurora_B", BASE + EXTRA),
             "D idw": ("aurora_D", BASE), "E idw+": ("aurora_D", BASE + EXTRA_IDW)}
 
 if __name__ == "__main__":
-    main(VARIANTI, "esperimento_idw_risultati.csv", idw=True)
+    main(VARIANTI, "risultati/esperimento_idw_risultati.csv", idw=True)

@@ -16,7 +16,9 @@ from shapely.geometry import Point
 
 from train_downscaling_head import FEATURE_COLS, Rete, applica_esclusioni  # Rete: la stessa del modello finale
 
-TABLE = "training_table_aurora.parquet"
+# Percorsi relativi alla cartella principale del progetto (da cui si lancia lo script)
+TABLE = "tabelle/training_table_aurora.parquet"  # notebook §6.6
+REGIONI = "dati/statici/italy_regions.geojson"
 REGIONS = ["Lombardia", "Emilia-Romagna", "Veneto"]  # regioni di validazione (il Piemonte e' il test)
 PARAMS = ["tx3", "tn3", "rr7", "qq2"]
 BATCH = 4096
@@ -27,7 +29,7 @@ NON_NEGATIVI = {"rr7", "qq2"}
 def assign_regions(df):
     """Aggiunge la colonna "regione" (regione amministrativa della stazione, italy_regions.geojson)."""
     st = df.drop_duplicates("uid")[["uid", "lat", "lon"]]
-    regions = gpd.read_file("italy_regions.geojson")
+    regions = gpd.read_file(REGIONI)
     name_col = [c for c in regions.columns if "name" in c.lower()][0]
     g = gpd.GeoDataFrame(st, geometry=[Point(x, y) for x, y in zip(st.lon, st.lat)], crs="EPSG:4326")
     j = gpd.sjoin(g, regions[[name_col, "geometry"]], how="left", predicate="within")

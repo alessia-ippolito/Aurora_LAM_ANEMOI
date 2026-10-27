@@ -39,6 +39,18 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 
+# Percorsi relativi alla cartella principale del progetto (da cui si lancia lo script)
+TABELLA_TRAINING = "tabelle/training_table_aurora.parquet"  # notebook §6.6
+TABELLA_TEST = "tabelle/test_table_aurora.parquet"
+FATTORI_SCALA = "tabelle/fattori_scala_aurora.json"
+ESCLUSIONI = "tabelle/esclusioni_training.csv"  # notebook §7.2
+EPOCHE_CV = "modello/epoche_cv.json"  # cv_regione_anno.py
+CHECKPOINTS = "modello/checkpoints"
+
+
+def checkpoint(param):
+    return os.path.join(CHECKPOINTS, f"{param}_finale.pt")
+
 try:
     import pytorch_lightning as pl
 except ImportError as e:
@@ -59,7 +71,7 @@ except ImportError as e:
 # notebook §6.6): l'elenco lo scrive il notebook in fattori_scala_aurora.json, cosi' e' definito in un
 # solo punto. Con queste variabili l'errore scende del 12-16% su tutti i parametri, in tutti i fold
 # della cross-validation regione x anno (esperimento_bilineare.py).
-AURORA_INFO = "fattori_scala_aurora.json"
+AURORA_INFO = FATTORI_SCALA
 if os.path.exists(AURORA_INFO):
     AURORA_FEATURE = json.load(open(AURORA_INFO))["aurora_feature"]
 else:
@@ -111,7 +123,6 @@ def _read_table_optional(basename):
     return None
 
 
-ESCLUSIONI = "esclusioni_training.csv"  # generato dal notebook, §7.2
 
 
 def applica_esclusioni(df, path=ESCLUSIONI):
@@ -134,7 +145,8 @@ def applica_esclusioni(df, path=ESCLUSIONI):
     return df[~m]
 
 
-def load_tables(parameter, table="training_table_aurora", test_table="test_table_aurora", usa_esclusioni=True):
+def load_tables(parameter, table=os.path.splitext(TABELLA_TRAINING)[0], test_table=os.path.splitext(TABELLA_TEST)[0],
+                usa_esclusioni=True):
     """Il test (Piemonte, split "test") e' in una tabella a parte (notebook §6.6); se manca si
     prosegue con il solo training."""
     train_val = _read_table(table)
@@ -276,7 +288,7 @@ def prevedi(modello, df, param):
 
 
 def carica_modello(param):
-    return torch.load(f"checkpoints/{param}_finale.pt", weights_only=False)
+    return torch.load(checkpoint(param), weights_only=False)
 
 
 def evaluate(modello, df, param, label):
@@ -293,9 +305,9 @@ def main():
     Salva le reti e la normalizzazione delle feature; valuta il test (Piemonte) solo con --valuta_test."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--parameter", choices=PARAMS, default=None, help="una sola variabile (default: tutte)")
-    ap.add_argument("--table", default="training_table_aurora",
+    ap.add_argument("--table", default=os.path.splitext(TABELLA_TRAINING)[0],
                     help="basename (senza estensione) della tabella di training")
-    ap.add_argument("--test_table", default="test_table_aurora",
+    ap.add_argument("--test_table", default=os.path.splitext(TABELLA_TEST)[0],
                     help="basename (senza estensione) della tabella di test (Piemonte)")
     ap.add_argument("--valuta_test", action="store_true",
                     help="valuta anche sul test Piemonte: da usare UNA volta sola, a modello definitivo")
@@ -303,10 +315,10 @@ def main():
                     help="non applicare esclusioni_training.csv (per confronto)")
     args = ap.parse_args()
     torch.set_num_threads(6)
-    if not os.path.exists("epoche_cv.json"):
+    if not os.path.exists(EPOCHE_CV):
         raise SystemExit("non trovo epoche_cv.json: lancia prima cv_regione_anno.py")
-    epoche = json.load(open("epoche_cv.json"))
-    os.makedirs("checkpoints", exist_ok=True)
+    epoche = json.load(open(EPOCHE_CV))
+    os.makedirs(CHECKPOINTS, exist_ok=True)
 
     for param in ([args.parameter] if args.parameter else PARAMS):
         feature = feature_cols(param)
@@ -325,8 +337,8 @@ def main():
         reti = [allena_rete(train_df, feature, epoche[param], seed, mean, std).state_dict() for seed in range(N_SEED)]
         modello = {"feature_cols": feature, "mean": mean.tolist(), "std": std.tolist(), "epoche": epoche[param],
                    "hidden": list(HIDDEN), "dropout": DROPOUT, "reti": reti}
-        torch.save(modello, f"checkpoints/{param}_finale.pt")
-        print(f"salvato checkpoints/{param}_finale.pt")
+        torch.save(modello, checkpoint(param))
+        print(f"salvato {checkpoint(param)}")
         evaluate(modello, train_df, param, "train (dati visti in training)")
         if not args.valuta_test:
             print("[test] non valutato: aggiungi --valuta_test una sola volta, quando il modello e' definitivo.")

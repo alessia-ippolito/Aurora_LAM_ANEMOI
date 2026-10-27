@@ -38,10 +38,10 @@ def main():
                 for r in cv_rete(t, param, feature, nome, seed=seed, dropout=0.1):
                     righe.append({**r, "seed": seed})
                 print(f"[{param}] {nome} ({len(feature)} feature) seed {seed} fatto", flush=True)
-                pd.DataFrame(righe).to_csv("esperimento_feature_ridotte_risultati.csv", index=False)
+                pd.DataFrame(righe).to_csv("risultati/esperimento_feature_ridotte_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
-    base = pd.read_csv("esperimento_iperparametri_risultati.csv")
+    base = pd.read_csv("risultati/esperimento_iperparametri_risultati.csv")
     base = base[base["variante"] == "D1 dropout 0.1"].assign(variante="tutte le feature")
     tutto = pd.concat([base, res], ignore_index=True)
     s = riepilogo(tutto)

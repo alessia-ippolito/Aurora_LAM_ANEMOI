@@ -31,6 +31,7 @@ import torch
 from cv_comune import PARAMS, allena_valuta, carica_tabella, errori, folds
 from train_downscaling_head import DROPOUT, HIDDEN, N_SEED, feature_cols
 
+EPOCHE_CV = "modello/epoche_cv.json"  # letto da train_downscaling_head.py
 MAX_EPOCHE = {"tx3": 20, "tn3": 20, "rr7": 20, "qq2": 45}
 
 
@@ -61,12 +62,12 @@ def main():
                              "n": len(va)})
             print(f"[{param}] {reg} {anno}: train={len(tr)} val={len(va)} rmse grezzo={rows[-1]['rmse_grezzo']:.3f}",
                   flush=True)
-            pd.DataFrame(rows).to_csv("cv_regione_anno_risultati.csv", index=False)
+            pd.DataFrame(rows).to_csv("risultati/cv_regione_anno_risultati.csv", index=False)
 
     res = pd.DataFrame(rows)
     curva = res.groupby(["parametro", "epoca"])["rmse_corretto"].mean().unstack("parametro")
     epoche = {p: int(curva[p].idxmin()) for p in PARAMS}
-    json.dump(epoche, open("epoche_cv.json", "w"), indent=1)
+    json.dump(epoche, open(EPOCHE_CV, "w"), indent=1)
     print(f"\nepoche scelte (salvate in epoche_cv.json): {epoche}")
 
     best = pd.concat([res[(res["parametro"] == p) & (res["epoca"] == e)] for p, e in epoche.items()])

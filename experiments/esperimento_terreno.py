@@ -37,7 +37,7 @@ def main():
                 for r in cv_rete(t, param, feature, nome, seed=seed):
                     righe.append({**r, "seed": seed})
                 print(f"[{param}] {nome} seed {seed} fatto", flush=True)
-                pd.DataFrame(righe).to_csv("esperimento_terreno_risultati.csv", index=False)
+                pd.DataFrame(righe).to_csv("risultati/esperimento_terreno_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
     s = riepilogo(res)

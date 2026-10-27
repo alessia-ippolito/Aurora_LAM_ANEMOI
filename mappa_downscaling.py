@@ -38,12 +38,25 @@ from campi_aurora import carica_campi, interpola_punti
 from descrittori_terreno import FORMA_RILIEVO, dem_elevation, descrittori
 from train_downscaling_head import carica_modello, prevedi
 
+# Percorsi relativi alla cartella principale del progetto (da cui si lancia lo script)
+CACHE_ECAD = "dati/osservazioni/ecad_padania_raw_cache"
+CACHE_LOMBARDIA = "dati/osservazioni/arpa_lombardia_daily_cache_utc"
+CACHE_PIEMONTE = "dati/osservazioni/arpa_piemonte_daily_cache"
+CACHE_ARPAE = "dati/osservazioni/arpae_qq2_daily_cache"
+STAZIONI_ECAD = "dati/osservazioni/stazioni_padania.csv"
+SENSORI_LOMBARDIA = "dati/osservazioni/lombardia_sensori_target.csv"
+STAZIONI_PIEMONTE = "dati/osservazioni/arpa_piemonte_stazioni.csv"
+CAMPI_AURORA = "dati/aurora_campi"
+DEM = "dati/statici/cop30_padania.tif"
+REGIONI = "dati/statici/italy_regions.geojson"
+FATTORI_SCALA = "tabelle/fattori_scala_aurora.json"
+
 GIORNI = sys.argv[1:] or ["2021-08-15", "2021-10-04", "2021-12-31"]
 PARAMS = ["tx3", "tn3", "qq2", "rr7"]
 COL_AURORA = {"tx3": "tx3_aurora", "tn3": "tn3_aurora", "rr7": "rr7_aurora_raw", "qq2": "qq2_aurora_raw"}
 RIS = 0.01  # gradi, ~1 km
 UNITA = {"tx3": "°C", "tn3": "°C", "qq2": "W/m²", "rr7": "mm"}
-INFO = json.load(open("fattori_scala_aurora.json"))  # scritto dal notebook §6.6
+INFO = json.load(open(FATTORI_SCALA))  # scritto dal notebook §6.6
 FATTORI, TABLE_QC = INFO["fattori_scala"], {k: tuple(v) for k, v in INFO["table_qc"].items()}
 
 
@@ -75,7 +88,7 @@ def griglia_dem():
     Nel punto, non media del pixel: come per le stazioni (dem_elevation) e come la forma del rilievo,
     cosi' ogni pixel e' il valore atteso in un punto al centro della cella, con feature dello stesso
     tipo di quelle del training."""
-    with rasterio.open("cop30_padania.tif") as d:
+    with rasterio.open(DEM) as d:
         b = d.bounds
     ny, nx = int(round((b.top - b.bottom) / RIS)), int(round((b.right - b.left) / RIS))
     lat = b.top - (np.arange(ny) + 0.5) * (b.top - b.bottom) / ny
@@ -89,8 +102,8 @@ def osservazioni(giorni):
     """Osservazioni dei giorni richiesti, con le stesse regole del notebook §6.6."""
     giorni = set(pd.to_datetime(giorni))
     out = []
-    anag = pd.read_csv("stazioni_padania.csv").set_index("station_id")
-    for f in glob.glob(os.path.join("ecad_padania_raw_cache", "*.csv")):
+    anag = pd.read_csv(STAZIONI_ECAD).set_index("station_id")
+    for f in glob.glob(os.path.join(CACHE_ECAD, "*.csv")):
         sid, p = os.path.basename(f)[:-4].split("__")
         if p not in PARAMS or sid not in anag.index:
             continue
@@ -101,12 +114,12 @@ def osservazioni(giorni):
         d = d[d["date"].isin(giorni)].dropna(subset=[p])
         out += [(sid, "ecad", p, r.date, getattr(r, p), anag.loc[sid, "lat"], anag.loc[sid, "lon"])
                 for r in d.itertuples()]
-    reg = pd.read_csv("lombardia_sensori_target.csv").set_index("idsensore")
+    reg = pd.read_csv(SENSORI_LOMBARDIA).set_index("idsensore")
     reg["lon_utm"], reg["lat_utm"] = Transformer.from_crs("EPSG:32632", "EPSG:4326", always_xy=True).transform(
         reg["cgb_est"].values, reg["cgb_nord"].values)
     col = {"Temperatura": [("tx3", "vmax"), ("tn3", "vmin")], "Precipitazione": [("rr7", "vsum")],
            "Radiazione Globale": [("qq2", "vmed")]}
-    for f in glob.glob(os.path.join("arpa_lombardia_daily_cache_utc", "*.csv")):
+    for f in glob.glob(os.path.join(CACHE_LOMBARDIA, "*.csv")):
         s = int(os.path.basename(f)[:-4])
         d = pd.read_csv(f)
         if d.empty or s not in reg.index:
@@ -118,9 +131,9 @@ def osservazioni(giorni):
         for p, c in col[reg.loc[s, "tipologia"]]:
             out += [(f"arpalom_{s}", "arpa_lom", p, r.giorno, getattr(r, c), reg.loc[s, "lat_utm"], reg.loc[s, "lon_utm"])
                     for r in d.itertuples()]
-    pie = pd.read_csv("arpa_piemonte_stazioni.csv").set_index("uid")
+    pie = pd.read_csv(STAZIONI_PIEMONTE).set_index("uid")
     pcol = {"tmax": ("tx3", 1.0), "tmin": ("tn3", 1.0), "ptot": ("rr7", 1.0), "rtot": ("qq2", 1e6 / 86400)}
-    for f in glob.glob(os.path.join("arpa_piemonte_daily_cache", "*.csv")):
+    for f in glob.glob(os.path.join(CACHE_PIEMONTE, "*.csv")):
         u = os.path.basename(f)[:-4]
         if u not in pie.index:
             continue
@@ -133,7 +146,7 @@ def osservazioni(giorni):
     # di un mese compare anche nel file del mese dopo, quindi si ricombinano le ore prima del filtro
     mesi = {(g.year, g.month) for g in giorni} | {((g + pd.offsets.MonthBegin(1)).year,
                                                    (g + pd.offsets.MonthBegin(1)).month) for g in giorni}
-    fa = [os.path.join("arpae_qq2_daily_cache", f"{y}-{m:02d}.csv") for y, m in sorted(mesi)]
+    fa = [os.path.join(CACHE_ARPAE, f"{y}-{m:02d}.csv") for y, m in sorted(mesi)]
     fa = [f for f in fa if os.path.exists(f)]
     if fa:
         a = pd.concat([pd.read_csv(f, parse_dates=["date"]) for f in fa], ignore_index=True)
@@ -149,7 +162,7 @@ def osservazioni(giorni):
 
 
 def _file_campi(giorno):
-    return os.path.join("aurora_campi", f"aurora_campi_{giorno}.nc")
+    return os.path.join(CAMPI_AURORA, f"aurora_campi_{giorno}.nc")
 
 
 def main():
@@ -157,7 +170,7 @@ def main():
     teste = carica_teste()
     glat, glon, gelev = griglia_dem()
     LAT, LON = np.meshgrid(glat, glon, indexing="ij")
-    regioni = gpd.read_file("italy_regions.geojson")
+    regioni = gpd.read_file(REGIONI)
     obs = osservazioni(GIORNI)
     confronto = []
 
@@ -228,14 +241,14 @@ def main():
             fig.colorbar(im, ax=axes[r, :], shrink=0.8, label=f"{p} ({UNITA[p]})")
         fig.suptitle(f"{day.date()}: Aurora 25 km e downscaling ~1 km (a sinistra: punti della griglia di "
                      f"Aurora; a destra: stazioni osservate)", fontsize=13)
-        fig.savefig(f"mappa_{day.date()}.png", dpi=110, bbox_inches="tight")
+        fig.savefig(f"mappe/mappa_{day.date()}.png", dpi=110, bbox_inches="tight")
         plt.close(fig)
-        out.to_netcdf(f"mappa_{day.date()}.nc")
+        out.to_netcdf(f"mappe/mappa_{day.date()}.nc")
         print(f"salvati mappa_{day.date()}.png e mappa_{day.date()}.nc")
 
     if confronto:
         c = pd.DataFrame(confronto)
-        c.to_csv("mappa_confronto_stazioni.csv", index=False)
+        c.to_csv("risultati/mappa_confronto_stazioni.csv", index=False)
         print("\nconfronto con le stazioni (RMSE):")
         print(c.pivot_table(index=["giorno", "parametro"], columns="versione", values="rmse").round(2))
 

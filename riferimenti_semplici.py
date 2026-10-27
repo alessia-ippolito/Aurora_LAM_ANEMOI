@@ -51,7 +51,7 @@ def main():
             aggiungi("R3 regressione lineare", va["aurora"].values + lin.predict(va[FEATURE_COLS].values))
         print(f"[{param}] riferimenti fatti; ora la rete attuale...", flush=True)
         righe += cv_rete(t, param, FEATURE_COLS, "C rete attuale")
-        pd.DataFrame(righe).to_csv("riferimenti_semplici_risultati.csv", index=False)
+        pd.DataFrame(righe).to_csv("risultati/riferimenti_semplici_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
     s = riepilogo(res)
