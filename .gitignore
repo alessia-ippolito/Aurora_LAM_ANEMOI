@@ -18,7 +18,7 @@ sarah3_padania_raw/
 aurora_campi*/
 
 # Modelli e log di Lightning
-checkpoints/
+checkpoints/*
 lightning_logs/
 *.ckpt
 
@@ -32,7 +32,11 @@ lightning_logs/
 *.npz
 *.pt
 
-# Cartelle di inutili/ con dati e modelli vecchi (gli script .py restano)
+# Eccezione: le reti del modello finale (train_downscaling_head.py, ~530 KB in tutto), quelle
+# valutate sul test e usate per le mappe
+!checkpoints/*_finale.pt
+
+# Script e dati superati: esclusa tutta la cartella
 inutili/
 immagini_output/
 
