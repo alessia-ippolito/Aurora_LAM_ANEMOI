@@ -1,23 +1,23 @@
 """
-Esperimento: testa convoluzionale REGOLARIZZATA (seguito di esperimento_convoluzionale.py, che
-overfittava dopo 2-3 epoche e perdeva contro la testa attuale, soprattutto su qq2).
+Experiment: REGULARISED convolutional head (follow-up of esperimento_convoluzionale.py, which
+overfitted after 2-3 epochs and lost against the current head, especially on qq2).
 
-Stessa finestra 5 x 5 celle di Aurora centrata sulla stazione, stessa CV regione x anno, stesse
-esclusioni. Cambia:
-  - early stopping vero: dentro ogni fold il 15% delle stazioni e il 15% dei giorni (blocchi di 10) di
-    training sono tenuti da parte; l errore interno si misura sulle stazioni escluse nei giorni esclusi;
-    ci si ferma quando l'errore su quelle non migliora per PAZIENZA epoche e si tornano ai pesi
-    migliori. L'errore riportato e' quello sul fold di validazione a quell'epoca: l'epoca non e'
-    scelta guardando la validazione.
-  - dropout sui canali della finestra (Dropout2d 0.2) e nella parte densa (0.3)
-  - AdamW, weight decay 1e-3 (prima Adam 1e-4)
-  - 16 filtri invece di 32, learning rate 5e-4 invece di 1e-3
+Same 5 x 5 window of Aurora cells centred on the station, same region x year CV, same exclusions.
+What changes:
+  - true early stopping: inside each fold 15% of the stations and 15% of the training days (blocks
+    of 10) are held out; the internal error is measured on the held-out stations on the held-out
+    days; training stops when the error on those does not improve for PAZIENZA (patience) epochs and
+    the best weights are restored. The reported error is the one on the validation fold at that
+    epoch: the epoch is not chosen by looking at the validation.
+  - dropout on the window channels (Dropout2d 0.2) and in the dense part (0.3)
+  - AdamW, weight decay 1e-3 (before: Adam 1e-4)
+  - 16 filters instead of 32, learning rate 5e-4 instead of 1e-3
 
-Uso:
+Usage:
     python esperimento_convoluzionale_reg.py
 Output:
-    esperimento_convoluzionale_reg_risultati.csv (curva per epoca, con l'epoca di stop),
-    riepilogo a schermo (confronto con la testa attuale e con la convoluzionale non regolarizzata)
+    esperimento_convoluzionale_reg_risultati.csv (curve per epoch, with the stopping epoch),
+    summary on screen (comparison with the current head and with the non-regularised convolutional one)
 """
 import copy
 
@@ -63,12 +63,12 @@ def rmse_su(net, cubo, pesi, g, st, sc, aurora, obs, taglia_zero):
 
 def fold(cubo, pesi, tr, va, taglia_zero, seed=SEED):
     torch.manual_seed(seed)
-    # stazioni nuove E giorni nuovi (blocchi di 10). Provato:
-    #  - solo stazioni tenute da parte: la rete impara il meteo di quei giorni dalle stazioni vicine;
-    #  - solo giorni tenuti da parte: la rete riconosce la stazione dalla finestra e ne impara la
-    #    correzione specifica.
-    # In entrambi i casi l'errore interno scendeva fino all'epoca 20-24, mentre sul fold di
-    # validazione risaliva gia' dall'epoca 5.
+    # new stations AND new days (blocks of 10). Tried:
+    #  - held-out stations only: the network learns the weather of those days from the nearby stations;
+    #  - held-out days only: the network recognises the station from the window and learns its
+    #    specific correction.
+    # In both cases the internal error kept falling until epoch 20-24, while on the validation fold
+    # it was already rising from epoch 5.
     rng = np.random.default_rng(seed)
     uid = tr["uid"].unique()
     st_int = rng.choice(uid, int(len(uid) * QUOTA_INTERNA), replace=False)
@@ -128,7 +128,7 @@ def main():
     anni = sorted(t["anno"].unique())
 
     cubo, giorni, glat, glon, nomi = cubo_aurora(anni)
-    print(f"campi: {tuple(cubo.shape)}", flush=True)
+    print(f"fields: {tuple(cubo.shape)}", flush=True)
     st = t.drop_duplicates("uid")[["uid", "lat", "lon"]].reset_index(drop=True)
     pesi = pesi_finestra(st["lat"].values, st["lon"].values, glat, glon)
     t["staz_i"] = t["uid"].map(pd.Series(st.index, index=st["uid"]))
@@ -148,13 +148,13 @@ def main():
                 rows += [{"parametro": param, "regione": reg, "anno": anno, **r} for r in curva]
                 stop = curva[0]["epoca_stop"]
                 r_stop = next(r["rmse"] for r in curva if r["epoca"] == stop)
-                print(f"[{param}] {reg} {anno}: stop all'epoca {stop}, RMSE {r_stop:.3f} "
-                      f"(minimo {min(r['rmse'] for r in curva):.3f}, Aurora {curva[0]['rmse_aurora']:.3f})", flush=True)
+                print(f"[{param}] {reg} {anno}: stop at epoch {stop}, RMSE {r_stop:.3f} "
+                      f"(minimum {min(r['rmse'] for r in curva):.3f}, Aurora {curva[0]['rmse_aurora']:.3f})", flush=True)
                 pd.DataFrame(rows).to_csv("risultati/esperimento_convoluzionale_reg_risultati.csv", index=False)
 
     res = pd.DataFrame(rows)
     stop = res[res["epoca"] == res["epoca_stop"]].set_index(["parametro", "regione", "anno"])["rmse"]
-    mlp = pd.read_csv("risultati/cv_regione_anno_risultati_modello_precedente.csv")  # testa con cui e' stato fatto il confronto
+    mlp = pd.read_csv("risultati/cv_regione_anno_risultati_modello_precedente.csv")  # head the comparison was made with
     ep_mlp = mlp.groupby(["parametro", "epoca"])["rmse_corretto"].mean().groupby("parametro").idxmin()
     attuale = pd.concat([mlp[(mlp["parametro"] == p) & (mlp["epoca"] == e)] for p, e in ep_mlp])
     attuale = attuale.set_index(["parametro", "regione", "anno"])["rmse_corretto"]
@@ -163,11 +163,11 @@ def main():
     conv = pd.concat([conv[(conv["parametro"] == p) & (conv["epoca"] == e)] for p, e in ep_conv])
     conv = conv.set_index(["parametro", "regione", "anno"])["rmse"]
     per_fold = pd.DataFrame({"conv_reg": stop, "conv": conv, "testa_attuale": attuale}).dropna()
-    print("\n=== CV regione x anno, RMSE medio sui fold ===")
+    print("\n=== Region x year CV, mean RMSE over the folds ===")
     print(per_fold.groupby("parametro").mean().round(3))
-    print("\nfold in cui la convoluzionale regolarizzata batte la testa attuale:",
+    print("\nfolds where the regularised convolutional head beats the current head:",
           (per_fold["conv_reg"] < per_fold["testa_attuale"]).groupby("parametro").sum().to_dict())
-    print("\nper fold:")
+    print("\nby fold:")
     print(per_fold.round(2))
 
 

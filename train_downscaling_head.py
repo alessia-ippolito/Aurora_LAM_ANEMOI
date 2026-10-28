@@ -1,32 +1,33 @@
 """
-Testa di downscaling (bias-correction) sulla previsione Aurora, nello stile "Granite": una piccola
-rete impara il residuo osservazione - Aurora (interpolata bilinearmente nel punto), usando come
-feature Aurora stessa, le altre variabili di Aurora nel punto, la quota (DEM 30 m), la stagione e,
-per tn3 e qq2, la forma del rilievo. All'inferenza valore_corretto = aurora + correzione: la rete non
-reinventa il segnale meteorologico, solo la correzione locale che Aurora (0.25 gradi) non vede.
+Downscaling (bias-correction) head on the Aurora forecast, in the "Granite" style: a small network
+learns the residual observation - Aurora (bilinearly interpolated to the point), using as features
+Aurora itself, the other Aurora variables at the point, the elevation (30 m DEM), the season and,
+for tn3 and qq2, the terrain shape. At inference corrected_value = aurora + correction: the network
+does not reinvent the meteorological signal, only the local correction that Aurora (0.25 degrees)
+cannot see.
 
-Modello finale (scelto con gli esperimenti in cv_comune.py e esperimento_*.py):
-  - una rete per variabile, 64-64, ReLU, dropout 0.1 (esperimento_iperparametri.py)
-  - ensemble: N_SEED reti identiche allenate con seed diversi, previsione = media (esperimento_ensemble.py)
-  - feature: FEATURE_COLS (28) senza a_<variabile> (copia di "aurora") + FORMA_RILIEVO per tn3 e qq2
+Final model (chosen with the experiments in cv_comune.py and esperimento_*.py):
+  - one network per variable, 64-64, ReLU, dropout 0.1 (esperimento_iperparametri.py)
+  - ensemble: N_SEED identical networks trained with different seeds, forecast = mean (esperimento_ensemble.py)
+  - features: FEATURE_COLS (28) without a_<variable> (copy of "aurora") + FORMA_RILIEVO for tn3 and qq2
     (esperimento_terreno.py)
-  - pioggia: residuo semplice con errore quadratico (esperimento_pioggia.py)
+  - precipitation: plain residual with squared error (esperimento_pioggia.py)
 
-Input atteso nella working directory:
-  - training_table_aurora.parquet    (dal notebook padania_cerra_ecad_analysis §6.6)
-  - test_table_aurora.parquet        (stesso notebook: Piemonte 2020, SOLO per la valutazione finale)
-  - esclusioni_training.csv          (notebook §7.2, opzionale: righe da non usare)
+Expected input in the working directory:
+  - training_table_aurora.parquet    (from the data preparation notebook, §6.6)
+  - test_table_aurora.parquet        (same notebook: Piedmont 2020, ONLY for the final evaluation)
+  - esclusioni_training.csv          (notebook §7.2, optional: rows not to be used)
   - epoche_cv.json                   (cv_regione_anno.py)
 
-Uso:
-  python cv_regione_anno.py                          # una volta: sceglie le epoche (epoche_cv.json)
-  python train_downscaling_head.py                   # modello finale, tutte e 4 le variabili
-  python train_downscaling_head.py --valuta_test     # UNA volta sola, a modello definitivo
+Usage:
+  python cv_regione_anno.py                          # once: chooses the epochs (epoche_cv.json)
+  python train_downscaling_head.py                   # final model, all 4 variables
+  python train_downscaling_head.py --valuta_test     # ONCE only, when the model is final
 
 Output:
-  - checkpoints/{parameter}_finale.pt: le N_SEED reti, le feature e la loro normalizzazione
-    (medie/deviazioni del training), necessarie all'inferenza (mappa_downscaling.py)
-  - stampa RMSE/bias di Aurora interpolata e del downscaling (train; test solo con --valuta_test)
+  - checkpoints/{parameter}_finale.pt: the N_SEED networks, the features and their normalisation
+    (training means/standard deviations), needed for inference (mappa_downscaling.py)
+  - prints RMSE/bias of interpolated Aurora and of the downscaling (train; test only with --valuta_test)
 """
 import argparse
 import glob
@@ -39,7 +40,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 
-# Percorsi relativi alla cartella principale del progetto (da cui si lancia lo script)
+# Paths relative to the main project folder (where the script is run from)
 TABELLA_TRAINING = "tabelle/training_table_aurora.parquet"  # notebook §6.6
 TABELLA_TEST = "tabelle/test_table_aurora.parquet"
 FATTORI_SCALA = "tabelle/fattori_scala_aurora.json"
@@ -55,38 +56,38 @@ try:
     import pytorch_lightning as pl
 except ImportError as e:
     raise SystemExit(
-        "manca pytorch_lightning. Su Lightning AI Studio: pip install pytorch-lightning"
+        "pytorch_lightning is missing. On Lightning AI Studio: pip install pytorch-lightning"
     ) from e
 
 
 # --------------------------------------------------------------------------- #
-# Dati
+# Data
 # --------------------------------------------------------------------------- #
 
-# lat/lon tolte: l'ablazione leave-one-region-out le mostra come identificatori di
-# regione che non si trasferiscono tra regioni (migliorano o pareggiano in 11
-# casi su 12, vedi ablation_latlon_all.csv). Restano il valore Aurora, la quota
-# DTM e la stagione, cioe' le informazioni fisiche.
-# Le altre variabili di Aurora nel punto della stazione (interpolate bilinearmente dai campi,
-# notebook §6.6): l'elenco lo scrive il notebook in fattori_scala_aurora.json, cosi' e' definito in un
-# solo punto. Con queste variabili l'errore scende del 12-16% su tutti i parametri, in tutti i fold
-# della cross-validation regione x anno (esperimento_bilineare.py).
+# lat/lon removed: the leave-one-region-out ablation shows them acting as region identifiers
+# that do not transfer between regions (removing them improves or ties in 11 cases out of 12,
+# see ablation_latlon_all.csv). What remains is the Aurora value, the DTM elevation and the
+# season, i.e. the physical information.
+# The other Aurora variables at the station location (bilinearly interpolated from the fields,
+# notebook §6.6): the list is written by the notebook in fattori_scala_aurora.json, so it is defined
+# in one place only. With these variables the error drops by 12-16% for all variables, in all the
+# folds of the region x year cross-validation (esperimento_bilineare.py).
 AURORA_INFO = FATTORI_SCALA
 if os.path.exists(AURORA_INFO):
     AURORA_FEATURE = json.load(open(AURORA_INFO))["aurora_feature"]
 else:
     AURORA_FEATURE = []
-    print(f"ATTENZIONE: {AURORA_INFO} non trovato (notebook §6.6): solo aurora, quota e stagione come feature.")
+    print(f"WARNING: {AURORA_INFO} not found (notebook §6.6): only aurora, elevation and season as features.")
 FEATURE_COLS = ["aurora", "elev", "doy_sin", "doy_cos"] + AURORA_FEATURE
-# "rilievo_locale" (max - min di quota entro 500 m, inutili/add_terrain_feature.py) e' stato testato
-# e scartato con il modello precedente.
-# Forma del rilievo (descrittori_terreno.py): solo per tn3 (aria fredda in conche e fondovalle) e
-# qq2 (ombreggiamento); per tx3 e rr7 nessun guadagno nella cross-validation (esperimento_terreno.py).
+# "rilievo_locale" (max - min elevation within 500 m, inutili/add_terrain_feature.py) was tested
+# and discarded with the previous model.
+# Terrain shape (descrittori_terreno.py): only for tn3 (cold air in basins and valley floors) and
+# qq2 (shading); no gain in cross-validation for tx3 and rr7 (esperimento_terreno.py).
 FORMA_RILIEVO = ["tpi_1km", "tpi_5km", "tpi_20km", "pendenza", "nordness", "eastness"]  # = descrittori_terreno
 FEATURE_EXTRA = {"tn3": FORMA_RILIEVO, "qq2": FORMA_RILIEVO}
 PARAMS = ["tx3", "tn3", "rr7", "qq2"]
 
-# Rete e allenamento del modello finale
+# Network and training of the final model
 HIDDEN = (64, 64)
 DROPOUT = 0.1
 LR = 1e-3
@@ -96,41 +97,41 @@ N_SEED = 5
 
 
 def feature_cols(param):
-    """Feature del modello per la variabile param. a_<param> e' tolta: per la variabile stessa e' una
-    copia esatta di "aurora" (in FEATURE_COLS resta per gli esperimenti precedenti, che la includevano)."""
+    """Model features for the variable param. a_<param> is removed: for the variable itself it is an
+    exact copy of "aurora" (it stays in FEATURE_COLS for the earlier experiments, which included it)."""
     return [c for c in FEATURE_COLS if c != f"a_{param}"] + FEATURE_EXTRA.get(param, [])
 
 
 def _read_table(basename):
-    """Legge basename.parquet (formato del notebook §6.6), oppure .csv.gz / .csv."""
+    """Reads basename.parquet (format of the notebook §6.6), or .csv.gz / .csv."""
     if os.path.exists(basename + ".parquet"):
         return pd.read_parquet(basename + ".parquet")
     for ext in (".csv.gz", ".csv"):
         p = basename + ext
         if os.path.exists(p):
             return pd.read_csv(p, parse_dates=["date"])
-    raise FileNotFoundError(f"non trovo {basename}.parquet / .csv.gz / .csv nella working directory")
+    raise FileNotFoundError(f"cannot find {basename}.parquet / .csv.gz / .csv in the working directory")
 
 
 def _read_table_optional(basename):
-    """Come _read_table, ma restituisce None invece di sollevare un errore
-    se il file non c'e' - usato per il test (es. Piemonte-Aurora), che puo'
-    non essere ancora pronto senza per questo bloccare train+val."""
+    """Like _read_table, but returns None instead of raising an error if the file
+    is missing - used for the test table (e.g. Piedmont-Aurora), which may not be
+    ready yet without blocking train+val."""
     for ext in (".parquet", ".csv.gz", ".csv"):
         if os.path.exists(basename + ext):
             return _read_table(basename)
-    print(f"ATTENZIONE: {basename} non trovato - proseguo senza test, solo train+val.")
+    print(f"WARNING: {basename} not found - continuing without test, train+val only.")
     return None
 
 
 
 
 def applica_esclusioni(df, path=ESCLUSIONI):
-    """Toglie le righe elencate in esclusioni_training.csv (notebook §7.2): stazioni intere
-    (date vuota; parameter vuoto = tutti i parametri) o singoli giorni. La tabella di training
-    resta intatta; se il file non c'e' non toglie niente."""
+    """Removes the rows listed in esclusioni_training.csv (notebook §7.2): whole stations
+    (empty date; empty parameter = all variables) or single days. The training table itself
+    stays intact; if the file is missing nothing is removed."""
     if not os.path.exists(path):
-        print(f"ATTENZIONE: {path} non trovato, nessuna esclusione applicata.")
+        print(f"WARNING: {path} not found, no exclusion applied.")
         return df
     e = pd.read_csv(path, parse_dates=["date"])
     intere = e[e["date"].isna()]
@@ -141,14 +142,14 @@ def applica_esclusioni(df, path=ESCLUSIONI):
     m = (df["uid"].isin(tutte).values
          | pd.MultiIndex.from_frame(df[["uid", "parameter"]]).isin(per_param)
          | pd.MultiIndex.from_frame(df[["uid", "parameter", "date"]]).isin(per_giorno))
-    print(f"esclusioni ({path}): tolte {int(m.sum())} righe su {len(df)}")
+    print(f"exclusions ({path}): removed {int(m.sum())} rows out of {len(df)}")
     return df[~m]
 
 
 def load_tables(parameter, table=os.path.splitext(TABELLA_TRAINING)[0], test_table=os.path.splitext(TABELLA_TEST)[0],
                 usa_esclusioni=True):
-    """Il test (Piemonte, split "test") e' in una tabella a parte (notebook §6.6); se manca si
-    prosegue con il solo training."""
+    """The test set (Piedmont, split "test") is in a separate table (notebook §6.6); if it is
+    missing, only the training table is used."""
     train_val = _read_table(table)
     test = _read_table_optional(test_table) if test_table else None
 
@@ -157,7 +158,7 @@ def load_tables(parameter, table=os.path.splitext(TABELLA_TRAINING)[0], test_tab
     if usa_esclusioni:
         df = applica_esclusioni(df)
     if df.empty:
-        raise ValueError(f"nessuna riga per parameter={parameter!r}: controlla il nome (tx3/tn3/rr7/qq2)")
+        raise ValueError(f"no rows for parameter={parameter!r}: check the name (tx3/tn3/rr7/qq2)")
 
     doy = df["date"].dt.dayofyear.astype(float)
     df["doy_sin"] = np.sin(2 * np.pi * doy / 365.25)
@@ -167,8 +168,8 @@ def load_tables(parameter, table=os.path.splitext(TABELLA_TRAINING)[0], test_tab
 
 
 class ResidualDataset(Dataset):
-    """Feature -> residuo (obs - aurora). Le feature sono già standardizzate
-    (media/std calcolate SOLO sul train, per non far trapelare val/test)."""
+    """Features -> residual (obs - aurora). The features are already standardised
+    (mean/std computed ONLY on the training data, so that val/test do not leak)."""
 
     def __init__(self, df, mean, std):
         x = (df[FEATURE_COLS].values - mean) / std
@@ -185,12 +186,12 @@ class ResidualDataset(Dataset):
 
 
 # --------------------------------------------------------------------------- #
-# Modello
+# Model
 # --------------------------------------------------------------------------- #
 
 class Rete(nn.Module):
-    """Rete del modello finale (e degli esperimenti, via cv_comune.py): piccola apposta, e' una
-    correzione locale, non deve reimparare la meteorologia da zero."""
+    """Network of the final model (and of the experiments, through cv_comune.py): small on purpose,
+    it is a local correction and must not relearn meteorology from scratch."""
 
     def __init__(self, n_in, hidden=HIDDEN, dropout=0.0):
         super().__init__()
@@ -205,8 +206,8 @@ class Rete(nn.Module):
 
 
 class DownscalingHead(pl.LightningModule):
-    """Versione precedente della testa (Lightning, 64-64 senza dropout, una rete sola): usata solo
-    da esperimento_sarah_c.py. Il modello finale usa Rete."""
+    """Previous version of the head (Lightning, 64-64 without dropout, a single network): used only
+    by esperimento_sarah_c.py. The final model uses Rete."""
 
     def __init__(self, n_features, hidden=64, lr=1e-3, weight_decay=1e-4):
         super().__init__()
@@ -249,13 +250,13 @@ class DownscalingHead(pl.LightningModule):
 # Main
 # --------------------------------------------------------------------------- #
 
-NON_NEGATIVI = {"rr7", "qq2"}  # pioggia e radiazione: il valore corretto non puo' essere < 0
+NON_NEGATIVI = {"rr7", "qq2"}  # precipitation and radiation: the corrected value cannot be < 0
 
 
 def allena_rete(tr, feature, epoche, seed, mean, std, hidden=HIDDEN, dropout=DROPOUT, lr=LR, wd=WEIGHT_DECAY,
                 batch=BATCH):
-    """Allena una rete sul residuo obs - aurora. Stesso ciclo di allenamento della cross-validation
-    (cv_comune.allena_valuta): quello che e' stato validato e' esattamente quello che si allena."""
+    """Trains a network on the residual obs - aurora. Same training loop as the cross-validation
+    (cv_comune.allena_valuta): what was validated is exactly what is trained."""
     torch.manual_seed(seed)
     x = torch.tensor((tr[feature].values - mean) / std, dtype=torch.float32)
     y = torch.tensor(tr["obs"].values - tr["aurora"].values, dtype=torch.float32).unsqueeze(1)
@@ -273,8 +274,8 @@ def allena_rete(tr, feature, epoche, seed, mean, std, hidden=HIDDEN, dropout=DRO
 
 
 def prevedi(modello, df, param):
-    """Valore corretto con l'ensemble: media delle reti (ognuna tagliata a zero per pioggia e
-    radiazione, come nella cross-validation). modello = dizionario salvato da main()."""
+    """Corrected value with the ensemble: mean of the networks (each clipped at zero for
+    precipitation and radiation, as in the cross-validation). modello = dictionary saved by main()."""
     x = torch.tensor((df[modello["feature_cols"]].values - np.array(modello["mean"])) / np.array(modello["std"]),
                      dtype=torch.float32)
     prev = []
@@ -294,29 +295,30 @@ def carica_modello(param):
 def evaluate(modello, df, param, label):
     pred, obs, aur = prevedi(modello, df, param), df["obs"].values, df["aurora"].values
     print(f"[{label}] n={len(df)}")
-    print(f"  Aurora interpolata -> RMSE={np.sqrt(np.mean((aur - obs) ** 2)):.3f}  bias={np.mean(aur - obs):.3f}")
-    print(f"  downscaling        -> RMSE={np.sqrt(np.mean((pred - obs) ** 2)):.3f}  bias={np.mean(pred - obs):.3f}")
+    print(f"  interpolated Aurora -> RMSE={np.sqrt(np.mean((aur - obs) ** 2)):.3f}  bias={np.mean(aur - obs):.3f}")
+    print(f"  downscaling         -> RMSE={np.sqrt(np.mean((pred - obs) ** 2)):.3f}  bias={np.mean(pred - obs):.3f}")
 
 
 def main():
-    """Modello finale: per ogni variabile allena N_SEED reti su TUTTE le righe di training (tutti gli
-    anni, tutte le regioni, Piemonte escluso), per un numero di epoche fisso scelto dalla
-    cross-validation regione x anno (cv_regione_anno.py -> epoche_cv.json), senza early stopping.
-    Salva le reti e la normalizzazione delle feature; valuta il test (Piemonte) solo con --valuta_test."""
+    """Final model: for each variable trains N_SEED networks on ALL the training rows (all years,
+    all regions, Piedmont excluded), for a fixed number of epochs chosen by the region x year
+    cross-validation (cv_regione_anno.py -> epoche_cv.json), without early stopping.
+    Saves the networks and the feature normalisation; evaluates the test set (Piedmont) only with
+    --valuta_test."""
     ap = argparse.ArgumentParser()
-    ap.add_argument("--parameter", choices=PARAMS, default=None, help="una sola variabile (default: tutte)")
+    ap.add_argument("--parameter", choices=PARAMS, default=None, help="a single variable (default: all)")
     ap.add_argument("--table", default=os.path.splitext(TABELLA_TRAINING)[0],
-                    help="basename (senza estensione) della tabella di training")
+                    help="basename (without extension) of the training table")
     ap.add_argument("--test_table", default=os.path.splitext(TABELLA_TEST)[0],
-                    help="basename (senza estensione) della tabella di test (Piemonte)")
+                    help="basename (without extension) of the test table (Piedmont)")
     ap.add_argument("--valuta_test", action="store_true",
-                    help="valuta anche sul test Piemonte: da usare UNA volta sola, a modello definitivo")
+                    help="also evaluate on the Piedmont test set: use it ONCE only, when the model is final")
     ap.add_argument("--senza_esclusioni", action="store_true",
-                    help="non applicare esclusioni_training.csv (per confronto)")
+                    help="do not apply esclusioni_training.csv (for comparison)")
     args = ap.parse_args()
     torch.set_num_threads(6)
     if not os.path.exists(EPOCHE_CV):
-        raise SystemExit("non trovo epoche_cv.json: lancia prima cv_regione_anno.py")
+        raise SystemExit("cannot find epoche_cv.json: run cv_regione_anno.py first")
     epoche = json.load(open(EPOCHE_CV))
     os.makedirs(CHECKPOINTS, exist_ok=True)
 
@@ -326,11 +328,11 @@ def main():
                          usa_esclusioni=not args.senza_esclusioni)
         mancanti = [c for c in feature if c not in df.columns]
         if mancanti:
-            raise SystemExit(f"nella tabella mancano {mancanti}: rilancia il notebook §6.6")
+            raise SystemExit(f"the table is missing {mancanti}: re-run the notebook §6.6")
         train_df = df[df["split"] != "test"].dropna(subset=feature + ["obs", "aurora"])
         test_df = df[df["split"] == "test"].dropna(subset=feature + ["obs", "aurora"])
-        print(f"\n=== {param}: train={len(train_df)}  test(Piemonte)={len(test_df)}  epoche={epoche[param]}  "
-              f"feature={len(feature)}  reti={N_SEED} ===")
+        print(f"\n=== {param}: train={len(train_df)}  test(Piedmont)={len(test_df)}  epochs={epoche[param]}  "
+              f"features={len(feature)}  networks={N_SEED} ===")
         mean = train_df[feature].values.mean(axis=0)
         std = train_df[feature].values.std(axis=0)
         std[std == 0] = 1.0
@@ -338,14 +340,14 @@ def main():
         modello = {"feature_cols": feature, "mean": mean.tolist(), "std": std.tolist(), "epoche": epoche[param],
                    "hidden": list(HIDDEN), "dropout": DROPOUT, "reti": reti}
         torch.save(modello, checkpoint(param))
-        print(f"salvato {checkpoint(param)}")
-        evaluate(modello, train_df, param, "train (dati visti in training)")
+        print(f"saved {checkpoint(param)}")
+        evaluate(modello, train_df, param, "train (data seen in training)")
         if not args.valuta_test:
-            print("[test] non valutato: aggiungi --valuta_test una sola volta, quando il modello e' definitivo.")
+            print("[test] not evaluated: add --valuta_test once only, when the model is final.")
         elif len(test_df):
-            evaluate(modello, test_df, param, "test (Piemonte 2020, regione e anno mai visti)")
+            evaluate(modello, test_df, param, "test (Piedmont 2020, region and year never seen)")
         else:
-            print("[test] nessuna riga di test disponibile - saltato.")
+            print("[test] no test rows available - skipped.")
 
 
 if __name__ == "__main__":

@@ -1,22 +1,25 @@
 """
-Importanza delle feature (permutation importance) del modello finale, per singola feature e per gruppo.
+Feature importance (permutation importance) of the final model, by single feature and by group.
 
-In ogni fold della CV regione x anno (cv_comune.py) si allena una rete con la configurazione finale
-(train_downscaling_head.py: feature per variabile, 64-64, dropout 0.1, epoche da epoche_cv.json).
-Poi, sui dati di validazione del fold, si mescolano a caso i valori di una feature (o di tutte le
-feature di un gruppo, con la stessa permutazione delle righe) e si misura di quanto sale l'RMSE.
-Importanza = aumento percentuale dell'RMSE, media su RIPETIZIONI permutazioni e sui 9 fold.
+In each fold of the region x year CV (cv_comune.py) a network is trained with the final configuration
+(train_downscaling_head.py: features per variable, 64-64, dropout 0.1, epochs from epoche_cv.json).
+Then, on the validation data of the fold, the values of one feature (or of all the features of a
+group, with the same row permutation) are shuffled at random and the increase in RMSE is measured.
+Importance = percentage increase of the RMSE, mean over RIPETIZIONI permutations and over the 9 folds.
 
-Per gruppo e per singola feature, perche' molte feature sono quasi copie l'una dell'altra (es.
-aurora = a_<variabile>, temperatura a 925 e 850 hPa con r = 0.98): mescolandone una sola il modello
-usa ancora la gemella e l'importanza risulta bassa anche se l'informazione e' fondamentale; mescolando
-tutto il gruppo si misura quanto conta l'informazione.
+By group as well as by single feature, because many features are almost copies of each other (e.g.
+aurora = a_<variable>, temperature at 925 and 850 hPa with r = 0.98): shuffling only one of them, the
+model still uses its twin and the importance looks low even if the information is essential;
+shuffling the whole group measures how much the information matters.
 
-Attenzione: la permutazione crea combinazioni irrealistiche (es. 30 gradi in superficie e 0 a 850
-hPa). L'importanza dice quanto il modello USA un'informazione, non che quella informazione sia la
-causa fisica dell'errore di Aurora.
+Caution: the permutation creates unrealistic combinations (e.g. 30 degrees at the surface and 0 at
+850 hPa). The importance says how much the model USES a piece of information, not that this
+information is the physical cause of the Aurora error.
 
-Uso:
+The group names are kept in Italian: they are the keys stored in the results file
+(e.g. "Stagione" = season, "Quota" = elevation, "Umidita'" = humidity, "Forma del rilievo" = terrain shape).
+
+Usage:
     python esperimento_importanza.py
 Output:
     esperimento_importanza_risultati.csv
@@ -88,20 +91,20 @@ def main():
                 aumenti = []
                 for _ in range(RIPETIZIONI):
                     xp = xv.copy()
-                    xp[:, idx] = xv[rng.permutation(len(xv))][:, idx]   # stessa permutazione per il gruppo
+                    xp[:, idx] = xv[rng.permutation(len(xv))][:, idx]   # same permutation for the whole group
                     aumenti.append(100 * (rmse_con(net, xp, av, ov, param) - base) / base)
                 righe.append({"parametro": param, "regione": reg, "anno": anno, "tipo": tipo, "nome": nome,
                               "aumento_rmse_%": float(np.mean(aumenti)), "rmse_base": base})
-            print(f"[{param}] {reg} {anno} fatto (RMSE {base:.3f})", flush=True)
+            print(f"[{param}] {reg} {anno} done (RMSE {base:.3f})", flush=True)
             pd.DataFrame(righe).to_csv("risultati/esperimento_importanza_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
     m = res.groupby(["tipo", "nome", "parametro"])["aumento_rmse_%"].mean().unstack("parametro")[PARAMS]
     pd.set_option("display.width", 200)
-    print("\n=== aumento % dell'RMSE mescolando un GRUPPO (media sui 9 fold) ===")
+    print("\n=== % increase of the RMSE when shuffling a GROUP (mean over the 9 folds) ===")
     gr = m.loc["gruppo"]
     print(gr.loc[gr.mean(axis=1).sort_values(ascending=False).index].round(2).to_string())
-    print("\n=== aumento % dell'RMSE mescolando una SINGOLA feature (media sui 9 fold) ===")
+    print("\n=== % increase of the RMSE when shuffling a SINGLE feature (mean over the 9 folds) ===")
     fe = m.loc["feature"]
     print(fe.loc[fe.mean(axis=1).sort_values(ascending=False).index].round(2).to_string())
 

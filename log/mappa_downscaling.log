@@ -1,20 +1,20 @@
-﻿fattori di scala: {'tx3': 1.0, 'tn3': 1.0, 'rr7': 4323.82630044394, 'qq2': 0.00041673074383938465}
-salvati mappa_2021-08-15.png e mappa_2021-08-15.nc
-salvati mappa_2021-10-04.png e mappa_2021-10-04.nc
-salvati mappa_2021-12-31.png e mappa_2021-12-31.nc
+﻿scale factors: {'tx3': 1.0, 'tn3': 1.0, 'rr7': 4323.82630044394, 'qq2': 0.00041673074383938465}
+saved mappa_2021-08-15.png and mappa_2021-08-15.nc
+saved mappa_2021-10-04.png and mappa_2021-10-04.nc
+saved mappa_2021-12-31.png and mappa_2021-12-31.nc
 
-confronto con le stazioni (RMSE):
-versione              Aurora (bilineare)  downscaling
-giorno     parametro                                 
-2021-08-15 qq2                     84.48        26.07
-           rr7                      1.69         2.29
-           tn3                      7.08         1.89
-           tx3                      8.37         2.12
-2021-10-04 qq2                     40.30        31.31
-           rr7                     37.23        33.29
-           tn3                      5.20         1.58
-           tx3                      4.42         2.19
-2021-12-31 qq2                     79.56        19.27
-           rr7                      0.13         0.15
-           tn3                      4.10         2.86
-           tx3                      3.77         3.51
+comparison with the stations (RMSE):
+versione              Aurora (bilinear)  downscaling
+giorno     parametro                                
+2021-08-15 qq2                    84.48        26.07
+           rr7                     1.69         2.29
+           tn3                     7.08         1.89
+           tx3                     8.37         2.12
+2021-10-04 qq2                    40.30        31.31
+           rr7                    37.23        33.29
+           tn3                     5.20         1.58
+           tx3                     4.42         2.19
+2021-12-31 qq2                    79.56        19.27
+           rr7                     0.13         0.15
+           tn3                     4.10         2.86
+           tx3                     3.77         3.51

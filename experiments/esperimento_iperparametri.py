@@ -1,16 +1,16 @@
 """
-Esperimento (punto 5): piccola ricerca degli iperparametri della rete, una modifica alla volta
-rispetto alla configurazione attuale (64-64, dropout 0, lr 1e-3, weight decay 1e-4, batch 4096).
-Feature: quelle scelte con esperimento_terreno.py (forma del rilievo solo per tn3 e qq2).
-CV regione x anno di cv_comune.py; un seed per configurazione, poi le configurazioni migliori
-si ricontrollano con un secondo seed (CONFERMA).
+Experiment (point 5): small search over the network hyperparameters, one change at a time with
+respect to the current configuration (64-64, dropout 0, lr 1e-3, weight decay 1e-4, batch 4096).
+Features: those chosen with esperimento_terreno.py (terrain shape only for tn3 and qq2).
+Region x year CV of cv_comune.py; one seed per configuration, then the best configurations are
+checked again with a second seed (CONFERMA, confirmation).
 
-Una modifica alla volta (e non una griglia completa) per due motivi: costa meno e, provando poche
-configurazioni sugli stessi 9 fold, si riduce il rischio di scegliere quella che va meglio per caso.
+One change at a time (and not a full grid) for two reasons: it costs less and, by trying few
+configurations on the same 9 folds, the risk of picking the one that is best by chance is lower.
 
-Uso:
+Usage:
     python esperimento_iperparametri.py
-    python esperimento_iperparametri.py --conferma "H2 128-128" "W wd 1e-3"   # secondo seed
+    python esperimento_iperparametri.py --conferma "H2 128-128" "W wd 1e-3"   # second seed
 Output:
     esperimento_iperparametri_risultati.csv
 """
@@ -54,19 +54,19 @@ def main():
         for param in PARAMS:
             for r in cv_rete(t, param, FEATURE[param], nome, seed=seed, **opz):
                 righe.append({**r, "seed": seed})
-            print(f"{nome} [{param}] seed {seed} fatto", flush=True)
+            print(f"{nome} [{param}] seed {seed} done", flush=True)
             pd.DataFrame(righe).to_csv(USCITA_CSV, index=False)
 
     res = pd.DataFrame(righe)
     for s in sorted(res["seed"].unique()):
-        print(f"\n=== seed {s}: RMSE medio sui 9 fold all'epoca migliore ===")
+        print(f"\n=== seed {s}: mean RMSE over the 9 folds at the best epoch ===")
         r = riepilogo(res[res["seed"] == s])
         tab = r["rmse"].unstack("parametro")[list(PARAMS)]
         base = tab.loc["B base 64-64"]
         print(tab.round(3).to_string())
-        print("\ndifferenza % rispetto alla base:")
+        print("\n% difference from the base:")
         print((100 * (tab - base) / base).round(2).to_string())
-        print("\nepoca migliore:")
+        print("\nbest epoch:")
         print(r["epoca"].unstack("parametro")[list(PARAMS)].to_string())
 
 

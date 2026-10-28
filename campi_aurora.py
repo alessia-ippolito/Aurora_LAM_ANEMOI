@@ -1,12 +1,12 @@
 """
-Lettura dei campi giornalieri di Aurora salvati da extract_aurora_campi.py (aurora_campi/, un file per
-giorno) e interpolazione nei punti voluti (stazioni o pixel di una griglia fine).
+Reads the daily Aurora fields saved by extract_aurora_campi.py (aurora_campi/, one file per day)
+and interpolates them at the requested points (stations or pixels of a fine grid).
 
     campi = carica_campi([2016, 2022, 2023])          # Dataset: date x lat x lon (+ livello)
-    punti = interpola_punti(campi, lat, lon)          # DataFrame: una riga per punto e giorno
+    punti = interpola_punti(campi, lat, lon)          # DataFrame: one row per point and day
 
-Le variabili in quota (atm_<nome>_media, dimensione "livello") diventano una colonna per livello
-(atm_t_850, atm_q_700, ...). Le variabili statiche (orog_aurora, statica_*) non dipendono dal giorno.
+Pressure-level variables (atm_<name>_media, dimension "livello") become one column per level
+(atm_t_850, atm_q_700, ...). Static variables (orog_aurora, statica_*) do not depend on the day.
 """
 import glob
 import os
@@ -25,15 +25,15 @@ def _statica(nome):
 
 
 def carica_campi(anni, variabili=None):
-    """Campi giornalieri degli anni richiesti. variabili: lista di nomi da tenere (None = tutte)."""
+    """Daily fields of the requested years. variabili: list of names to keep (None = all)."""
     files = []
     for f in sorted(glob.glob(os.path.join(CARTELLA, "aurora_campi_*.nc"))):
         m = _RE.search(os.path.basename(f))
         if m and int(m.group(1)) in set(anni):
             files.append((pd.Timestamp(f"{m.group(1)}-{m.group(2)}-{m.group(3)}"), f))
     if not files:
-        raise FileNotFoundError(f"nessun file in {CARTELLA}/ per gli anni {anni}")
-    # lettura con netCDF4 invece di xr.open_dataset: ~100 volte piu' veloce su tanti file piccoli
+        raise FileNotFoundError(f"no file in {CARTELLA}/ for the years {anni}")
+    # reading with netCDF4 instead of xr.open_dataset: ~100 times faster on many small files
     import netCDF4
 
     with netCDF4.Dataset(files[0][1]) as d:
@@ -58,7 +58,7 @@ def carica_campi(anni, variabili=None):
 
 
 def _idw(campi, lat, lon, k, potenza):
-    """Media pesata 1/d**potenza sui k centri di cella piu' vicini a ogni punto (distanza sulla sfera)."""
+    """Weighted mean 1/d**potenza over the k grid-cell centres nearest to each point (distance on the sphere)."""
     from scipy.spatial import cKDTree
 
     def xyz(la, lo):
@@ -68,25 +68,25 @@ def _idw(campi, lat, lon, k, potenza):
     glat, glon = np.meshgrid(campi["lat"].values, campi["lon"].values, indexing="ij")
     d, idx = cKDTree(xyz(glat.ravel(), glon.ravel())).query(xyz(lat, lon), k=k)
     d, idx = d.reshape(len(lat), k), idx.reshape(len(lat), k)
-    w = 1.0 / np.maximum(d, 1e-12) ** potenza  # punto sul centro di una cella: prende quel valore
+    w = 1.0 / np.maximum(d, 1e-12) ** potenza  # a point on a cell centre takes that value
     w /= w.sum(axis=1, keepdims=True)
     piatto = campi.stack(cella=("lat", "lon")).drop_vars(["cella", "lat", "lon"])
     vicini = piatto.isel(cella=xr.DataArray(idx, dims=("punto", "vicino")))
     return (vicini * xr.DataArray(w, dims=("punto", "vicino"))).sum("vicino")
 
 
-# da passare come metodi=... per interpolare pioggia e radiazione con IDW e il resto con `metodo`
+# pass as metodi=... to interpolate precipitation and radiation with IDW and the rest with `metodo`
 IDW_PIOGGIA_RADIAZIONE = {v: "idw" for v in ("rr7_aurora_raw", "qq2_aurora_raw",
                                               "sup_scaled_tp_1h_media", "sup_ssrd_1h_media")}
 
 
 def interpola_punti(campi, lat, lon, metodo="linear", ids=None, metodi=None, k=4, potenza=2):
-    """Interpola tutti i campi nei punti (lat, lon). metodo: "linear" (bilineare), "nearest" o "idw"
-    (inverso della distanza sui k centri di cella piu' vicini, pesi 1/d**potenza).
-    metodi: {variabile: metodo} per usare su alcune variabili un metodo diverso da `metodo`
-    (es. metodi=IDW_PIOGGIA_RADIAZIONE).
-    Restituisce un DataFrame con colonne punto (o ids), date e una colonna per variabile
-    (le variabili in quota diventano una colonna per livello)."""
+    """Interpolates all fields at the points (lat, lon). metodo: "linear" (bilinear), "nearest" or "idw"
+    (inverse distance over the k nearest grid-cell centres, weights 1/d**potenza).
+    metodi: {variable: method} to use a method other than `metodo` for some variables
+    (e.g. metodi=IDW_PIOGGIA_RADIAZIONE).
+    Returns a DataFrame with columns punto (or ids), date and one column per variable
+    (pressure-level variables become one column per level)."""
     lat, lon = np.asarray(lat, dtype=float), np.asarray(lon, dtype=float)
     pts = dict(lat=xr.DataArray(lat, dims="punto"), lon=xr.DataArray(lon, dims="punto"))
     scelta = {n: (metodi or {}).get(n, metodo) for n in campi.data_vars}

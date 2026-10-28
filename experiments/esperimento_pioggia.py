@@ -1,21 +1,21 @@
 """
-Esperimento (punto 3): la pioggia (rr7) si corregge meglio cambiando il modo in cui la rete la impara?
-Stesse feature del modello attuale, CV regione x anno di cv_comune.py, 2 seed per variante.
+Experiment (point 3): is precipitation (rr7) corrected better by changing how the network learns it?
+Same features as the current model, region x year CV of cv_comune.py, 2 seeds per variant.
 
-  P0 residuo           come oggi: la rete impara obs - aurora con errore quadratico
-  P1 radice            la rete impara sqrt(obs) - sqrt(aurora): pesa meno i pochi eventi estremi
-  P2 log               la rete impara log(1+obs) - log(1+aurora): come P1, ancora piu' marcato
-  P3 due parti         una rete stima la probabilita' di giorno piovoso (>= 1 mm), una seconda la
-                       quantita' nei giorni piovosi; previsione = probabilita' x quantita'
+  P0 residuo (residual)  as today: the network learns obs - aurora with squared error
+  P1 radice (sqrt)       the network learns sqrt(obs) - sqrt(aurora): gives less weight to the few extreme events
+  P2 log                 the network learns log(1+obs) - log(1+aurora): like P1, even more marked
+  P3 due parti (two-part) one network estimates the probability of a wet day (>= 1 mm), a second one
+                         the amount on wet days; forecast = probability x amount
 
-Con l'errore quadratico la P0 stima gia' la media condizionata, che e' cio' che minimizza l'RMSE:
-P1-P3 possono migliorare altri aspetti (errore assoluto, riconoscere i giorni di pioggia) anche se
-l'RMSE non scende. Per questo oltre a RMSE, bias e MAE si misurano, per le soglie 1 e 20 mm:
-  POD  frazione dei giorni con pioggia >= soglia riconosciuti
-  FAR  frazione dei giorni previsti >= soglia in cui non e' piovuto cosi'
-  CSI  indice complessivo (colpi / (colpi + mancati + falsi allarmi))
+With squared error P0 already estimates the conditional mean, which is what minimises the RMSE:
+P1-P3 can improve other aspects (absolute error, recognising rainy days) even if the RMSE does not
+drop. This is why, besides RMSE, bias and MAE, the following are measured for the 1 and 20 mm thresholds:
+  POD  fraction of the days with precipitation >= threshold that are detected
+  FAR  fraction of the days forecast >= threshold on which it did not rain that much
+  CSI  overall index (hits / (hits + misses + false alarms))
 
-Uso:
+Usage:
     python esperimento_pioggia.py
 Output:
     esperimento_pioggia_risultati.csv
@@ -45,7 +45,7 @@ def categoriche(pred, obs):
 
 
 def due_parti(tr, va, seed):
-    """Classificatore (piovoso si/no) + regressione della quantita' sui soli giorni piovosi."""
+    """Classifier (wet day yes/no) + regression of the amount on wet days only."""
     torch.manual_seed(seed)
     m = tr[FEATURE_COLS].values.mean(axis=0)
     s = tr[FEATURE_COLS].values.std(axis=0)
@@ -99,11 +99,11 @@ def main():
                 for ep, p in enumerate(pred, start=1):
                     righe.append({"variante": nome, "regione": reg, "anno": anno, "seed": seed, "epoca": ep,
                                   **errori(p, ov), **categoriche(p, ov)})
-        print(f"{reg} {anno} fatto", flush=True)
+        print(f"{reg} {anno} done", flush=True)
         pd.DataFrame(righe).to_csv("risultati/esperimento_pioggia_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
-    # epoca scelta per variante sull'RMSE medio (come per il modello), poi tutte le metriche a quell'epoca
+    # epoch chosen per variant on the mean RMSE (as for the model), then all the metrics at that epoch
     curva = res.groupby(["variante", "epoca"]).mean(numeric_only=True)
     ep = curva["rmse"].groupby("variante").idxmin()
     tab = pd.DataFrame({v: curva.loc[e] for v, e in ep.items()}).T.drop(columns=["anno", "seed"])
@@ -111,9 +111,9 @@ def main():
     rif = []
     for reg, anno, _, va in folds(tp):
         rif.append({**errori(va["aurora"].values, va["obs"].values), **categoriche(va["aurora"].values, va["obs"].values)})
-    tab.loc["Aurora interpolata"] = pd.DataFrame(rif).mean()
+    tab.loc["Aurora interpolated"] = pd.DataFrame(rif).mean()
     pd.set_option("display.width", 200)
-    print("\n=== rr7, CV regione x anno: medie sui fold e sui seed, all'epoca con RMSE migliore ===")
+    print("\n=== rr7, region x year CV: means over folds and seeds, at the epoch with the best RMSE ===")
     print(tab.round(3).to_string())
 
 

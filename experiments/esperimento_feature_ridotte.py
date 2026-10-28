@@ -1,15 +1,15 @@
 """
-Esperimento: si possono togliere feature ridondanti senza perdere accuratezza?
-Scelte guidate da esperimento_importanza.py e dalle correlazioni tra feature (|r| > 0.9).
-Configurazione finale (64-64, dropout 0.1, forma del rilievo per tn3 e qq2), CV regione x anno di
-cv_comune.py, 2 seed; il confronto e' con "D1 dropout 0.1" di esperimento_iperparametri.py (stessa
-configurazione con tutte le feature, stessi seed).
+Experiment: can redundant features be removed without losing accuracy?
+Choices guided by esperimento_importanza.py and by the correlations between features (|r| > 0.9).
+Final configuration (64-64, dropout 0.1, terrain shape for tn3 and qq2), region x year CV of
+cv_comune.py, 2 seeds; the comparison is with "D1 dropout 0.1" of esperimento_iperparametri.py (same
+configuration with all the features, same seeds).
 
-  M  minima     toglie a_<variabile> (copia esatta di "aurora") e la neve (importanza ~0)
-  R  ridotta    M + una feature per ogni coppia molto correlata, quella che conta meno da sola:
-                atm_t_850 (r = 0.98 con atm_t_925), sup_2t_media (0.98 con a_tx3), tpi_20km (0.98 con dz)
+  M  minima (minimal)   removes a_<variable> (exact copy of "aurora") and snow (importance ~0)
+  R  ridotta (reduced)  M + one feature for each highly correlated pair, the one that matters less alone:
+                        atm_t_850 (r = 0.98 with atm_t_925), sup_2t_media (0.98 with a_tx3), tpi_20km (0.98 with dz)
 
-Uso:
+Usage:
     python esperimento_feature_ridotte.py
 Output:
     esperimento_feature_ridotte_risultati.csv
@@ -37,20 +37,20 @@ def main():
             for seed in SEEDS:
                 for r in cv_rete(t, param, feature, nome, seed=seed, dropout=0.1):
                     righe.append({**r, "seed": seed})
-                print(f"[{param}] {nome} ({len(feature)} feature) seed {seed} fatto", flush=True)
+                print(f"[{param}] {nome} ({len(feature)} features) seed {seed} done", flush=True)
                 pd.DataFrame(righe).to_csv("risultati/esperimento_feature_ridotte_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
     base = pd.read_csv("risultati/esperimento_iperparametri_risultati.csv")
-    base = base[base["variante"] == "D1 dropout 0.1"].assign(variante="tutte le feature")
+    base = base[base["variante"] == "D1 dropout 0.1"].assign(variante="all features")
     tutto = pd.concat([base, res], ignore_index=True)
     s = riepilogo(tutto)
     tab = s["rmse"].unstack("parametro")[PARAMS]
-    print("\n=== CV regione x anno: RMSE medio sui fold e sui 2 seed, all'epoca migliore ===")
+    print("\n=== Region x year CV: mean RMSE over the folds and the 2 seeds, at the best epoch ===")
     print(tab.round(3).to_string())
-    print("\ndifferenza % rispetto a tutte le feature:")
-    print((100 * (tab - tab.loc["tutte le feature"]) / tab.loc["tutte le feature"]).round(2).to_string())
-    print("\nepoca migliore:")
+    print("\n% difference from all features:")
+    print((100 * (tab - tab.loc["all features"]) / tab.loc["all features"]).round(2).to_string())
+    print("\nbest epoch:")
     print(s["epoca"].unstack("parametro")[PARAMS].to_string())
 
 

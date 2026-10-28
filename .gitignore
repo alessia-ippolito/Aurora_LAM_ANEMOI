@@ -1,4 +1,4 @@
-# Credenziali (ADS, EUMETSAT, DTM): mai su git
+# Credentials (ADS, EUMETSAT, DTM): never on git
 .env
 
 # Python / Jupyter
@@ -6,7 +6,7 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
-# Dati scaricati (cache delle API, si ricreano con il notebook)
+# Downloaded data (API caches, recreated by the notebook)
 arpa_lombardia_daily_cache_utc/
 arpa_piemonte_daily_cache/
 arpae_qq2_daily_cache/
@@ -14,15 +14,15 @@ ecad_padania_by_year/
 ecad_padania_raw_cache/
 sarah3_padania_raw/
 
-# Campi di Aurora (extract_aurora_campi.py su Lightning)
+# Aurora fields (extract_aurora_campi.py on Lightning)
 aurora_campi*/
 
-# Modelli e log di Lightning
+# Models and Lightning logs
 modello/checkpoints/*
 lightning_logs/
 *.ckpt
 
-# Dati grandi o derivati: si ricreano con il notebook e gli script
+# Large or derived data: recreated by the notebook and the scripts
 *.parquet
 *.csv.gz
 *.nc
@@ -32,15 +32,15 @@ lightning_logs/
 *.npz
 *.pt
 
-# Eccezione: le reti del modello finale (train_downscaling_head.py, ~530 KB in tutto), quelle
-# valutate sul test e usate per le mappe
+# Exception: the networks of the final model (train_downscaling_head.py, ~530 KB in total), the
+# ones evaluated on the test set and used for the maps
 !modello/checkpoints/*_finale.pt
 
-# Script e dati superati: esclusa tutta la cartella
+# Superseded scripts and data: the whole folder is excluded
 inutili/
 immagini_output/
 
-# Sistema
+# System
 .DS_Store
 Thumbs.db
 desktop.ini

@@ -1,28 +1,28 @@
 """
-Esperimento: testa convoluzionale. Oltre ai valori di Aurora nel punto della stazione, la rete vede
-una finestra di 5 x 5 celle di Aurora (~125 x 125 km) centrata sul punto esatto della stazione, con
-tutte le variabili usate dalla testa attuale: puo' riconoscere la situazione intorno (fronti, flusso
-contro i rilievi, differenze pianura/montagna, nuvolosita' a monte).
+Experiment: convolutional head. Besides the Aurora values at the station location, the network sees
+a window of 5 x 5 Aurora cells (~125 x 125 km) centred on the exact station location, with all the
+variables used by the current head: it can recognise the surrounding situation (fronts, flow
+against the mountains, plain/mountain differences, upstream cloudiness).
 
-Confronto diretto con la testa attuale (MLP sulle 28 feature nel punto, cv_regione_anno.py):
-stessa cross-validation regione x anno (allena su 2 regioni x 2 anni, valuta su regione e anno
-esclusi), stesse esclusioni (notebook §7.2), stessa tabella (training_table_aurora.parquet),
-Piemonte mai usato. L'errore si misura dopo ogni epoca; si sceglie l'epoca migliore in media.
+Direct comparison with the current head (MLP on the 28 features at the point, cv_regione_anno.py):
+same region x year cross-validation (trains on 2 regions x 2 years, evaluates on the excluded
+region and year), same exclusions (notebook §7.2), same table (training_table_aurora.parquet),
+Piedmont never used. The error is measured after each epoch; the best epoch on average is chosen.
 
-Finestra: celle campionate con interpolazione bilineare a passi di 0.25 gradi intorno al punto
-(offset -0.5 ... +0.5 gradi in lat e lon), quindi centrata esattamente sulla stazione (o sul pixel,
-nelle mappe). I campi hanno 0.5 gradi di margine oltre l'AOI: bastano per stazioni sul bordo.
+Window: cells sampled with bilinear interpolation at steps of 0.25 degrees around the point
+(offsets -0.5 ... +0.5 degrees in lat and lon), so exactly centred on the station (or on the pixel,
+in the maps). The fields have a 0.5 degree margin beyond the AOI: enough for stations on the border.
 
-Rete:  finestra (24 canali x 5 x 5) -> conv 3x3 (32) -> conv 3x3 (32) -> 32 numeri
-       + valori nel punto (aurora, quota, dz, stagione) -> 64 -> 64 -> correzione
+Network:  window (24 channels x 5 x 5) -> conv 3x3 (32) -> conv 3x3 (32) -> 32 numbers
+          + values at the point (aurora, elevation, dz, season) -> 64 -> 64 -> correction
 
-Uso:
-    python esperimento_convoluzionale.py        # finestra 5 x 5
-    python esperimento_convoluzionale.py 7      # finestra 7 x 7 (+-0.75 gradi: oltre il margine dei
-                                                  campi per le stazioni vicino al bordo dell'AOI, dove
-                                                  la finestra ripete i valori del bordo)
+Usage:
+    python esperimento_convoluzionale.py        # 5 x 5 window
+    python esperimento_convoluzionale.py 7      # 7 x 7 window (+-0.75 degrees: beyond the field margin
+                                                  for stations near the AOI border, where the window
+                                                  repeats the border values)
 Output:
-    esperimento_convoluzionale_risultati.csv (esperimento_convoluzionale_7x7_risultati.csv per 7 x 7), riepilogo a schermo (con il confronto con la testa attuale)
+    esperimento_convoluzionale_risultati.csv (esperimento_convoluzionale_7x7_risultati.csv for 7 x 7), summary on screen (with the comparison with the current head)
 """
 import json
 import sys
@@ -47,14 +47,14 @@ ATM = [("atm_t_media", 925), ("atm_t_media", 850), ("atm_t_media", 700), ("atm_t
        ("atm_q_media", 925), ("atm_q_media", 850), ("atm_q_media", 700), ("atm_z_media", 500),
        ("atm_u_media", 850), ("atm_v_media", 850)]
 SCALARI = ["aurora", "elev", "dz", "doy_sin", "doy_cos"]
-LATO = int(sys.argv[1]) if __name__ == "__main__" and len(sys.argv) > 1 else 5   # celle per lato (dispari)
+LATO = int(sys.argv[1]) if __name__ == "__main__" and len(sys.argv) > 1 else 5   # cells per side (odd)
 OFFSET = 0.25 * (np.arange(LATO) - LATO // 2)
 RISULTATI = ("risultati/esperimento_convoluzionale_risultati.csv" if LATO == 5
              else f"risultati/esperimento_convoluzionale_{LATO}x{LATO}_risultati.csv")
 
 
 def cubo_aurora(anni):
-    """Campi giornalieri come un unico array (giorni, canali, lat, lon), canali standardizzati."""
+    """Daily fields as a single array (days, channels, lat, lon), standardised channels."""
     campi = carica_campi(anni, variabili=list(COL_AURORA.values()) + SUP + ["orog_aurora"]
                          + sorted({v for v, _ in ATM}))
     fatt, qc = INFO["fattori_scala"], {k: tuple(v) for k, v in INFO["table_qc"].items()}
@@ -77,8 +77,8 @@ def cubo_aurora(anni):
 
 
 def pesi_finestra(lat_st, lon_st, glat, glon):
-    """Per ogni stazione: indici delle 4 celle e pesi bilineari per i LATO x LATO punti della finestra."""
-    dlat, dlon = glat[0] - glat[1], glon[1] - glon[0]     # lat decrescente, lon crescente
+    """For each station: indices of the 4 cells and bilinear weights for the LATO x LATO window points."""
+    dlat, dlon = glat[0] - glat[1], glon[1] - glon[0]     # decreasing lat, increasing lon
     la, lo = np.broadcast_arrays(lat_st[:, None, None] + OFFSET[None, :, None],
                                  lon_st[:, None, None] + OFFSET[None, None, :])
     fy = (glat[0] - la) / dlat
@@ -92,7 +92,7 @@ def pesi_finestra(lat_st, lon_st, glat, glon):
 
 
 def finestre(cubo, giorno, staz, y0, x0, wy, wx):
-    """Finestre (B, C, LATO, LATO) per i campioni (giorno, stazione)."""
+    """Windows (B, C, LATO, LATO) for the samples (day, station)."""
     yy, xx, ay, ax = y0[staz], x0[staz], wy[staz], wx[staz]                  # B x 25
     d = giorno[:, None].expand_as(yy)
     v = lambda dy, dx: cubo[d, :, yy + dy, xx + dx]                          # B x 25 x C
@@ -163,13 +163,13 @@ def main():
     anni = sorted(t["anno"].unique())
 
     cubo, giorni, glat, glon, nomi = cubo_aurora(anni)
-    print(f"campi: {tuple(cubo.shape)} (giorni, canali, lat, lon); canali: {nomi}", flush=True)
+    print(f"fields: {tuple(cubo.shape)} (days, channels, lat, lon); channels: {nomi}", flush=True)
     st = t.drop_duplicates("uid")[["uid", "lat", "lon"]].reset_index(drop=True)
     pesi = pesi_finestra(st["lat"].values, st["lon"].values, glat, glon)
     t["staz_i"] = t["uid"].map(pd.Series(st.index, index=st["uid"]))
     t["giorno_i"] = giorni.get_indexer(t["date"])
     t = t[t["giorno_i"] >= 0]
-    print(f"righe: {len(t)}, stazioni: {len(st)}", flush=True)
+    print(f"rows: {len(t)}, stations: {len(st)}", flush=True)
 
     rows = []
     for param in PARAMS:
@@ -183,27 +183,27 @@ def main():
                 for r in fold(cubo, pesi, tr, va, param in NON_NEGATIVI):
                     rows.append({"parametro": param, "regione": reg, "anno": anno, **r})
                 best = min(x["rmse"] for x in rows[-MAX_EPOCHS:])
-                print(f"[{param}] {reg} {anno}: migliore {best:.3f} (Aurora {rows[-1]['rmse_aurora']:.3f})", flush=True)
+                print(f"[{param}] {reg} {anno}: best {best:.3f} (Aurora {rows[-1]['rmse_aurora']:.3f})", flush=True)
                 pd.DataFrame(rows).to_csv(RISULTATI, index=False)
 
     res = pd.DataFrame(rows)
     curva = res.groupby(["parametro", "epoca"])["rmse"].mean().unstack("parametro")
     conv = pd.DataFrame({"rmse_conv": curva.min(), "epoche_conv": curva.idxmin()})
-    # testa attuale (MLP, 28 feature nel punto): stessa CV, risultati di cv_regione_anno.py
-    mlp = pd.read_csv("risultati/cv_regione_anno_risultati_modello_precedente.csv")  # testa con cui e' stato fatto il confronto
+    # current head (MLP, 28 features at the point): same CV, results of cv_regione_anno.py
+    mlp = pd.read_csv("risultati/cv_regione_anno_risultati_modello_precedente.csv")  # head the comparison was made with
     cm = mlp.groupby(["parametro", "epoca"])["rmse_corretto"].mean().unstack("parametro")
     conv["rmse_testa_attuale"] = cm.min()
     conv["rmse_aurora"] = res.groupby("parametro")["rmse_aurora"].mean()
     conv["differenza_%"] = 100 * (conv["rmse_conv"] - conv["rmse_testa_attuale"]) / conv["rmse_testa_attuale"]
-    print("\n=== CV regione x anno: convoluzionale vs testa attuale (RMSE medio sui fold) ===")
+    print("\n=== Region x year CV: convolutional vs current head (mean RMSE over the folds) ===")
     print(conv.round(3))
     sel = pd.concat([res[(res["parametro"] == p) & (res["epoca"] == e)] for p, e in conv["epoche_conv"].items()])
     best_mlp = pd.concat([mlp[(mlp["parametro"] == p) & (mlp["epoca"] == e)] for p, e in cm.idxmin().items()])
     cmp_ = sel.set_index(["parametro", "regione", "anno"])["rmse"].to_frame("conv").join(
         best_mlp.set_index(["parametro", "regione", "anno"])["rmse_corretto"].rename("testa_attuale"))
-    print("\nper fold:")
+    print("\nby fold:")
     print(cmp_.round(2))
-    print("\nfold in cui la convoluzionale e' migliore:",
+    print("\nfolds where the convolutional head is better:",
           cmp_.assign(m=cmp_["conv"] < cmp_["testa_attuale"]).groupby("parametro")["m"].sum().to_dict())
 
 

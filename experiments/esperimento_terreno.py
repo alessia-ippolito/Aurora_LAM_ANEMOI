@@ -1,14 +1,14 @@
 """
-Esperimento (punto 2): la rete migliora con descrittori del terreno oltre alla quota?
-(descrittori_terreno.py; CV regione x anno di cv_comune.py; 2 seed per variante)
+Experiment (point 2): does the network improve with terrain descriptors in addition to elevation?
+(descrittori_terreno.py; region x year CV of cv_comune.py; 2 seeds per variant)
 
-  C        rete attuale (28 feature)
-  T1       C + forma del rilievo: tpi_1km, tpi_5km, tpi_20km, pendenza, nordness, eastness
-  T2       T1 + distanza da mare e laghi
-           (campi lisci nello spazio: potrebbero far riconoscere la posizione delle stazioni come
-           facevano lat/lon; per questo sono una variante a parte)
+  C        current network (28 features)
+  T1       C + terrain shape: tpi_1km, tpi_5km, tpi_20km, pendenza (slope), nordness, eastness
+  T2       T1 + distance from sea and lakes
+           (fields that are smooth in space: they could let the network recognise the station
+           location as lat/lon did; this is why they are a separate variant)
 
-Uso:
+Usage:
     python esperimento_terreno.py
 Output:
     esperimento_terreno_risultati.csv
@@ -36,22 +36,22 @@ def main():
             for seed in SEEDS:
                 for r in cv_rete(t, param, feature, nome, seed=seed):
                     righe.append({**r, "seed": seed})
-                print(f"[{param}] {nome} seed {seed} fatto", flush=True)
+                print(f"[{param}] {nome} seed {seed} done", flush=True)
                 pd.DataFrame(righe).to_csv("risultati/esperimento_terreno_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
     s = riepilogo(res)
-    print("\n=== CV regione x anno: RMSE medio sui fold e sui seed, all'epoca migliore ===")
+    print("\n=== Region x year CV: mean RMSE over folds and seeds, at the best epoch ===")
     print(s["rmse"].unstack("parametro")[list(PARAMS)].round(3))
-    print("\nepoca migliore:")
+    print("\nbest epoch:")
     print(s["epoca"].unstack("parametro")[list(PARAMS)])
-    # per fold, alla rispettiva epoca migliore: in quanti fold T1/T2 battono C
+    # per fold, at the respective best epoch: in how many folds T1/T2 beat C
     sel = res.merge(s["epoca"].rename("ep").reset_index(), on=["variante", "parametro"])
     sel = sel[sel["epoca"] == sel["ep"]].groupby(["parametro", "regione", "anno", "variante"])["rmse"].mean()
     tab = sel.unstack("variante")
     for v in list(VARIANTI)[1:]:
-        print(f"fold in cui {v} batte C:", (tab[v] < tab["C"]).groupby("parametro").sum().to_dict())
-    print("\nper fold:")
+        print(f"folds where {v} beats C:", (tab[v] < tab["C"]).groupby("parametro").sum().to_dict())
+    print("\nby fold:")
     print(tab.round(3))
 
 

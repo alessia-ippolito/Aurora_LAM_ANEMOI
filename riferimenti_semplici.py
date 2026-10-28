@@ -1,18 +1,20 @@
 """
-Riferimenti semplici per capire quanto vale la rete (CV regione x anno, cv_comune.py):
+Simple baselines to judge how much the network is worth (region x year CV, cv_comune.py):
 
-  R0  Aurora interpolata              nessuna correzione
-  R1  + correzione di quota           tx3/tn3: Aurora - 6.5 gradi/km x dz (dz = quota stazione -
-                                      quota del terreno di Aurora); rr7/qq2 come R0
-  R2  + correzione media mensile      R1 + errore medio per mese, stimato sui dati di training del fold
-  R3  regressione lineare             correzione = combinazione lineare delle stesse 28 feature
-                                      della rete, stimata sul training del fold
-  C   rete attuale                    28 feature, 64-64 (ricalcolata con cv_comune.py: e' il
-                                      riferimento per gli esperimenti successivi)
+  R0  Aurora interpolated             no correction
+  R1  + elevation correction          tx3/tn3: Aurora - 6.5 degrees/km x dz (dz = station elevation -
+                                      Aurora terrain elevation); rr7/qq2 as R0
+  R2  + monthly mean correction       R1 + mean error per month, estimated on the training data of the fold
+  R3  linear regression               correction = linear combination of the same 28 features as the
+                                      network, estimated on the training data of the fold
+  C   current network                 28 features, 64-64 (recomputed with cv_comune.py: it is the
+                                      reference for the later experiments)
 
-Per rr7 e qq2 i valori negativi sono portati a 0, come nella rete.
+For rr7 and qq2 negative values are set to 0, as in the network.
+The variant labels (e.g. "R0 Aurora interpolata") are kept in Italian: they are the keys stored in
+the results file.
 
-Uso:
+Usage:
     python riferimenti_semplici.py
 Output:
     riferimenti_semplici_risultati.csv
@@ -25,7 +27,7 @@ from sklearn.linear_model import LinearRegression
 from cv_comune import NON_NEGATIVI, PARAMS, carica_tabella, cv_rete, errori, folds, riepilogo
 from train_downscaling_head import FEATURE_COLS
 
-GRADIENTE = -0.0065   # gradi per metro
+GRADIENTE = -0.0065   # degrees per metre
 
 
 def main():
@@ -49,17 +51,17 @@ def main():
             aggiungi("R2 + correzione media mensile", (r1_va + va["mese"].map(mensile)).values)
             lin = LinearRegression().fit(tr[FEATURE_COLS].values, tr["residual"].values)
             aggiungi("R3 regressione lineare", va["aurora"].values + lin.predict(va[FEATURE_COLS].values))
-        print(f"[{param}] riferimenti fatti; ora la rete attuale...", flush=True)
+        print(f"[{param}] baselines done; now the current network...", flush=True)
         righe += cv_rete(t, param, FEATURE_COLS, "C rete attuale")
         pd.DataFrame(righe).to_csv("risultati/riferimenti_semplici_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
     s = riepilogo(res)
-    print("\n=== CV regione x anno: RMSE medio sui 9 fold ===")
+    print("\n=== Region x year CV: mean RMSE over the 9 folds ===")
     print(s["rmse"].unstack("parametro")[list(PARAMS)].round(3))
-    print("\nbias medio:")
+    print("\nmean bias:")
     print(s["bias"].unstack("parametro")[list(PARAMS)].round(3))
-    print("\nepoca scelta per la rete:", s.xs("C rete attuale")["epoca"].to_dict())
+    print("\nepoch chosen for the network:", s.xs("C rete attuale")["epoca"].to_dict())
 
 
 if __name__ == "__main__":

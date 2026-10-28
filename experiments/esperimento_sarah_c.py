@@ -1,26 +1,26 @@
 """
-Esperimento: per la radiazione (qq2) conviene ancora il pre-training sui pixel SARAH-3, ora che la
-testa riceve tutte le variabili di Aurora (notebook §6.6)?
+Experiment: for radiation (qq2), is pre-training on the SARAH-3 pixels still worth it, now that the
+head receives all the Aurora variables (notebook §6.6)?
 
-Pixel SARAH come osservazioni qq2 aggiuntive SOLO in training (mai come feature: in inferenza la
-testa usa solo Aurora + feature statiche). Per ogni pixel, Aurora e tutte le variabili sono
-interpolate bilinearmente dai campi (aurora_campi/), esattamente come per le stazioni; quota dal DEM.
+SARAH pixels as additional qq2 observations ONLY in training (never as a feature: at inference the
+head uses only Aurora + static features). For each pixel, Aurora and all the variables are bilinearly
+interpolated from the fields (aurora_campi/), exactly as for the stations; elevation from the DEM.
 
-Cross-validation regione x anno (come cv_regione_anno.py): si valuta SOLO sulle stazioni vere della
-regione e dell'anno tenuti fuori. Dal pre-training si escludono i pixel della regione E dell'anno
-tenuti fuori: SARAH e' un'osservazione satellitare di quel giorno, includere l'anno di validazione
-darebbe alla rete il meteo reale di quei giorni e una stima ottimista.
+Region x year cross-validation (as cv_regione_anno.py): evaluation ONLY on the real stations of the
+held-out region and year. The pixels of the held-out region AND year are excluded from pre-training:
+SARAH is a satellite observation of that day, including the validation year would give the network
+the real weather of those days and an optimistic estimate.
 
-Varianti (2 seed ciascuna):
-  STAZIONI = solo stazioni (= modello attuale)
-  PRE+FT   = pre-training sui pixel SARAH, poi fine-tuning sulle sole stazioni
-L'errore si misura dopo ogni epoca di fine-tuning: per ogni variante si sceglie l'epoca migliore in
-media sui fold.
+Variants (2 seeds each):
+  STAZIONI = stations only (= current model)
+  PRE+FT   = pre-training on the SARAH pixels, then fine-tuning on the stations only
+The error is measured after each fine-tuning epoch: for each variant the best epoch on average over
+the folds is chosen.
 
-Uso:
+Usage:
     python esperimento_sarah_c.py
 Output:
-    sarah_c_pixel_<anni>.parquet (cache dei pixel), esperimento_sarah_c_risultati.csv
+    sarah_c_pixel_<years>.parquet (pixel cache), esperimento_sarah_c_risultati.csv
 """
 import glob
 import json
@@ -41,7 +41,7 @@ from train_downscaling_head import FEATURE_COLS, DownscalingHead, applica_esclus
 TABLE = "tabelle/training_table_aurora.parquet"
 INFO = json.load(open("tabelle/fattori_scala_aurora.json"))
 SARAH_RAW = "dati/statici/sarah3_padania_raw"
-PASSO_PIXEL = 2          # un pixel SARAH ogni 2 (0.1 gradi, ~10 km)
+PASSO_PIXEL = 2          # one SARAH pixel every 2 (0.1 degrees, ~10 km)
 EPOCHE_PRE = 20
 MAX_EPOCHS_FT = 40
 SEEDS = [0, 1]
@@ -49,11 +49,11 @@ COL_AURORA = {"tx3": "tx3_aurora", "tn3": "tn3_aurora", "rr7": "rr7_aurora_raw",
 
 
 def pixel_sarah(anni):
-    """Pixel SARAH (uno ogni PASSO_PIXEL) dentro le regioni di validazione, con SIS giornaliero e
-    tutte le feature di Aurora interpolate nel punto. Cache su disco."""
+    """SARAH pixels (one every PASSO_PIXEL) inside the validation regions, with daily SIS and all
+    the Aurora features interpolated at the point. Cached on disk."""
     cache = f"tabelle/sarah_c_pixel_{'_'.join(map(str, anni))}.parquet"
     if os.path.exists(cache):
-        print(f"pixel SARAH da cache: {cache}")
+        print(f"SARAH pixels from cache: {cache}")
         return pd.read_parquet(cache)
     files = sorted(f for f in glob.glob(os.path.join(SARAH_RAW, "SISdm*.nc"))
                    if int(re.search(r"SISdm(\d{4})", f).group(1)) in anni)
@@ -69,18 +69,18 @@ def pixel_sarah(anni):
     px = px.dropna(subset=["elev"]).reset_index(drop=True)
     sel_y = np.searchsorted(iy, [int(np.where(lat == v)[0][0]) for v in px["lat"]])
     sel_x = np.searchsorted(ix, [int(np.where(lon == v)[0][0]) for v in px["lon"]])
-    print(f"pixel SARAH nelle regioni di validazione: {len(px)}; lettura di {len(files)} file...", flush=True)
+    print(f"SARAH pixels in the validation regions: {len(px)}; reading {len(files)} files...", flush=True)
     righe = []
     for f in files:
         giorno = pd.Timestamp(re.search(r"SISdm(\d{8})", f).group(1))
         with netCDF4.Dataset(f) as d:
-            # SIS e' salvato come intero: in float prima di mettere NaN nei valori mancanti
+            # SIS is stored as an integer: convert to float before putting NaN in the missing values
             blocco = np.ma.masked_array(d["SIS"][0, iy[0]:iy[-1] + 1:PASSO_PIXEL,
                                                  ix[0]:ix[-1] + 1:PASSO_PIXEL]).astype(float).filled(np.nan)
         righe.append(pd.DataFrame({"uid": px["uid"], "date": giorno, "obs": blocco[sel_y, sel_x]}))
     s = pd.concat(righe, ignore_index=True).dropna(subset=["obs"])
 
-    # Aurora e tutte le variabili nel punto del pixel, come per le stazioni (notebook §6.6)
+    # Aurora and all the variables at the pixel location, as for the stations (notebook §6.6)
     campi = carica_campi(anni)
     f = interpola_punti(campi, px["lat"], px["lon"], "linear", ids=px["uid"]).rename(columns={"punto": "uid"})
     fatt, qc = INFO["fattori_scala"], {k: tuple(v) for k, v in INFO["table_qc"].items()}
@@ -93,7 +93,7 @@ def pixel_sarah(anni):
     s["residual"] = s["obs"] - s["aurora"]
     s = s.drop(columns="orog_aurora")
     s.to_parquet(cache, index=False)
-    print(f"salvato {cache}: {s.shape}")
+    print(f"saved {cache}: {s.shape}")
     return s
 
 
@@ -110,7 +110,7 @@ def tensori(df, mean, std):
 
 
 def allena(net, df, mean, std, epoche, seed, va=None):
-    """Allena net su df; se va e' dato, restituisce l'RMSE su va dopo ogni epoca."""
+    """Trains net on df; if va is given, returns the RMSE on va after each epoch."""
     torch.manual_seed(seed)
     x, y = tensori(df, mean, std)
     loader = DataLoader(TensorDataset(x, y), batch_size=BATCH, shuffle=True)
@@ -142,9 +142,9 @@ def main():
     t = assign_regions(add_doy(t))
     anni = sorted(t["anno"].unique())
     sarah = add_doy(pixel_sarah(anni))
-    print(f"stazioni qq2: {t['uid'].nunique()} ({len(t)} righe) | pixel SARAH: {sarah['uid'].nunique()} "
-          f"({len(sarah)} righe) | bias SARAH - Aurora {sarah['residual'].mean():.1f}, "
-          f"stazioni - Aurora {t['residual'].mean():.1f} W/m2", flush=True)
+    print(f"qq2 stations: {t['uid'].nunique()} ({len(t)} rows) | SARAH pixels: {sarah['uid'].nunique()} "
+          f"({len(sarah)} rows) | bias SARAH - Aurora {sarah['residual'].mean():.1f}, "
+          f"stations - Aurora {t['residual'].mean():.1f} W/m2", flush=True)
 
     rows = []
     for reg in REGIONS:
@@ -165,18 +165,18 @@ def main():
                 allena(net, pre, mean, std, EPOCHE_PRE, seed)
                 for r in allena(net, tr, mean, std, MAX_EPOCHS_FT, seed, va):
                     rows.append({"regione": reg, "anno": anno, "seed": seed, "variante": "PRE+FT", **r})
-            print(f"{reg} {anno}: fatto (pre-training su {len(pre)} righe SARAH)", flush=True)
+            print(f"{reg} {anno}: done (pre-training on {len(pre)} SARAH rows)", flush=True)
             pd.DataFrame(rows).to_csv("risultati/esperimento_sarah_c_risultati.csv", index=False)
 
     res = pd.DataFrame(rows)
     curva = res.groupby(["variante", "epoca"])["rmse"].mean()
     best = curva.groupby("variante").agg(["min", "idxmin"])
     best["epoca"] = best["idxmin"].apply(lambda x: x[1])
-    print("\n=== qq2, CV regione x anno: RMSE medio sui fold e sui seed, all'epoca migliore ===")
+    print("\n=== qq2, region x year CV: mean RMSE over folds and seeds, at the best epoch ===")
     print(best[["min", "epoca"]].rename(columns={"min": "rmse"}).round(3))
     sel = pd.concat([res[(res["variante"] == v) & (res["epoca"] == e)] for v, e in best["epoca"].items()])
     print(sel.groupby(["regione", "anno", "variante"])["rmse"].mean().unstack("variante").round(2))
-    print("\nbias medio:", sel.groupby("variante")["bias"].mean().round(2).to_dict())
+    print("\nmean bias:", sel.groupby("variante")["bias"].mean().round(2).to_dict())
 
 
 if __name__ == "__main__":

@@ -1,19 +1,19 @@
 """
-Esperimento: pioggia e radiazione di Aurora interpolate con IDW invece che bilinearmente nel punto della
-stazione. Stessa cross-validation, stessa rete e stessi seed di esperimento_bilineare.py; cambia solo come
-si interpolano rr7 e qq2 (tx3, tn3 e le altre variabili restano bilineari).
+Experiment: Aurora precipitation and radiation interpolated with IDW instead of bilinearly at the
+station location. Same cross-validation, same network and same seeds as esperimento_bilineare.py; only
+the interpolation of rr7 and qq2 changes (tx3, tn3 and the other variables stay bilinear).
 
-Varianti:
-  B bilineare:   come in esperimento_bilineare.py
-  C bilineare+:  come in esperimento_bilineare.py
-  D idw:         B con rr7 e qq2 di Aurora interpolati con IDW (4 celle piu' vicine, pesi 1/d^2)
-  E idw+:        C con a_rr7 e a_qq2 (target e feature) interpolati con IDW
-Per tx3 e tn3 D coincide con B; E differisce da C solo nelle feature a_rr7 e a_qq2.
+Variants:
+  B bilineare:   as in esperimento_bilineare.py
+  C bilineare+:  as in esperimento_bilineare.py
+  D idw:         B with Aurora rr7 and qq2 interpolated with IDW (4 nearest cells, weights 1/d^2)
+  E idw+:        C with a_rr7 and a_qq2 (target and features) interpolated with IDW
+For tx3 and tn3 D coincides with B; E differs from C only in the features a_rr7 and a_qq2.
 
-Uso:
+Usage:
     python esperimento_idw.py
 Output:
-    esperimento_idw_risultati.csv, riepilogo a schermo
+    esperimento_idw_risultati.csv, summary on screen
 """
 from experiments.esperimento_bilineare import BASE, EXTRA, main
 

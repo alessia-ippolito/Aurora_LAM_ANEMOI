@@ -1,35 +1,35 @@
 """
-Descrittori del terreno per la testa di downscaling, oltre alla quota (punto 2 degli esperimenti).
-Stessa funzione per le stazioni (training/test) e per i pixel delle mappe, cosi' le feature sono
-calcolate nello stesso modo.
+Terrain descriptors for the downscaling head, in addition to elevation (point 2 of the experiments).
+The same function is used for the stations (training/test) and for the map pixels, so the features
+are computed in the same way.
 
-Dal Copernicus DEM GLO-30 (cop30_padania.tif), ricampionato a ~90 m (media di 3 x 3 pixel):
-  tpi_1km, tpi_5km, tpi_20km  posizione nel rilievo: quota del punto meno quota media in un quadrato
-                              di lato ~2, ~10, ~40 km intorno. Negativo = fondovalle o conca (aria
-                              fredda di notte, inversioni), positivo = dorsale o versante alto.
-  pendenza                    gradi, a ~90 m
-  nordness, eastness          cos/sin dell'esposizione x sin(pendenza): versanti a nord/sud, est/ovest
-                              (0 in piano)
-Da Natural Earth 10m:
-  dist_mare_km                distanza dalla linea di costa
-  dist_lago_km                distanza dal lago piu' vicino (grandi laghi: Garda, Maggiore, Como, ...)
+From the Copernicus GLO-30 DEM (cop30_padania.tif), resampled to ~90 m (mean of 3 x 3 pixels):
+  tpi_1km, tpi_5km, tpi_20km  position in the terrain: elevation of the point minus mean elevation in a
+                              square of side ~2, ~10, ~40 km around it. Negative = valley floor or basin
+                              (cold air at night, inversions), positive = ridge or upper slope.
+  pendenza                    slope, degrees, at ~90 m
+  nordness, eastness          cos/sin of the aspect x sin(slope): north/south, east/west facing slopes
+                              (0 on flat ground)
+From Natural Earth 10m:
+  dist_mare_km                distance from the coastline
+  dist_lago_km                distance from the nearest lake (large lakes: Garda, Maggiore, Como, ...)
 
-Nel modello finale entrano solo i 6 descrittori di FORMA_RILIEVO, e solo per tn3 e qq2
-(esperimento_terreno.py: tn3 -2.6%, qq2 -0.8%; nessun guadagno per tx3 e rr7; le distanze da mare e
-laghi peggiorano le temperature). Il notebook (§6.6) li aggiunge alla tabella di training/test con
-descrittori(); mappa_downscaling.py li calcola nello stesso modo in ogni pixel.
+The final model uses only the 6 descriptors of FORMA_RILIEVO (terrain shape), and only for tn3 and
+qq2 (esperimento_terreno.py: tn3 -2.6%, qq2 -0.8%; no gain for tx3 and rr7; the distances from sea
+and lakes make the temperatures worse). The notebook (§6.6) adds them to the training/test table
+with descrittori(); mappa_downscaling.py computes them in the same way in each pixel.
 
-Uso:
-    python descrittori_terreno.py      # calcola e salva i descrittori delle stazioni (per gli esperimenti)
+Usage:
+    python descrittori_terreno.py      # computes and saves the station descriptors (for the experiments)
 Output:
-    descrittori_terreno_stazioni.parquet (uid + descrittori)
+    descrittori_terreno_stazioni.parquet (uid + descriptors)
 """
 from functools import lru_cache
 
 import numpy as np
 import pandas as pd
 
-# Percorsi relativi alla cartella principale del progetto (da cui si lancia lo script)
+# Paths relative to the main project folder (where the script is run from)
 DEM = "dati/statici/cop30_padania.tif"
 TABELLA_TRAINING = "tabelle/training_table_aurora.parquet"
 
@@ -41,10 +41,10 @@ USCITA = "tabelle/descrittori_terreno_stazioni.parquet"
 
 
 def dem_elevation(lats, lons):
-    """Quota (m) dal Copernicus DEM GLO-30 a 30 m, punto per punto (feature "elev" di stazioni e
-    pixel delle mappe). NaN se fuori dal DEM (bbox 44.0-46.5 N, 6.5-13.0 E). Rispetto alla quota
-    ufficiale delle stazioni ECA&D: errore mediano ~2 m (la vecchia elev_cerra, cella CERRA 5.5 km,
-    era ~50 m, con punte oltre 800 m in montagna)."""
+    """Elevation (m) from the 30 m Copernicus GLO-30 DEM, point by point (feature "elev" of stations
+    and map pixels). NaN outside the DEM (bbox 44.0-46.5 N, 6.5-13.0 E). Against the official
+    elevation of the ECA&D stations: median error ~2 m (the old elev_cerra, 5.5 km CERRA cell, was
+    ~50 m, with peaks above 800 m in the mountains)."""
     import rasterio
 
     with rasterio.open(DEM) as d:
@@ -58,7 +58,7 @@ def dem_elevation(lats, lons):
 
 @lru_cache(maxsize=1)
 def _griglie_dem():
-    """Quota a ~90 m e i descrittori derivati, come griglie sull'area del DEM."""
+    """Elevation at ~90 m and the derived descriptors, as grids over the DEM area."""
     import rasterio
     from rasterio.enums import Resampling
     from scipy.ndimage import uniform_filter
@@ -68,15 +68,15 @@ def _griglie_dem():
         z = d.read(1, out_shape=(h, w), resampling=Resampling.average).astype("float64")
         b = d.bounds
     lat_c = (b.top + b.bottom) / 2
-    dy = (b.top - b.bottom) / h * 111_320                         # metri per pixel in latitudine
+    dy = (b.top - b.bottom) / h * 111_320                         # metres per pixel in latitude
     dx = (b.right - b.left) / w * 111_320 * np.cos(np.radians(lat_c))
     g = {}
     for nome, lato_km in LATI_TPI_KM.items():
         finestra = (max(1, round(lato_km * 1000 / dy)), max(1, round(lato_km * 1000 / dx)))
         g[nome] = z - uniform_filter(z, size=finestra, mode="nearest")
-    gy, gx = np.gradient(z, dy, dx)                               # righe: da nord a sud
+    gy, gx = np.gradient(z, dy, dx)                               # rows: from north to south
     pend = np.arctan(np.hypot(gx, gy))
-    # esposizione: direzione verso cui scende il versante (0 = nord, 90 = est)
+    # aspect: direction the slope faces downhill (0 = north, 90 = east)
     esp = np.arctan2(-gx, gy)
     g["pendenza"] = np.degrees(pend)
     g["nordness"] = np.cos(esp) * np.sin(pend)
@@ -104,8 +104,8 @@ def _distanze(lats, lons):
 
 
 def descrittori(lats, lons, con_distanze=True):
-    """Descrittori del terreno nei punti dati (gradi). NaN fuori dal DEM.
-    con_distanze=False salta le distanze da mare e laghi (non usate dal modello finale)."""
+    """Terrain descriptors at the given points (degrees). NaN outside the DEM.
+    con_distanze=False skips the distances from sea and lakes (not used by the final model)."""
     lats, lons = np.asarray(lats, float), np.asarray(lons, float)
     g, b, h, w = _griglie_dem()
     r = np.floor((b.top - lats) / (b.top - b.bottom) * h).astype(int)
@@ -125,7 +125,7 @@ def main():
     d = descrittori(st["lat"].values, st["lon"].values)
     d.insert(0, "uid", st["uid"].values)
     d.to_parquet(USCITA, index=False)
-    print(f"salvato {USCITA}: {len(d)} stazioni")
+    print(f"saved {USCITA}: {len(d)} stations")
     print(d[DESCRITTORI].describe().round(2).T)
 
 

@@ -1,16 +1,16 @@
 """
-Esperimento (punto 1): media di piu' reti allenate con seed diversi (ensemble), sulla configurazione
-finale scelta con gli esperimenti precedenti:
-  - feature: le 28 attuali + forma del rilievo per tn3 e qq2 (esperimento_terreno.py)
-  - pioggia: residuo semplice con errore quadratico (esperimento_pioggia.py)
-  - rete 64-64 con dropout 0.1 (esperimento_iperparametri.py)
-CV regione x anno di cv_comune.py. Per ogni fold si allenano N_SEED reti; l'ensemble e' la media
-delle loro previsioni. L'epoca si sceglie in media sui fold, come sempre.
+Experiment (point 1): mean of several networks trained with different seeds (ensemble), on the final
+configuration chosen with the previous experiments:
+  - features: the current 28 + terrain shape for tn3 and qq2 (esperimento_terreno.py)
+  - precipitation: plain residual with squared error (esperimento_pioggia.py)
+  - 64-64 network with dropout 0.1 (esperimento_iperparametri.py)
+Region x year CV of cv_comune.py. For each fold N_SEED networks are trained; the ensemble is the mean
+of their predictions. The epoch is chosen on the mean over the folds, as always.
 
-Uso:
+Usage:
     python esperimento_ensemble.py
 Output:
-    esperimento_ensemble_risultati.csv  (per fold ed epoca: rete singola, media sui seed, ensemble di k reti)
+    esperimento_ensemble_risultati.csv  (per fold and epoch: single network, mean over seeds, ensemble of k networks)
 """
 import numpy as np
 import pandas as pd
@@ -36,7 +36,7 @@ def main():
             ov = va["obs"].values
             pred = np.stack([allena_valuta(tr, va, FEATURE[param], param, max_epoche=MAX_EPOCHE[param],
                                            seed=s, salva_pred=True, **OPZIONI)[1] for s in range(N_SEED)])
-            # pred: seed x epoca x righe
+            # pred: seed x epoch x rows
             for ep in range(pred.shape[1]):
                 singole = [errori(pred[s, ep], ov)["rmse"] for s in range(N_SEED)]
                 riga = {"parametro": param, "regione": reg, "anno": anno, "epoca": ep + 1,
@@ -45,7 +45,7 @@ def main():
                     riga[f"rmse_ensemble_{k}"] = errori(pred[:k, ep].mean(axis=0), ov)["rmse"]
                 riga["bias_ensemble"] = errori(pred[:, ep].mean(axis=0), ov)["bias"]
                 righe.append(riga)
-            print(f"[{param}] {reg} {anno} fatto", flush=True)
+            print(f"[{param}] {reg} {anno} done", flush=True)
             pd.DataFrame(righe).to_csv("risultati/esperimento_ensemble_risultati.csv", index=False)
 
     res = pd.DataFrame(righe)
@@ -53,15 +53,15 @@ def main():
     out = {}
     for param in PARAMS:
         c = curva.loc[param]
-        out[param] = {"rete singola": c["rmse_singola_media"].min(),
-                      "epoca singola": int(c["rmse_singola_media"].idxmin()),
+        out[param] = {"single network": c["rmse_singola_media"].min(),
+                      "single epoch": int(c["rmse_singola_media"].idxmin()),
                       **{f"ensemble {k}": c[f"rmse_ensemble_{k}"].min() for k in range(2, N_SEED + 1)},
-                      f"epoca ensemble {N_SEED}": int(c[f"rmse_ensemble_{N_SEED}"].idxmin())}
+                      f"ensemble epoch {N_SEED}": int(c[f"rmse_ensemble_{N_SEED}"].idxmin())}
     tab = pd.DataFrame(out)
-    print("\n=== CV regione x anno: RMSE medio sui 9 fold all'epoca migliore ===")
+    print("\n=== Region x year CV: mean RMSE over the 9 folds at the best epoch ===")
     print(tab.round(3).to_string())
-    g = 100 * (tab.loc[f"ensemble {N_SEED}"] - tab.loc["rete singola"]) / tab.loc["rete singola"]
-    print(f"\nguadagno dell'ensemble di {N_SEED} reti rispetto alla rete singola (%):", g.round(2).to_dict())
+    g = 100 * (tab.loc[f"ensemble {N_SEED}"] - tab.loc["single network"]) / tab.loc["single network"]
+    print(f"\ngain of the ensemble of {N_SEED} networks over the single network (%):", g.round(2).to_dict())
 
 
 if __name__ == "__main__":

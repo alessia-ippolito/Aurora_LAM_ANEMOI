@@ -1,29 +1,30 @@
 """
-Esperimento: la testa migliora se Aurora viene interpolata bilinearmente nel punto della stazione,
-e ancora di piu' se riceve anche le altre variabili di Aurora? Stessa cross-validation regione x
-anno di cv_regione_anno.py (allena su 2 regioni x 2 anni, valuta sulla regione e sull'anno esclusi),
-stesse esclusioni (notebook §7.2), Piemonte mai usato.
+Experiment: does the head improve if Aurora is bilinearly interpolated to the station location, and
+even more if it also receives the other Aurora variables? Same region x year cross-validation as
+cv_regione_anno.py (trains on 2 regions x 2 years, evaluates on the excluded region and year), same
+exclusions (notebook §7.2), Piedmont never used.
 
-Nessuna variante usa latitudine e longitudine: con lat/lon la rete impara correzioni legate alle
-coordinate delle stazioni e, in una regione tenuta fuori, le estrapola in modo instabile (stessi
-dati, solo un diverso ordine delle righe: tx3 Veneto 2016 da 2.9 a 4.5 gradi; v. anche
-ablation_latlon_all.csv). Due seed per variante, per misurare quanto i risultati sono stabili.
+No variant uses latitude and longitude: with lat/lon the network learns corrections tied to the
+station coordinates and, in a held-out region, extrapolates them unstably (same data, only a
+different row order: tx3 Veneto 2016 from 2.9 to 4.5 degrees; see also ablation_latlon_all.csv).
+Two seeds per variant, to measure how stable the results are.
 
-Varianti (stessa rete e stesso addestramento, cambiano solo gli input):
-  A  cella vicina: aurora nella cella piu' vicina (colonna "aurora" della tabella) + quota, stagione
-  B  bilineare:    aurora interpolata bilinearmente nel punto esatto della stazione + quota, stagione
-  C  bilineare+:   B + le altre variabili di Aurora nel punto (le 4 variabili principali insieme,
-                   temperatura e umidita' in quota, strato limite, nuvolosita' (ttr), vento, pressione,
-                   neve, geopotenziale a 500 hPa) + differenza quota stazione - quota di Aurora
-Il target e' sempre obs - aurora della variante (per B e C l'aurora bilineare). L'errore si misura
-dopo ogni epoca: per ogni variante si sceglie il numero di epoche migliore in media sui fold.
+Variants (same network and same training, only the inputs change; labels kept in Italian, they are
+the keys stored in the results file):
+  A  cella vicina (nearest cell): aurora in the nearest cell ("aurora" column of the table) + elevation, season
+  B  bilineare (bilinear):   aurora bilinearly interpolated at the exact station location + elevation, season
+  C  bilineare+:   B + the other Aurora variables at the point (the 4 main variables together,
+                   temperature and humidity aloft, boundary layer, cloudiness (ttr), wind, pressure,
+                   snow, geopotential at 500 hPa) + difference station elevation - Aurora elevation
+The target is always obs - aurora of the variant (for B and C the bilinear aurora). The error is
+measured after each epoch: for each variant the best number of epochs on average over the folds is chosen.
 
-Richiede i campi di Aurora degli anni di training in aurora_campi/ (extract_aurora_campi.py).
+Requires the Aurora fields of the training years in aurora_campi/ (extract_aurora_campi.py).
 
-Uso:
+Usage:
     python esperimento_bilineare.py
 Output:
-    esperimento_bilineare_risultati.csv, riepilogo a schermo
+    esperimento_bilineare_risultati.csv, summary on screen
 """
 import numpy as np
 import pandas as pd
@@ -34,13 +35,13 @@ from campi_aurora import carica_campi, interpola_punti
 from cv_comune import BATCH, PARAMS, REGIONS, SEED, assign_regions
 from train_downscaling_head import DownscalingHead, applica_esclusioni
 
-TABLE = "inutili/training_table_aurora_backup_cella_vicina.csv.gz"  # tabella con Aurora nella cella piu' vicina (variante A)
+TABLE = "inutili/training_table_aurora_backup_cella_vicina.csv.gz"  # table with Aurora in the nearest cell (variant A)
 MAX_EPOCHS = 20
 SEEDS = [0, 1]
 COL_RAW = {"tx3": "tx3_aurora", "tn3": "tn3_aurora", "rr7": "rr7_aurora_raw", "qq2": "qq2_aurora_raw"}
-QC = {"tx3": (-30, 50), "tn3": (-40, 35), "qq2": (0, 450), "rr7": (0, 300)}  # clip di Aurora, come §6.6
+QC = {"tx3": (-30, 50), "tn3": (-40, 35), "qq2": (0, 450), "rr7": (0, 300)}  # clip of Aurora, as in §6.6
 NON_NEGATIVI = {"rr7", "qq2"}
-BASE = ["elev", "doy_sin", "doy_cos"]  # niente lat/lon
+BASE = ["elev", "doy_sin", "doy_cos"]  # no lat/lon
 EXTRA = ["a_tx3", "a_tn3", "a_rr7", "a_qq2",
          "sup_2t_media", "sup_msl_media", "sup_10u_media", "sup_10v_media", "sup_vento10_max",
          "sup_i10fg_media", "sup_blh_media", "sup_ttr_1h_media", "sup_scaled_sf_1h_media",
@@ -49,27 +50,27 @@ EXTRA = ["a_tx3", "a_tn3", "a_rr7", "a_qq2",
 
 
 def prepara(idw=False):
-    """idw=True: aggiunge a_rr7_idw, a_qq2_idw e aurora_D (come aurora_B, ma pioggia e radiazione
-    interpolate con IDW invece che bilinearmente; v. esperimento_idw.py)."""
+    """idw=True: adds a_rr7_idw, a_qq2_idw and aurora_D (like aurora_B, but precipitation and
+    radiation interpolated with IDW instead of bilinearly; see esperimento_idw.py)."""
     t = pd.read_csv(TABLE, parse_dates=["date"])
     t = applica_esclusioni(t[t["split"] == "train"])
     anni = sorted(t["date"].dt.year.unique())
     st = t.drop_duplicates("uid")[["uid", "lat", "lon"]].reset_index(drop=True)
     campi = carica_campi(anni)
-    print(f"campi Aurora: {dict(campi.sizes)}", flush=True)
+    print(f"Aurora fields: {dict(campi.sizes)}", flush=True)
     vic = interpola_punti(campi[list(COL_RAW.values())], st["lat"], st["lon"], "nearest", ids=st["uid"])
     bil = interpola_punti(campi, st["lat"], st["lon"], "linear", ids=st["uid"])
     vic = vic.rename(columns={"punto": "uid"})
     bil = bil.rename(columns={"punto": "uid"})
 
-    # fattore grezzo -> unita' fisiche come in tabella (rapporto aurora / grezzo nella cella piu' vicina)
+    # raw -> physical units factor as in the table (ratio aurora / raw in the nearest cell)
     fatt = {"tx3": 1.0, "tn3": 1.0}
     for p in NON_NEGATIVI:
         q = t[t["parameter"] == p].merge(vic[["uid", "date", COL_RAW[p]]], on=["uid", "date"])
         lo, hi = QC[p]
         q = q[(q["aurora"] > lo) & (q["aurora"] < hi) & (q[COL_RAW[p]] > 0)]
         fatt[p] = float((q["aurora"] / q[COL_RAW[p]]).median())
-    print("fattori di scala:", fatt)
+    print("scale factors:", fatt)
     for p, c in COL_RAW.items():
         bil[f"a_{p}"] = (bil[c] * fatt[p]).clip(*QC[p])
     servono = [c for c in EXTRA if c in bil.columns] + ["orog_aurora"]
@@ -81,7 +82,7 @@ def prepara(idw=False):
         for p in NON_NEGATIVI:
             bil[f"a_{p}_idw"] = (bil[f"raw_{p}_idw"] * fatt[p]).clip(*QC[p])
             servono.append(f"a_{p}_idw")
-    # solo le colonne che servono, in float32 (tutte le 119 colonne su 2.2 milioni di righe non stanno in memoria)
+    # only the needed columns, in float32 (all 119 columns on 2.2 million rows do not fit in memory)
     bil = bil[["uid", "date"] + servono].astype({c: "float32" for c in servono})
 
     t = t.merge(bil, on=["uid", "date"], how="inner")
@@ -96,7 +97,7 @@ def prepara(idw=False):
     t["doy_cos"] = np.cos(2 * np.pi * doy / 365.25)
     t["anno"] = t["date"].dt.year
     t = assign_regions(t)
-    print(f"righe: {len(t)} | differenza media |aurora A - B|: "
+    print(f"rows: {len(t)} | mean difference |aurora A - B|: "
           f"{t.groupby('parameter').apply(lambda g: (g.aurora_A - g.aurora_B).abs().mean(), include_groups=False).round(3).to_dict()}",
           flush=True)
     return t
@@ -156,7 +157,7 @@ def main(varianti=VARIANTI, uscita="risultati/esperimento_bilineare_risultati.cs
                         for r in fold(tr, va, col, feat, param in NON_NEGATIVI, seed=seed):
                             rows.append({"parametro": param, "regione": reg, "anno": anno, "variante": nome,
                                          "seed": seed, **r})
-                print(f"[{param}] {reg} {anno}: fatto", flush=True)
+                print(f"[{param}] {reg} {anno}: done", flush=True)
         res = pd.DataFrame(rows)
         res.to_csv(uscita, index=False)
 
@@ -165,17 +166,17 @@ def main(varianti=VARIANTI, uscita="risultati/esperimento_bilineare_risultati.cs
     best = curva.groupby(["parametro", "variante"]).agg(["min", "idxmin"])
     best["epoca"] = best["idxmin"].apply(lambda x: x[2])
     aur = res.groupby(["parametro", "variante"])["rmse_aurora"].mean()
-    # stabilita': differenza tra i due seed (media sui fold) all'epoca scelta
+    # stability: difference between the two seeds (mean over the folds) at the chosen epoch
     sel = res.merge(best["epoca"].rename("ep_scelta").reset_index(), on=["parametro", "variante"])
     sel = sel[sel["epoca"] == sel["ep_scelta"]]
     per_seed = sel.groupby(["parametro", "variante", "seed"])["rmse"].mean().unstack("seed")
     out = pd.DataFrame({"rmse_aurora_input": aur, "rmse_testa": best["min"], "epoche": best["epoca"],
                         "diff_tra_seed": (per_seed.max(axis=1) - per_seed.min(axis=1))})
-    print("\n=== CV regione x anno, senza lat/lon: RMSE medio sui fold e sui seed, all'epoca migliore ===")
+    print("\n=== Region x year CV, without lat/lon: mean RMSE over folds and seeds, at the best epoch ===")
     print(out.round(3))
-    # quanto cambia lo stesso fold tra i due seed (instabilita' residua)
+    # how much the same fold changes between the two seeds (residual instability)
     f = sel.groupby(["parametro", "variante", "regione", "anno"])["rmse"].agg(lambda x: x.max() - x.min())
-    print("\ndifferenza massima tra seed sullo stesso fold:")
+    print("\nmaximum difference between seeds on the same fold:")
     print(f.groupby(["parametro", "variante"]).max().round(3))
 
 

@@ -1,155 +1,191 @@
-# Downscaling di Aurora sulla Pianura Padana
+# Downscaling Aurora over the Po Valley
 
-Correzione statistica (downscaling puntuale) delle previsioni giornaliere di
-[Aurora](https://github.com/microsoft/aurora) (0.25°) con le osservazioni delle stazioni al suolo.
-Una piccola rete per ciascuna variabile impara il residuo osservazione − Aurora. Aurora viene
-interpolata bilinearmente nel punto della stazione, e la rete usa come feature le variabili di
-Aurora in quel punto, la quota (DEM a 30 m), la stagione e, per tn3 e qq2, la forma del rilievo.
+Statistical correction (point downscaling) of the daily forecasts of
+[Aurora](https://github.com/microsoft/aurora) (0.25°) with ground station observations.
+One small neural network per variable learns the residual observation − Aurora. Aurora is
+bilinearly interpolated to the station location, and the network uses as features the Aurora
+variables at that point, the elevation (30 m DEM), the season and, for tn3 and qq2, the shape of
+the terrain.
 
-| Variabile | Significato |
+| Variable | Meaning |
 |---|---|
-| `tx3` | temperatura massima giornaliera (°C) |
-| `tn3` | temperatura minima giornaliera (°C) |
-| `rr7` | precipitazione giornaliera (mm) |
-| `qq2` | radiazione globale media giornaliera (W/m²) |
+| `tx3` | daily maximum temperature (°C) |
+| `tn3` | daily minimum temperature (°C) |
+| `rr7` | daily precipitation (mm) |
+| `qq2` | daily mean global radiation (W/m²) |
 
-- **Training:** Lombardia, Emilia-Romagna, Veneto e le altre stazioni dell'area, anni 2016, 2022 e 2023.
-- **Validazione:** cross-validation regione × anno.
-- **Test finale:** Piemonte 2020. È una regione e un anno mai visti, e va usato una sola volta.
+- **Training:** Lombardy, Emilia-Romagna, Veneto and the other stations in the area, years 2016, 2022 and 2023.
+- **Validation:** region × year cross-validation.
+- **Final test:** Piedmont 2020. It is a region and a year never seen in training, and it is used only once.
 
-## Struttura
+## Structure
 
 ```
 dati/
-  osservazioni/    cache delle osservazioni (ECA&D, ARPA Lombardia, ARPA Piemonte, ARPAE) e anagrafiche
-  aurora_campi/    campi giornalieri di Aurora, un file .nc per giorno (extract_aurora_campi.py)
-  statici/         DEM Copernicus GLO-30, confini delle regioni, SARAH-3
-tabelle/           tabelle di training e test, fattori di scala, esclusioni (notebook)
-modello/           epoche scelte in cross-validation e reti del modello finale (checkpoints/)
-risultati/         risultati di cross-validation, esperimenti e test (.csv)
-log/               output degli script
-mappe/             mappe ad alta risoluzione e mappa dell'errore per stazione
-experiments/       esperimenti che hanno portato al modello finale
-inutili/           script e dati superati (non su git)
+  osservazioni/    observation caches (ECA&D, ARPA Lombardia, ARPA Piemonte, ARPAE) and station registries
+  aurora_campi/    daily Aurora fields, one .nc file per day (extract_aurora_campi.py)
+  statici/         Copernicus GLO-30 DEM, region boundaries, SARAH-3
+tabelle/           training and test tables, scale factors, exclusions (notebook)
+modello/           epochs chosen in cross-validation and networks of the final model (checkpoints/)
+risultati/         cross-validation, experiment and test results (.csv)
+log/               script output
+mappe/             high-resolution maps and per-station error map
+experiments/       experiments that led to the final model
+inutili/           superseded scripts and data (not on git)
 ```
 
-Tutti i percorsi sono relativi alla cartella principale. Ogni script e il notebook definiscono i
-propri percorsi in cima al file. Gli script vanno lanciati **dalla cartella principale**.
+All paths are relative to the main folder. Each script and the notebook define their own paths at
+the top of the file. Scripts must be run **from the main folder**.
 
-## Requisiti
+File, folder, function and variable names are in Italian; comments, documentation and figures are
+in English. A short glossary:
 
-Python 3.12 con i seguenti pacchetti:
+| Italian | English | Italian | English |
+|---|---|---|---|
+| dati | data | osservazioni | observations |
+| tabelle | tables | campi | fields |
+| modello | model | statici | static data |
+| risultati | results | esclusioni | exclusions |
+| mappe | maps | fattori di scala | scale factors |
+| esperimento | experiment | descrittori del terreno | terrain descriptors |
+| regione / anno | region / year | forma del rilievo | terrain shape |
+| riferimenti semplici | simple baselines | inutili | unused |
+
+## Requirements
+
+Python 3.12 with the following packages:
 
 ```
 pip install numpy pandas pyarrow xarray netCDF4 scipy torch geopandas shapely pyproj rasterio \
             matplotlib cartopy requests cdsapi
 ```
 
-L'estrazione dei campi di Aurora richiede una GPU e pacchetti in più (vedi il passo 2).
+Extracting the Aurora fields needs a GPU and a few more packages (see step 2).
 
-Il DEM Copernicus GLO-30 (`cop30_padania.tif`) e i file giornalieri SARAH-3 (`SISdm*.nc`) vanno
-messi a mano in `dati/statici/`, perché il codice attuale non li scarica. I confini delle regioni
-invece li scarica il notebook la prima volta che lo esegui (da openpolis/geojson-italy).
+The Copernicus GLO-30 DEM (`cop30_padania.tif`) and the daily SARAH-3 files (`SISdm*.nc`) must be
+placed by hand in `dati/statici/`, because the current code does not download them. The region
+boundaries are downloaded by the notebook the first time it runs (from openpolis/geojson-italy).
 
 ## Pipeline
 
-### 1. Osservazioni: `padania_cerra_ecad_analysis.ipynb` (§1–§6.5)
+### 1. Observations: `data_preparation_train_test.ipynb` (§1–§6.5)
 
-Scarica e mette in cache in `dati/osservazioni/`:
+Downloads and caches in `dati/osservazioni/`:
 
-- le stazioni ECA&D (API OGC EDR);
-- ARPA Lombardia, ARPA Piemonte e ARPAE;
+- the ECA&D stations (OGC EDR API);
+- ARPA Lombardia, ARPA Piemonte and ARPAE;
 
-e ne analizza la completezza. Le cache esistenti vengono riusate, quindi rieseguire il notebook non
-riscarica i dati.
+and analyses their completeness. Existing caches are reused, so re-running the notebook does not
+download the data again.
 
-### 2. Campi di Aurora: `extract_aurora_campi.py` (GPU)
+### 2. Aurora fields: `extract_aurora_campi.py` (GPU)
 
-Fa girare Aurora 0.25° v1.5 da ERA5 (ARCO) e salva un file per giorno in `dati/aurora_campi/`, con
-le quattro variabili e tutte le altre variabili di superficie e in quota, ritagliate sull'area.
+Runs Aurora 0.25° v1.5 from ERA5 (ARCO) and saves one file per day in `dati/aurora_campi/`, with
+the four variables and all the other surface and pressure-level variables, cropped to the area.
 
 ```
 pip install torch microsoft-aurora xarray gcsfs zarr huggingface_hub pandas numpy netcdf4
-python extract_aurora_campi.py 2016 2022 2023 2020          # anni di training e di test
-python extract_aurora_campi.py 2021-08-15 2021-10-04        # giorni singoli, per le mappe
+python extract_aurora_campi.py 2016 2022 2023 2020          # training and test years
+python extract_aurora_campi.py 2021-08-15 2021-10-04        # single days, for the maps
 ```
 
-Lo script è riprendibile: i giorni già salvati vengono saltati. È pensato per Lightning AI. Su
-Colab c'è `colab_aurora_campi.ipynb` (opzione `--poca-memoria` per GPU piccole).
+The script can be resumed: days already saved are skipped. It was written for Lightning AI. For
+Colab there is `colab_aurora_campi.ipynb` (option `--poca-memoria` for small GPUs).
 
-### 3. Tabelle di training e test: notebook §6.6–§7
+Note: Aurora is run with only 4 of the 19 surface inputs that AuroraV1p5 expects (2 m temperature,
+10 m wind, mean sea level pressure). This gives Aurora a strong cold bias in summer, which the
+downscaling largely corrects. "Aurora" in this project therefore means Aurora with reduced input.
 
-Costruisce in `tabelle/`:
+### 3. Training and test tables: notebook §6.6–§7
 
-- `training_table_aurora.parquet` e `test_table_aurora.parquet`: osservazione, Aurora interpolata
-  bilinearmente nel punto della stazione, feature, quota DEM e residuo;
-- `fattori_scala_aurora.json`: unità di rr7/qq2 ed elenco delle feature.
+Builds in `tabelle/`:
 
-Il controllo qualità (§7) scrive `esclusioni_training.csv`, cioè le righe da non usare. La tabella
-resta intatta: le esclusioni le applicano gli script.
+- `training_table_aurora.parquet` and `test_table_aurora.parquet`: observation, Aurora bilinearly
+  interpolated to the station location, features, DEM elevation and residual;
+- `fattori_scala_aurora.json`: units of rr7/qq2 and list of features.
 
-Sempre nel §6.6 si applicano le correzioni delle coordinate: UTM per ARPA Lombardia e
+The quality control (§7) writes `esclusioni_training.csv`, the rows not to be used. The tables stay
+intact: the scripts apply the exclusions.
+
+The coordinate corrections are also applied in §6.6: UTM for ARPA Lombardia and
 `CORREZIONI_MANUALI`.
 
-### 4. Cross-validation e scelta delle epoche
+### 4. Cross-validation and choice of the epochs
 
 ```
 python cv_regione_anno.py > log/cv_regione_anno.log
 ```
 
-Ci sono 9 fold (3 regioni × 3 anni). Il Piemonte non entra mai. Lo script scrive:
+There are 9 folds (3 regions × 3 years). Piedmont is never used. The script writes:
 
-- `modello/epoche_cv.json`, letto dal passo 5;
+- `modello/epoche_cv.json`, read by step 5;
 - `risultati/cv_regione_anno_risultati.csv`.
 
-### 5. Modello finale
+### 5. Final model
 
 ```
-python train_downscaling_head.py                    # tutte e 4 le variabili (--parameter tx3 per una sola)
-python train_downscaling_head.py --valuta_test      # UNA volta sola, a modello definitivo
+python train_downscaling_head.py                    # all 4 variables (--parameter tx3 for one only)
+python train_downscaling_head.py --valuta_test      # ONCE only, when the model is final
 ```
 
-Allena su tutta la tabella di training con le epoche del passo 4 e salva
-`modello/checkpoints/<variabile>_finale.pt`. Ogni file contiene l'ensemble di reti, le feature e
-la loro normalizzazione.
+Trains on the whole training table with the epochs from step 4 and saves
+`modello/checkpoints/<variable>_finale.pt`. Each file contains the ensemble of networks, the
+features and their normalisation.
 
-### 6. Mappe e valutazione
+### 6. Maps and evaluation
 
 ```
-python mappa_downscaling.py 2021-08-15 2021-10-04 2021-12-31   # mappe ~1 km, servono i campi di quei giorni
-python mappa_rmse.py                                            # errore per stazione sul test (Piemonte 2020)
+python mappa_downscaling.py 2021-08-15 2021-10-04 2021-12-31   # ~1 km maps, needs the fields of those days
+python mappa_rmse.py                                            # per-station error on the test (Piedmont 2020)
 ```
 
-Le mappe vanno in `mappe/` e i confronti con le stazioni in `risultati/`.
+Maps go to `mappe/` and the comparisons with the stations to `risultati/`.
 
-## Esperimenti (`experiments/`)
+## Results
 
-Ogni esperimento usa la stessa cross-validation regione × anno (`cv_comune.py`) e cambia una sola
-cosa rispetto al modello di riferimento. I risultati vanno in `risultati/`. Gli esperimenti si
-lanciano come moduli dalla cartella principale:
+RMSE on the test set (Piedmont 2020), evaluated once:
+
+| Variable | Aurora | Model | Reduction | Model in cross-validation |
+|---|---|---|---|---|
+| tx3 (°C) | 4.70 | 2.29 | −51% | 2.34 |
+| tn3 (°C) | 3.77 | 1.94 | −49% | 2.26 |
+| rr7 (mm) | 8.88 | 5.78 | −35% | 6.43 |
+| qq2 (W/m²) | 62.67 | 39.68 | −37% | 34.10 |
+
+## Experiments (`experiments/`)
+
+Each experiment uses the same region × year cross-validation (`cv_comune.py`) and changes only one
+thing with respect to the reference model. Results go to `risultati/`. Experiments are run as
+modules from the main folder:
 
 ```
 python -m experiments.esperimento_terreno > log/esperimento_terreno.log
 ```
 
-| Script | Domanda |
+| Script | Question |
 |---|---|
-| `esperimento_bilineare` | Aurora interpolata bilinearmente invece della cella più vicina? |
-| `esperimento_idw` | IDW per pioggia e radiazione invece della bilineare? |
-| `esperimento_terreno` | descrittori del terreno oltre alla quota? (richiede `python descrittori_terreno.py`) |
-| `esperimento_pioggia` | trasformazioni del target per la pioggia (radice, log)? |
-| `esperimento_iperparametri` | dimensione della rete, dropout, learning rate |
-| `esperimento_ensemble` | media di più reti con seed diversi |
-| `esperimento_feature_ridotte` | si possono togliere feature ridondanti? |
-| `esperimento_importanza` | permutation importance del modello finale |
-| `esperimento_convoluzionale`, `_reg` | rete convoluzionale sulla finestra di Aurora intorno al punto |
-| `esperimento_sarah_c` | pre-training della radiazione sui pixel SARAH-3 |
+| `esperimento_bilineare` | Aurora bilinearly interpolated instead of the nearest cell? |
+| `esperimento_idw` | IDW for precipitation and radiation instead of bilinear? |
+| `esperimento_terreno` | terrain descriptors in addition to elevation? (requires `python descrittori_terreno.py`) |
+| `esperimento_pioggia` | target transformations for precipitation (square root, log)? |
+| `esperimento_iperparametri` | network size, dropout, learning rate |
+| `esperimento_ensemble` | average of several networks with different seeds |
+| `esperimento_feature_ridotte` | can redundant features be removed? |
+| `esperimento_importanza` | permutation importance of the final model |
+| `esperimento_convoluzionale`, `_reg` | convolutional network on the Aurora window around the point |
+| `esperimento_sarah_c` | radiation pre-training on SARAH-3 pixels |
 
-`riferimenti_semplici.py` (nella cartella principale) confronta la rete con alcune correzioni
-semplici: correzione di quota, media mensile, regressione lineare.
+`riferimenti_semplici.py` (in the main folder) compares the network with some simple corrections:
+elevation correction, monthly mean, linear regression.
 
-## Cosa non è nel repository
+## What is not in the repository
 
-Dati, campi di Aurora, tabelle e DEM sono esclusi da `.gitignore` perché sono grandi o si possono
-ricreare con i passi 1–3. Sono inclusi codice, notebook, risultati (`.csv`), log, mappe in `.png` e
-le reti del modello finale (`modello/checkpoints/*_finale.pt`).
+Data, Aurora fields, tables and DEM are excluded by `.gitignore` because they are large or can be
+recreated with steps 1–3. Code, notebooks, results (`.csv`), logs, `.png` maps and the networks of
+the final model (`modello/checkpoints/*_finale.pt`) are included.
+
+## Data licences
+
+ECA&D data are for non-commercial research and education only
+([data policy](https://www.ecad.eu/documents/ECAD_datapolicy.pdf)); the trained models depend on
+them. Please cite ECA&D as required by its policy.
